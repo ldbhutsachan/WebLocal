@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <!-- Logging pattern for console and file -->
+    <property name="CONSOLE_LOG_PATTERN" value="${CONSOLE_LOG_PATTERN:-%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
+    <property name="FILE_LOG_PATTERN" value="${FILE_LOG_PATTERN:-%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
+
+    <!-- all config from resource -->
+    <springProperty scope="context" name="application_name" source="spring.application.name"/>
+    <springProperty scope="context" name="app_profile" source="spring.profiles.active"/>
+    <springProperty scope="context" name="logstash-server" source="spring.logstash.server"/>
+    <springProperty scope="context" name="logstash-port" source="spring.logstash.port"/>
+
+    <springProperty scope="context" name="log-package" source="spring.apps.package"/>
+    <springProperty scope="context" name="log-info" source="spring.apps.logging.level-info"/>
+    <springProperty scope="context" name="log-debug" source="spring.apps.logging.level-debug"/>
+    <springProperty scope="context" name="log-errorInfo" source="spring.apps.logging.level-errorInfo"/>
+
+    <property name="LOG_LOCATION" value="logs"/>
+    <property name="LOG_ARCHIVED_FOLDER" value="archived"/>
+    <property name="LOG_FILE" value="${application_name}"/>
+    <property name="maxFileSize" value="20MB"/>
+    <property name="totalSizeCap" value="60GB"/>
+    <property name="maxHistory" value="120"/>
+
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+
+    <!-- To enable JMX Management -->
+    <jmxConfigurator/>
+
+    <!-- Print Log to console -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <charset>UTF-8</charset>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Write Log to file -->
+    <appender name="FILE_ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_LOCATION}/${LOG_FILE}.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_LOCATION}/${LOG_ARCHIVED_FOLDER}/${LOG_FILE}-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <!-- each archived file, size max 100MB -->
+            <maxFileSize>${maxFileSize}</maxFileSize>
+            <!-- total size of all archive files, if total size > 60GB, it will delete old archived file -->
+            <totalSizeCap>${totalSizeCap}</totalSizeCap>
+            <!-- 120 days to keep -->
+            <maxHistory>${maxHistory}</maxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <charset>UTF-8</charset>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Logs Async to do appender -->
+    <appender name="ASYNC_CONSOLE" class="ch.qos.logback.classic.AsyncAppender">
+        <discardingThreshold>0</discardingThreshold> <!-- default 20, means drop lower event when has 20% capacity remaining -->
+        <appender-ref ref="CONSOLE"/>
+        <queueSize>500</queueSize> <!-- default 256 -->
+        <includeCallerData>false</includeCallerData><!-- default false -->
+        <neverBlock>true</neverBlock><!-- default false, set to true to cause the Appender not block the application and just drop the messages -->
+    </appender>
+
+    <appender name="ASYNC_FILE" class="ch.qos.logback.classic.AsyncAppender">
+        <discardingThreshold>0</discardingThreshold>
+        <appender-ref ref="FILE_ROLLING"/>
+        <queueSize>500</queueSize>
+        <includeCallerData>false</includeCallerData>
+        <neverBlock>false</neverBlock>
+    </appender>
+
+
+    <!-- App Service Production profile -->
+    <springProfile name="uat">
+        <root level="${log-info:-INFO}">
+            <appender-ref ref="ASYNC_FILE"/>
+            <appender-ref ref="ASYNC_CONSOLE"/>
+        </root>
+        <root level="${log-errorInfo:-ERROR}">
+            <appender-ref ref="ASYNC_FILE"/>
+            <appender-ref ref="ASYNC_CONSOLE"/>
+        </root>
+        <logger name="org.springframework" level="${log-info:-INFO}" additivity="false">
+            <appender-ref ref="ASYNC_FILE"/>
+            <appender-ref ref="ASYNC_CONSOLE"/>
+        </logger>
+        <logger name="${log-package:-com.ldb.reportcustom}" level="${log-debug:-DEBUG}" additivity="false">
+            <appender-ref ref="ASYNC_FILE"/>
+            <appender-ref ref="ASYNC_CONSOLE"/>
+        </logger>
+    </springProfile>
+
+    <!-- App Service Production profile -->
+    <springProfile name="prod">
+        <root level="${log-info:-INFO}">
+            <appender-ref ref="ASYNC_FILE"/>
+            <appender-ref ref="ASYNC_CONSOLE"/>
+        </root>
+        <root level="${log-errorInfo:-ERROR}">
+            <appender-ref ref="ASYNC_FILE"/>
+            <appender-ref ref="ASYNC_CONSOLE"/>
+        </root>
+        <logger name="org.springframework" level="${log-info:-INFO}" additivity="false">
+            <appender-ref ref="ASYNC_FILE"/>
+            <appender-ref ref="ASYNC_CONSOLE"/>
+        </logger>
+        <logger name="${log-package:-com.ldb.reportcustom}" level="${log-debug:-DEBUG}" additivity="false">
+            <appender-ref ref="ASYNC_FILE"/>
+            <appender-ref ref="ASYNC_CONSOLE"/>
+        </logger>
+    </springProfile>
+
+</configuration>

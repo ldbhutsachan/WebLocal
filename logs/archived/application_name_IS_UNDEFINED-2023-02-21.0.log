@@ -1,0 +1,2 @@
+2023-02-21 11:47:59.028  INFO [ap-custom-report-service,,,] 16732 --- [Thread-46] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-21 11:47:59.028  INFO [ap-custom-report-service,,,] 16732 --- [Thread-46] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

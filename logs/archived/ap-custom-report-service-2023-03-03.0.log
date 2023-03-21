@@ -1,0 +1,1656 @@
+2023-03-03 10:48:39.946  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-03-03 10:48:39.947  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-03-03 10:48:39.948  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-03 10:48:40.339  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-03-03 10:48:41.455  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-03-03 10:48:41.549  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88ms. Found 3 JPA repository interfaces.
+2023-03-03 10:48:41.861  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4b4b5ad2-2245-3cc1-a7c7-44e67073fc0c
+2023-03-03 10:48:42.151  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@db63fd7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 10:48:42.167  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 10:48:42.849  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-03-03 10:48:42.970  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2617 ms
+2023-03-03 10:48:43.433  WARN [ap-custom-report-service,,,] 16448 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-03 10:48:43.711  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-03 10:48:44.366  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 10:48:44.403  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 10:48:45.077 DEBUG [ap-custom-report-service,,,] 16448 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-03-03 10:48:45.871  INFO [ap-custom-report-service,,,] 16448 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 10:48:46.083  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f51ab3a, org.springframework.security.web.context.SecurityContextPersistenceFilter@4efed894, org.springframework.security.web.header.HeaderWriterFilter@371812cc, org.springframework.web.filter.CorsFilter@525fb0c8, org.springframework.security.web.authentication.logout.LogoutFilter@58d84372, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@5970a3e0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@695ff201, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45e362e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ab8b35b, org.springframework.security.web.session.SessionManagementFilter@7a2e266a, org.springframework.security.web.access.ExceptionTranslationFilter@73ec9148, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2d81d1ff]
+2023-03-03 10:48:46.742  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-03 10:48:46.873  WARN [ap-custom-report-service,,,] 16448 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-03-03 10:48:46.928  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-03-03 10:48:47.010  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-03-03 10:48:47.055  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-03-03 10:48:47.341  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-03-03 10:48:47.360  INFO [ap-custom-report-service,,,] 16448 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 7.992 seconds (JVM running for 8.532)
+2023-03-03 10:50:27.395  INFO [ap-custom-report-service,,,] 16448 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-03 10:50:27.406  INFO [ap-custom-report-service,,,] 16448 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2023-03-03 10:50:27.435 DEBUG [ap-custom-report-service,5684125fee6ac8aa,5684125fee6ac8aa,true] 16448 --- [http-nio-23532-exec-1] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-03-03 10:50:27.552  INFO [ap-custom-report-service,5684125fee6ac8aa,5684125fee6ac8aa,true] 16448 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-03-03 10:50:27.552  INFO [ap-custom-report-service,5684125fee6ac8aa,5684125fee6ac8aa,true] 16448 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : Client IP Address: 0:0:0:0:0:0:0:1
+2023-03-03 10:50:28.081  INFO [ap-custom-report-service,5684125fee6ac8aa,5684125fee6ac8aa,true] 16448 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : loginResponse: {"accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjc3ODE1NDI3LCJleHAiOjE2Nzc5MDE4Mjd9.j5CA8Znf6OZdhZmFPW9TlhaM7nI5eZMEHe3txgrmlXs-Pcg8Hnqss3vLM8LIM_K5OXaPB-etjXc8fvXExHcOHg","tokenType":"Bearer","expireDate":86400,"username":"ADMIN_R5C10_1","enabled":true,"borders":{"borderId":"R5C10","bridge":"1","code":"510","enable":true,"name":"ດ່ານສາກົນ ຂົວມິດຕະພາບ I","provinceCode":"201","provinceName":"ນະຄອນລວງວຽງຈັນ","roles":[{"roleId":24,"roleName":"ROLE_REPORT_ADMIN","roleDisplay":"Role Border","createdBy":2,"createdAt":{"seconds":1675616400,"nanos":0},"modifiedBy":2,"modifiedAt":{"seconds":1675616400,"nanos":0}}],"createdAt":{"seconds":1674281281,"nanos":0},"modifiedAt":{"seconds":1674281281,"nanos":0}},"roles":[{"roleId":24,"roleName":"ROLE_REPORT_ADMIN","roleDisplay":"Role Border","createdBy":2,"createdAt":{"seconds":1675616400,"nanos":0},"modifiedBy":2,"modifiedAt":{"seconds":1675616400,"nanos":0}}]}
+2023-03-03 10:50:28.107  INFO [ap-custom-report-service,5684125fee6ac8aa,5684125fee6ac8aa,true] 16448 --- [http-nio-23532-exec-1] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "accessToken" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjc3ODE1NDI3LCJleHAiOjE2Nzc5MDE4Mjd9.j5CA8Znf6OZdhZmFPW9TlhaM7nI5eZMEHe3txgrmlXs-Pcg8Hnqss3vLM8LIM_K5OXaPB-etjXc8fvXExHcOHg",
+    "tokenType" : "Bearer",
+    "expireDate" : 86400,
+    "username" : "ADMIN_R5C10_1",
+    "enabled" : true,
+    "borders" : {
+      "createdAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "modifiedAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "borderId" : "R5C10",
+      "bridge" : "1",
+      "code" : "510",
+      "enable" : true,
+      "name" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I",
+      "provinceCode" : "201",
+      "provinceName" : "ນະຄອນລວງວຽງຈັນ",
+      "roles" : [ {
+        "roleId" : 24,
+        "roleName" : "ROLE_REPORT_ADMIN",
+        "roleDisplay" : "Role Border"
+      } ]
+    },
+    "roles" : [ {
+      "roleId" : 24,
+      "roleName" : "ROLE_REPORT_ADMIN",
+      "roleDisplay" : "Role Border"
+    } ]
+  }
+}
+2023-03-03 10:51:26.219 DEBUG [ap-custom-report-service,dab6efd75e70e23a,dab6efd75e70e23a,true] 16448 --- [http-nio-23532-exec-3] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report/api/v1/custom/authenticate/token
+2023-03-03 10:51:26.234 ERROR [ap-custom-report-service,dab6efd75e70e23a,dab6efd75e70e23a,true] 16448 --- [http-nio-23532-exec-3] c.l.r.exceptions.ApiExceptionHandler     : Method Argument Exception Handling : org.springframework.validation.BeanPropertyBindingResult: 2 errors
+Field error in object 'loginRequest' on field 'username': rejected value [null]; codes [NotBlank.loginRequest.username,NotBlank.username,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.username,username]; arguments []; default message [username]]; default message [javax.validation.constraints.NotBlank.message]
+Field error in object 'loginRequest' on field 'password': rejected value [null]; codes [NotBlank.loginRequest.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.password,password]; arguments []; default message [password]]; default message [javax.validation.constraints.NotBlank.message]
+2023-03-03 10:51:26.238  INFO [ap-custom-report-service,dab6efd75e70e23a,dab6efd75e70e23a,true] 16448 --- [http-nio-23532-exec-3] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "code" : "EB001",
+  "message" : "Exception Method Argument Handling",
+  "detailedErrors" : "Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.ldb.reportcustom.controller.LoginController.getMobileAuthenticate(com.ldb.reportcustom.messages.request.LoginRequest,javax.servlet.http.HttpServletRequest) with 2 errors: [Field error in object 'loginRequest' on field 'username': rejected value [null]; codes [NotBlank.loginRequest.username,NotBlank.username,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.username,username]; arguments []; default message [username]]; default message [javax.validation.constraints.NotBlank.message]] [Field error in object 'loginRequest' on field 'password': rejected value [null]; codes [NotBlank.loginRequest.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.password,password]; arguments []; default message [password]]; default message [javax.validation.constraints.NotBlank.message]] "
+}
+2023-03-03 10:51:26.240  WARN [ap-custom-report-service,dab6efd75e70e23a,dab6efd75e70e23a,true] 16448 --- [http-nio-23532-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.ldb.reportcustom.controller.LoginController.getMobileAuthenticate(com.ldb.reportcustom.messages.request.LoginRequest,javax.servlet.http.HttpServletRequest) with 2 errors: [Field error in object 'loginRequest' on field 'username': rejected value [null]; codes [NotBlank.loginRequest.username,NotBlank.username,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.username,username]; arguments []; default message [username]]; default message [javax.validation.constraints.NotBlank.message]] [Field error in object 'loginRequest' on field 'password': rejected value [null]; codes [NotBlank.loginRequest.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.password,password]; arguments []; default message [password]]; default message [javax.validation.constraints.NotBlank.message]] ]
+2023-03-03 10:51:59.425 DEBUG [ap-custom-report-service,19877a378e7e676c,19877a378e7e676c,true] 16448 --- [http-nio-23532-exec-5] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report/api/v1/custom/singleWindowTotal.service
+2023-03-03 10:51:59.429  INFO [ap-custom-report-service,19877a378e7e676c,19877a378e7e676c,true] 16448 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : 		 --> Custom total Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-03-03 10:51:59.429  INFO [ap-custom-report-service,19877a378e7e676c,19877a378e7e676c,true] 16448 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-03-03 10:51:59.429  INFO [ap-custom-report-service,19877a378e7e676c,19877a378e7e676c,true] 16448 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-03-03 10:51:59.429  INFO [ap-custom-report-service,19877a378e7e676c,19877a378e7e676c,true] 16448 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-03-03 10:51:59.430  INFO [ap-custom-report-service,19877a378e7e676c,19877a378e7e676c,true] 16448 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230303"
+}
+2023-03-03 10:51:59.493  INFO [ap-custom-report-service,19877a378e7e676c,19877a378e7e676c,true] 16448 --- [http-nio-23532-exec-5] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50')
+2023-03-03 10:51:59.494  INFO [ap-custom-report-service,19877a378e7e676c,19877a378e7e676c,true] 16448 --- [http-nio-23532-exec-5] c.l.r.services.Impl.GetDataServiceImpl   : SQL : SELECT TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY') AS PAY_DATE, B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE as BORDER_ID, B.TAX_ACCOUNT_BORDER,REFERENCE,MORE_INFO , SUM(B.AMOUNT) as TOTAL, COUNT(*) AS NUM_TXN FROM TAX_INVOICE A LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230303 AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50') GROUP BY REFERENCE,TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY'), B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE, B.TAX_ACCOUNT_BORDER,MORE_INFO ORDER BY TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY')
+2023-03-03 10:51:59.532  INFO [ap-custom-report-service,19877a378e7e676c,19877a378e7e676c,true] 16448 --- [http-nio-23532-exec-5] c.l.r.s.Impl.SingleWindowServiceImpl     : mapList:[{AFE=200000.0, PSC=0.0, STA=53800.0, CD=3.09849E7, STD=5.64293E8, LNSW=256800.0, SCV=0.0, VAT=3.396261E8, EMT=0.0, PFD=0.0, PRS=0.0, EXD=0.0, EXC=1.93682E8, BT=0.0, TBC=0.0, SCF=0.0, SCI=0.0, ITF=0.0, paymentDate=03/03/2023, VT=0.0}]
+2023-03-03 10:51:59.533  INFO [ap-custom-report-service,19877a378e7e676c,19877a378e7e676c,true] 16448 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : 		 --> End Custom total Request controller <<<<<<<<<<<<<<<<<<<
+2023-03-03 10:51:59.535  INFO [ap-custom-report-service,19877a378e7e676c,19877a378e7e676c,true] 16448 --- [http-nio-23532-exec-5] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "data" : {
+        "AFE" : 200000.0,
+        "PSC" : 0.0,
+        "STA" : 53800.0,
+        "CD" : 3.09849E7,
+        "STD" : 5.64293E8,
+        "LNSW" : 256800.0,
+        "SCV" : 0.0,
+        "VAT" : 3.396261E8,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 1.93682E8,
+        "BT" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/03/2023",
+        "VT" : 0.0
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຄ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ"
+      }
+    } ],
+    "sumTotal" : {
+      "AFE" : 200000.0,
+      "CD" : 3.09849E7,
+      "STA" : 53800.0,
+      "PSC" : 0.0,
+      "STD" : 5.64293E8,
+      "LNSW" : 256800.0,
+      "SCV" : 0.0,
+      "VAT" : 3.396261E8,
+      "EMT" : 0.0,
+      "PFD" : 0.0,
+      "EXD" : 0.0,
+      "PRS" : 0.0,
+      "EXC" : 1.93682E8,
+      "BT" : 0.0,
+      "total" : 5.678966E8,
+      "TBC" : 0.0,
+      "SCF" : 0.0,
+      "SCI" : 0.0,
+      "ITF" : 0.0,
+      "VT" : 0.0
+    }
+  }
+}
+2023-03-03 11:01:11.516  INFO [ap-custom-report-service,,,] 16448 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:01:11.517  INFO [ap-custom-report-service,,,] 16448 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:01:15.682  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-03-03 11:01:15.683  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-03-03 11:01:15.683  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-03 11:01:16.017  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-03-03 11:01:16.782  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-03-03 11:01:16.868  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80ms. Found 3 JPA repository interfaces.
+2023-03-03 11:01:17.120  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4b4b5ad2-2245-3cc1-a7c7-44e67073fc0c
+2023-03-03 11:01:17.356  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@66373949' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:01:17.370  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:01:17.999  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-03-03 11:01:18.117  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2090 ms
+2023-03-03 11:01:18.482  WARN [ap-custom-report-service,,,] 11808 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-03 11:01:18.713  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:01:19.344  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:01:19.374  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:01:20.007 DEBUG [ap-custom-report-service,,,] 11808 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-03-03 11:01:20.668  INFO [ap-custom-report-service,,,] 11808 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:01:20.868  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71a7f84c, org.springframework.security.web.context.SecurityContextPersistenceFilter@6ca2042b, org.springframework.security.web.header.HeaderWriterFilter@3f92080f, org.springframework.web.filter.CorsFilter@40b2f582, org.springframework.security.web.authentication.logout.LogoutFilter@9e64635, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@79dc5c90, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65f4704e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@785525b6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62f2a587, org.springframework.security.web.session.SessionManagementFilter@79f4ceca, org.springframework.security.web.access.ExceptionTranslationFilter@24cda91f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@690df24]
+2023-03-03 11:01:21.498  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-03 11:01:21.615  WARN [ap-custom-report-service,,,] 11808 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-03-03 11:01:21.654  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-03-03 11:01:21.726  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-03-03 11:01:21.768  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-03-03 11:01:22.022  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-03-03 11:01:22.037  INFO [ap-custom-report-service,,,] 11808 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 6.882 seconds (JVM running for 7.352)
+2023-03-03 11:01:24.313  INFO [ap-custom-report-service,,,] 11808 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-03 11:01:24.323  INFO [ap-custom-report-service,,,] 11808 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2023-03-03 11:01:24.647 DEBUG [ap-custom-report-service,b0aff49b81e7b782,b0aff49b81e7b782,true] 11808 --- [http-nio-23532-exec-1] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report/api/v1/custom/singleWindowTotal.service
+2023-03-03 11:01:24.699  INFO [ap-custom-report-service,b0aff49b81e7b782,b0aff49b81e7b782,true] 11808 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : 		 --> Custom total Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-03-03 11:01:24.700  INFO [ap-custom-report-service,b0aff49b81e7b782,b0aff49b81e7b782,true] 11808 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-03-03 11:01:24.700  INFO [ap-custom-report-service,b0aff49b81e7b782,b0aff49b81e7b782,true] 11808 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-03-03 11:01:24.700  INFO [ap-custom-report-service,b0aff49b81e7b782,b0aff49b81e7b782,true] 11808 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-03-03 11:01:24.707  INFO [ap-custom-report-service,b0aff49b81e7b782,b0aff49b81e7b782,true] 11808 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230303"
+}
+2023-03-03 11:01:24.773  INFO [ap-custom-report-service,b0aff49b81e7b782,b0aff49b81e7b782,true] 11808 --- [http-nio-23532-exec-1] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50')
+2023-03-03 11:01:24.773  INFO [ap-custom-report-service,b0aff49b81e7b782,b0aff49b81e7b782,true] 11808 --- [http-nio-23532-exec-1] c.l.r.services.Impl.GetDataServiceImpl   : SQL : SELECT TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY') AS PAY_DATE, B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE as BORDER_ID, B.TAX_ACCOUNT_BORDER,REFERENCE,MORE_INFO , SUM(B.AMOUNT) as TOTAL, COUNT(*) AS NUM_TXN FROM TAX_INVOICE A LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230303 AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50') GROUP BY REFERENCE,TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY'), B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE, B.TAX_ACCOUNT_BORDER,MORE_INFO ORDER BY TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY')
+2023-03-03 11:01:24.822  INFO [ap-custom-report-service,b0aff49b81e7b782,b0aff49b81e7b782,true] 11808 --- [http-nio-23532-exec-1] c.l.r.s.Impl.SingleWindowServiceImpl     : mapList:[{AFE=200000.0, PSC=0.0, STA=53800.0, CD=0.0, STD=3.93911E7, LNSW=256800.0, SCV=0.0, VAT=0.0, EMT=0.0, PFD=0.0, PRS=0.0, EXD=0.0, EXC=0.0, BT=0.0, TBC=0.0, SCF=0.0, SCI=0.0, ITF=0.0, paymentDate=03/03/2023, VT=0.0}]
+2023-03-03 11:01:24.823  INFO [ap-custom-report-service,b0aff49b81e7b782,b0aff49b81e7b782,true] 11808 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : 		 --> End Custom total Request controller <<<<<<<<<<<<<<<<<<<
+2023-03-03 11:01:24.837  INFO [ap-custom-report-service,b0aff49b81e7b782,b0aff49b81e7b782,true] 11808 --- [http-nio-23532-exec-1] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "data" : {
+        "AFE" : 200000.0,
+        "PSC" : 0.0,
+        "STA" : 53800.0,
+        "CD" : 0.0,
+        "STD" : 3.93911E7,
+        "LNSW" : 256800.0,
+        "SCV" : 0.0,
+        "VAT" : 0.0,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 0.0,
+        "BT" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/03/2023",
+        "VT" : 0.0
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຄ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ"
+      }
+    } ],
+    "sumTotal" : {
+      "AFE" : 200000.0,
+      "CD" : 0.0,
+      "STA" : 53800.0,
+      "PSC" : 0.0,
+      "STD" : 3.93911E7,
+      "LNSW" : 256800.0,
+      "SCV" : 0.0,
+      "VAT" : 0.0,
+      "EMT" : 0.0,
+      "PFD" : 0.0,
+      "EXD" : 0.0,
+      "PRS" : 0.0,
+      "EXC" : 0.0,
+      "BT" : 0.0,
+      "total" : 5.932029E8,
+      "TBC" : 0.0,
+      "SCF" : 0.0,
+      "SCI" : 0.0,
+      "ITF" : 0.0,
+      "VT" : 0.0
+    }
+  }
+}
+2023-03-03 11:12:02.771 DEBUG [ap-custom-report-service,623e9baf53fc999c,623e9baf53fc999c,true] 11808 --- [http-nio-23532-exec-5] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report/api/v1/custom/singleWindowTotal.service
+2023-03-03 11:12:02.772  INFO [ap-custom-report-service,623e9baf53fc999c,623e9baf53fc999c,true] 11808 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : 		 --> Custom total Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-03-03 11:12:02.773  INFO [ap-custom-report-service,623e9baf53fc999c,623e9baf53fc999c,true] 11808 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-03-03 11:12:02.773  INFO [ap-custom-report-service,623e9baf53fc999c,623e9baf53fc999c,true] 11808 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-03-03 11:12:02.773  INFO [ap-custom-report-service,623e9baf53fc999c,623e9baf53fc999c,true] 11808 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-03-03 11:12:02.773  INFO [ap-custom-report-service,623e9baf53fc999c,623e9baf53fc999c,true] 11808 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230303"
+}
+2023-03-03 11:12:02.808  INFO [ap-custom-report-service,623e9baf53fc999c,623e9baf53fc999c,true] 11808 --- [http-nio-23532-exec-5] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50')
+2023-03-03 11:12:02.808  INFO [ap-custom-report-service,623e9baf53fc999c,623e9baf53fc999c,true] 11808 --- [http-nio-23532-exec-5] c.l.r.services.Impl.GetDataServiceImpl   : SQL : SELECT TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY') AS PAY_DATE, B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE as BORDER_ID, B.TAX_ACCOUNT_BORDER,REFERENCE,MORE_INFO , SUM(B.AMOUNT) as TOTAL, COUNT(*) AS NUM_TXN FROM TAX_INVOICE A LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230303 AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50') GROUP BY REFERENCE,TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY'), B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE, B.TAX_ACCOUNT_BORDER,MORE_INFO ORDER BY TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY')
+2023-03-03 11:12:02.825  INFO [ap-custom-report-service,623e9baf53fc999c,623e9baf53fc999c,true] 11808 --- [http-nio-23532-exec-5] c.l.r.s.Impl.SingleWindowServiceImpl     : mapList:[{AFE=200000.0, PSC=0.0, STA=53800.0, CD=0.0, STD=3.93911E7, LNSW=256800.0, SCV=0.0, VAT=0.0, EMT=0.0, PFD=0.0, PRS=0.0, EXD=0.0, EXC=0.0, BT=0.0, TBC=0.0, SCF=0.0, SCI=0.0, ITF=0.0, paymentDate=03/03/2023, VT=0.0}]
+2023-03-03 11:12:02.825  INFO [ap-custom-report-service,623e9baf53fc999c,623e9baf53fc999c,true] 11808 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : 		 --> End Custom total Request controller <<<<<<<<<<<<<<<<<<<
+2023-03-03 11:12:02.826  INFO [ap-custom-report-service,623e9baf53fc999c,623e9baf53fc999c,true] 11808 --- [http-nio-23532-exec-5] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "data" : {
+        "AFE" : 200000.0,
+        "PSC" : 0.0,
+        "STA" : 53800.0,
+        "CD" : 0.0,
+        "STD" : 3.93911E7,
+        "LNSW" : 256800.0,
+        "SCV" : 0.0,
+        "VAT" : 0.0,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 0.0,
+        "BT" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/03/2023",
+        "VT" : 0.0
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຄ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ"
+      }
+    } ],
+    "sumTotal" : {
+      "AFE" : 200000.0,
+      "CD" : 0.0,
+      "STA" : 53800.0,
+      "PSC" : 0.0,
+      "STD" : 3.93911E7,
+      "LNSW" : 256800.0,
+      "SCV" : 0.0,
+      "VAT" : 0.0,
+      "EMT" : 0.0,
+      "PFD" : 0.0,
+      "EXD" : 0.0,
+      "PRS" : 0.0,
+      "EXC" : 0.0,
+      "BT" : 0.0,
+      "total" : 5.932029E8,
+      "TBC" : 0.0,
+      "SCF" : 0.0,
+      "SCI" : 0.0,
+      "ITF" : 0.0,
+      "VT" : 0.0
+    }
+  }
+}
+2023-03-03 11:12:50.201  INFO [ap-custom-report-service,,,] 11808 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:12:50.202  INFO [ap-custom-report-service,,,] 11808 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:12:54.330  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-03-03 11:12:54.331  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-03-03 11:12:54.332  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-03 11:12:54.658  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-03-03 11:12:55.297  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-03-03 11:12:55.379  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77ms. Found 3 JPA repository interfaces.
+2023-03-03 11:12:55.632  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4b4b5ad2-2245-3cc1-a7c7-44e67073fc0c
+2023-03-03 11:12:55.865  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1657a6e0' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:12:55.882  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:12:56.491  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-03-03 11:12:56.607  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1938 ms
+2023-03-03 11:12:56.980  WARN [ap-custom-report-service,,,] 7960 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-03 11:12:57.201  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:12:57.741  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:12:57.792  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:12:58.584 DEBUG [ap-custom-report-service,,,] 7960 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-03-03 11:12:59.234  INFO [ap-custom-report-service,,,] 7960 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:12:59.398  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b0085ad, org.springframework.security.web.context.SecurityContextPersistenceFilter@40461a5d, org.springframework.security.web.header.HeaderWriterFilter@d19255b, org.springframework.web.filter.CorsFilter@5bd716d4, org.springframework.security.web.authentication.logout.LogoutFilter@1af4066f, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@59b3a86f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a56a9f6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@494972d0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43d0dff4, org.springframework.security.web.session.SessionManagementFilter@79f99b86, org.springframework.security.web.access.ExceptionTranslationFilter@3b415709, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@40228c13]
+2023-03-03 11:13:00.036  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-03 11:13:00.151  WARN [ap-custom-report-service,,,] 7960 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-03-03 11:13:00.188  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-03-03 11:13:00.268  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-03-03 11:13:00.312  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-03-03 11:13:00.313  INFO [ap-custom-report-service,,,] 7960 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-03 11:13:00.335  INFO [ap-custom-report-service,,,] 7960 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2023-03-03 11:13:00.633  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-03-03 11:13:00.649  INFO [ap-custom-report-service,,,] 7960 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 6.844 seconds (JVM running for 7.302)
+2023-03-03 11:13:00.941 DEBUG [ap-custom-report-service,11234b721cec46b4,11234b721cec46b4,true] 7960 --- [http-nio-23532-exec-1] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report/api/v1/custom/singleWindowTotal.service
+2023-03-03 11:13:00.994  INFO [ap-custom-report-service,11234b721cec46b4,11234b721cec46b4,true] 7960 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : 		 --> Custom total Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-03-03 11:13:00.994  INFO [ap-custom-report-service,11234b721cec46b4,11234b721cec46b4,true] 7960 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-03-03 11:13:00.994  INFO [ap-custom-report-service,11234b721cec46b4,11234b721cec46b4,true] 7960 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-03-03 11:13:00.994  INFO [ap-custom-report-service,11234b721cec46b4,11234b721cec46b4,true] 7960 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-03-03 11:13:01.001  INFO [ap-custom-report-service,11234b721cec46b4,11234b721cec46b4,true] 7960 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230303"
+}
+2023-03-03 11:13:01.063  INFO [ap-custom-report-service,11234b721cec46b4,11234b721cec46b4,true] 7960 --- [http-nio-23532-exec-1] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50')
+2023-03-03 11:13:01.064  INFO [ap-custom-report-service,11234b721cec46b4,11234b721cec46b4,true] 7960 --- [http-nio-23532-exec-1] c.l.r.services.Impl.GetDataServiceImpl   : SQL : SELECT TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY') AS PAY_DATE, B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE as BORDER_ID, B.TAX_ACCOUNT_BORDER,REFERENCE,MORE_INFO , SUM(B.AMOUNT) as TOTAL, COUNT(*) AS NUM_TXN FROM TAX_INVOICE A LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230303 AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50') GROUP BY REFERENCE,TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY'), B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE, B.TAX_ACCOUNT_BORDER,MORE_INFO ORDER BY TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY')
+2023-03-03 11:13:01.089  INFO [ap-custom-report-service,11234b721cec46b4,11234b721cec46b4,true] 7960 --- [http-nio-23532-exec-1] c.l.r.s.Impl.SingleWindowServiceImpl     : mapList:[{AFE=200000.0, PSC=0.0, STA=53800.0, CD=0.0, STD=3.93911E7, LNSW=256800.0, SCV=0.0, VAT=0.0, EMT=0.0, PFD=0.0, PRS=0.0, EXD=0.0, EXC=0.0, BT=0.0, TBC=0.0, SCF=0.0, SCI=0.0, ITF=0.0, paymentDate=03/03/2023, VT=0.0}]
+2023-03-03 11:13:01.090  INFO [ap-custom-report-service,11234b721cec46b4,11234b721cec46b4,true] 7960 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : 		 --> End Custom total Request controller <<<<<<<<<<<<<<<<<<<
+2023-03-03 11:13:01.101  INFO [ap-custom-report-service,11234b721cec46b4,11234b721cec46b4,true] 7960 --- [http-nio-23532-exec-1] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "data" : {
+        "AFE" : 200000.0,
+        "PSC" : 0.0,
+        "STA" : 53800.0,
+        "CD" : 0.0,
+        "STD" : 3.93911E7,
+        "LNSW" : 256800.0,
+        "SCV" : 0.0,
+        "VAT" : 0.0,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 0.0,
+        "BT" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/03/2023",
+        "VT" : 0.0
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຄ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ"
+      }
+    } ],
+    "sumTotal" : {
+      "AFE" : 200000.0,
+      "CD" : 0.0,
+      "STA" : 53800.0,
+      "PSC" : 0.0,
+      "STD" : 3.93911E7,
+      "LNSW" : 256800.0,
+      "SCV" : 0.0,
+      "VAT" : 0.0,
+      "EMT" : 0.0,
+      "PFD" : 0.0,
+      "EXD" : 0.0,
+      "PRS" : 0.0,
+      "EXC" : 0.0,
+      "BT" : 0.0,
+      "total" : 5.932029E8,
+      "TBC" : 0.0,
+      "SCF" : 0.0,
+      "SCI" : 0.0,
+      "ITF" : 0.0,
+      "VT" : 0.0
+    }
+  }
+}
+2023-03-03 11:13:06.927 DEBUG [ap-custom-report-service,3843742e8f7ca6f1,3843742e8f7ca6f1,true] 7960 --- [http-nio-23532-exec-3] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report/api/v1/custom/singleWindowTotal.service
+2023-03-03 11:13:06.929  INFO [ap-custom-report-service,3843742e8f7ca6f1,3843742e8f7ca6f1,true] 7960 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : 		 --> Custom total Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-03-03 11:13:06.929  INFO [ap-custom-report-service,3843742e8f7ca6f1,3843742e8f7ca6f1,true] 7960 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-03-03 11:13:06.929  INFO [ap-custom-report-service,3843742e8f7ca6f1,3843742e8f7ca6f1,true] 7960 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-03-03 11:13:06.929  INFO [ap-custom-report-service,3843742e8f7ca6f1,3843742e8f7ca6f1,true] 7960 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-03-03 11:13:06.929  INFO [ap-custom-report-service,3843742e8f7ca6f1,3843742e8f7ca6f1,true] 7960 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230303"
+}
+2023-03-03 11:13:06.964  INFO [ap-custom-report-service,3843742e8f7ca6f1,3843742e8f7ca6f1,true] 7960 --- [http-nio-23532-exec-3] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50')
+2023-03-03 11:13:06.964  INFO [ap-custom-report-service,3843742e8f7ca6f1,3843742e8f7ca6f1,true] 7960 --- [http-nio-23532-exec-3] c.l.r.services.Impl.GetDataServiceImpl   : SQL : SELECT TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY') AS PAY_DATE, B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE as BORDER_ID, B.TAX_ACCOUNT_BORDER,REFERENCE,MORE_INFO , SUM(B.AMOUNT) as TOTAL, COUNT(*) AS NUM_TXN FROM TAX_INVOICE A LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230303 AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50') GROUP BY REFERENCE,TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY'), B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE, B.TAX_ACCOUNT_BORDER,MORE_INFO ORDER BY TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY')
+2023-03-03 11:13:06.975  INFO [ap-custom-report-service,3843742e8f7ca6f1,3843742e8f7ca6f1,true] 7960 --- [http-nio-23532-exec-3] c.l.r.s.Impl.SingleWindowServiceImpl     : mapList:[{AFE=200000.0, PSC=0.0, STA=53800.0, CD=0.0, STD=3.93911E7, LNSW=256800.0, SCV=0.0, VAT=0.0, EMT=0.0, PFD=0.0, PRS=0.0, EXD=0.0, EXC=0.0, BT=0.0, TBC=0.0, SCF=0.0, SCI=0.0, ITF=0.0, paymentDate=03/03/2023, VT=0.0}]
+2023-03-03 11:13:06.976  INFO [ap-custom-report-service,3843742e8f7ca6f1,3843742e8f7ca6f1,true] 7960 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : 		 --> End Custom total Request controller <<<<<<<<<<<<<<<<<<<
+2023-03-03 11:13:06.978  INFO [ap-custom-report-service,3843742e8f7ca6f1,3843742e8f7ca6f1,true] 7960 --- [http-nio-23532-exec-3] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "data" : {
+        "AFE" : 200000.0,
+        "PSC" : 0.0,
+        "STA" : 53800.0,
+        "CD" : 0.0,
+        "STD" : 3.93911E7,
+        "LNSW" : 256800.0,
+        "SCV" : 0.0,
+        "VAT" : 0.0,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 0.0,
+        "BT" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/03/2023",
+        "VT" : 0.0
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຄ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ"
+      }
+    } ],
+    "sumTotal" : {
+      "AFE" : 200000.0,
+      "CD" : 0.0,
+      "STA" : 53800.0,
+      "PSC" : 0.0,
+      "STD" : 3.93911E7,
+      "LNSW" : 256800.0,
+      "SCV" : 0.0,
+      "VAT" : 0.0,
+      "EMT" : 0.0,
+      "PFD" : 0.0,
+      "EXD" : 0.0,
+      "PRS" : 0.0,
+      "EXC" : 0.0,
+      "BT" : 0.0,
+      "total" : 5.932029E8,
+      "TBC" : 0.0,
+      "SCF" : 0.0,
+      "SCI" : 0.0,
+      "ITF" : 0.0,
+      "VT" : 0.0
+    }
+  }
+}
+2023-03-03 11:13:07.824 DEBUG [ap-custom-report-service,dd1982af66abaa1c,dd1982af66abaa1c,true] 7960 --- [http-nio-23532-exec-4] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report/api/v1/custom/singleWindowTotal.service
+2023-03-03 11:13:07.827  INFO [ap-custom-report-service,dd1982af66abaa1c,dd1982af66abaa1c,true] 7960 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : 		 --> Custom total Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-03-03 11:13:07.827  INFO [ap-custom-report-service,dd1982af66abaa1c,dd1982af66abaa1c,true] 7960 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-03-03 11:13:07.827  INFO [ap-custom-report-service,dd1982af66abaa1c,dd1982af66abaa1c,true] 7960 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-03-03 11:13:07.827  INFO [ap-custom-report-service,dd1982af66abaa1c,dd1982af66abaa1c,true] 7960 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-03-03 11:13:07.827  INFO [ap-custom-report-service,dd1982af66abaa1c,dd1982af66abaa1c,true] 7960 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230303"
+}
+2023-03-03 11:13:07.863  INFO [ap-custom-report-service,dd1982af66abaa1c,dd1982af66abaa1c,true] 7960 --- [http-nio-23532-exec-4] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50')
+2023-03-03 11:13:07.863  INFO [ap-custom-report-service,dd1982af66abaa1c,dd1982af66abaa1c,true] 7960 --- [http-nio-23532-exec-4] c.l.r.services.Impl.GetDataServiceImpl   : SQL : SELECT TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY') AS PAY_DATE, B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE as BORDER_ID, B.TAX_ACCOUNT_BORDER,REFERENCE,MORE_INFO , SUM(B.AMOUNT) as TOTAL, COUNT(*) AS NUM_TXN FROM TAX_INVOICE A LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230303 AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50') GROUP BY REFERENCE,TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY'), B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE, B.TAX_ACCOUNT_BORDER,MORE_INFO ORDER BY TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY')
+2023-03-03 11:13:07.881  INFO [ap-custom-report-service,dd1982af66abaa1c,dd1982af66abaa1c,true] 7960 --- [http-nio-23532-exec-4] c.l.r.s.Impl.SingleWindowServiceImpl     : mapList:[{AFE=200000.0, PSC=0.0, STA=53800.0, CD=0.0, STD=3.93911E7, LNSW=256800.0, SCV=0.0, VAT=0.0, EMT=0.0, PFD=0.0, PRS=0.0, EXD=0.0, EXC=0.0, BT=0.0, TBC=0.0, SCF=0.0, SCI=0.0, ITF=0.0, paymentDate=03/03/2023, VT=0.0}]
+2023-03-03 11:13:07.881  INFO [ap-custom-report-service,dd1982af66abaa1c,dd1982af66abaa1c,true] 7960 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : 		 --> End Custom total Request controller <<<<<<<<<<<<<<<<<<<
+2023-03-03 11:13:07.882  INFO [ap-custom-report-service,dd1982af66abaa1c,dd1982af66abaa1c,true] 7960 --- [http-nio-23532-exec-4] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "data" : {
+        "AFE" : 200000.0,
+        "PSC" : 0.0,
+        "STA" : 53800.0,
+        "CD" : 0.0,
+        "STD" : 3.93911E7,
+        "LNSW" : 256800.0,
+        "SCV" : 0.0,
+        "VAT" : 0.0,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 0.0,
+        "BT" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/03/2023",
+        "VT" : 0.0
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຄ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ"
+      }
+    } ],
+    "sumTotal" : {
+      "AFE" : 200000.0,
+      "CD" : 0.0,
+      "STA" : 53800.0,
+      "PSC" : 0.0,
+      "STD" : 3.93911E7,
+      "LNSW" : 256800.0,
+      "SCV" : 0.0,
+      "VAT" : 0.0,
+      "EMT" : 0.0,
+      "PFD" : 0.0,
+      "EXD" : 0.0,
+      "PRS" : 0.0,
+      "EXC" : 0.0,
+      "BT" : 0.0,
+      "total" : 5.932029E8,
+      "TBC" : 0.0,
+      "SCF" : 0.0,
+      "SCI" : 0.0,
+      "ITF" : 0.0,
+      "VT" : 0.0
+    }
+  }
+}
+2023-03-03 11:16:21.048  INFO [ap-custom-report-service,,,] 7960 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:16:21.049  INFO [ap-custom-report-service,,,] 7960 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:16:25.618  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-03-03 11:16:25.620  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-03-03 11:16:25.621  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-03 11:16:25.950  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-03-03 11:16:26.552  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-03-03 11:16:26.629  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72ms. Found 3 JPA repository interfaces.
+2023-03-03 11:16:26.884  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4b4b5ad2-2245-3cc1-a7c7-44e67073fc0c
+2023-03-03 11:16:27.134  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@f496b5a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:16:27.151  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:16:27.760  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-03-03 11:16:27.854  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1893 ms
+2023-03-03 11:16:28.253  WARN [ap-custom-report-service,,,] 15456 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-03 11:16:28.472  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:16:29.084  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:16:29.125  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:16:29.890 DEBUG [ap-custom-report-service,,,] 15456 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-03-03 11:16:30.740  INFO [ap-custom-report-service,,,] 15456 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:16:30.977  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6dcd9adb, org.springframework.security.web.context.SecurityContextPersistenceFilter@5a406b9c, org.springframework.security.web.header.HeaderWriterFilter@784e94ce, org.springframework.web.filter.CorsFilter@16cd4264, org.springframework.security.web.authentication.logout.LogoutFilter@23c59313, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@642c143b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a2520e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36fd23bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31e8319c, org.springframework.security.web.session.SessionManagementFilter@6d5e79e8, org.springframework.security.web.access.ExceptionTranslationFilter@55effa9d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@70c0e12f]
+2023-03-03 11:16:31.659  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-03 11:16:31.759  WARN [ap-custom-report-service,,,] 15456 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-03-03 11:16:31.799  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-03-03 11:16:31.862  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-03-03 11:16:31.910  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-03-03 11:16:32.169  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-03-03 11:16:32.182  INFO [ap-custom-report-service,,,] 15456 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 7.072 seconds (JVM running for 7.529)
+2023-03-03 11:16:41.937  INFO [ap-custom-report-service,,,] 15456 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-03 11:16:41.947  INFO [ap-custom-report-service,,,] 15456 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2023-03-03 11:16:42.285 DEBUG [ap-custom-report-service,bfde85231dc8b72a,bfde85231dc8b72a,true] 15456 --- [http-nio-23532-exec-1] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report/api/v1/custom/singleWindowTotal.service
+2023-03-03 11:16:42.333  INFO [ap-custom-report-service,bfde85231dc8b72a,bfde85231dc8b72a,true] 15456 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : 		 --> Custom total Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-03-03 11:16:42.334  INFO [ap-custom-report-service,bfde85231dc8b72a,bfde85231dc8b72a,true] 15456 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-03-03 11:16:42.334  INFO [ap-custom-report-service,bfde85231dc8b72a,bfde85231dc8b72a,true] 15456 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-03-03 11:16:42.334  INFO [ap-custom-report-service,bfde85231dc8b72a,bfde85231dc8b72a,true] 15456 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-03-03 11:16:42.341  INFO [ap-custom-report-service,bfde85231dc8b72a,bfde85231dc8b72a,true] 15456 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230303"
+}
+2023-03-03 11:16:42.416  INFO [ap-custom-report-service,bfde85231dc8b72a,bfde85231dc8b72a,true] 15456 --- [http-nio-23532-exec-1] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50')
+2023-03-03 11:16:42.416  INFO [ap-custom-report-service,bfde85231dc8b72a,bfde85231dc8b72a,true] 15456 --- [http-nio-23532-exec-1] c.l.r.services.Impl.GetDataServiceImpl   : SQL : SELECT TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY') AS PAY_DATE, B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE as BORDER_ID, B.TAX_ACCOUNT_BORDER,REFERENCE,MORE_INFO , SUM(B.AMOUNT) as TOTAL, COUNT(*) AS NUM_TXN FROM TAX_INVOICE A LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230303 AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50') GROUP BY REFERENCE,TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY'), B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE, B.TAX_ACCOUNT_BORDER,MORE_INFO ORDER BY TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY')
+2023-03-03 11:16:42.491  INFO [ap-custom-report-service,bfde85231dc8b72a,bfde85231dc8b72a,true] 15456 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : 		 --> End Custom total Request controller <<<<<<<<<<<<<<<<<<<
+2023-03-03 11:16:42.503  INFO [ap-custom-report-service,bfde85231dc8b72a,bfde85231dc8b72a,true] 15456 --- [http-nio-23532-exec-1] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "data" : {
+        "AFE" : 200000.0,
+        "PSC" : 0.0,
+        "STA" : 53800.0,
+        "CD" : 0.0,
+        "STD" : 3.93911E7,
+        "LNSW" : 256800.0,
+        "SCV" : 0.0,
+        "VAT" : 0.0,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 0.0,
+        "BT" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/03/2023",
+        "VT" : 0.0
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຄ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ"
+      }
+    } ],
+    "sumTotal" : {
+      "AFE" : 1400000.0,
+      "PSC" : 0.0,
+      "STA" : 467800.0,
+      "CD" : 0.0,
+      "STD" : 5.893375E8,
+      "LNSW" : 1797600.0,
+      "SCV" : 105000.0,
+      "VAT" : 0.0,
+      "EMT" : 0.0,
+      "PFD" : 0.0,
+      "PRS" : 0.0,
+      "EXD" : 0.0,
+      "EXC" : 0.0,
+      "BT" : 0.0,
+      "total" : 5.932029E8,
+      "TBC" : 0.0,
+      "SCF" : 0.0,
+      "SCI" : 60000.0,
+      "ITF" : 0.0,
+      "VT" : 35000.0
+    }
+  }
+}
+2023-03-03 11:19:18.241  INFO [ap-custom-report-service,,,] 15456 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:19:18.242  INFO [ap-custom-report-service,,,] 15456 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:19:22.444  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-03-03 11:19:22.445  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-03-03 11:19:22.446  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-03 11:19:22.781  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-03-03 11:19:23.415  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-03-03 11:19:23.494  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72ms. Found 3 JPA repository interfaces.
+2023-03-03 11:19:23.732  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4b4b5ad2-2245-3cc1-a7c7-44e67073fc0c
+2023-03-03 11:19:23.981  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@32f34b4b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:19:23.996  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:19:24.564  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-03-03 11:19:24.665  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1873 ms
+2023-03-03 11:19:25.040  WARN [ap-custom-report-service,,,] 13492 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-03 11:19:25.258  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:19:25.841  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:19:25.898  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:19:26.523 DEBUG [ap-custom-report-service,,,] 13492 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-03-03 11:19:27.206  INFO [ap-custom-report-service,,,] 13492 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:19:27.395  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1329c955, org.springframework.security.web.context.SecurityContextPersistenceFilter@47c8053f, org.springframework.security.web.header.HeaderWriterFilter@731923a2, org.springframework.web.filter.CorsFilter@7910eda8, org.springframework.security.web.authentication.logout.LogoutFilter@780e4595, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@7b4645a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36f8335e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5bab0517, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18448807, org.springframework.security.web.session.SessionManagementFilter@2c0ae5f7, org.springframework.security.web.access.ExceptionTranslationFilter@69e6f71, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4bfd63c3]
+2023-03-03 11:19:28.087  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-03 11:19:28.204  WARN [ap-custom-report-service,,,] 13492 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-03-03 11:19:28.246  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-03-03 11:19:28.310  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-03-03 11:19:28.352  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-03-03 11:19:28.612  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-03-03 11:19:28.625  INFO [ap-custom-report-service,,,] 13492 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 6.699 seconds (JVM running for 7.178)
+2023-03-03 11:19:39.607  INFO [ap-custom-report-service,,,] 13492 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-03 11:19:39.617  INFO [ap-custom-report-service,,,] 13492 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2023-03-03 11:19:39.958 DEBUG [ap-custom-report-service,b1319bb22e48a3a5,b1319bb22e48a3a5,true] 13492 --- [http-nio-23532-exec-1] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report/api/v1/custom/singleWindowTotal.service
+2023-03-03 11:19:40.004  INFO [ap-custom-report-service,b1319bb22e48a3a5,b1319bb22e48a3a5,true] 13492 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : 		 --> Custom total Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-03-03 11:19:40.005  INFO [ap-custom-report-service,b1319bb22e48a3a5,b1319bb22e48a3a5,true] 13492 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-03-03 11:19:40.005  INFO [ap-custom-report-service,b1319bb22e48a3a5,b1319bb22e48a3a5,true] 13492 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-03-03 11:19:40.005  INFO [ap-custom-report-service,b1319bb22e48a3a5,b1319bb22e48a3a5,true] 13492 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-03-03 11:19:40.012  INFO [ap-custom-report-service,b1319bb22e48a3a5,b1319bb22e48a3a5,true] 13492 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230303"
+}
+2023-03-03 11:19:40.071  INFO [ap-custom-report-service,b1319bb22e48a3a5,b1319bb22e48a3a5,true] 13492 --- [http-nio-23532-exec-1] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50')
+2023-03-03 11:19:40.071  INFO [ap-custom-report-service,b1319bb22e48a3a5,b1319bb22e48a3a5,true] 13492 --- [http-nio-23532-exec-1] c.l.r.services.Impl.GetDataServiceImpl   : SQL : SELECT TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY') AS PAY_DATE, B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE as BORDER_ID, B.TAX_ACCOUNT_BORDER,REFERENCE,MORE_INFO , SUM(B.AMOUNT) as TOTAL, COUNT(*) AS NUM_TXN FROM TAX_INVOICE A LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230303 AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50') GROUP BY REFERENCE,TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY'), B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE, B.TAX_ACCOUNT_BORDER,MORE_INFO ORDER BY TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY')
+2023-03-03 11:19:40.102  INFO [ap-custom-report-service,b1319bb22e48a3a5,b1319bb22e48a3a5,true] 13492 --- [http-nio-23532-exec-1] c.l.r.s.Impl.SingleWindowServiceImpl     : mapList:[{AFE=200000.0, PSC=0.0, STA=53800.0, CD=4.62207E7, STD=5.893375E8, LNSW=256800.0, SCV=0.0, VAT=3.47012E8, EMT=0.0, PFD=0.0, PRS=0.0, EXD=0.0, EXC=1.961048E8, BT=0.0, TBC=0.0, SCF=0.0, SCI=0.0, ITF=0.0, paymentDate=03/03/2023, VT=0.0}]
+2023-03-03 11:19:40.102  INFO [ap-custom-report-service,b1319bb22e48a3a5,b1319bb22e48a3a5,true] 13492 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : 		 --> End Custom total Request controller <<<<<<<<<<<<<<<<<<<
+2023-03-03 11:19:40.116  INFO [ap-custom-report-service,b1319bb22e48a3a5,b1319bb22e48a3a5,true] 13492 --- [http-nio-23532-exec-1] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "data" : {
+        "AFE" : 200000.0,
+        "PSC" : 0.0,
+        "STA" : 53800.0,
+        "CD" : 4.62207E7,
+        "STD" : 5.893375E8,
+        "LNSW" : 256800.0,
+        "SCV" : 0.0,
+        "VAT" : 3.47012E8,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 1.961048E8,
+        "BT" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/03/2023",
+        "VT" : 0.0
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຄ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ"
+      }
+    } ],
+    "sumTotal" : {
+      "AFE" : 200000.0,
+      "CD" : 4.62207E7,
+      "STA" : 53800.0,
+      "PSC" : 0.0,
+      "STD" : 5.893375E8,
+      "LNSW" : 256800.0,
+      "SCV" : 0.0,
+      "VAT" : 3.47012E8,
+      "EMT" : 0.0,
+      "PFD" : 0.0,
+      "EXD" : 0.0,
+      "PRS" : 0.0,
+      "EXC" : 1.961048E8,
+      "BT" : 0.0,
+      "total" : 5.932029E8,
+      "TBC" : 0.0,
+      "SCF" : 0.0,
+      "SCI" : 0.0,
+      "ITF" : 0.0,
+      "VT" : 0.0
+    }
+  }
+}
+2023-03-03 11:20:34.353  INFO [ap-custom-report-service,,,] 13492 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:20:34.354  INFO [ap-custom-report-service,,,] 13492 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:20:38.084  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-03-03 11:20:38.085  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-03-03 11:20:38.086  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-03 11:20:38.409  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-03-03 11:20:39.045  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-03-03 11:20:39.128  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77ms. Found 3 JPA repository interfaces.
+2023-03-03 11:20:39.375  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4b4b5ad2-2245-3cc1-a7c7-44e67073fc0c
+2023-03-03 11:20:39.640  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@479f4ea9' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:20:39.659  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:20:40.298  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-03-03 11:20:40.393  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1973 ms
+2023-03-03 11:20:40.771  WARN [ap-custom-report-service,,,] 1480 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-03 11:20:40.985  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:20:41.565  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:20:41.622  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:20:42.206 DEBUG [ap-custom-report-service,,,] 1480 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-03-03 11:20:42.909  INFO [ap-custom-report-service,,,] 1480 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:20:43.104  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@473363e7, org.springframework.security.web.context.SecurityContextPersistenceFilter@7882ab2a, org.springframework.security.web.header.HeaderWriterFilter@771a6715, org.springframework.web.filter.CorsFilter@41ad9bd, org.springframework.security.web.authentication.logout.LogoutFilter@829756c, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@7ea34073, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d85e8ec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@684f407e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e14964b, org.springframework.security.web.session.SessionManagementFilter@3ff8ab85, org.springframework.security.web.access.ExceptionTranslationFilter@40f7fbe1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@46a2c20]
+2023-03-03 11:20:43.889  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-03 11:20:44.002  WARN [ap-custom-report-service,,,] 1480 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-03-03 11:20:44.049  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-03-03 11:20:44.126  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-03-03 11:20:44.170  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-03-03 11:20:44.429  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-03-03 11:20:44.444  INFO [ap-custom-report-service,,,] 1480 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 6.888 seconds (JVM running for 7.353)
+2023-03-03 11:20:44.857  INFO [ap-custom-report-service,,,] 1480 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-03 11:20:44.866  INFO [ap-custom-report-service,,,] 1480 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2023-03-03 11:20:45.202 DEBUG [ap-custom-report-service,12a6b90dca0e4541,12a6b90dca0e4541,true] 1480 --- [http-nio-23532-exec-1] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report/api/v1/custom/singleWindowTotal.service
+2023-03-03 11:20:45.250  INFO [ap-custom-report-service,12a6b90dca0e4541,12a6b90dca0e4541,true] 1480 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : 		 --> Custom total Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-03-03 11:20:45.251  INFO [ap-custom-report-service,12a6b90dca0e4541,12a6b90dca0e4541,true] 1480 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-03-03 11:20:45.251  INFO [ap-custom-report-service,12a6b90dca0e4541,12a6b90dca0e4541,true] 1480 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-03-03 11:20:45.251  INFO [ap-custom-report-service,12a6b90dca0e4541,12a6b90dca0e4541,true] 1480 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-03-03 11:20:45.258  INFO [ap-custom-report-service,12a6b90dca0e4541,12a6b90dca0e4541,true] 1480 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230303"
+}
+2023-03-03 11:20:45.259  INFO [ap-custom-report-service,12a6b90dca0e4541,12a6b90dca0e4541,true] 1480 --- [http-nio-23532-exec-1] c.l.r.services.Impl.GetDataServiceImpl   : SQL : SELECT TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY') AS PAY_DATE, B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE as BORDER_ID, B.TAX_ACCOUNT_BORDER,REFERENCE,MORE_INFO , SUM(B.AMOUNT) as TOTAL, COUNT(*) AS NUM_TXN FROM TAX_INVOICE A LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230303 GROUP BY REFERENCE,TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY'), B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE, B.TAX_ACCOUNT_BORDER,MORE_INFO ORDER BY TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY')
+2023-03-03 11:20:45.405  INFO [ap-custom-report-service,12a6b90dca0e4541,12a6b90dca0e4541,true] 1480 --- [http-nio-23532-exec-1] c.l.r.s.Impl.SingleWindowServiceImpl     : mapList:[{AFE=200000.0, PSC=0.0, STA=53800.0, CD=4.62207E7, STD=5.893375E8, LNSW=256800.0, SCV=0.0, VAT=3.47012E8, EMT=0.0, PFD=0.0, PRS=0.0, EXD=0.0, EXC=1.961048E8, BT=0.0, TBC=0.0, SCF=0.0, SCI=0.0, ITF=0.0, paymentDate=03/03/2023, VT=0.0}]
+2023-03-03 11:20:45.406  INFO [ap-custom-report-service,12a6b90dca0e4541,12a6b90dca0e4541,true] 1480 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : 		 --> End Custom total Request controller <<<<<<<<<<<<<<<<<<<
+2023-03-03 11:20:45.418  INFO [ap-custom-report-service,12a6b90dca0e4541,12a6b90dca0e4541,true] 1480 --- [http-nio-23532-exec-1] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "data" : {
+        "AFE" : 200000.0,
+        "PSC" : 0.0,
+        "STA" : 53800.0,
+        "CD" : 4.62207E7,
+        "STD" : 5.893375E8,
+        "LNSW" : 256800.0,
+        "SCV" : 0.0,
+        "VAT" : 3.47012E8,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 1.961048E8,
+        "BT" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/03/2023",
+        "VT" : 0.0
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຄ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ"
+      }
+    } ],
+    "sumTotal" : {
+      "AFE" : 200000.0,
+      "CD" : 4.62207E7,
+      "STA" : 53800.0,
+      "PSC" : 0.0,
+      "STD" : 5.893375E8,
+      "LNSW" : 256800.0,
+      "SCV" : 0.0,
+      "VAT" : 3.47012E8,
+      "EMT" : 0.0,
+      "PFD" : 0.0,
+      "EXD" : 0.0,
+      "PRS" : 0.0,
+      "EXC" : 1.961048E8,
+      "BT" : 0.0,
+      "total" : 5.932029E8,
+      "TBC" : 0.0,
+      "SCF" : 0.0,
+      "SCI" : 0.0,
+      "ITF" : 0.0,
+      "VT" : 0.0
+    }
+  }
+}
+2023-03-03 11:26:47.172  INFO [ap-custom-report-service,,,] 1480 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:26:47.173  INFO [ap-custom-report-service,,,] 1480 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:27:05.151  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-03-03 11:27:05.153  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-03-03 11:27:05.154  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-03 11:27:05.481  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-03-03 11:27:06.254  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-03-03 11:27:06.334  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 3 JPA repository interfaces.
+2023-03-03 11:27:06.570  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4b4b5ad2-2245-3cc1-a7c7-44e67073fc0c
+2023-03-03 11:27:06.798  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@564291fc' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:27:06.814  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:27:07.407  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-03-03 11:27:07.511  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2020 ms
+2023-03-03 11:27:07.873  WARN [ap-custom-report-service,,,] 17216 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-03 11:27:08.084  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:27:08.681  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:27:08.714  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:27:09.351 DEBUG [ap-custom-report-service,,,] 17216 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-03-03 11:27:10.048  INFO [ap-custom-report-service,,,] 17216 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:27:10.232  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77d73869, org.springframework.security.web.context.SecurityContextPersistenceFilter@3297fc14, org.springframework.security.web.header.HeaderWriterFilter@6877d876, org.springframework.web.filter.CorsFilter@49bc7de0, org.springframework.security.web.authentication.logout.LogoutFilter@b58141c, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@1e74a931, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6aae31a9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b44355, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2bdf0077, org.springframework.security.web.session.SessionManagementFilter@12eb41a, org.springframework.security.web.access.ExceptionTranslationFilter@68c2291f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@9cc4bc7]
+2023-03-03 11:27:10.852  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-03 11:27:10.968  WARN [ap-custom-report-service,,,] 17216 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-03-03 11:27:11.023  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-03-03 11:27:11.096  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-03-03 11:27:11.141  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-03-03 11:27:11.385  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-03-03 11:27:11.404  INFO [ap-custom-report-service,,,] 17216 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 6.772 seconds (JVM running for 7.249)
+2023-03-03 11:27:12.189  INFO [ap-custom-report-service,,,] 17216 --- [http-nio-23532-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-03 11:27:12.200  INFO [ap-custom-report-service,,,] 17216 --- [http-nio-23532-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2023-03-03 11:27:12.585 DEBUG [ap-custom-report-service,97ba088482b76190,97ba088482b76190,true] 17216 --- [http-nio-23532-exec-2] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report/api/v1/custom/singleWindowTotal.service
+2023-03-03 11:27:12.638  INFO [ap-custom-report-service,97ba088482b76190,97ba088482b76190,true] 17216 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : 		 --> Custom total Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-03-03 11:27:12.638  INFO [ap-custom-report-service,97ba088482b76190,97ba088482b76190,true] 17216 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-03-03 11:27:12.638  INFO [ap-custom-report-service,97ba088482b76190,97ba088482b76190,true] 17216 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-03-03 11:27:12.639  INFO [ap-custom-report-service,97ba088482b76190,97ba088482b76190,true] 17216 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-03-03 11:27:12.647  INFO [ap-custom-report-service,97ba088482b76190,97ba088482b76190,true] 17216 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230303"
+}
+2023-03-03 11:27:12.647  INFO [ap-custom-report-service,97ba088482b76190,97ba088482b76190,true] 17216 --- [http-nio-23532-exec-2] c.l.r.services.Impl.GetDataServiceImpl   : SQL : SELECT TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY') AS PAY_DATE, B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE as BORDER_ID, B.TAX_ACCOUNT_BORDER,REFERENCE,MORE_INFO , SUM(B.AMOUNT) as TOTAL, COUNT(*) AS NUM_TXN FROM TAX_INVOICE A LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230303 GROUP BY REFERENCE,TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY'), B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE, B.TAX_ACCOUNT_BORDER,MORE_INFO ORDER BY TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY')
+2023-03-03 11:27:12.703  INFO [ap-custom-report-service,97ba088482b76190,97ba088482b76190,true] 17216 --- [http-nio-23532-exec-2] c.l.r.s.Impl.SingleWindowServiceImpl     : mapList:[{AFE=200000.0, PSC=0.0, STA=53800.0, CD=4.62207E7, STD=5.893375E8, LNSW=256800.0, SCV=0.0, VAT=3.47012E8, EMT=0.0, PFD=0.0, PRS=0.0, EXD=0.0, EXC=1.961048E8, BT=0.0, TBC=0.0, SCF=0.0, SCI=0.0, ITF=0.0, paymentDate=03/03/2023, VT=0.0}]
+2023-03-03 11:27:12.704  INFO [ap-custom-report-service,97ba088482b76190,97ba088482b76190,true] 17216 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : 		 --> End Custom total Request controller <<<<<<<<<<<<<<<<<<<
+2023-03-03 11:27:12.716  INFO [ap-custom-report-service,97ba088482b76190,97ba088482b76190,true] 17216 --- [http-nio-23532-exec-2] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "data" : {
+        "AFE" : 200000.0,
+        "PSC" : 0.0,
+        "STA" : 53800.0,
+        "CD" : 4.62207E7,
+        "STD" : 5.893375E8,
+        "LNSW" : 256800.0,
+        "SCV" : 0.0,
+        "VAT" : 3.47012E8,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 1.961048E8,
+        "BT" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/03/2023",
+        "VT" : 0.0
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຄ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ"
+      }
+    } ],
+    "sumTotal" : {
+      "AFE" : 200000.0,
+      "CD" : 4.62207E7,
+      "STA" : 53800.0,
+      "PSC" : 0.0,
+      "STD" : 5.893375E8,
+      "LNSW" : 256800.0,
+      "SCV" : 0.0,
+      "VAT" : 3.47012E8,
+      "EMT" : 0.0,
+      "PFD" : 0.0,
+      "EXD" : 0.0,
+      "PRS" : 0.0,
+      "EXC" : 1.961048E8,
+      "BT" : 0.0,
+      "total" : 5.932029E8,
+      "TBC" : 0.0,
+      "SCF" : 0.0,
+      "SCI" : 0.0,
+      "ITF" : 0.0,
+      "VT" : 0.0
+    }
+  }
+}
+2023-03-03 11:28:34.193  INFO [ap-custom-report-service,,,] 17216 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:28:34.194  INFO [ap-custom-report-service,,,] 17216 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:28:38.394  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-03-03 11:28:38.396  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-03-03 11:28:38.397  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-03 11:28:38.727  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-03-03 11:28:39.337  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-03-03 11:28:39.421  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79ms. Found 3 JPA repository interfaces.
+2023-03-03 11:28:39.685  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4b4b5ad2-2245-3cc1-a7c7-44e67073fc0c
+2023-03-03 11:28:39.937  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3d3e7c9c' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:28:39.954  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:28:40.584  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-03-03 11:28:40.702  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1964 ms
+2023-03-03 11:28:41.108  WARN [ap-custom-report-service,,,] 13336 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-03 11:28:41.321  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:28:41.866  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:28:41.901  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:28:42.510 DEBUG [ap-custom-report-service,,,] 13336 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-03-03 11:28:43.228  INFO [ap-custom-report-service,,,] 13336 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:28:43.489  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72815f73, org.springframework.security.web.context.SecurityContextPersistenceFilter@7e9ee5d8, org.springframework.security.web.header.HeaderWriterFilter@2ed0feab, org.springframework.web.filter.CorsFilter@57011192, org.springframework.security.web.authentication.logout.LogoutFilter@1c5c7e3f, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@645a470a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@726a764, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12034310, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@70bd1810, org.springframework.security.web.session.SessionManagementFilter@76253e7d, org.springframework.security.web.access.ExceptionTranslationFilter@2536257a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1ffc8d07]
+2023-03-03 11:28:44.126  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-03 11:28:44.243  WARN [ap-custom-report-service,,,] 13336 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-03-03 11:28:44.282  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-03-03 11:28:44.363  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-03-03 11:28:44.408  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-03-03 11:28:44.681  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-03-03 11:28:44.695  INFO [ap-custom-report-service,,,] 13336 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 6.811 seconds (JVM running for 7.282)
+2023-03-03 11:28:47.000  INFO [ap-custom-report-service,,,] 13336 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-03 11:28:47.008  INFO [ap-custom-report-service,,,] 13336 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-03-03 11:28:47.361 DEBUG [ap-custom-report-service,684ebe1b6620cae1,684ebe1b6620cae1,true] 13336 --- [http-nio-23532-exec-1] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report/api/v1/custom/singleWindowTotal.service
+2023-03-03 11:28:47.423  INFO [ap-custom-report-service,684ebe1b6620cae1,684ebe1b6620cae1,true] 13336 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : 		 --> Custom total Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-03-03 11:28:47.424  INFO [ap-custom-report-service,684ebe1b6620cae1,684ebe1b6620cae1,true] 13336 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-03-03 11:28:47.424  INFO [ap-custom-report-service,684ebe1b6620cae1,684ebe1b6620cae1,true] 13336 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-03-03 11:28:47.424  INFO [ap-custom-report-service,684ebe1b6620cae1,684ebe1b6620cae1,true] 13336 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-03-03 11:28:47.434  INFO [ap-custom-report-service,684ebe1b6620cae1,684ebe1b6620cae1,true] 13336 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230303"
+}
+2023-03-03 11:28:47.434  INFO [ap-custom-report-service,684ebe1b6620cae1,684ebe1b6620cae1,true] 13336 --- [http-nio-23532-exec-1] c.l.r.services.Impl.GetDataServiceImpl   : SQL : SELECT TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY') AS PAY_DATE, B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE as BORDER_ID, B.TAX_ACCOUNT_BORDER,REFERENCE,MORE_INFO , SUM(B.AMOUNT) as TOTAL, COUNT(*) AS NUM_TXN FROM TAX_INVOICE A LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230303 GROUP BY REFERENCE,TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY'), B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE, B.TAX_ACCOUNT_BORDER,MORE_INFO ORDER BY TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY')
+2023-03-03 11:28:47.487  INFO [ap-custom-report-service,684ebe1b6620cae1,684ebe1b6620cae1,true] 13336 --- [http-nio-23532-exec-1] c.l.r.s.Impl.SingleWindowServiceImpl     : mapList:[{AFE=200000.0, PSC=0.0, STA=53800.0, CD=4.62207E7, STD=5.893375E8, LNSW=256800.0, SCV=0.0, VAT=3.47012E8, EMT=0.0, PFD=0.0, PRS=0.0, EXD=0.0, EXC=1.961048E8, BT=0.0, TBC=0.0, SCF=0.0, SCI=0.0, ITF=0.0, paymentDate=03/03/2023, VT=0.0}]
+2023-03-03 11:28:47.488  INFO [ap-custom-report-service,684ebe1b6620cae1,684ebe1b6620cae1,true] 13336 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : 		 --> End Custom total Request controller <<<<<<<<<<<<<<<<<<<
+2023-03-03 11:28:47.502  INFO [ap-custom-report-service,684ebe1b6620cae1,684ebe1b6620cae1,true] 13336 --- [http-nio-23532-exec-1] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "data" : {
+        "AFE" : 200000.0,
+        "PSC" : 0.0,
+        "STA" : 53800.0,
+        "CD" : 4.62207E7,
+        "STD" : 5.893375E8,
+        "LNSW" : 256800.0,
+        "SCV" : 0.0,
+        "VAT" : 3.47012E8,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 1.961048E8,
+        "BT" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/03/2023",
+        "VT" : 0.0
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຄ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ"
+      }
+    } ],
+    "sumTotal" : {
+      "AFE" : 200000.0,
+      "CD" : 4.62207E7,
+      "STA" : 53800.0,
+      "PSC" : 0.0,
+      "STD" : 5.893375E8,
+      "LNSW" : 256800.0,
+      "SCV" : 0.0,
+      "VAT" : 3.47012E8,
+      "EMT" : 0.0,
+      "PFD" : 0.0,
+      "EXD" : 0.0,
+      "PRS" : 0.0,
+      "EXC" : 1.961048E8,
+      "BT" : 0.0,
+      "total" : 5.932029E8,
+      "TBC" : 0.0,
+      "SCF" : 0.0,
+      "SCI" : 0.0,
+      "ITF" : 0.0,
+      "VT" : 0.0
+    }
+  }
+}
+2023-03-03 11:30:34.163  INFO [ap-custom-report-service,,,] 13336 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:30:34.164  INFO [ap-custom-report-service,,,] 13336 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:30:38.351  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-03-03 11:30:38.352  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-03-03 11:30:38.352  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-03 11:30:38.671  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-03-03 11:30:39.297  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-03-03 11:30:39.375  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72ms. Found 3 JPA repository interfaces.
+2023-03-03 11:30:39.625  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4b4b5ad2-2245-3cc1-a7c7-44e67073fc0c
+2023-03-03 11:30:39.875  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@28e791a9' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:30:39.889  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:30:40.468  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-03-03 11:30:40.580  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1898 ms
+2023-03-03 11:30:40.971  WARN [ap-custom-report-service,,,] 14940 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-03 11:30:41.184  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:30:41.746  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:30:41.782  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:30:42.392 DEBUG [ap-custom-report-service,,,] 14940 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-03-03 11:30:43.385  INFO [ap-custom-report-service,,,] 14940 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:30:43.594  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48a09029, org.springframework.security.web.context.SecurityContextPersistenceFilter@24388d42, org.springframework.security.web.header.HeaderWriterFilter@2cc46072, org.springframework.web.filter.CorsFilter@66942067, org.springframework.security.web.authentication.logout.LogoutFilter@eeed5d0, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@2987d551, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ed12173, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@616014c8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30a2ca6, org.springframework.security.web.session.SessionManagementFilter@6e301fc4, org.springframework.security.web.access.ExceptionTranslationFilter@9d7a529, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@10343969]
+2023-03-03 11:30:44.382  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-03 11:30:44.506  WARN [ap-custom-report-service,,,] 14940 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-03-03 11:30:44.557  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-03-03 11:30:44.628  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-03-03 11:30:44.669  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-03-03 11:30:44.919  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-03-03 11:30:44.931  INFO [ap-custom-report-service,,,] 14940 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 7.094 seconds (JVM running for 7.554)
+2023-03-03 11:30:45.349  INFO [ap-custom-report-service,,,] 14940 --- [http-nio-23532-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-03 11:30:45.356  INFO [ap-custom-report-service,,,] 14940 --- [http-nio-23532-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-03-03 11:30:45.696 DEBUG [ap-custom-report-service,9da85ef05b4023ce,9da85ef05b4023ce,true] 14940 --- [http-nio-23532-exec-2] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report/api/v1/custom/singleWindowTotal.service
+2023-03-03 11:30:45.754  INFO [ap-custom-report-service,9da85ef05b4023ce,9da85ef05b4023ce,true] 14940 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : 		 --> Custom total Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-03-03 11:30:45.754  INFO [ap-custom-report-service,9da85ef05b4023ce,9da85ef05b4023ce,true] 14940 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-03-03 11:30:45.754  INFO [ap-custom-report-service,9da85ef05b4023ce,9da85ef05b4023ce,true] 14940 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-03-03 11:30:45.754  INFO [ap-custom-report-service,9da85ef05b4023ce,9da85ef05b4023ce,true] 14940 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-03-03 11:30:45.761  INFO [ap-custom-report-service,9da85ef05b4023ce,9da85ef05b4023ce,true] 14940 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230303"
+}
+2023-03-03 11:30:45.762  INFO [ap-custom-report-service,9da85ef05b4023ce,9da85ef05b4023ce,true] 14940 --- [http-nio-23532-exec-2] c.l.r.services.Impl.GetDataServiceImpl   : SQL : SELECT TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY') AS PAY_DATE, B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE as BORDER_ID, B.TAX_ACCOUNT_BORDER,REFERENCE,MORE_INFO , SUM(B.AMOUNT) as TOTAL, COUNT(*) AS NUM_TXN FROM TAX_INVOICE A LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230303 GROUP BY REFERENCE,TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY'), B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE, B.TAX_ACCOUNT_BORDER,MORE_INFO ORDER BY TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY')
+2023-03-03 11:30:45.813  INFO [ap-custom-report-service,9da85ef05b4023ce,9da85ef05b4023ce,true] 14940 --- [http-nio-23532-exec-2] c.l.r.s.Impl.SingleWindowServiceImpl     : mapList:[{AFE=1400000.0, PSC=0.0, STA=467800.0, CD=4.62207E7, STD=5.893375E8, LNSW=1797600.0, SCV=105000.0, VAT=3.47012E8, EMT=0.0, PFD=0.0, PRS=0.0, EXD=0.0, EXC=1.961048E8, BT=0.0, TBC=0.0, SCF=0.0, SCI=60000.0, ITF=0.0, paymentDate=03/03/2023, VT=35000.0}]
+2023-03-03 11:30:45.814  INFO [ap-custom-report-service,9da85ef05b4023ce,9da85ef05b4023ce,true] 14940 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : 		 --> End Custom total Request controller <<<<<<<<<<<<<<<<<<<
+2023-03-03 11:30:45.826  INFO [ap-custom-report-service,9da85ef05b4023ce,9da85ef05b4023ce,true] 14940 --- [http-nio-23532-exec-2] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "data" : {
+        "AFE" : 1400000.0,
+        "PSC" : 0.0,
+        "STA" : 467800.0,
+        "CD" : 4.62207E7,
+        "STD" : 5.893375E8,
+        "LNSW" : 1797600.0,
+        "SCV" : 105000.0,
+        "VAT" : 3.47012E8,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 1.961048E8,
+        "BT" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 60000.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/03/2023",
+        "VT" : 35000.0
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຄ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ"
+      }
+    } ],
+    "sumTotal" : {
+      "AFE" : 1400000.0,
+      "CD" : 4.62207E7,
+      "STA" : 467800.0,
+      "PSC" : 0.0,
+      "STD" : 5.893375E8,
+      "LNSW" : 1797600.0,
+      "SCV" : 105000.0,
+      "VAT" : 3.47012E8,
+      "EMT" : 0.0,
+      "PFD" : 0.0,
+      "EXD" : 0.0,
+      "PRS" : 0.0,
+      "EXC" : 1.961048E8,
+      "BT" : 0.0,
+      "total" : 5.932029E8,
+      "TBC" : 0.0,
+      "SCF" : 0.0,
+      "SCI" : 60000.0,
+      "ITF" : 0.0,
+      "VT" : 35000.0
+    }
+  }
+}
+2023-03-03 11:31:46.084  INFO [ap-custom-report-service,,,] 14940 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:31:46.085  INFO [ap-custom-report-service,,,] 14940 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:31:49.841  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-03-03 11:31:49.842  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-03-03 11:31:49.843  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-03 11:31:50.167  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-03-03 11:31:50.792  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-03-03 11:31:50.875  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77ms. Found 3 JPA repository interfaces.
+2023-03-03 11:31:51.119  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4b4b5ad2-2245-3cc1-a7c7-44e67073fc0c
+2023-03-03 11:31:51.404  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@479f4ea9' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:31:51.422  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:31:52.037  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-03-03 11:31:52.134  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1955 ms
+2023-03-03 11:31:52.511  WARN [ap-custom-report-service,,,] 18320 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-03 11:31:52.735  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:31:53.304  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:31:53.361  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:31:53.964 DEBUG [ap-custom-report-service,,,] 18320 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-03-03 11:31:54.637  INFO [ap-custom-report-service,,,] 18320 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:31:54.812  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4217270d, org.springframework.security.web.context.SecurityContextPersistenceFilter@404ad8f0, org.springframework.security.web.header.HeaderWriterFilter@3ff8ab85, org.springframework.web.filter.CorsFilter@66a16376, org.springframework.security.web.authentication.logout.LogoutFilter@657ddde1, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@6d13886, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@430f2e5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71176ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@639c8dd6, org.springframework.security.web.session.SessionManagementFilter@25f0af33, org.springframework.security.web.access.ExceptionTranslationFilter@d4e3c09, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67ddbb3e]
+2023-03-03 11:31:55.485  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-03 11:31:55.597  WARN [ap-custom-report-service,,,] 18320 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-03-03 11:31:55.637  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-03-03 11:31:55.698  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-03-03 11:31:55.744  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-03-03 11:31:56.004  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-03-03 11:31:56.019  INFO [ap-custom-report-service,,,] 18320 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 6.708 seconds (JVM running for 7.164)
+2023-03-03 11:31:56.219  INFO [ap-custom-report-service,,,] 18320 --- [http-nio-23532-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-03 11:31:56.227  INFO [ap-custom-report-service,,,] 18320 --- [http-nio-23532-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-03-03 11:31:56.561 DEBUG [ap-custom-report-service,0428d650b90a1177,0428d650b90a1177,true] 18320 --- [http-nio-23532-exec-2] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report/api/v1/custom/singleWindowTotal.service
+2023-03-03 11:31:56.611  INFO [ap-custom-report-service,0428d650b90a1177,0428d650b90a1177,true] 18320 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : 		 --> Custom total Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-03-03 11:31:56.611  INFO [ap-custom-report-service,0428d650b90a1177,0428d650b90a1177,true] 18320 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-03-03 11:31:56.611  INFO [ap-custom-report-service,0428d650b90a1177,0428d650b90a1177,true] 18320 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-03-03 11:31:56.611  INFO [ap-custom-report-service,0428d650b90a1177,0428d650b90a1177,true] 18320 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-03-03 11:31:56.618  INFO [ap-custom-report-service,0428d650b90a1177,0428d650b90a1177,true] 18320 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230303"
+}
+2023-03-03 11:31:56.678  INFO [ap-custom-report-service,0428d650b90a1177,0428d650b90a1177,true] 18320 --- [http-nio-23532-exec-2] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50')
+2023-03-03 11:31:56.679  INFO [ap-custom-report-service,0428d650b90a1177,0428d650b90a1177,true] 18320 --- [http-nio-23532-exec-2] c.l.r.services.Impl.GetDataServiceImpl   : SQL : SELECT TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY') AS PAY_DATE, B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE as BORDER_ID, B.TAX_ACCOUNT_BORDER,REFERENCE,MORE_INFO , SUM(B.AMOUNT) as TOTAL, COUNT(*) AS NUM_TXN FROM TAX_INVOICE A LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230303 AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10', 'LAVLP', 'R5C30', 'R5C20', 'R5C40', 'LAVTEBCHW0', 'R3C10', 'R3C16', 'R3C20', 'R3C30', 'R3C60', 'R3C36', 'R1C20', 'R1C30', 'R1C50', 'R1C10', 'R1C18', 'R4C10', 'R4C20', 'R4C40', 'R4C60', 'R4C30', 'R4C50', 'R2C60', 'R2C30', 'R2C40', 'R2C70', 'R1C40', 'R1C60', 'R1C61', 'R2C20', 'R2C21', 'R2C50', 'R4C31', 'R3C40', 'R3C50') GROUP BY REFERENCE,TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY'), B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE, B.TAX_ACCOUNT_BORDER,MORE_INFO ORDER BY TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY')
+2023-03-03 11:31:56.712  INFO [ap-custom-report-service,0428d650b90a1177,0428d650b90a1177,true] 18320 --- [http-nio-23532-exec-2] c.l.r.s.Impl.SingleWindowServiceImpl     : mapList:[{AFE=1400000.0, PSC=0.0, STA=467800.0, CD=4.62207E7, STD=5.893375E8, LNSW=1797600.0, SCV=105000.0, VAT=3.47012E8, EMT=0.0, PFD=0.0, PRS=0.0, EXD=0.0, EXC=1.961048E8, BT=0.0, TBC=0.0, SCF=0.0, SCI=60000.0, ITF=0.0, paymentDate=03/03/2023, VT=35000.0}]
+2023-03-03 11:31:56.713  INFO [ap-custom-report-service,0428d650b90a1177,0428d650b90a1177,true] 18320 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : 		 --> End Custom total Request controller <<<<<<<<<<<<<<<<<<<
+2023-03-03 11:31:56.725  INFO [ap-custom-report-service,0428d650b90a1177,0428d650b90a1177,true] 18320 --- [http-nio-23532-exec-2] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "data" : {
+        "AFE" : 1400000.0,
+        "PSC" : 0.0,
+        "STA" : 467800.0,
+        "CD" : 4.62207E7,
+        "STD" : 5.893375E8,
+        "LNSW" : 1797600.0,
+        "SCV" : 105000.0,
+        "VAT" : 3.47012E8,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 1.961048E8,
+        "BT" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 60000.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/03/2023",
+        "VT" : 35000.0
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຄ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ"
+      }
+    } ],
+    "sumTotal" : {
+      "AFE" : 1400000.0,
+      "CD" : 4.62207E7,
+      "STA" : 467800.0,
+      "PSC" : 0.0,
+      "STD" : 5.893375E8,
+      "LNSW" : 1797600.0,
+      "SCV" : 105000.0,
+      "VAT" : 3.47012E8,
+      "EMT" : 0.0,
+      "PFD" : 0.0,
+      "EXD" : 0.0,
+      "PRS" : 0.0,
+      "EXC" : 1.961048E8,
+      "BT" : 0.0,
+      "total" : 5.932029E8,
+      "TBC" : 0.0,
+      "SCF" : 0.0,
+      "SCI" : 60000.0,
+      "ITF" : 0.0,
+      "VT" : 35000.0
+    }
+  }
+}
+2023-03-03 11:32:19.578  INFO [ap-custom-report-service,,,] 18320 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:32:19.579  INFO [ap-custom-report-service,,,] 18320 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:32:23.609  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-03-03 11:32:23.611  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-03-03 11:32:23.611  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-03 11:32:23.930  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-03-03 11:32:24.658  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-03-03 11:32:24.739  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75ms. Found 3 JPA repository interfaces.
+2023-03-03 11:32:25.003  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4b4b5ad2-2245-3cc1-a7c7-44e67073fc0c
+2023-03-03 11:32:25.283  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@479f4ea9' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:32:25.302  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:32:25.909  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-03-03 11:32:26.013  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2073 ms
+2023-03-03 11:32:26.382  WARN [ap-custom-report-service,,,] 10556 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-03 11:32:26.591  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:32:27.218  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:32:27.279  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:32:27.884 DEBUG [ap-custom-report-service,,,] 10556 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-03-03 11:32:28.594  INFO [ap-custom-report-service,,,] 10556 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:32:28.811  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@149dd3d3, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f140dad, org.springframework.security.web.header.HeaderWriterFilter@7bd9cd8e, org.springframework.web.filter.CorsFilter@58526d22, org.springframework.security.web.authentication.logout.LogoutFilter@5b87d776, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@1001f4c4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67adaacf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7190cd11, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b7f1610, org.springframework.security.web.session.SessionManagementFilter@2a66ff86, org.springframework.security.web.access.ExceptionTranslationFilter@7cc02ade, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6defe888]
+2023-03-03 11:32:29.505  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-03 11:32:29.621  WARN [ap-custom-report-service,,,] 10556 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-03-03 11:32:29.677  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-03-03 11:32:29.770  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-03-03 11:32:29.818  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-03-03 11:32:30.071  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-03-03 11:32:30.086  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 6.988 seconds (JVM running for 7.443)
+2023-03-03 11:36:33.898  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-03-03 11:36:34.134  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-03-03 11:36:34.136  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1ms. Found 0 JPA repository interfaces.
+2023-03-03 11:36:34.215  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2811a046-2e27-3e13-8cac-b09fbf21d1d5
+2023-03-03 11:36:34.353  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-03-03 11:36:34.386  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 486 ms
+2023-03-03 11:36:34.709  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:36:34.859  WARN [ap-custom-report-service,,,] 10556 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-03 11:36:34.926  INFO [ap-custom-report-service,,,] 10556 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:36:35.194  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3d0f5661-9f92-43a3-b074-78b4ba0b093d
+
+2023-03-03 11:36:35.257  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e5c6571, org.springframework.security.web.context.SecurityContextPersistenceFilter@3d3336f1, org.springframework.security.web.header.HeaderWriterFilter@25bcb4d2, org.springframework.security.web.csrf.CsrfFilter@755d3ace, org.springframework.security.web.authentication.logout.LogoutFilter@76b1e618, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@23261746, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@9e30916, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2faef6f4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6f5e3a64, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@112b100d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d9b2ee6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ea49f9e, org.springframework.security.web.session.SessionManagementFilter@3a89a9d7, org.springframework.security.web.access.ExceptionTranslationFilter@6d2b2ffc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79f2ce97]
+2023-03-03 11:36:35.311  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-03 11:36:35.421  WARN [ap-custom-report-service,,,] 10556 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-03-03 11:36:35.452  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-03-03 11:36:35.480  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-03-03 11:36:35.554  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-03-03 11:36:35.554  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-03-03 11:36:35.563  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 1.835 seconds (JVM running for 252.92)
+2023-03-03 11:36:35.571  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   InfoContributorAutoConfiguration#buildInfoContributor matched:
+      - @ConditionalOnEnabledInfoContributor management.info.defaults.enabled is considered true (OnEnabledInfoContributorCondition)
+      - @ConditionalOnSingleCandidate (types: org.springframework.boot.info.BuildProperties; SearchStrategy: all) found a primary bean from beans 'buildProperties' (OnBeanCondition)
+
+   ManagementWebSecurityAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ProjectInfoAutoConfiguration#buildProperties matched:
+      - @ConditionalOnResource found location ${spring.info.build.location:classpath:META-INF/build-info.properties} (OnResourceCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.boot.info.BuildProperties; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.oauth2.jwt.JwtDecoder,org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration#inMemoryUserDetailsManager matched:
+      - @ConditionalOnMissingBean (types: org.springframework.security.oauth2.client.registration.ClientRegistrationRepository; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ValidationAutoConfiguration#defaultValidator matched:
+      - @ConditionalOnMissingBean (types: javax.validation.Validator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebSecurityEnablerConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter; SearchStrategy: all) found bean 'org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityConfigurerAdapter'; @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2023-03-03 11:36:37.705  INFO [ap-custom-report-service,,,] 10556 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:36:37.705  INFO [ap-custom-report-service,,,] 10556 --- [Thread-31] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:36:37.909  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-03-03 11:36:38.176  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-03-03 11:36:38.212  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 3 JPA repository interfaces.
+2023-03-03 11:36:38.252  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=13d4dbb5-3196-3ba2-9a48-65a637f0029f
+2023-03-03 11:36:38.281  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6c775f28' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:36:38.287  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:36:38.367  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-03-03 11:36:38.391  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 481 ms
+2023-03-03 11:36:38.485  WARN [ap-custom-report-service,,,] 10556 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-03 11:36:38.535  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:36:38.678  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:36:38.700  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:36:38.768  INFO [ap-custom-report-service,,,] 10556 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:36:38.920 DEBUG [ap-custom-report-service,,,] 10556 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-03-03 11:36:39.019  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e05b6e1, org.springframework.security.web.context.SecurityContextPersistenceFilter@551e4532, org.springframework.security.web.header.HeaderWriterFilter@22700f05, org.springframework.web.filter.CorsFilter@75033b8e, org.springframework.security.web.authentication.logout.LogoutFilter@68cebc71, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@6567c11, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61e35611, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57e6b3d8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@dca2290, org.springframework.security.web.session.SessionManagementFilter@699ebbb9, org.springframework.security.web.access.ExceptionTranslationFilter@2863503, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43499e89]
+2023-03-03 11:36:39.247  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-03 11:36:39.317  WARN [ap-custom-report-service,,,] 10556 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-03-03 11:36:39.334  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-03-03 11:36:39.352  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-03-03 11:36:39.396  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-03-03 11:36:39.439  INFO [ap-custom-report-service,,,] 15800 --- [main] c.l.r.ReportCustomApplicationTests       : The following profiles are active: prod
+2023-03-03 11:36:39.458  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-03-03 11:36:39.463  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 1.702 seconds (JVM running for 256.82)
+2023-03-03 11:36:39.468  INFO [ap-custom-report-service,,,] 10556 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   ManagementWebSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter; SearchStrategy: all) found beans of type 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter' webSecurityConfig (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter' (OnClassCondition)
+         - found 'session' scope (OnWebApplicationCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.oauth2.jwt.JwtDecoder,org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector; SearchStrategy: all) found beans of type 'org.springframework.security.authentication.AuthenticationManager' org.springframework.security.authenticationManager and found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' userDetailsService and found beans of type 'org.springframework.security.authentication.AuthenticationProvider' authenticationProvider (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+
+   ValidationAutoConfiguration#defaultValidator:
+      Did not match:
+         - @ConditionalOnMissingBean (types: javax.validation.Validator; SearchStrategy: all) found beans of type 'javax.validation.Validator' validator (OnBeanCondition)
+
+   WebSecurityEnablerConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - found 'session' scope (OnWebApplicationCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2023-03-03 11:36:40.045  INFO [ap-custom-report-service,,,] 15800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-03-03 11:36:40.133  INFO [ap-custom-report-service,,,] 15800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81ms. Found 3 JPA repository interfaces.
+2023-03-03 11:36:40.421  INFO [ap-custom-report-service,,,] 15800 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3a371150-2181-3684-a3af-c3abb725fd98
+2023-03-03 11:36:40.713  INFO [ap-custom-report-service,,,] 15800 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@456aa471' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:36:40.741  INFO [ap-custom-report-service,,,] 15800 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-03 11:36:41.081  INFO [ap-custom-report-service,,,] 15800 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-03 11:36:41.687  INFO [ap-custom-report-service,,,] 15800 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:36:41.700  INFO [ap-custom-report-service,,,] 15800 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-03-03 11:36:41.799  WARN [ap-custom-report-service,,,] 15800 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-03 11:36:43.270  INFO [ap-custom-report-service,,,] 15800 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:36:43.605  INFO [ap-custom-report-service,,,] 15800 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5cfe28e1, org.springframework.security.web.context.SecurityContextPersistenceFilter@68229a6, org.springframework.security.web.header.HeaderWriterFilter@522f0bb8, org.springframework.web.filter.CorsFilter@7ac90dab, org.springframework.security.web.authentication.logout.LogoutFilter@239d9cb7, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@23365142, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1eb52131, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d7677d8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40d370fa, org.springframework.security.web.session.SessionManagementFilter@5065bdac, org.springframework.security.web.access.ExceptionTranslationFilter@4dffa400, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2fb70301]
+2023-03-03 11:36:44.994  WARN [ap-custom-report-service,,,] 15800 --- [main] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-03-03 11:36:45.046  INFO [ap-custom-report-service,,,] 15800 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-03-03 11:36:45.096  INFO [ap-custom-report-service,,,] 15800 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-03-03 11:36:45.363  INFO [ap-custom-report-service,,,] 15800 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-03-03 11:36:45.375  INFO [ap-custom-report-service,,,] 15800 --- [main] c.l.r.ReportCustomApplicationTests       : Started ReportCustomApplicationTests in 6.859 seconds (JVM running for 7.627)
+2023-03-03 11:36:45.486  INFO [ap-custom-report-service,,,] 15800 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-03 11:36:45.487  INFO [ap-custom-report-service,,,] 15800 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
