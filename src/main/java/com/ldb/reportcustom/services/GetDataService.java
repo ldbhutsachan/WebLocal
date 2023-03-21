@@ -21,5 +21,7 @@ public interface GetDataService {
     List<RespSingleWinDaily> listReportPaymentCompare(RequestReportByStartDate dataRequest);
 
     List<RespSumTaxCode> listReportSumTaxCodeLNSW(RequestReportByStartDate dataRequest);
+
+    List<RespSingleWinDaily> listReportCompany(RequestReportDate dataRequest);
     //List<RespSumTaxCode> listReportSumTaxCodeLNSW(RequestReportByStartDate dataRequest);
 }

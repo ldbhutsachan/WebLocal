@@ -204,5 +204,56 @@ public class SingleWindowController {
         log.info("\t\t --> End Custom total Request controller <<<<<<<<<<<<<<<<<<<");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
-    //Report total
+    //Report total company
+    @ApiOperation(
+            value = "Report Custom in daily Tap 1",
+            authorizations = {@Authorization(value = "apiKey")},
+            response = RespSingleWinDaily.class
+    )
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Success", response = RespSingleWinDaily.class),
+            @ApiResponse(code = 201, message = "Created", response = ExceptionResponse.class),
+            @ApiResponse(code = 400, message = "Bad Request", response = BadRequestException.class),
+            @ApiResponse(code = 401, message = "Unauthorized", response = UnAuthorizedException.class),
+            @ApiResponse(code = 403, message = "Forbidden", response = ForbiddenException.class),
+            @ApiResponse(code = 404, message = "Not Found", response = NotFoundException.class),
+            @ApiResponse(code = 500, message = "Internal Server Error", response = InternalServerError.class),
+            @ApiResponse(code = 503, message = "Service Unavailable", response = ServiceUnavailableException.class)
+    })
+    @RequestMapping(
+            value = APIMappingPaths.ReportAdmin.API_CUSTOM_SINGLE_WINDOW_GATEWAY_COMPANY_PATH,
+            consumes = {
+                    MediaType.APPLICATION_JSON_VALUE
+            },
+            produces = {
+                    MediaType.APPLICATION_JSON_VALUE
+            },
+            method = RequestMethod.POST
+    )
+//    @PreAuthorize("hasRole('ROLE_BORDER')")
+//    @Secured({"ROLE_BORDER"})
+//    @PreAuthorize("hasAnyRole(@environment.getProperty('ROLE_REPORT_MOBILE_ADMIN')) or hasRole(@environment.getProperty('ROLE_REPORT_MOBILE_VISA'))")
+    @ResponseBody
+    public ResponseEntity<?> reportCompany(
+            @ApiParam(
+                    name = "Body Request",
+                    value = "JSON body request to check information",
+                    required = true)
+            @Valid
+            @RequestBody RequestReportDate dataRequest,
+            @Context HttpServletRequest request
+    ) throws Exception {
+        log.info("\t\t --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>");
+        String clientIpAddress = request.getRemoteAddr();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+        log.info("Client IP Address = " + clientIpAddress);
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        log.info("auth == " + auth.getName());
+        log.info("auth username == " + auth.getPrincipal());
+        log.info("data body request: " + dataRequest.toString());
+        DataResponse response = singleWindowService.ReportCompany(dataRequest);
+        log.info("\t\t --> End Custom Request controller <<<<<<<<<<<<<<<<<<<");
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
 }

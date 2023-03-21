@@ -20,7 +20,7 @@ import lombok.EqualsAndHashCode;
 @JsonPropertyOrder({
         "billNo",
         "number",
-
+        "invoices",
         "borderName",
         "typeInvoice",
         "soi",

@@ -17,5 +17,7 @@ public interface SingleWindowService {
     DataResponse paymentCompareReport(RequestReportByStartDate dataRequest);
 
     DataResponse paymentTotalReport(RequestReportByStartDate dataRequest);
+   // ReportCompany
+   DataResponse ReportCompany(RequestReportDate dataRequest);
 
 }

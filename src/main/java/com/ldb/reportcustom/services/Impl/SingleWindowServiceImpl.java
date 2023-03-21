@@ -528,5 +528,64 @@ public class SingleWindowServiceImpl implements SingleWindowService {
         }
         return response;
     }
+///report company
+@Override
+public DataResponse ReportCompany(RequestReportDate dataRequest) {
+    DataResponse response = new DataResponse();
+    response.setStatus("05");
+    response.setMessage("fail");
+    List<RespMainCompanyObj> listMain = new ArrayList<>();
+    DecimalFormat numfm = new DecimalFormat("#,###,###,##0");
+    HashMap<String, Object> dataValue = new HashMap<String, Object>();
 
+    try {
+        List<RespSingleWinDaily> listRp = getDataService.listReportCompany(dataRequest);
+        assert listRp != null;
+        List<String> refIds = listRp.stream().map(RespSingleWinDaily::getRefId).distinct().collect(Collectors.toList());
+        RespMainCompanyObj mainObj = new RespMainCompanyObj();
+        double totalAmount = 0;
+        String borderName = "";
+        String paymentDate = "";
+        double totalAmounts = 0;
+        Date issueDate = new Date();
+        HashMap<String, Object> total = new HashMap<String, Object>();
+        HashMap<String, Object> dataValues = new HashMap<String, Object>();
+        SimpleDateFormat sf = new SimpleDateFormat("dd/MM/yyyy");
+//
+        for (String refId : refIds) {
+            totalAmounts += listRp.stream().filter(p -> p.getRefId().equals(refId)).map(RespSingleWinDaily::getAmount).findFirst().orElse(0.0);
+            paymentDate = listRp.stream().filter(p -> p.getRefId().equals(refId)).map(RespSingleWinDaily::getPaymentDate).findFirst().orElse("");
+            issueDate = new SimpleDateFormat("yyyy-MM-dd").parse(listRp.stream().filter(p -> p.getRefId().equals(refId)).map(RespSingleWinDaily::getIssueDate).findFirst().orElse(""));
+            /**
+             * Set data in main object
+             */
+            totalAmount = listRp.stream().filter(p -> p.getRefId().equals(refId)).map(RespSingleWinDaily::getAmount).findFirst().orElse(0.0);
+            mainObj = new RespMainCompanyObj();
+            mainObj.setPaymentDate(paymentDate);
+           mainObj.setReference(listRp.stream().filter(p -> p.getRefId().equals(refId)).map(RespSingleWinDaily::getRefId).findFirst().orElse(""));
+            mainObj.setCompanyName(listRp.stream().filter(p -> p.getRefId().equals(refId)).map(RespSingleWinDaily::getCompanyName).findFirst().orElse(""));
+            mainObj.setTypeInvoice(listRp.stream().filter(p -> p.getRefId().equals(refId)).map(RespSingleWinDaily::getTypeInvoice).findFirst().orElse(""));
+            mainObj.setInvoiceNumber(listRp.stream().filter(p -> p.getRefId().equals(refId)).map(RespSingleWinDaily::getInvoiceNumber).findFirst().orElse(""));
+            mainObj.setInstance(listRp.stream().filter(p -> p.getRefId().equals(refId)).map(RespSingleWinDaily::getInstance).findFirst().orElse(""));
+            mainObj.setReceiptNumber(listRp.stream().filter(p -> p.getRefId().equals(refId)).map(RespSingleWinDaily::getReceiptNumber).findFirst().orElse(""));
+            mainObj.setPaymentChanel(listRp.stream().filter(p -> p.getRefId().equals(refId)).map(RespSingleWinDaily::getPaymentChanel).findFirst().orElse(""));
+            mainObj.setAmount(totalAmount);
+            /**
+             * Set header data
+             */
+            listMain.add(mainObj);
+        }
+        ///start
+        dataValue.put("dataValue", listMain);
+        //get amount total
+        dataValue.put("sumTotal", totalAmounts);
+        response.setStatus("00");
+        response.setMessage("success");
+        response.setDataResponse(dataValue);
+    } catch (Exception e) {
+        log.error("Cannot Get data = {}", e.getMessage());
+        e.printStackTrace();
+    }
+    return response;
+}
 }
