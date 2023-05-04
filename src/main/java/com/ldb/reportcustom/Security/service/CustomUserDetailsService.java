@@ -145,7 +145,6 @@ public class CustomUserDetailsService extends JdbcDaoImpl {
         Users user = userRepository.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException("User", "id", id)
         );
-
         return UserPrincipal.create(user);
     }
 

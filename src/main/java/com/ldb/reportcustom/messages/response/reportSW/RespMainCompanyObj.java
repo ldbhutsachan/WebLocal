@@ -26,7 +26,9 @@ import lombok.EqualsAndHashCode;
         "receiptNumber",
         "amount",
         "paymentChanel",
-        "printBill"
+        "printBill",
+        "border",
+        "borderName"
 
 
 
@@ -60,9 +62,13 @@ public class RespMainCompanyObj {
 
     @JsonProperty("companyName")
     private String companyName;
+
+    @JsonProperty("border")
+    private String border;
+
+    @JsonProperty("borderName")
+    private String borderName;
 //reference
-
-
 
     @Override
     public String toString() {

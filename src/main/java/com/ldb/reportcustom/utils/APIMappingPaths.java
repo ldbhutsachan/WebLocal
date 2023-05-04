@@ -9,6 +9,7 @@ package com.ldb.reportcustom.utils;
 public class APIMappingPaths {
 
     public static final String API_MB_GATEWAY_VERSION_PATH = "/api/v1";
+
     public static final String API_MB_REPORT_PATH = "/custom";
     public static final String API_AUTHENTICATION_GATEWAY_PATH = "/authenticate";
     public static final class  LOGIN {
@@ -31,8 +32,11 @@ public class APIMappingPaths {
         public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_TOTAL_PATH_ADMIN_SELECT_ALL = "/singleWindowTotalAdminSelectAll.service";
         //Report 03
         public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_TOTAL_PATH_ADMIN = "/singleWindowTotalAdmin.service";
+
 //ລາຍງານຜູ້ສໍາລະ
+        public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_COMPANY_GROUP_PATH = "/GroupCompany.service";
         public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_COMPANY_PATH = "/company.service";
+
 
 
     }

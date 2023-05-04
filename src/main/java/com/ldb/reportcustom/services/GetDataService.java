@@ -1,5 +1,6 @@
 package com.ldb.reportcustom.services;
 
+import com.ldb.reportcustom.messages.request.RequestDatebyCompany;
 import com.ldb.reportcustom.messages.request.RequestReportByStartDate;
 import com.ldb.reportcustom.messages.request.RequestReportDate;
 import com.ldb.reportcustom.messages.request.RequestReportStartDate;
@@ -22,6 +23,6 @@ public interface GetDataService {
 
     List<RespSumTaxCode> listReportSumTaxCodeLNSW(RequestReportByStartDate dataRequest);
 
-    List<RespSingleWinDaily> listReportCompany(RequestReportDate dataRequest);
+    List<RespSingleWinDaily> listReportCompany(RequestDatebyCompany dataRequest);
     //List<RespSumTaxCode> listReportSumTaxCodeLNSW(RequestReportByStartDate dataRequest);
 }

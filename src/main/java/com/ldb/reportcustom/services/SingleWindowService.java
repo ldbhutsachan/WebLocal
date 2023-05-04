@@ -1,5 +1,6 @@
 package com.ldb.reportcustom.services;
 
+import com.ldb.reportcustom.messages.request.RequestDatebyCompany;
 import com.ldb.reportcustom.messages.request.RequestReportByStartDate;
 import com.ldb.reportcustom.messages.request.RequestReportDate;
 import com.ldb.reportcustom.messages.request.RequestReportStartDate;
@@ -18,6 +19,6 @@ public interface SingleWindowService {
 
     DataResponse paymentTotalReport(RequestReportByStartDate dataRequest);
    // ReportCompany
-   DataResponse ReportCompany(RequestReportDate dataRequest);
+   DataResponse ReportCompany(RequestDatebyCompany dataRequest);
 
 }

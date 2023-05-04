@@ -1,5 +1,6 @@
 package com.ldb.reportcustom.services.Impl;
 
+import com.ldb.reportcustom.messages.request.RequestDatebyCompany;
 import com.ldb.reportcustom.messages.request.RequestReportByStartDate;
 import com.ldb.reportcustom.messages.request.RequestReportDate;
 import com.ldb.reportcustom.messages.response.DataResponse;
@@ -530,7 +531,7 @@ public class SingleWindowServiceImpl implements SingleWindowService {
     }
 ///report company
 @Override
-public DataResponse ReportCompany(RequestReportDate dataRequest) {
+public DataResponse ReportCompany(RequestDatebyCompany dataRequest) {
     DataResponse response = new DataResponse();
     response.setStatus("05");
     response.setMessage("fail");
@@ -569,6 +570,8 @@ public DataResponse ReportCompany(RequestReportDate dataRequest) {
             mainObj.setInstance(listRp.stream().filter(p -> p.getRefId().equals(refId)).map(RespSingleWinDaily::getInstance).findFirst().orElse(""));
             mainObj.setReceiptNumber(listRp.stream().filter(p -> p.getRefId().equals(refId)).map(RespSingleWinDaily::getReceiptNumber).findFirst().orElse(""));
             mainObj.setPaymentChanel(listRp.stream().filter(p -> p.getRefId().equals(refId)).map(RespSingleWinDaily::getPaymentChanel).findFirst().orElse(""));
+            mainObj.setBorder(listRp.stream().filter(p -> p.getRefId().equals(refId)).map(RespSingleWinDaily::getBorderCode).findFirst().orElse(""));
+            mainObj.setBorderName(listRp.stream().filter(p -> p.getRefId().equals(refId)).map(RespSingleWinDaily::getBroderName).findFirst().orElse(""));
             mainObj.setAmount(totalAmount);
             /**
              * Set header data

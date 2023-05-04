@@ -91,6 +91,7 @@ com\ldb\reportcustom\handler\LimitLoginAuthenticationProvider.class
 com\ldb\reportcustom\messages\response\ProvinceReponse.class
 com\ldb\reportcustom\messages\request\RequestReportDate.class
 com\ldb\reportcustom\Security\service\UserDetailsDaoImpl.class
+com\ldb\reportcustom\services\Impl\GetDataServiceImpl$5.class
 com\ldb\reportcustom\services\Impl\GetSingleWindowServiceAdminImpl$4.class
 com\ldb\reportcustom\messages\response\ProfileResponse.class
 com\ldb\reportcustom\Security\jwt\JwtTokenProvider.class
@@ -102,3 +103,4 @@ com\ldb\reportcustom\Security\service\UserDetailsDao.class
 com\ldb\reportcustom\utils\APIMappingPaths.class
 com\ldb\reportcustom\messages\response\reportSW\RespSingleWinDaily.class
 com\ldb\reportcustom\entities\audit\DateAudit.class
+com\ldb\reportcustom\messages\response\reportSW\RespMainCompanyObj.class

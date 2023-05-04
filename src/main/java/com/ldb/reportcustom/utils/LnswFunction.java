@@ -37,6 +37,7 @@ public class LnswFunction {
          * ກວດສອບວ່າ ROLE ທີ່ໃຊ້ໃນການລອກອິນເຂົ້າລະບົບເປັນ ROLE_BORDER ຫຼື ບໍ່ ຖ້າແມ່ນໃຫ້ເອົາ BORDER_ID ທີ່ມີຢູ່.o
          */
         if (auth.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_BORDER"))) {
+
             borders = borderRepository.findByBorderIdFromUserName(auth.getName()).stream().map(Border::getBorderId).collect(Collectors.toList());
         } else {
             List<String> roleNames = auth.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList());

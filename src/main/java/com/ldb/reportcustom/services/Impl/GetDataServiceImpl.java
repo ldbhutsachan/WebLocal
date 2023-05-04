@@ -2,6 +2,7 @@ package com.ldb.reportcustom.services.Impl;
 
 import com.ldb.reportcustom.messages.request.RequestReportByStartDate;
 import com.ldb.reportcustom.messages.request.RequestReportDate;
+import com.ldb.reportcustom.messages.request.RequestDatebyCompany;
 import com.ldb.reportcustom.messages.response.reportSW.RespAccountBorder;
 import com.ldb.reportcustom.messages.response.reportSW.RespSingleWinDaily;
 import com.ldb.reportcustom.messages.response.reportSW.RespSumTaxCode;
@@ -200,25 +201,26 @@ public class GetDataServiceImpl implements GetDataService {
     }
     ///report company
     @Override
-    public List<RespSingleWinDaily> listReportCompany(RequestReportDate dataRequest) {
+    public List<RespSingleWinDaily> listReportCompany(RequestDatebyCompany dataRequest) {
         StringBuilder sb = new StringBuilder();
+        log.info("req issuer_name:"+dataRequest.getTIN_NAME());
         try {
             String condit = "";
 
-            if (!dataRequest.getStartDate().equals("") ) {
+            if(dataRequest.tIN_NAME.equals("ALL")){
                 condit += " AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') between " + dataRequest.getStartDate() + " AND " + dataRequest.getEndDate();
+            }else {
+                log.info("req issuer_name Req 0002:");
+                condit += "AND TIN_NAME like '%"+dataRequest.getTIN_NAME()+"%' AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') between " + dataRequest.getStartDate() + " AND " + dataRequest.getEndDate();
             }
-
             condit += lnswFunction.borderIdCondit("A.ISSUING_CUSTOMER_OFFICE");
-
             sb.append("\nSELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, ");
-            sb.append("\nTB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID ");
+            sb.append("\nTB.name AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID ");
             sb.append("\nFROM TAX_INVOICE A ");
             sb.append("\nLEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID ");
             sb.append("\nLEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' ");
             sb.append("\nLEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID ");
             sb.append("\nWHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1 ").append(condit).append(" ORDER BY REFERENCE, b.AMOUNT DESC ");
-
             String sql = sb.toString();
             log.info("SQL : " + sql);
             return jdbcTemplate.query(sql, new RowMapper<RespSingleWinDaily>() {

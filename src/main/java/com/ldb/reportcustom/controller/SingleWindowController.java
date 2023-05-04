@@ -2,10 +2,7 @@ package com.ldb.reportcustom.controller;
 
 import com.ldb.reportcustom.exceptions.DetailMessage.ExceptionResponse;
 import com.ldb.reportcustom.exceptions.ExceptionStatus.*;
-import com.ldb.reportcustom.messages.request.BorderRequestReportByBoderID;
-import com.ldb.reportcustom.messages.request.RequestReportByStartDate;
-import com.ldb.reportcustom.messages.request.RequestReportDate;
-import com.ldb.reportcustom.messages.request.RequestReportStartDate;
+import com.ldb.reportcustom.messages.request.*;
 import com.ldb.reportcustom.messages.response.DataResponse;
 import com.ldb.reportcustom.messages.response.reportSW.RespSingleWinDaily;
 import com.ldb.reportcustom.services.SingleWindowService;
@@ -240,7 +237,7 @@ public class SingleWindowController {
                     value = "JSON body request to check information",
                     required = true)
             @Valid
-            @RequestBody RequestReportDate dataRequest,
+            @RequestBody RequestDatebyCompany dataRequest,
             @Context HttpServletRequest request
     ) throws Exception {
         log.info("\t\t --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>");
