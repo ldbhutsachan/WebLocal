@@ -1,5 +1,6 @@
 com\ldb\reportcustom\config\WebMvcConfig.class
 com\ldb\reportcustom\messages\response\reportSW\RespSumTaxCode.class
+com\ldb\reportcustom\entities\Company.class
 com\ldb\reportcustom\exceptions\ResourceNotFoundException.class
 com\ldb\reportcustom\handler\MyAccessDeniedHandler.class
 com\ldb\reportcustom\messages\response\reportSW\RespPrintBillFooter.class
@@ -40,6 +41,8 @@ com\ldb\reportcustom\utils\JSONUtils.class
 com\ldb\reportcustom\exceptions\ExceptionStatus\NotFoundException.class
 com\ldb\reportcustom\Security\service\UserDetailsDaoImpl$1.class
 com\ldb\reportcustom\entities\UserAttempts.class
+com\ldb\reportcustom\messages\request\GroupcompanyReq.class
+com\ldb\reportcustom\controller\CompanyGroupController.class
 com\ldb\reportcustom\exceptions\DTO\DetailedErrorDTO.class
 com\ldb\reportcustom\exceptions\ExceptionStatus\ForbiddenException.class
 com\ldb\reportcustom\ReportCustomApplication.class
@@ -48,6 +51,7 @@ com\ldb\reportcustom\utils\APIMappingPaths$ReportAdmin.class
 com\ldb\reportcustom\repositories\CreateUserRepository.class
 com\ldb\reportcustom\services\Impl\GetDataServiceImpl$3.class
 com\ldb\reportcustom\utils\FunctionlessWriteNumberToWord.class
+com\ldb\reportcustom\services\GetCompanyService.class
 com\ldb\reportcustom\exceptions\ExceptionStatus\BadRequestException.class
 com\ldb\reportcustom\services\Impl\GetProvinceService$1.class
 com\ldb\reportcustom\repositories\ProvinceRepository.class
@@ -69,16 +73,19 @@ com\ldb\reportcustom\Security\jwt\JwtAuthenticationFilter.class
 com\ldb\reportcustom\Security\service\UserPrincipal.class
 com\ldb\reportcustom\exceptions\Exception2\ForbiddenException.class
 com\ldb\reportcustom\services\Impl\SingleWindowServiceImpl.class
+com\ldb\reportcustom\services\Impl\GetListCompany$1.class
 com\ldb\reportcustom\controller\ReportAdminController.class
 com\ldb\reportcustom\services\Impl\GetSingleWindowServiceAdminImpl$1.class
 com\ldb\reportcustom\exceptions\ExceptionStatus\ServiceUnavailableException.class
 com\ldb\reportcustom\exceptions\ExceptionStatus\InternalServerError.class
+com\ldb\reportcustom\services\Impl\GetListCompany.class
 com\ldb\reportcustom\repositories\BorderRepository.class
 com\ldb\reportcustom\controller\SingleWindowController.class
 com\ldb\reportcustom\utils\APIMappingPaths$REPORT_SERVICE.class
 com\ldb\reportcustom\config\SpringSecurityAuditAwareImpl.class
 com\ldb\reportcustom\exceptions\ExceptionStatus\GatewayTimeOutException.class
 com\ldb\reportcustom\services\Impl\GetSingleWindowServiceAdminImpl.class
+com\ldb\reportcustom\messages\request\RequestDatebyCompany.class
 com\ldb\reportcustom\repositories\UserRepository.class
 com\ldb\reportcustom\exceptions\DetailMessage\ExceptionResponse.class
 com\ldb\reportcustom\exceptions\ApiExceptionHandler.class

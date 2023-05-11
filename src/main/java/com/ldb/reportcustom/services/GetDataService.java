@@ -23,6 +23,6 @@ public interface GetDataService {
 
     List<RespSumTaxCode> listReportSumTaxCodeLNSW(RequestReportByStartDate dataRequest);
 
-    List<RespSingleWinDaily> listReportCompany(RequestDatebyCompany dataRequest);
+    List<RespSingleWinDaily> listReportCompanyAll(RequestDatebyCompany dataRequest);
     //List<RespSumTaxCode> listReportSumTaxCodeLNSW(RequestReportByStartDate dataRequest);
 }

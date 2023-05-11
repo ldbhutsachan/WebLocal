@@ -4,6 +4,7 @@ C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcust
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespSingleWinDaily.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\entities\audit\DateAudit.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\exceptions\DTO\ExceptionDTO.java
+C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\messages\request\GroupcompanyReq.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\utils\JSONUtils.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\utils\LnswFunction.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\exceptions\DetailMessage\ErrorInfo.java
@@ -29,8 +30,10 @@ C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcust
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\entities\audit\Auditable.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\Security\service\CustomUserDetailsService.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\BadRequestException.java
+C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\services\Impl\GetListCompany.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\services\Impl\GetSingleWindowServiceAdminImpl.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\config\WebMvcConfig.java
+C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\services\GetCompanyService.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\Security\service\UserDetailsDao.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\GatewayTimeOutException.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\handler\LimitLoginAuthenticationProvider.java
@@ -57,6 +60,7 @@ C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcust
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\messages\response\BorderRespone.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\exceptions\Exception2\BadRequestException.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\Security\service\UserPrincipal.java
+C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\messages\request\RequestDatebyCompany.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\NotFoundException.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\messages\request\BorderRequestReportByBoderID.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\controller\ReportAdminController.java
@@ -74,6 +78,7 @@ C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcust
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\ReportCustomApplication.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\services\SingleWindowServiceAdmin.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\exceptions\DTO\ErrorDTO.java
+C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\entities\Company.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\exceptions\DTO\DetailedErrorDTO.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\messages\request\RequestReportDate.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespAccountBorder.java
@@ -85,4 +90,5 @@ C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcust
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\entities\Users.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\handler\MyAccessDeniedHandler.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespPrintBillHeader.java
+C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\controller\CompanyGroupController.java
 C:\LDB Project\Report Fastax\Report Fastax 2023\src\main\java\com\ldb\reportcustom\messages\response\DataResponse.java

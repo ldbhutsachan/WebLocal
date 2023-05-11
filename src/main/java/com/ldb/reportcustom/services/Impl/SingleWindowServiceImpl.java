@@ -45,7 +45,6 @@ public class SingleWindowServiceImpl implements SingleWindowService {
         DataResponse response = new DataResponse();
         response.setStatus("05");
         response.setMessage("fail");
-//        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
         List<RespMainObj> listMain = new ArrayList<>();
         DecimalFormat numfm = new DecimalFormat("#,###,###,##0");
         HashMap<String, Object> dataValue = new HashMap<String, Object>();
@@ -172,7 +171,6 @@ public class SingleWindowServiceImpl implements SingleWindowService {
         DataResponse response = new DataResponse();
         response.setStatus("05");
         response.setMessage("fail");
-//        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
         List<RespMainObj> listMain = new ArrayList<>();
         DecimalFormat numfm = new DecimalFormat("#,###,###,##0");
         try {
@@ -487,7 +485,7 @@ public class SingleWindowServiceImpl implements SingleWindowService {
              */
             mapList =  dataList.stream().filter(element -> element.containsKey("data")).map(element -> element.get("data")).collect(Collectors.toList());
          //   System.out.println("mapList = " + mapList);
-            log.info("mapList:"+mapList);
+           // log.info("mapList:"+mapList);
             for (RespAccountBorder accountBorder : listAcctBorder) {
                 /**
                  * ກຳນົດຄ່າໃຫ້ກ່ອນຕາມແຕ່ລະປະເພດໃຫ້ເປັນ 0 ໜ້າປະເພດໃດມີຄ່າໃຫ້ເສັດຄ່າໃໝ່ ຕາມຈຳນວນທີດືງອອກມາຈາກຖານຂ້ມູນ
@@ -540,7 +538,7 @@ public DataResponse ReportCompany(RequestDatebyCompany dataRequest) {
     HashMap<String, Object> dataValue = new HashMap<String, Object>();
 
     try {
-        List<RespSingleWinDaily> listRp = getDataService.listReportCompany(dataRequest);
+        List<RespSingleWinDaily> listRp = getDataService.listReportCompanyAll(dataRequest);
         assert listRp != null;
         List<String> refIds = listRp.stream().map(RespSingleWinDaily::getRefId).distinct().collect(Collectors.toList());
         RespMainCompanyObj mainObj = new RespMainCompanyObj();

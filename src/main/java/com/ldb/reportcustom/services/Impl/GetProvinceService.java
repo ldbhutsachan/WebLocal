@@ -2,21 +2,28 @@ package com.ldb.reportcustom.services.Impl;
 import com.ldb.reportcustom.messages.response.BorderRespone;
 import com.ldb.reportcustom.messages.response.ProvinceReponse;
 import com.ldb.reportcustom.repositories.ProvinceRepository;
+import com.ldb.reportcustom.utils.LnswFunction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
-
+import lombok.extern.slf4j.Slf4j;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+@Slf4j
 @Service
 public class GetProvinceService implements ProvinceRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate;
+    @Autowired
+    private LnswFunction lnswFunction;
     @Override
-    public List<ProvinceReponse> getProvince() {
-        String ConSql = "select distinct province_code,province_name from tax_border  order by province_code asc ";
+    public List<ProvinceReponse> getProvince(ProvinceReponse provinceReponse) {
+       String test= lnswFunction.borderIdCondit("NAME");
+        String ConSql="";
+             ConSql = "select distinct province_code,province_name from tax_border  order by province_code asc ";
+            log.info("SQL"+ConSql);
         return jdbcTemplate.query(ConSql, new RowMapper<ProvinceReponse>() {
             String AlO ="SELECT ALL";
             @Override

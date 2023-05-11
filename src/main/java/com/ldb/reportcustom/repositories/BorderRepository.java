@@ -19,7 +19,7 @@ import java.util.List;
  */
 @Repository
 public interface BorderRepository extends CrudRepository<Border, Border> {
-    @Query(value ="SELECT A.* FROM TAX_BORDER A\n" +
+    @Query(value ="SELECT A.*,B.* FROM TAX_BORDER A\n" +
             "JOIN TAX_BORDER_ROLE B ON A.BORDER_ID = B.BORDER_ID\n" +
             "JOIN TAX_ROLES TR on B.ROLE_ID = TR.ROLE_ID\n" +
             "WHERE TR.ROLE_NAME IN ( ?1 )", nativeQuery = true)

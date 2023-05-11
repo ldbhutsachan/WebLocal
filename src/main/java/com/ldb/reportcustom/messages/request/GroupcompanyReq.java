@@ -1,12 +1,15 @@
 package com.ldb.reportcustom.messages.request;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.checkerframework.checker.units.qual.A;
 
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 public class GroupcompanyReq {
-    private String borderCode;
+private String borderCode;
 }

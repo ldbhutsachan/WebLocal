@@ -39,7 +39,7 @@ public class GetDataServiceImpl implements GetDataService {
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT ID, TAX_RECEIPT_NAME, BORDER_ID, TAX_CODE  FROM TAX_ACCOUNT_BORDER WHERE RECEIPT_TITLE = 'Y' ");
         String sql = sb.toString();
-        log.info("SQL : " + sql);
+       // log.info("SQL : " + sql);
         return this.jdbcTemplate.query(sql, new RowMapper<RespAccountBorder>() {
             @Override
             public RespAccountBorder mapRow(ResultSet rs, int i) throws SQLException {
@@ -75,7 +75,7 @@ public class GetDataServiceImpl implements GetDataService {
             sb.append("\nWHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1 ").append(condit).append(" ORDER BY REFERENCE, b.AMOUNT DESC ");
 
             String sql = sb.toString();
-            log.info("SQL : " + sql);
+           // log.info("SQL : " + sql);
             return jdbcTemplate.query(sql, new RowMapper<RespSingleWinDaily>() {
                 @Override
                 public RespSingleWinDaily mapRow(ResultSet rs, int i) throws SQLException {
@@ -130,7 +130,7 @@ public class GetDataServiceImpl implements GetDataService {
             sb.append("\nWHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1 ").append(condit).append(" ORDER BY REFERENCE, b.AMOUNT DESC ");
 
             String sql = sb.toString();
-            log.info("SQL : " + sql);
+           // log.info("SQL : " + sql);
             return jdbcTemplate.query(sql, new RowMapper<RespSingleWinDaily>() {
                 @Override
                 public RespSingleWinDaily mapRow(ResultSet rs, int i) throws SQLException {
@@ -181,7 +181,7 @@ public class GetDataServiceImpl implements GetDataService {
         sb.append("WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1 ").append(condit);
         sb.append(" GROUP BY REFERENCE,TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY'), B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE, B.TAX_ACCOUNT_BORDER,MORE_INFO ORDER BY TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY')");
         String sql = sb.toString();
-        log.info("SQL : " + sql);
+       // log.info("SQL : " + sql);
         return this.jdbcTemplate.query(sql, new RowMapper<RespSumTaxCode>() {
             @Override
             public RespSumTaxCode mapRow(ResultSet rs, int i) throws SQLException {
@@ -201,12 +201,11 @@ public class GetDataServiceImpl implements GetDataService {
     }
     ///report company
     @Override
-    public List<RespSingleWinDaily> listReportCompany(RequestDatebyCompany dataRequest) {
+    public List<RespSingleWinDaily> listReportCompanyAll(RequestDatebyCompany dataRequest) {
         StringBuilder sb = new StringBuilder();
         log.info("req issuer_name:"+dataRequest.getTIN_NAME());
         try {
             String condit = "";
-
             if(dataRequest.tIN_NAME.equals("ALL")){
                 condit += " AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') between " + dataRequest.getStartDate() + " AND " + dataRequest.getEndDate();
             }else {
@@ -222,7 +221,7 @@ public class GetDataServiceImpl implements GetDataService {
             sb.append("\nLEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID ");
             sb.append("\nWHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1 ").append(condit).append(" ORDER BY REFERENCE, b.AMOUNT DESC ");
             String sql = sb.toString();
-            log.info("SQL : " + sql);
+          //  log.info("SQL : " + sql);
             return jdbcTemplate.query(sql, new RowMapper<RespSingleWinDaily>() {
                 @Override
                 public RespSingleWinDaily mapRow(ResultSet rs, int i) throws SQLException {

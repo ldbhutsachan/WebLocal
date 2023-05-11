@@ -5,6 +5,7 @@ import com.ldb.reportcustom.exceptions.ExceptionStatus.*;
 import com.ldb.reportcustom.messages.request.BoderRequest;
 import com.ldb.reportcustom.messages.request.BorderRequestReportByBoderID;
 import com.ldb.reportcustom.messages.response.DataResponse;
+import com.ldb.reportcustom.messages.response.ProvinceReponse;
 import com.ldb.reportcustom.messages.response.reportSW.RespSingleWinDaily;
 import com.ldb.reportcustom.repositories.ProvinceRepository;
 import com.ldb.reportcustom.services.SingleWindowServiceAdmin;
@@ -40,11 +41,11 @@ public class ReportAdminController {
             value = APIMappingPaths.ReportAdmin.API_CUSTOM_SINGLE_WINDOW_GATEWAY_PATH_PROVINCE,
             method = RequestMethod.GET
     )
-    public ResponseEntity<?> getProvince(){
+    public ResponseEntity<?> getProvince(ProvinceReponse provinceReponse){
         DataResponse responseProvince = new DataResponse();
         try {
             //provinceService
-            responseProvince.setDataResponse(provinceService.getProvince());
+            responseProvince.setDataResponse(provinceService.getProvince(provinceReponse));
             if(responseProvince.getDataResponse() !=null){
                 responseProvince.setStatus("00");
                 responseProvince.setMessage("Success");

@@ -8,7 +8,7 @@ import com.ldb.reportcustom.messages.response.ProvinceReponse;
 import java.util.List;
 
 public interface ProvinceRepository {
-    public List<ProvinceReponse> getProvince();
+    public List<ProvinceReponse> getProvince(ProvinceReponse provinceReponse);
     public  List<BorderRespone> getBorderByProvinceCode(String provinceCode);
 
 

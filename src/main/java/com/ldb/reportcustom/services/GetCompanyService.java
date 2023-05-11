@@ -8,5 +8,5 @@ import com.ldb.reportcustom.messages.response.BorderRespone;
 import java.util.List;
 
 public interface GetCompanyService {
-    public List<Company> ListCompany(String  borderCode);
+    public List<Company> ListCompany(GroupcompanyReq  borderCode);
 }

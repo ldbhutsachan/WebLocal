@@ -24,22 +24,19 @@ public class GetListCompany implements GetCompanyService {
     @Autowired
     private LnswFunction lnswFunction;
     @Override
-    public List<Company> ListCompany(String  borderCode) {
+    public List<Company> ListCompany(GroupcompanyReq  borderCode) {
         String condit="";
         condit += lnswFunction.borderIdCondit("A.ISSUING_CUSTOMER_OFFICE");
-        System.out.println("boder condit:"+condit);
         StringBuilder sb = new StringBuilder();
         sb.append("select to_char('ALL') as tin_name, to_char('ALL') as ISSUING_CUSTOMER_OFFICE from dual union " +
                 "SELECT tin_name,ISSUING_CUSTOMER_OFFICE FROM BORDER.TAX_INVOICE A" +
-                " LEFT OUTER JOIN BORDER.TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID where ISSUING_CUSTOMER_OFFICE='"+borderCode+"'  group by ISSUER_NAME,ISSUING_CUSTOMER_OFFICE \n");
+                " LEFT OUTER JOIN BORDER.TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID where ISSUING_CUSTOMER_OFFICE is not null "+condit+"  group by tin_name,ISSUING_CUSTOMER_OFFICE order by ISSUING_CUSTOMER_OFFICE asc \n");
         String sql = sb.toString();
-        log.info("SQL : " + sql);
         return this.jdbcTemplate.query(sql, new RowMapper<Company>() {
             @Override
             public Company mapRow(ResultSet rs, int i) throws SQLException {
                 Company tr = new Company();
                 tr.setTIN_NAME(rs.getString("tin_name"));
-               // tr.setIssuing_customer_office(rs.getString("ISSUING_CUSTOMER_OFFICE"));
                 return tr;
             }
         });

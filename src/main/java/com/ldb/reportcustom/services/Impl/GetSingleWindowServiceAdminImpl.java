@@ -40,10 +40,13 @@ public class GetSingleWindowServiceAdminImpl implements GetSingleWindowServiceAd
 
     @Override
     public List<RespAccountBorder> findBorderAccountAdmin() {
+
+
+
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT ID, TAX_RECEIPT_NAME, BORDER_ID, TAX_CODE  FROM TAX_ACCOUNT_BORDER WHERE RECEIPT_TITLE = 'Y' ");
         String sql = sb.toString();
-//        log.info("SQL : " + sql);
+      // log.info("SQL : " + sql);
         return this.jdbcTemplate.query(sql, new RowMapper<RespAccountBorder>() {
             @Override
             public RespAccountBorder mapRow(ResultSet rs, int i) throws SQLException {
@@ -57,11 +60,12 @@ public class GetSingleWindowServiceAdminImpl implements GetSingleWindowServiceAd
             }
         });
     }
-
+////NOW
     @Override
     public List<RespSingleWinDaily> listReportPaymentAdmin(BorderRequestReportByBoderID dataRequest) {
         StringBuilder sb = new StringBuilder();
         BorderRespone borderRespone = new BorderRespone();
+       // log.info("getBorDerID"+dataRequest.getBorDerID());
 
         List<RespSingleWinDaily> resoop= new ArrayList<>();
         try {
@@ -70,7 +74,6 @@ public class GetSingleWindowServiceAdminImpl implements GetSingleWindowServiceAd
             if (!dataRequest.getStartDate().equals("") && !dataRequest.getEndDate().equals("")) {
                 condit += " AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') BETWEEN " + dataRequest.getStartDate() + " AND " + dataRequest.getEndDate();
             }
-
 
             condit+=" AND A.ISSUING_CUSTOMER_OFFICE ='"+dataRequest.getBorDerID()+"' ";
 
@@ -83,7 +86,7 @@ public class GetSingleWindowServiceAdminImpl implements GetSingleWindowServiceAd
             sb.append("\nWHERE INVOICE_STATUS = 'ACCEPTED' ").append(condit).append(" ORDER BY REFERENCE, b.AMOUNT DESC ");
 
             String sql = sb.toString();
-            log.info("SQL : " + sql);
+           // log.info("SQL : " + sql);
             resoop = jdbcTemplate.query(sql, new RowMapper<RespSingleWinDaily>() {
                 @Override
                 public RespSingleWinDaily mapRow(ResultSet rs, int i) throws SQLException {
@@ -109,7 +112,7 @@ public class GetSingleWindowServiceAdminImpl implements GetSingleWindowServiceAd
                     return rpt;
                 }
             });
-            log.info("hut RRRQ",resoop.toString());
+          //  log.info("hut RRRQ",resoop.toString());
             return resoop;
         } catch (Exception e) {
             log.error("Cannot Get data = {}", e.getMessage());
@@ -128,6 +131,7 @@ public class GetSingleWindowServiceAdminImpl implements GetSingleWindowServiceAd
             if (!dataRequest.getStartDate().equals("") && !dataRequest.getEndDate().equals("")) {
                 condit += " AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') BETWEEN " + dataRequest.getStartDate() + " AND " + dataRequest.getEndDate();
             }
+           // log.info("getBorDerID:"+dataRequest.getBorDerID());
             //check admin
             if(dataRequest.getBorDerID() == null){
                 condit += lnswFunction.borderIdCondit("A.ISSUING_CUSTOMER_OFFICE ");
@@ -135,7 +139,7 @@ public class GetSingleWindowServiceAdminImpl implements GetSingleWindowServiceAd
             }else{
                 condit+=" AND A.ISSUING_CUSTOMER_OFFICE ='"+dataRequest.getBorDerID()+"'";
             }
-            System.out.println("show border"+dataRequest.getBorDerID());
+            System.out.println("show border:"+dataRequest.getBorDerID());
 
             sb.append("\nSELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, ");
             sb.append("\nTB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID ");
@@ -146,7 +150,7 @@ public class GetSingleWindowServiceAdminImpl implements GetSingleWindowServiceAd
             sb.append("\nWHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1 ").append(condit).append(" ORDER BY REFERENCE, b.AMOUNT DESC ");
 
             String sql = sb.toString();
-            log.info("SQL : " + sql);
+          //  log.info("SQL : " + sql);
             return jdbcTemplate.query(sql, new RowMapper<RespSingleWinDaily>() {
                 @Override
                 public RespSingleWinDaily mapRow(ResultSet rs, int i) throws SQLException {
@@ -196,7 +200,7 @@ public class GetSingleWindowServiceAdminImpl implements GetSingleWindowServiceAd
         sb.append("WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1 ").append(condit);
         sb.append(" GROUP BY REFERENCE,TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY'), B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE, B.TAX_ACCOUNT_BORDER,MORE_INFO ORDER BY TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY')");
         String sql = sb.toString();
-        log.info("SQL : " + sql);
+       // log.info("SQL : " + sql);
         return this.jdbcTemplate.query(sql, new RowMapper<RespSumTaxCode>() {
             @Override
             public RespSumTaxCode mapRow(ResultSet rs, int i) throws SQLException {
