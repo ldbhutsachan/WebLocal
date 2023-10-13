@@ -1,0 +1,443 @@
+2023-09-04 09:21:22.296  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-09-04 09:21:22.297  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-04 09:21:22.630  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-09-04 09:21:23.185  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-09-04 09:21:23.244  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 3 JPA repository interfaces.
+2023-09-04 09:21:23.401  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aed222f2-9e06-35bd-b57a-53ca6fcbef86
+2023-09-04 09:21:23.590  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1f284175' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-04 09:21:23.600  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-04 09:21:24.066  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-09-04 09:21:24.145  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1507 ms
+2023-09-04 09:21:24.312  WARN [ap-custom-report-service,,,] 19132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-04 09:21:24.421  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-04 09:21:24.793  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-09-04 09:21:24.810  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-09-04 09:21:25.128 DEBUG [ap-custom-report-service,,,] 19132 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-09-04 09:21:25.578  INFO [ap-custom-report-service,,,] 19132 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-04 09:21:25.740  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3fdf306e, org.springframework.security.web.context.SecurityContextPersistenceFilter@10cbd309, org.springframework.security.web.header.HeaderWriterFilter@c130e12, org.springframework.web.filter.CorsFilter@3a1059f3, org.springframework.security.web.authentication.logout.LogoutFilter@42ee595e, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@3b38ff67, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@554a4093, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@99ccce4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34549472, org.springframework.security.web.session.SessionManagementFilter@3b9becdd, org.springframework.security.web.access.ExceptionTranslationFilter@382959c3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b999bf4]
+2023-09-04 09:21:26.129  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-04 09:21:26.308  WARN [ap-custom-report-service,,,] 19132 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-09-04 09:21:26.335  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-09-04 09:21:26.385  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-09-04 09:21:26.517  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-09-04 09:21:26.708  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-09-04 09:21:26.720  INFO [ap-custom-report-service,,,] 19132 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 4.967 seconds (JVM running for 5.351)
+2023-09-04 09:24:54.555  INFO [ap-custom-report-service,,,] 19132 --- [http-nio-23532-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-04 09:24:54.563  INFO [ap-custom-report-service,,,] 19132 --- [http-nio-23532-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-09-04 09:24:54.577 DEBUG [ap-custom-report-service,e3a1669f5145b21d,e3a1669f5145b21d,true] 19132 --- [http-nio-23532-exec-4] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-09-04 09:24:54.647  INFO [ap-custom-report-service,e3a1669f5145b21d,e3a1669f5145b21d,true] 19132 --- [http-nio-23532-exec-4] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-09-04 09:24:54.647  INFO [ap-custom-report-service,e3a1669f5145b21d,e3a1669f5145b21d,true] 19132 --- [http-nio-23532-exec-4] c.l.r.controller.LoginController         : Client IP Address: 0:0:0:0:0:0:0:1
+2023-09-04 09:24:54.730 DEBUG [ap-custom-report-service,e3a1669f5145b21d,e3a1669f5145b21d,true] 19132 --- [http-nio-23532-exec-4] c.l.r.S.s.CustomUserDetailsService       : Query returned no results for user 'CUSTOM_1'
+2023-09-04 09:24:54.789 DEBUG [ap-custom-report-service,e3a1669f5145b21d,e3a1669f5145b21d,true] 19132 --- [http-nio-23532-exec-4] c.l.r.h.LimitLoginAuthenticationProvider : User 'CUSTOM_1' not found
+2023-09-04 09:24:54.796  INFO [ap-custom-report-service,e3a1669f5145b21d,e3a1669f5145b21d,true] 19132 --- [http-nio-23532-exec-4] c.l.r.h.LimitLoginAuthenticationProvider : invalid login = Bad credentials
+2023-09-04 09:24:54.797 ERROR [ap-custom-report-service,e3a1669f5145b21d,e3a1669f5145b21d,true] 19132 --- [http-nio-23532-exec-4] c.l.r.controller.LoginController         : Authentication error = User or Password invalid
+2023-09-04 09:24:54.813  INFO [ap-custom-report-service,e3a1669f5145b21d,e3a1669f5145b21d,true] 19132 --- [http-nio-23532-exec-4] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "User or Password invalid"
+}
+2023-09-04 09:25:30.213 DEBUG [ap-custom-report-service,f2af2c07a8b121f1,f2af2c07a8b121f1,true] 19132 --- [http-nio-23532-exec-7] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-09-04 09:25:30.217  WARN [ap-custom-report-service,f2af2c07a8b121f1,f2af2c07a8b121f1,true] 19132 --- [http-nio-23532-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in string value; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in string value
+ at [Source: (PushbackInputStream); line: 3, column: 29] (through reference chain: com.ldb.reportcustom.messages.request.LoginRequest["password"])]
+2023-09-04 09:25:40.864 DEBUG [ap-custom-report-service,8c6b92f6d4019e2e,8c6b92f6d4019e2e,true] 19132 --- [http-nio-23532-exec-2] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-09-04 09:25:40.865  INFO [ap-custom-report-service,8c6b92f6d4019e2e,8c6b92f6d4019e2e,true] 19132 --- [http-nio-23532-exec-2] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-09-04 09:25:40.865  INFO [ap-custom-report-service,8c6b92f6d4019e2e,8c6b92f6d4019e2e,true] 19132 --- [http-nio-23532-exec-2] c.l.r.controller.LoginController         : Client IP Address: 0:0:0:0:0:0:0:1
+2023-09-04 09:25:41.195  INFO [ap-custom-report-service,8c6b92f6d4019e2e,8c6b92f6d4019e2e,true] 19132 --- [http-nio-23532-exec-2] c.l.r.controller.LoginController         : loginResponse: {"accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkzNzk0MzQxLCJleHAiOjE2OTM4ODA3NDF9.FNzGYt8FaC-_pbHPTaxHAS_wrZsh89RyPjwIRolcPMZObPTQHiOX_tLiBBLsZtUV9j6_pdZZ46Jky1kAgUvxQQ","tokenType":"Bearer","expireDate":86400,"username":"ADMIN_R5C10_1","enabled":true,"borders":{"borderId":"R5C10","bridge":"1","code":"510","enable":true,"name":"ດ່ານສາກົນ ຂົວມິດຕະພາບ I","provinceCode":"201","provinceName":"ນະຄອນລວງວຽງຈັນ","roles":[{"roleId":24,"roleName":"ROLE_REPORT_ADMIN","roleDisplay":"Role Border","createdBy":2,"createdAt":{"seconds":1675616400,"nanos":0},"modifiedBy":2,"modifiedAt":{"seconds":1675616400,"nanos":0}}],"createdAt":{"seconds":1674281281,"nanos":0},"modifiedAt":{"seconds":1674281281,"nanos":0}},"roles":[{"roleId":24,"roleName":"ROLE_REPORT_ADMIN","roleDisplay":"Role Border","createdBy":2,"createdAt":{"seconds":1675616400,"nanos":0},"modifiedBy":2,"modifiedAt":{"seconds":1675616400,"nanos":0}}]}
+2023-09-04 09:25:41.200  INFO [ap-custom-report-service,8c6b92f6d4019e2e,8c6b92f6d4019e2e,true] 19132 --- [http-nio-23532-exec-2] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "accessToken" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkzNzk0MzQxLCJleHAiOjE2OTM4ODA3NDF9.FNzGYt8FaC-_pbHPTaxHAS_wrZsh89RyPjwIRolcPMZObPTQHiOX_tLiBBLsZtUV9j6_pdZZ46Jky1kAgUvxQQ",
+    "tokenType" : "Bearer",
+    "expireDate" : 86400,
+    "username" : "ADMIN_R5C10_1",
+    "enabled" : true,
+    "borders" : {
+      "createdAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "modifiedAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "borderId" : "R5C10",
+      "bridge" : "1",
+      "code" : "510",
+      "enable" : true,
+      "name" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I",
+      "provinceCode" : "201",
+      "provinceName" : "ນະຄອນລວງວຽງຈັນ",
+      "roles" : [ {
+        "roleId" : 24,
+        "roleName" : "ROLE_REPORT_ADMIN",
+        "roleDisplay" : "Role Border"
+      } ]
+    },
+    "roles" : [ {
+      "roleId" : 24,
+      "roleName" : "ROLE_REPORT_ADMIN",
+      "roleDisplay" : "Role Border"
+    } ]
+  }
+}
+2023-09-04 09:25:56.398 DEBUG [ap-custom-report-service,d1ec7ccd5d7c46eb,d1ec7ccd5d7c46eb,true] 19132 --- [http-nio-23532-exec-5] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-09-04 09:25:56.399  INFO [ap-custom-report-service,d1ec7ccd5d7c46eb,d1ec7ccd5d7c46eb,true] 19132 --- [http-nio-23532-exec-5] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-09-04 09:25:56.399  INFO [ap-custom-report-service,d1ec7ccd5d7c46eb,d1ec7ccd5d7c46eb,true] 19132 --- [http-nio-23532-exec-5] c.l.r.controller.LoginController         : Client IP Address: 0:0:0:0:0:0:0:1
+2023-09-04 09:25:56.471  INFO [ap-custom-report-service,d1ec7ccd5d7c46eb,d1ec7ccd5d7c46eb,true] 19132 --- [http-nio-23532-exec-5] c.l.r.controller.LoginController         : loginResponse: {"accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkzNzk0MzU2LCJleHAiOjE2OTM4ODA3NTZ9.X22zFy8kpfmu2YFfqyeJSupPVOOYRZ3eT4uGzh8wfSJh-1bx_jEpwBNnxSJkKvmG2kCANMErDYVJXSop46Yd7A","tokenType":"Bearer","expireDate":86400,"username":"ADMIN_R5C10_1","enabled":true,"borders":{"borderId":"R5C10","bridge":"1","code":"510","enable":true,"name":"ດ່ານສາກົນ ຂົວມິດຕະພາບ I","provinceCode":"201","provinceName":"ນະຄອນລວງວຽງຈັນ","roles":[{"roleId":24,"roleName":"ROLE_REPORT_ADMIN","roleDisplay":"Role Border","createdBy":2,"createdAt":{"seconds":1675616400,"nanos":0},"modifiedBy":2,"modifiedAt":{"seconds":1675616400,"nanos":0}}],"createdAt":{"seconds":1674281281,"nanos":0},"modifiedAt":{"seconds":1674281281,"nanos":0}},"roles":[{"roleId":24,"roleName":"ROLE_REPORT_ADMIN","roleDisplay":"Role Border","createdBy":2,"createdAt":{"seconds":1675616400,"nanos":0},"modifiedBy":2,"modifiedAt":{"seconds":1675616400,"nanos":0}}]}
+2023-09-04 09:25:56.473  INFO [ap-custom-report-service,d1ec7ccd5d7c46eb,d1ec7ccd5d7c46eb,true] 19132 --- [http-nio-23532-exec-5] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "accessToken" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkzNzk0MzU2LCJleHAiOjE2OTM4ODA3NTZ9.X22zFy8kpfmu2YFfqyeJSupPVOOYRZ3eT4uGzh8wfSJh-1bx_jEpwBNnxSJkKvmG2kCANMErDYVJXSop46Yd7A",
+    "tokenType" : "Bearer",
+    "expireDate" : 86400,
+    "username" : "ADMIN_R5C10_1",
+    "enabled" : true,
+    "borders" : {
+      "createdAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "modifiedAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "borderId" : "R5C10",
+      "bridge" : "1",
+      "code" : "510",
+      "enable" : true,
+      "name" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I",
+      "provinceCode" : "201",
+      "provinceName" : "ນະຄອນລວງວຽງຈັນ",
+      "roles" : [ {
+        "roleId" : 24,
+        "roleName" : "ROLE_REPORT_ADMIN",
+        "roleDisplay" : "Role Border"
+      } ]
+    },
+    "roles" : [ {
+      "roleId" : 24,
+      "roleName" : "ROLE_REPORT_ADMIN",
+      "roleDisplay" : "Role Border"
+    } ]
+  }
+}
+2023-09-04 09:26:36.486 DEBUG [ap-custom-report-service,5bf8e803a3ee7c58,5bf8e803a3ee7c58,true] 19132 --- [http-nio-23532-exec-1] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-09-04 09:26:36.487  INFO [ap-custom-report-service,5bf8e803a3ee7c58,5bf8e803a3ee7c58,true] 19132 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-09-04 09:26:36.487  INFO [ap-custom-report-service,5bf8e803a3ee7c58,5bf8e803a3ee7c58,true] 19132 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : Client IP Address: 10.0.10.49
+2023-09-04 09:26:36.557  INFO [ap-custom-report-service,5bf8e803a3ee7c58,5bf8e803a3ee7c58,true] 19132 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : loginResponse: {"accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkzNzk0Mzk2LCJleHAiOjE2OTM4ODA3OTZ9.Yeqs7Gbt0GIaCRtj9kAsUFA0pIChm9ck2SiaeKDVMQH7i-eXYMTYG5AN-x_ZL_v28TjMyl2zg2kZeDxsst5X1g","tokenType":"Bearer","expireDate":86400,"username":"ADMIN_R5C10_1","enabled":true,"borders":{"borderId":"R5C10","bridge":"1","code":"510","enable":true,"name":"ດ່ານສາກົນ ຂົວມິດຕະພາບ I","provinceCode":"201","provinceName":"ນະຄອນລວງວຽງຈັນ","roles":[{"roleId":24,"roleName":"ROLE_REPORT_ADMIN","roleDisplay":"Role Border","createdBy":2,"createdAt":{"seconds":1675616400,"nanos":0},"modifiedBy":2,"modifiedAt":{"seconds":1675616400,"nanos":0}}],"createdAt":{"seconds":1674281281,"nanos":0},"modifiedAt":{"seconds":1674281281,"nanos":0}},"roles":[{"roleId":24,"roleName":"ROLE_REPORT_ADMIN","roleDisplay":"Role Border","createdBy":2,"createdAt":{"seconds":1675616400,"nanos":0},"modifiedBy":2,"modifiedAt":{"seconds":1675616400,"nanos":0}}]}
+2023-09-04 09:26:36.559  INFO [ap-custom-report-service,5bf8e803a3ee7c58,5bf8e803a3ee7c58,true] 19132 --- [http-nio-23532-exec-1] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "accessToken" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkzNzk0Mzk2LCJleHAiOjE2OTM4ODA3OTZ9.Yeqs7Gbt0GIaCRtj9kAsUFA0pIChm9ck2SiaeKDVMQH7i-eXYMTYG5AN-x_ZL_v28TjMyl2zg2kZeDxsst5X1g",
+    "tokenType" : "Bearer",
+    "expireDate" : 86400,
+    "username" : "ADMIN_R5C10_1",
+    "enabled" : true,
+    "borders" : {
+      "createdAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "modifiedAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "borderId" : "R5C10",
+      "bridge" : "1",
+      "code" : "510",
+      "enable" : true,
+      "name" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I",
+      "provinceCode" : "201",
+      "provinceName" : "ນະຄອນລວງວຽງຈັນ",
+      "roles" : [ {
+        "roleId" : 24,
+        "roleName" : "ROLE_REPORT_ADMIN",
+        "roleDisplay" : "Role Border"
+      } ]
+    },
+    "roles" : [ {
+      "roleId" : 24,
+      "roleName" : "ROLE_REPORT_ADMIN",
+      "roleDisplay" : "Role Border"
+    } ]
+  }
+}
+2023-09-04 09:26:44.912 DEBUG [ap-custom-report-service,cbd685f5ade751f9,cbd685f5ade751f9,true] 19132 --- [http-nio-23532-exec-4] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-09-04 09:26:44.914  INFO [ap-custom-report-service,cbd685f5ade751f9,cbd685f5ade751f9,true] 19132 --- [http-nio-23532-exec-4] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-09-04 09:26:44.914  INFO [ap-custom-report-service,cbd685f5ade751f9,cbd685f5ade751f9,true] 19132 --- [http-nio-23532-exec-4] c.l.r.controller.LoginController         : Client IP Address: 10.0.10.49
+2023-09-04 09:26:44.996  INFO [ap-custom-report-service,cbd685f5ade751f9,cbd685f5ade751f9,true] 19132 --- [http-nio-23532-exec-4] c.l.r.controller.LoginController         : loginResponse: {"accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkzNzk0NDA0LCJleHAiOjE2OTM4ODA4MDR9.z5jTxQt-XT2YhusJEtZ9itWTTzlSDToumL8QBDF4RDlA7GeHw7UHsYS8Y6lC-TyblG3CZ_Jk0Hm0bkdx42vo5Q","tokenType":"Bearer","expireDate":86400,"username":"ADMIN_R5C10_1","enabled":true,"borders":{"borderId":"R5C10","bridge":"1","code":"510","enable":true,"name":"ດ່ານສາກົນ ຂົວມິດຕະພາບ I","provinceCode":"201","provinceName":"ນະຄອນລວງວຽງຈັນ","roles":[{"roleId":24,"roleName":"ROLE_REPORT_ADMIN","roleDisplay":"Role Border","createdBy":2,"createdAt":{"seconds":1675616400,"nanos":0},"modifiedBy":2,"modifiedAt":{"seconds":1675616400,"nanos":0}}],"createdAt":{"seconds":1674281281,"nanos":0},"modifiedAt":{"seconds":1674281281,"nanos":0}},"roles":[{"roleId":24,"roleName":"ROLE_REPORT_ADMIN","roleDisplay":"Role Border","createdBy":2,"createdAt":{"seconds":1675616400,"nanos":0},"modifiedBy":2,"modifiedAt":{"seconds":1675616400,"nanos":0}}]}
+2023-09-04 09:26:44.998  INFO [ap-custom-report-service,cbd685f5ade751f9,cbd685f5ade751f9,true] 19132 --- [http-nio-23532-exec-4] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "accessToken" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkzNzk0NDA0LCJleHAiOjE2OTM4ODA4MDR9.z5jTxQt-XT2YhusJEtZ9itWTTzlSDToumL8QBDF4RDlA7GeHw7UHsYS8Y6lC-TyblG3CZ_Jk0Hm0bkdx42vo5Q",
+    "tokenType" : "Bearer",
+    "expireDate" : 86400,
+    "username" : "ADMIN_R5C10_1",
+    "enabled" : true,
+    "borders" : {
+      "createdAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "modifiedAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "borderId" : "R5C10",
+      "bridge" : "1",
+      "code" : "510",
+      "enable" : true,
+      "name" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I",
+      "provinceCode" : "201",
+      "provinceName" : "ນະຄອນລວງວຽງຈັນ",
+      "roles" : [ {
+        "roleId" : 24,
+        "roleName" : "ROLE_REPORT_ADMIN",
+        "roleDisplay" : "Role Border"
+      } ]
+    },
+    "roles" : [ {
+      "roleId" : 24,
+      "roleName" : "ROLE_REPORT_ADMIN",
+      "roleDisplay" : "Role Border"
+    } ]
+  }
+}
+2023-09-04 09:30:14.054 DEBUG [ap-custom-report-service,ad35cff28f6123b6,ad35cff28f6123b6,true] 19132 --- [http-nio-23532-exec-10] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-09-04 09:30:14.055  INFO [ap-custom-report-service,ad35cff28f6123b6,ad35cff28f6123b6,true] 19132 --- [http-nio-23532-exec-10] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-09-04 09:30:14.055  INFO [ap-custom-report-service,ad35cff28f6123b6,ad35cff28f6123b6,true] 19132 --- [http-nio-23532-exec-10] c.l.r.controller.LoginController         : Client IP Address: 10.0.10.49
+2023-09-04 09:30:14.126  INFO [ap-custom-report-service,ad35cff28f6123b6,ad35cff28f6123b6,true] 19132 --- [http-nio-23532-exec-10] c.l.r.controller.LoginController         : loginResponse: {"accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkzNzk0NjE0LCJleHAiOjE2OTM4ODEwMTR9.r-0mQ2wJGpO_DzX-a850jNdOL6KbeYnw1trFT_N7_4_zmaV8LB-zFNpADshqjUNl-tGgMmsb2frI-zc6Z_S1_Q","tokenType":"Bearer","expireDate":86400,"username":"ADMIN_R5C10_1","enabled":true,"borders":{"borderId":"R5C10","bridge":"1","code":"510","enable":true,"name":"ດ່ານສາກົນ ຂົວມິດຕະພາບ I","provinceCode":"201","provinceName":"ນະຄອນລວງວຽງຈັນ","roles":[{"roleId":24,"roleName":"ROLE_REPORT_ADMIN","roleDisplay":"Role Border","createdBy":2,"createdAt":{"seconds":1675616400,"nanos":0},"modifiedBy":2,"modifiedAt":{"seconds":1675616400,"nanos":0}}],"createdAt":{"seconds":1674281281,"nanos":0},"modifiedAt":{"seconds":1674281281,"nanos":0}},"roles":[{"roleId":24,"roleName":"ROLE_REPORT_ADMIN","roleDisplay":"Role Border","createdBy":2,"createdAt":{"seconds":1675616400,"nanos":0},"modifiedBy":2,"modifiedAt":{"seconds":1675616400,"nanos":0}}]}
+2023-09-04 09:30:14.128  INFO [ap-custom-report-service,ad35cff28f6123b6,ad35cff28f6123b6,true] 19132 --- [http-nio-23532-exec-10] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "accessToken" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkzNzk0NjE0LCJleHAiOjE2OTM4ODEwMTR9.r-0mQ2wJGpO_DzX-a850jNdOL6KbeYnw1trFT_N7_4_zmaV8LB-zFNpADshqjUNl-tGgMmsb2frI-zc6Z_S1_Q",
+    "tokenType" : "Bearer",
+    "expireDate" : 86400,
+    "username" : "ADMIN_R5C10_1",
+    "enabled" : true,
+    "borders" : {
+      "createdAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "modifiedAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "borderId" : "R5C10",
+      "bridge" : "1",
+      "code" : "510",
+      "enable" : true,
+      "name" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I",
+      "provinceCode" : "201",
+      "provinceName" : "ນະຄອນລວງວຽງຈັນ",
+      "roles" : [ {
+        "roleId" : 24,
+        "roleName" : "ROLE_REPORT_ADMIN",
+        "roleDisplay" : "Role Border"
+      } ]
+    },
+    "roles" : [ {
+      "roleId" : 24,
+      "roleName" : "ROLE_REPORT_ADMIN",
+      "roleDisplay" : "Role Border"
+    } ]
+  }
+}
+2023-09-04 09:32:55.698  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-09-04 09:32:55.699  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-04 09:32:56.033  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-09-04 09:32:56.590  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-09-04 09:32:56.653  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 3 JPA repository interfaces.
+2023-09-04 09:32:56.800  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aed222f2-9e06-35bd-b57a-53ca6fcbef86
+2023-09-04 09:32:56.968  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3a19f0bc' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-04 09:32:56.980  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-04 09:32:57.426  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-09-04 09:32:57.501  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1458 ms
+2023-09-04 09:32:57.657  WARN [ap-custom-report-service,,,] 22116 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-04 09:32:57.758  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-04 09:32:58.103  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-09-04 09:32:58.120  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-09-04 09:32:58.462 DEBUG [ap-custom-report-service,,,] 22116 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-09-04 09:32:58.773  INFO [ap-custom-report-service,,,] 22116 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-04 09:32:58.917  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6da5dca5, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b1a5c55, org.springframework.security.web.header.HeaderWriterFilter@41ee04ae, org.springframework.web.filter.CorsFilter@3356edd, org.springframework.security.web.authentication.logout.LogoutFilter@1240975a, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@27deb723, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b6d65b2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47af1e50, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b89b37f, org.springframework.security.web.session.SessionManagementFilter@56288c17, org.springframework.security.web.access.ExceptionTranslationFilter@541c6b21, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22093d3d]
+2023-09-04 09:32:59.292  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-04 09:32:59.479  WARN [ap-custom-report-service,,,] 22116 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-09-04 09:32:59.507  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-09-04 09:32:59.558  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-09-04 09:32:59.696  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-09-04 09:32:59.872  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-09-04 09:32:59.884  INFO [ap-custom-report-service,,,] 22116 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 4.693 seconds (JVM running for 5.05)
+2023-09-04 09:34:07.547  INFO [ap-custom-report-service,,,] 22116 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-04 09:34:07.555  INFO [ap-custom-report-service,,,] 22116 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-09-04 09:34:07.569 DEBUG [ap-custom-report-service,45daec108bb2faa8,45daec108bb2faa8,true] 22116 --- [http-nio-23532-exec-1] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-09-04 09:34:07.646  INFO [ap-custom-report-service,45daec108bb2faa8,45daec108bb2faa8,true] 22116 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-09-04 09:34:07.646  INFO [ap-custom-report-service,45daec108bb2faa8,45daec108bb2faa8,true] 22116 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : Client IP Address: 10.0.10.49
+2023-09-04 09:34:08.067  INFO [ap-custom-report-service,45daec108bb2faa8,45daec108bb2faa8,true] 22116 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : loginResponse: {"accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkzNzk0ODQ3LCJleHAiOjE2OTM4ODEyNDd9.nyWH7hGIPUdFEJw2iA046ynPMaThPlyIM4qe_OpIE3D7p241HDLR27YI2GT5gUNoCcEU6RY_Es8hNX4iICLFnQ","tokenType":"Bearer","expireDate":86400,"username":"ADMIN_R5C10_1","enabled":true,"borders":{"borderId":"R5C10","bridge":"1","code":"510","enable":true,"name":"ດ່ານສາກົນ ຂົວມິດຕະພາບ I","provinceCode":"201","provinceName":"ນະຄອນລວງວຽງຈັນ","roles":[{"roleId":24,"roleName":"ROLE_REPORT_ADMIN","roleDisplay":"Role Border","createdBy":2,"createdAt":{"seconds":1675616400,"nanos":0},"modifiedBy":2,"modifiedAt":{"seconds":1675616400,"nanos":0}}],"createdAt":{"seconds":1674281281,"nanos":0},"modifiedAt":{"seconds":1674281281,"nanos":0}},"roles":[{"roleId":24,"roleName":"ROLE_REPORT_ADMIN","roleDisplay":"Role Border","createdBy":2,"createdAt":{"seconds":1675616400,"nanos":0},"modifiedBy":2,"modifiedAt":{"seconds":1675616400,"nanos":0}}]}
+2023-09-04 09:34:08.084  INFO [ap-custom-report-service,45daec108bb2faa8,45daec108bb2faa8,true] 22116 --- [http-nio-23532-exec-1] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "accessToken" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkzNzk0ODQ3LCJleHAiOjE2OTM4ODEyNDd9.nyWH7hGIPUdFEJw2iA046ynPMaThPlyIM4qe_OpIE3D7p241HDLR27YI2GT5gUNoCcEU6RY_Es8hNX4iICLFnQ",
+    "tokenType" : "Bearer",
+    "expireDate" : 86400,
+    "username" : "ADMIN_R5C10_1",
+    "enabled" : true,
+    "borders" : {
+      "createdAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "modifiedAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "borderId" : "R5C10",
+      "bridge" : "1",
+      "code" : "510",
+      "enable" : true,
+      "name" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I",
+      "provinceCode" : "201",
+      "provinceName" : "ນະຄອນລວງວຽງຈັນ",
+      "roles" : [ {
+        "roleId" : 24,
+        "roleName" : "ROLE_REPORT_ADMIN",
+        "roleDisplay" : "Role Border"
+      } ]
+    },
+    "roles" : [ {
+      "roleId" : 24,
+      "roleName" : "ROLE_REPORT_ADMIN",
+      "roleDisplay" : "Role Border"
+    } ]
+  }
+}
+2023-09-04 09:38:09.339 DEBUG [ap-custom-report-service,17e895c51dc7a039,17e895c51dc7a039,true] 22116 --- [http-nio-23532-exec-6] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-09-04 09:38:09.340  INFO [ap-custom-report-service,17e895c51dc7a039,17e895c51dc7a039,true] 22116 --- [http-nio-23532-exec-6] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-09-04 09:38:09.340  INFO [ap-custom-report-service,17e895c51dc7a039,17e895c51dc7a039,true] 22116 --- [http-nio-23532-exec-6] c.l.r.controller.LoginController         : Client IP Address: 10.0.10.49
+2023-09-04 09:38:09.415  INFO [ap-custom-report-service,17e895c51dc7a039,17e895c51dc7a039,true] 22116 --- [http-nio-23532-exec-6] c.l.r.controller.LoginController         : loginResponse: {"accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkzNzk1MDg5LCJleHAiOjE2OTM4ODE0ODl9.Fk0goxuCxdAkf_OyAVBOJejbivptGyrN4dSB0dOOHCg0nqK1GV1DTvm9kMnA9mtsh03UUx2L0XldbUUxLy43tQ","tokenType":"Bearer","expireDate":86400,"username":"ADMIN_R5C10_1","enabled":true,"borders":{"borderId":"R5C10","bridge":"1","code":"510","enable":true,"name":"ດ່ານສາກົນ ຂົວມິດຕະພາບ I","provinceCode":"201","provinceName":"ນະຄອນລວງວຽງຈັນ","roles":[{"roleId":24,"roleName":"ROLE_REPORT_ADMIN","roleDisplay":"Role Border","createdBy":2,"createdAt":{"seconds":1675616400,"nanos":0},"modifiedBy":2,"modifiedAt":{"seconds":1675616400,"nanos":0}}],"createdAt":{"seconds":1674281281,"nanos":0},"modifiedAt":{"seconds":1674281281,"nanos":0}},"roles":[{"roleId":24,"roleName":"ROLE_REPORT_ADMIN","roleDisplay":"Role Border","createdBy":2,"createdAt":{"seconds":1675616400,"nanos":0},"modifiedBy":2,"modifiedAt":{"seconds":1675616400,"nanos":0}}]}
+2023-09-04 09:38:09.419  INFO [ap-custom-report-service,17e895c51dc7a039,17e895c51dc7a039,true] 22116 --- [http-nio-23532-exec-6] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "accessToken" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkzNzk1MDg5LCJleHAiOjE2OTM4ODE0ODl9.Fk0goxuCxdAkf_OyAVBOJejbivptGyrN4dSB0dOOHCg0nqK1GV1DTvm9kMnA9mtsh03UUx2L0XldbUUxLy43tQ",
+    "tokenType" : "Bearer",
+    "expireDate" : 86400,
+    "username" : "ADMIN_R5C10_1",
+    "enabled" : true,
+    "borders" : {
+      "createdAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "modifiedAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "borderId" : "R5C10",
+      "bridge" : "1",
+      "code" : "510",
+      "enable" : true,
+      "name" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I",
+      "provinceCode" : "201",
+      "provinceName" : "ນະຄອນລວງວຽງຈັນ",
+      "roles" : [ {
+        "roleId" : 24,
+        "roleName" : "ROLE_REPORT_ADMIN",
+        "roleDisplay" : "Role Border"
+      } ]
+    },
+    "roles" : [ {
+      "roleId" : 24,
+      "roleName" : "ROLE_REPORT_ADMIN",
+      "roleDisplay" : "Role Border"
+    } ]
+  }
+}
+2023-09-04 09:40:36.615  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-09-04 09:40:36.616  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-04 09:40:36.947  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-09-04 09:40:37.451  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-09-04 09:40:37.506  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51ms. Found 3 JPA repository interfaces.
+2023-09-04 09:40:37.655  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aed222f2-9e06-35bd-b57a-53ca6fcbef86
+2023-09-04 09:40:37.818  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@761216dd' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-04 09:40:37.829  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-04 09:40:38.277  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-09-04 09:40:38.350  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1396 ms
+2023-09-04 09:40:38.518  WARN [ap-custom-report-service,,,] 22972 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-04 09:40:38.613  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-04 09:40:38.926  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-09-04 09:40:38.944  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-09-04 09:40:39.244 DEBUG [ap-custom-report-service,,,] 22972 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-09-04 09:40:39.577  INFO [ap-custom-report-service,,,] 22972 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-04 09:40:39.721  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@288431b0, org.springframework.security.web.context.SecurityContextPersistenceFilter@3eda23ce, org.springframework.security.web.header.HeaderWriterFilter@2d982c49, org.springframework.web.filter.CorsFilter@6200f433, org.springframework.security.web.authentication.logout.LogoutFilter@1d794c89, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@2d46c198, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d3cef01, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@779227d6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ba5ac3f, org.springframework.security.web.session.SessionManagementFilter@489c0b3e, org.springframework.security.web.access.ExceptionTranslationFilter@3a68b3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a79597e]
+2023-09-04 09:40:40.100  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-04 09:40:40.279  WARN [ap-custom-report-service,,,] 22972 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-09-04 09:40:40.308  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-09-04 09:40:40.357  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-09-04 09:40:40.492  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-09-04 09:40:40.665  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-09-04 09:40:40.676  INFO [ap-custom-report-service,,,] 22972 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 4.57 seconds (JVM running for 4.939)
+2023-09-04 09:53:47.771  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-09-04 09:53:47.772  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-04 09:53:48.099  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-09-04 09:53:48.640  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-09-04 09:53:48.700  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 3 JPA repository interfaces.
+2023-09-04 09:53:48.861  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aed222f2-9e06-35bd-b57a-53ca6fcbef86
+2023-09-04 09:53:49.027  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@d5bbd5d' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-04 09:53:49.039  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-04 09:53:49.504  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-09-04 09:53:49.582  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1475 ms
+2023-09-04 09:53:49.764  WARN [ap-custom-report-service,,,] 18920 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-04 09:53:49.859  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-04 09:53:50.194  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-09-04 09:53:50.212  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-09-04 09:53:50.516 DEBUG [ap-custom-report-service,,,] 18920 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-09-04 09:53:50.973  INFO [ap-custom-report-service,,,] 18920 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-04 09:53:51.133  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15e37f0d, org.springframework.security.web.context.SecurityContextPersistenceFilter@48f4633d, org.springframework.security.web.header.HeaderWriterFilter@19d51e5b, org.springframework.web.filter.CorsFilter@2ac23a53, org.springframework.security.web.authentication.logout.LogoutFilter@361681ec, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@17918b01, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@205e71ca, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b70e6b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c0d517c, org.springframework.security.web.session.SessionManagementFilter@5405f62d, org.springframework.security.web.access.ExceptionTranslationFilter@a2df227, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@74257276]
+2023-09-04 09:53:51.541  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-04 09:53:51.731  WARN [ap-custom-report-service,,,] 18920 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-09-04 09:53:51.764  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-09-04 09:53:51.827  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-09-04 09:53:51.973  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-09-04 09:53:52.166  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-09-04 09:53:52.179  INFO [ap-custom-report-service,,,] 18920 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 4.904 seconds (JVM running for 5.258)
+2023-09-04 09:58:27.235  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-09-04 09:58:27.236  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-04 09:58:27.568  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-09-04 09:58:28.084  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-09-04 09:58:28.138  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51ms. Found 3 JPA repository interfaces.
+2023-09-04 09:58:28.305  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aed222f2-9e06-35bd-b57a-53ca6fcbef86
+2023-09-04 09:58:28.465  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@30db0825' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-04 09:58:28.475  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-04 09:58:28.912  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-09-04 09:58:28.987  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1412 ms
+2023-09-04 09:58:29.148  WARN [ap-custom-report-service,,,] 24180 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-04 09:58:29.242  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-04 09:58:29.579  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-09-04 09:58:29.597  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-09-04 09:58:29.935 DEBUG [ap-custom-report-service,,,] 24180 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-09-04 09:58:30.340  INFO [ap-custom-report-service,,,] 24180 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-04 09:58:30.489  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48de2e30, org.springframework.security.web.context.SecurityContextPersistenceFilter@5d673627, org.springframework.security.web.header.HeaderWriterFilter@3132cbf2, org.springframework.web.filter.CorsFilter@75cfbf42, org.springframework.security.web.authentication.logout.LogoutFilter@46793e74, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@65f79d8b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ee1b7ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4e04a753, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@78fcd698, org.springframework.security.web.session.SessionManagementFilter@4ddaf6ae, org.springframework.security.web.access.ExceptionTranslationFilter@113ddbfb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5879b1e0]
+2023-09-04 09:58:30.885  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-04 09:58:31.077  WARN [ap-custom-report-service,,,] 24180 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-09-04 09:58:31.106  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-09-04 09:58:31.160  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-09-04 09:58:31.304  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-09-04 09:58:31.486  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-09-04 09:58:31.498  INFO [ap-custom-report-service,,,] 24180 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 4.762 seconds (JVM running for 5.134)
+2023-09-04 09:58:36.270  INFO [ap-custom-report-service,,,] 24180 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-04 09:58:36.278  INFO [ap-custom-report-service,,,] 24180 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-09-04 09:58:36.291 DEBUG [ap-custom-report-service,92e246fcbabb0039,92e246fcbabb0039,true] 24180 --- [http-nio-23532-exec-1] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-09-04 09:58:36.360  INFO [ap-custom-report-service,92e246fcbabb0039,92e246fcbabb0039,true] 24180 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-09-04 09:58:36.360  INFO [ap-custom-report-service,92e246fcbabb0039,92e246fcbabb0039,true] 24180 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : Client IP Address: 10.0.10.49
+2023-09-04 09:58:36.467 ERROR [ap-custom-report-service,92e246fcbabb0039,92e246fcbabb0039,true] 24180 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : Authentication error = PreparedStatementCallback; bad SQL grammar [SELECT * from boder.border.TAX_USER_LOGIN where USER_NAME = ?]; nested exception is java.sql.SQLSyntaxErrorException: ORA-00933: SQL command not properly ended
+
+2023-09-04 09:58:36.482  INFO [ap-custom-report-service,92e246fcbabb0039,92e246fcbabb0039,true] 24180 --- [http-nio-23532-exec-1] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "PreparedStatementCallback; bad SQL grammar [SELECT * from boder.border.TAX_USER_LOGIN where USER_NAME = ?]; nested exception is java.sql.SQLSyntaxErrorException: ORA-00933: SQL command not properly ended\n"
+}

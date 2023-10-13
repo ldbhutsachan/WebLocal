@@ -19,14 +19,14 @@ import java.util.Date;
 public class UserDetailsDaoImpl extends JdbcDaoSupport implements UserDetailsDao {
 
 	private static final String SQL_USERS_UPDATE_LOCKED = "UPDATE TAX_USER_LOGIN SET account_non_locked = ? WHERE user_name = ?";
-	private static final String SQL_USERS_COUNT = "SELECT count(*) FROM TAX_USER_LOGIN WHERE user_name = ?";
+	private static final String SQL_USERS_COUNT = "SELECT count(*) from TAX_USER_LOGIN WHERE user_name = ?";
 
-	private static final String SQL_USER_ATTEMPTS_GET = "SELECT * FROM TAX_USER_LOGIN_ATTEMPTS WHERE user_name = ?";
+	private static final String SQL_USER_ATTEMPTS_GET = "SELECT * from TAX_USER_LOGIN_ATTEMPTS WHERE user_name = ?";
 	private static final String SQL_USER_ATTEMPTS_INSERT = "INSERT INTO TAX_USER_LOGIN_ATTEMPTS (user_name, attempts, last_modified) VALUES(?,?,?)";
 	private static final String SQL_USER_ATTEMPTS_UPDATE_ATTEMPTS = "UPDATE TAX_USER_LOGIN_ATTEMPTS SET attempts = attempts + 1, last_modified = ? WHERE user_name = ?";
 	private static final String SQL_USER_ATTEMPTS_RESET_ATTEMPTS = "UPDATE TAX_USER_LOGIN_ATTEMPTS SET attempts = 0, last_modified = null WHERE user_name = ?";
 
-	//get value from application.properties file : max.attempts
+	//get value from boder.application.properties file : max.attempts
 	@Value("${max.attempts}")
 	private  int MAX_ATTEMPTS;
 

@@ -1,5 +1,5 @@
+#from boder.openjdk:11-jdk
 FROM openjdk:11-jdk
-
 # Set timezone
 # Always have Bangkok timezone file beside Dockerfile
 #COPY Bangkok /etc/localtime

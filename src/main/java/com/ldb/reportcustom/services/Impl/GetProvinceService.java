@@ -22,7 +22,7 @@ public class GetProvinceService implements ProvinceRepository {
     public List<ProvinceReponse> getProvince(ProvinceReponse provinceReponse) {
        String test= lnswFunction.borderIdCondit("NAME");
         String ConSql="";
-             ConSql = "select distinct province_code,province_name from tax_border  order by province_code asc ";
+             ConSql = "select distinct province_code,province_name from border.tax_border  order by province_code asc ";
             log.info("SQL"+ConSql);
         return jdbcTemplate.query(ConSql, new RowMapper<ProvinceReponse>() {
             String AlO ="SELECT ALL";

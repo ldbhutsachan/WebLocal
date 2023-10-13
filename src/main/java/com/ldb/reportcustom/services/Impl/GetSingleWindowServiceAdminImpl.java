@@ -44,7 +44,7 @@ public class GetSingleWindowServiceAdminImpl implements GetSingleWindowServiceAd
 
 
         StringBuilder sb = new StringBuilder();
-        sb.append("SELECT ID, TAX_RECEIPT_NAME, BORDER_ID, TAX_CODE  FROM TAX_ACCOUNT_BORDER WHERE RECEIPT_TITLE = 'Y' ");
+        sb.append("SELECT ID, TAX_RECEIPT_NAME, BORDER_ID, TAX_CODE  from boder.TAX_ACCOUNT_BORDER WHERE RECEIPT_TITLE = 'Y' ");
         String sql = sb.toString();
       // log.info("SQL : " + sql);
         return this.jdbcTemplate.query(sql, new RowMapper<RespAccountBorder>() {
@@ -79,7 +79,7 @@ public class GetSingleWindowServiceAdminImpl implements GetSingleWindowServiceAd
 
             sb.append("\nSELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, ");
             sb.append("\nTB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, C.BORDER_ID ");
-            sb.append("\nFROM TAX_INVOICE A ");
+            sb.append("\nfrom boder.TAX_INVOICE A ");
             sb.append("\nLEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID ");
             sb.append("\nLEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' ");
             sb.append("\nLEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID ");
@@ -143,7 +143,7 @@ public class GetSingleWindowServiceAdminImpl implements GetSingleWindowServiceAd
 
             sb.append("\nSELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, ");
             sb.append("\nTB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID ");
-            sb.append("\nFROM TAX_INVOICE A ");
+            sb.append("\nfrom boder.TAX_INVOICE A ");
             sb.append("\nLEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID ");
             sb.append("\nLEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' ");
             sb.append("\nLEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID ");
@@ -196,7 +196,7 @@ public class GetSingleWindowServiceAdminImpl implements GetSingleWindowServiceAd
         condit += lnswFunction.borderIdCondit("A.ISSUING_CUSTOMER_OFFICE");
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY') AS PAY_DATE, B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE as BORDER_ID, B.TAX_ACCOUNT_BORDER,REFERENCE,MORE_INFO , SUM(B.AMOUNT) as TOTAL, COUNT(*) AS NUM_TXN ");
-        sb.append("FROM TAX_INVOICE A LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID ");
+        sb.append("from boder.TAX_INVOICE A LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID ");
         sb.append("WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1 ").append(condit);
         sb.append(" GROUP BY REFERENCE,TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY'), B.TAX_CODE, a.ISSUING_CUSTOMER_OFFICE, B.TAX_ACCOUNT_BORDER,MORE_INFO ORDER BY TO_CHAR(a.UPDATED_AT, 'DD/MM/YYYY')");
         String sql = sb.toString();

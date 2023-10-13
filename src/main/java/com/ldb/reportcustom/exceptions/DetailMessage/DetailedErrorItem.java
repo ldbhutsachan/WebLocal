@@ -26,7 +26,7 @@ public class DetailedErrorItem implements Serializable
     @ApiModelProperty(
             position = 1,
             example = "Missing juristicId query parameter",
-            notes = "More information on the problem and solution. Or, the error message from backend."
+            notes = "More information on the problem and solution. Or, the error message from boder.backend."
     )
     @JsonProperty("message")
     public String message;
@@ -34,7 +34,7 @@ public class DetailedErrorItem implements Serializable
     @ApiModelProperty(
             position = 2,
             example = "MID085",
-            notes = "Original error code from backend."
+            notes = "Original error code from boder.backend."
     )
     @JsonProperty("originalErrorCode")
     public String originalErrorCode;
@@ -42,7 +42,7 @@ public class DetailedErrorItem implements Serializable
     @ApiModelProperty(
             position = 3,
             example = "Merchant ID Not Found",
-            notes = "Original error message from backend."
+            notes = "Original error message from boder.backend."
     )
     @JsonProperty("originalErrorDesc")
     public String originalErrorDesc;

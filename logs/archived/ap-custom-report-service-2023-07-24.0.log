@@ -1,0 +1,657 @@
+2023-07-24 09:37:09.556  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-07-24 09:37:09.559  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-07-24 09:37:09.559  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-24 09:37:09.900  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-07-24 09:37:10.529  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-07-24 09:37:10.599  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64ms. Found 3 JPA repository interfaces.
+2023-07-24 09:37:10.842  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=55600031-b1ae-3db0-a3f5-8cd44101c17a
+2023-07-24 09:37:11.081  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@d70ddde' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24 09:37:11.096  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24 09:37:11.590  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-07-24 09:37:11.672  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1761 ms
+2023-07-24 09:37:11.975  WARN [ap-custom-report-service,,,] 16004 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-24 09:37:12.188  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-07-24 09:37:12.751  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-07-24 09:37:12.779  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-07-24 09:37:13.259 DEBUG [ap-custom-report-service,,,] 16004 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-07-24 09:37:13.927  INFO [ap-custom-report-service,,,] 16004 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24 09:37:14.084  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@421f0285, org.springframework.security.web.context.SecurityContextPersistenceFilter@b6aae9d, org.springframework.security.web.header.HeaderWriterFilter@47c9e2e3, org.springframework.web.filter.CorsFilter@51d5eeb3, org.springframework.security.web.authentication.logout.LogoutFilter@1bdc7083, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@595a36f4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1cc2d4d9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@238c66cc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@384c7ae3, org.springframework.security.web.session.SessionManagementFilter@a6e4cd1, org.springframework.security.web.access.ExceptionTranslationFilter@5e6b1fd5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4beece61]
+2023-07-24 09:37:14.527  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-24 09:37:14.592  WARN [ap-custom-report-service,,,] 16004 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-07-24 09:37:14.627  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-07-24 09:37:14.687  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-07-24 09:37:14.718  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-07-24 09:37:14.934  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-07-24 09:37:14.947  INFO [ap-custom-report-service,,,] 16004 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 5.934 seconds (JVM running for 6.527)
+2023-07-24 09:37:18.945  INFO [ap-custom-report-service,,,] 16004 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-24 09:37:18.950  INFO [ap-custom-report-service,,,] 16004 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-07-24 09:37:18.965 DEBUG [ap-custom-report-service,12345999a3ab634f,12345999a3ab634f,true] 16004 --- [http-nio-23532-exec-1] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-07-24 09:37:19.034  INFO [ap-custom-report-service,12345999a3ab634f,12345999a3ab634f,true] 16004 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-07-24 09:37:19.035  INFO [ap-custom-report-service,12345999a3ab634f,12345999a3ab634f,true] 16004 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : Client IP Address: 0:0:0:0:0:0:0:1
+2023-07-24 09:37:19.399 ERROR [ap-custom-report-service,12345999a3ab634f,12345999a3ab634f,true] 16004 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : Authentication error = Unable to make field private final long java.time.Instant.seconds accessible: module java.base does not "opens java.time" to unnamed module @a74868d
+2023-07-24 09:37:19.414  INFO [ap-custom-report-service,12345999a3ab634f,12345999a3ab634f,true] 16004 --- [http-nio-23532-exec-1] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "Unable to make field private final long java.time.Instant.seconds accessible: module java.base does not \"opens java.time\" to unnamed module @a74868d",
+  "dataResponse" : {
+    "accessToken" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkwMTY2MjM5LCJleHAiOjE2OTAyNTI2Mzl9.oW00r3dFOE9yg9-0o5UluI0FEqTFp75xy1u2QPzergOQ9dxA6SFEDlXMqLkOD7Wp_sGTAJSCntwyYb1Xawu3_A",
+    "tokenType" : "Bearer",
+    "expireDate" : 86400,
+    "username" : "ADMIN_R5C10_1",
+    "enabled" : true,
+    "borders" : {
+      "createdAt" : {
+        "epochSecond" : 1674281281,
+        "nano" : 0
+      },
+      "modifiedAt" : {
+        "epochSecond" : 1674281281,
+        "nano" : 0
+      },
+      "borderId" : "R5C10",
+      "bridge" : "1",
+      "code" : "510",
+      "enable" : true,
+      "name" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I",
+      "provinceCode" : "201",
+      "provinceName" : "ນະຄອນລວງວຽງຈັນ",
+      "roles" : [ {
+        "roleId" : 24,
+        "roleName" : "ROLE_REPORT_ADMIN",
+        "roleDisplay" : "Role Border"
+      } ]
+    },
+    "roles" : [ {
+      "roleId" : 24,
+      "roleName" : "ROLE_REPORT_ADMIN",
+      "roleDisplay" : "Role Border"
+    } ]
+  }
+}
+2023-07-24 09:37:53.239  INFO [ap-custom-report-service,,,] 16004 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24 09:37:53.240  INFO [ap-custom-report-service,,,] 16004 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-07-24 09:37:56.682  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-07-24 09:37:56.683  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-07-24 09:37:56.683  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-24 09:37:56.997  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-07-24 09:37:57.613  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-07-24 09:37:57.676  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59ms. Found 3 JPA repository interfaces.
+2023-07-24 09:37:57.918  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=55600031-b1ae-3db0-a3f5-8cd44101c17a
+2023-07-24 09:37:58.146  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@232e93ac' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24 09:37:58.161  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24 09:37:58.653  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-07-24 09:37:58.738  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1729 ms
+2023-07-24 09:37:59.075  WARN [ap-custom-report-service,,,] 3492 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-24 09:37:59.274  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-07-24 09:38:00.182  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-07-24 09:38:00.208  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-07-24 09:38:00.618 DEBUG [ap-custom-report-service,,,] 3492 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-07-24 09:38:01.240  INFO [ap-custom-report-service,,,] 3492 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24 09:38:01.394  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38661f5, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e0c4ff1, org.springframework.security.web.header.HeaderWriterFilter@21de78d9, org.springframework.web.filter.CorsFilter@776819c4, org.springframework.security.web.authentication.logout.LogoutFilter@3ce949bc, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@eb8c43e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7870ec8c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b45859, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f140031, org.springframework.security.web.session.SessionManagementFilter@7c346832, org.springframework.security.web.access.ExceptionTranslationFilter@589ec99c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@123781fc]
+2023-07-24 09:38:01.808  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-24 09:38:01.875  WARN [ap-custom-report-service,,,] 3492 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-07-24 09:38:01.911  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-07-24 09:38:01.964  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-07-24 09:38:01.995  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-07-24 09:38:02.197  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-07-24 09:38:02.209  INFO [ap-custom-report-service,,,] 3492 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 5.99 seconds (JVM running for 6.479)
+2023-07-24 09:38:04.975  INFO [ap-custom-report-service,,,] 3492 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-24 09:38:04.983  INFO [ap-custom-report-service,,,] 3492 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-07-24 09:38:04.996 DEBUG [ap-custom-report-service,dfa6e002df1aa11c,dfa6e002df1aa11c,true] 3492 --- [http-nio-23532-exec-1] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-07-24 09:38:05.083  INFO [ap-custom-report-service,dfa6e002df1aa11c,dfa6e002df1aa11c,true] 3492 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-07-24 09:38:05.083  INFO [ap-custom-report-service,dfa6e002df1aa11c,dfa6e002df1aa11c,true] 3492 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : Client IP Address: 0:0:0:0:0:0:0:1
+2023-07-24 09:38:05.461 ERROR [ap-custom-report-service,dfa6e002df1aa11c,dfa6e002df1aa11c,true] 3492 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : Authentication error = Unable to make field private final long java.time.Instant.seconds accessible: module java.base does not "opens java.time" to unnamed module @a74868d
+2023-07-24 09:38:05.475  INFO [ap-custom-report-service,dfa6e002df1aa11c,dfa6e002df1aa11c,true] 3492 --- [http-nio-23532-exec-1] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "Unable to make field private final long java.time.Instant.seconds accessible: module java.base does not \"opens java.time\" to unnamed module @a74868d",
+  "dataResponse" : {
+    "accessToken" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkwMTY2Mjg1LCJleHAiOjE2OTAyNTI2ODV9.G4V--NmTacbd6L8IvF0WFxbtixWTlbDLeZCEjtfUqBzIvu8jMZZQY_UgNC6AYYSohoOGHfH0R3PK5Vx_j-YMag",
+    "tokenType" : "Bearer",
+    "expireDate" : 86400,
+    "username" : "ADMIN_R5C10_1",
+    "enabled" : true,
+    "borders" : {
+      "createdAt" : {
+        "epochSecond" : 1674281281,
+        "nano" : 0
+      },
+      "modifiedAt" : {
+        "epochSecond" : 1674281281,
+        "nano" : 0
+      },
+      "borderId" : "R5C10",
+      "bridge" : "1",
+      "code" : "510",
+      "enable" : true,
+      "name" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I",
+      "provinceCode" : "201",
+      "provinceName" : "ນະຄອນລວງວຽງຈັນ",
+      "roles" : [ {
+        "roleId" : 24,
+        "roleName" : "ROLE_REPORT_ADMIN",
+        "roleDisplay" : "Role Border"
+      } ]
+    },
+    "roles" : [ {
+      "roleId" : 24,
+      "roleName" : "ROLE_REPORT_ADMIN",
+      "roleDisplay" : "Role Border"
+    } ]
+  }
+}
+2023-07-24 09:38:19.936  INFO [ap-custom-report-service,,,] 3492 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24 09:38:19.936  INFO [ap-custom-report-service,,,] 3492 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-07-24 09:38:22.146  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-07-24 09:38:22.147  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-07-24 09:38:22.147  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-24 09:38:22.458  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-07-24 09:38:23.065  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-07-24 09:38:23.135  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64ms. Found 3 JPA repository interfaces.
+2023-07-24 09:38:23.392  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=55600031-b1ae-3db0-a3f5-8cd44101c17a
+2023-07-24 09:38:23.631  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@9c9ad13' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24 09:38:23.647  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24 09:38:24.170  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-07-24 09:38:24.251  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1781 ms
+2023-07-24 09:38:24.582  WARN [ap-custom-report-service,,,] 952 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-24 09:38:24.771  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-07-24 09:38:25.291  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-07-24 09:38:25.317  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-07-24 09:38:25.746 DEBUG [ap-custom-report-service,,,] 952 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-07-24 09:38:26.379  INFO [ap-custom-report-service,,,] 952 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24 09:38:26.530  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d6a2292, org.springframework.security.web.context.SecurityContextPersistenceFilter@8d9fa39, org.springframework.security.web.header.HeaderWriterFilter@2952fc5c, org.springframework.web.filter.CorsFilter@5222dad7, org.springframework.security.web.authentication.logout.LogoutFilter@349ebd2d, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@3e7bc5a1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@653e6c9b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f5b9f19, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1014c575, org.springframework.security.web.session.SessionManagementFilter@396def03, org.springframework.security.web.access.ExceptionTranslationFilter@7d1d1ba6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6ec4f22e]
+2023-07-24 09:38:27.005  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-24 09:38:27.089  WARN [ap-custom-report-service,,,] 952 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-07-24 09:38:27.129  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-07-24 09:38:27.199  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-07-24 09:38:27.233  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-07-24 09:38:27.458  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-07-24 09:38:27.469  INFO [ap-custom-report-service,,,] 952 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 5.789 seconds (JVM running for 6.167)
+2023-07-24 09:38:31.210  INFO [ap-custom-report-service,,,] 952 --- [http-nio-23532-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-24 09:38:31.218  INFO [ap-custom-report-service,,,] 952 --- [http-nio-23532-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-07-24 09:38:31.232 DEBUG [ap-custom-report-service,d125af2da86b9fd1,d125af2da86b9fd1,true] 952 --- [http-nio-23532-exec-2] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-07-24 09:38:31.316  INFO [ap-custom-report-service,d125af2da86b9fd1,d125af2da86b9fd1,true] 952 --- [http-nio-23532-exec-2] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-07-24 09:38:31.316  INFO [ap-custom-report-service,d125af2da86b9fd1,d125af2da86b9fd1,true] 952 --- [http-nio-23532-exec-2] c.l.r.controller.LoginController         : Client IP Address: 0:0:0:0:0:0:0:1
+2023-07-24 09:38:31.454 ERROR [ap-custom-report-service,d125af2da86b9fd1,d125af2da86b9fd1,true] 952 --- [http-nio-23532-exec-2] c.l.r.controller.LoginController         : Authentication error = PreparedStatementCallback; bad SQL grammar [SELECT C.USER_NAME, B.ROLE_NAME from boder.TAX_USER_ROLE A JOIN TAX_ROLES B ON A.ROLE_ID = B.ROLE_ID LEFT OUTER JOIN TAX_USER_LOGIN C ON A.USER_ID = C.USER_ID WHERE C.USER_NAME =?]; nested exception is java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+2023-07-24 09:38:31.466  INFO [ap-custom-report-service,d125af2da86b9fd1,d125af2da86b9fd1,true] 952 --- [http-nio-23532-exec-2] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "PreparedStatementCallback; bad SQL grammar [SELECT C.USER_NAME, B.ROLE_NAME from boder.TAX_USER_ROLE A JOIN TAX_ROLES B ON A.ROLE_ID = B.ROLE_ID LEFT OUTER JOIN TAX_USER_LOGIN C ON A.USER_ID = C.USER_ID WHERE C.USER_NAME =?]; nested exception is java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist\n"
+}
+2023-07-24 09:38:53.237  INFO [ap-custom-report-service,,,] 952 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24 09:38:53.238  INFO [ap-custom-report-service,,,] 952 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-07-24 09:38:56.550  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-07-24 09:38:56.551  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-07-24 09:38:56.551  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-24 09:38:56.863  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-07-24 09:38:57.476  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-07-24 09:38:57.543  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63ms. Found 3 JPA repository interfaces.
+2023-07-24 09:38:57.819  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=55600031-b1ae-3db0-a3f5-8cd44101c17a
+2023-07-24 09:38:58.053  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@9c9ad13' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24 09:38:58.068  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24 09:38:58.540  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-07-24 09:38:58.623  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1749 ms
+2023-07-24 09:38:58.932  WARN [ap-custom-report-service,,,] 16972 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-24 09:38:59.146  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-07-24 09:38:59.675  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-07-24 09:38:59.706  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-07-24 09:39:00.196 DEBUG [ap-custom-report-service,,,] 16972 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-07-24 09:39:00.829  INFO [ap-custom-report-service,,,] 16972 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24 09:39:00.993  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36a4b342, org.springframework.security.web.context.SecurityContextPersistenceFilter@776a614d, org.springframework.security.web.header.HeaderWriterFilter@fbf3195, org.springframework.web.filter.CorsFilter@3edf7550, org.springframework.security.web.authentication.logout.LogoutFilter@5aedfd05, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@50044064, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d1d1ba6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@25fbf8f9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f9a39a2, org.springframework.security.web.session.SessionManagementFilter@3d944504, org.springframework.security.web.access.ExceptionTranslationFilter@54f662f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c7e48c1]
+2023-07-24 09:39:01.459  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-24 09:39:01.532  WARN [ap-custom-report-service,,,] 16972 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-07-24 09:39:01.564  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-07-24 09:39:01.618  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-07-24 09:39:01.649  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-07-24 09:39:01.856  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-07-24 09:39:01.869  INFO [ap-custom-report-service,,,] 16972 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 5.793 seconds (JVM running for 6.244)
+2023-07-24 09:39:05.066  INFO [ap-custom-report-service,,,] 16972 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-24 09:39:05.072  INFO [ap-custom-report-service,,,] 16972 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-07-24 09:39:05.086 DEBUG [ap-custom-report-service,d0abeb51730fe697,d0abeb51730fe697,true] 16972 --- [http-nio-23532-exec-1] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-07-24 09:39:05.167  INFO [ap-custom-report-service,d0abeb51730fe697,d0abeb51730fe697,true] 16972 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-07-24 09:39:05.167  INFO [ap-custom-report-service,d0abeb51730fe697,d0abeb51730fe697,true] 16972 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : Client IP Address: 0:0:0:0:0:0:0:1
+2023-07-24 09:39:05.325 ERROR [ap-custom-report-service,d0abeb51730fe697,d0abeb51730fe697,true] 16972 --- [http-nio-23532-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ORA-00942: table or view does not exist
+
+2023-07-24 09:39:05.329 ERROR [ap-custom-report-service,d0abeb51730fe697,d0abeb51730fe697,true] 16972 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : Authentication error = could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2023-07-24 09:39:05.338  INFO [ap-custom-report-service,d0abeb51730fe697,d0abeb51730fe697,true] 16972 --- [http-nio-23532-exec-1] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet"
+}
+2023-07-24 09:39:07.924 DEBUG [ap-custom-report-service,df3705c5f4291e91,df3705c5f4291e91,true] 16972 --- [http-nio-23532-exec-3] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-07-24 09:39:07.926  INFO [ap-custom-report-service,df3705c5f4291e91,df3705c5f4291e91,true] 16972 --- [http-nio-23532-exec-3] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-07-24 09:39:07.926  INFO [ap-custom-report-service,df3705c5f4291e91,df3705c5f4291e91,true] 16972 --- [http-nio-23532-exec-3] c.l.r.controller.LoginController         : Client IP Address: 0:0:0:0:0:0:0:1
+2023-07-24 09:39:07.932 ERROR [ap-custom-report-service,df3705c5f4291e91,df3705c5f4291e91,true] 16972 --- [http-nio-23532-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : ORA-00942: table or view does not exist
+
+2023-07-24 09:39:07.933 ERROR [ap-custom-report-service,df3705c5f4291e91,df3705c5f4291e91,true] 16972 --- [http-nio-23532-exec-3] c.l.r.controller.LoginController         : Authentication error = could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2023-07-24 09:39:07.933  INFO [ap-custom-report-service,df3705c5f4291e91,df3705c5f4291e91,true] 16972 --- [http-nio-23532-exec-3] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet"
+}
+2023-07-24 09:39:09.007 DEBUG [ap-custom-report-service,9bf3fd69853fae82,9bf3fd69853fae82,true] 16972 --- [http-nio-23532-exec-4] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-07-24 09:39:09.010  INFO [ap-custom-report-service,9bf3fd69853fae82,9bf3fd69853fae82,true] 16972 --- [http-nio-23532-exec-4] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-07-24 09:39:09.010  INFO [ap-custom-report-service,9bf3fd69853fae82,9bf3fd69853fae82,true] 16972 --- [http-nio-23532-exec-4] c.l.r.controller.LoginController         : Client IP Address: 0:0:0:0:0:0:0:1
+2023-07-24 09:39:09.015 ERROR [ap-custom-report-service,9bf3fd69853fae82,9bf3fd69853fae82,true] 16972 --- [http-nio-23532-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : ORA-00942: table or view does not exist
+
+2023-07-24 09:39:09.016 ERROR [ap-custom-report-service,9bf3fd69853fae82,9bf3fd69853fae82,true] 16972 --- [http-nio-23532-exec-4] c.l.r.controller.LoginController         : Authentication error = could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2023-07-24 09:39:09.016  INFO [ap-custom-report-service,9bf3fd69853fae82,9bf3fd69853fae82,true] 16972 --- [http-nio-23532-exec-4] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet"
+}
+2023-07-24 09:39:49.115  INFO [ap-custom-report-service,,,] 16972 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24 09:39:49.116  INFO [ap-custom-report-service,,,] 16972 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-07-24 09:39:52.590  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-07-24 09:39:52.591  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-07-24 09:39:52.591  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-24 09:39:52.901  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-07-24 09:39:53.519  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-07-24 09:39:53.589  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65ms. Found 3 JPA repository interfaces.
+2023-07-24 09:39:53.857  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=55600031-b1ae-3db0-a3f5-8cd44101c17a
+2023-07-24 09:39:54.096  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@9387180' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24 09:39:54.110  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24 09:39:54.615  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-07-24 09:39:54.697  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1786 ms
+2023-07-24 09:39:54.996  WARN [ap-custom-report-service,,,] 3900 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-24 09:39:55.175  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-07-24 09:39:55.663  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-07-24 09:39:55.683  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-07-24 09:39:56.162 DEBUG [ap-custom-report-service,,,] 3900 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-07-24 09:39:56.762  INFO [ap-custom-report-service,,,] 3900 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24 09:39:56.936  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7518a45f, org.springframework.security.web.context.SecurityContextPersistenceFilter@58577ecd, org.springframework.security.web.header.HeaderWriterFilter@221a6dea, org.springframework.web.filter.CorsFilter@6991fcbf, org.springframework.security.web.authentication.logout.LogoutFilter@396def03, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@30a81110, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b7ade7e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@436e2f21, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c7e48c1, org.springframework.security.web.session.SessionManagementFilter@48b76ab2, org.springframework.security.web.access.ExceptionTranslationFilter@74153478, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3d3b0b18]
+2023-07-24 09:39:57.383  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-24 09:39:57.453  WARN [ap-custom-report-service,,,] 3900 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-07-24 09:39:57.491  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-07-24 09:39:57.552  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-07-24 09:39:57.585  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-07-24 09:39:57.791  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-07-24 09:39:57.805  INFO [ap-custom-report-service,,,] 3900 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 5.683 seconds (JVM running for 6.18)
+2023-07-24 09:40:00.023  INFO [ap-custom-report-service,,,] 3900 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-24 09:40:00.030  INFO [ap-custom-report-service,,,] 3900 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-07-24 09:40:00.048 DEBUG [ap-custom-report-service,0c0baa76442f86f1,0c0baa76442f86f1,true] 3900 --- [http-nio-23532-exec-1] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-07-24 09:40:00.129  INFO [ap-custom-report-service,0c0baa76442f86f1,0c0baa76442f86f1,true] 3900 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-07-24 09:40:00.129  INFO [ap-custom-report-service,0c0baa76442f86f1,0c0baa76442f86f1,true] 3900 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : Client IP Address: 0:0:0:0:0:0:0:1
+2023-07-24 09:40:00.288 ERROR [ap-custom-report-service,0c0baa76442f86f1,0c0baa76442f86f1,true] 3900 --- [http-nio-23532-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ORA-00942: table or view does not exist
+
+2023-07-24 09:40:00.292 ERROR [ap-custom-report-service,0c0baa76442f86f1,0c0baa76442f86f1,true] 3900 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : Authentication error = could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2023-07-24 09:40:00.302  INFO [ap-custom-report-service,0c0baa76442f86f1,0c0baa76442f86f1,true] 3900 --- [http-nio-23532-exec-1] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "message" : "could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet"
+}
+2023-07-24 09:42:24.309 DEBUG [ap-custom-report-service,666bf35f8b60fbca,666bf35f8b60fbca,true] 3900 --- [http-nio-23532-exec-5] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-07-24 09:42:24.310  INFO [ap-custom-report-service,666bf35f8b60fbca,666bf35f8b60fbca,true] 3900 --- [http-nio-23532-exec-5] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-07-24 09:42:24.310  INFO [ap-custom-report-service,666bf35f8b60fbca,666bf35f8b60fbca,true] 3900 --- [http-nio-23532-exec-5] c.l.r.controller.LoginController         : Client IP Address: 0:0:0:0:0:0:0:1
+2023-07-24 09:42:24.320 ERROR [ap-custom-report-service,666bf35f8b60fbca,666bf35f8b60fbca,true] 3900 --- [http-nio-23532-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : ORA-00942: table or view does not exist
+
+2023-07-24 09:42:24.321 ERROR [ap-custom-report-service,666bf35f8b60fbca,666bf35f8b60fbca,true] 3900 --- [http-nio-23532-exec-5] c.l.r.controller.LoginController         : Authentication error = could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2023-07-24 09:42:24.321  INFO [ap-custom-report-service,666bf35f8b60fbca,666bf35f8b60fbca,true] 3900 --- [http-nio-23532-exec-5] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "message" : "could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet"
+}
+2023-07-24 09:42:32.715  INFO [ap-custom-report-service,,,] 3900 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24 09:42:32.715  INFO [ap-custom-report-service,,,] 3900 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-07-24 09:42:36.035  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-07-24 09:42:36.037  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-07-24 09:42:36.037  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-24 09:42:36.348  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-07-24 09:42:36.958  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-07-24 09:42:37.024  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61ms. Found 3 JPA repository interfaces.
+2023-07-24 09:42:37.282  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=55600031-b1ae-3db0-a3f5-8cd44101c17a
+2023-07-24 09:42:37.523  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@d70ddde' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24 09:42:37.537  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24 09:42:38.027  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-07-24 09:42:38.108  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1749 ms
+2023-07-24 09:42:38.410  WARN [ap-custom-report-service,,,] 5828 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-24 09:42:38.613  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-07-24 09:42:40.897 ERROR [ap-custom-report-service,,,] 5828 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:456)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:451)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1040)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:552)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:501)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1292)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1025)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:743)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:793)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:57)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:747)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:562)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:324)
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:133)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider.getDefaultDdlAuto(HibernateDefaultDdlAutoProvider.java:42)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.lambda$getVendorProperties$1(HibernateJpaConfiguration.java:130)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:136)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:102)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:94)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:132)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:133)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:227)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:420)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:342)
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.findEntityManagerFactory(EntityManagerFactoryUtils.java:121)
+	at org.springframework.orm.jpa.EntityManagerFactoryAccessor.setBeanFactory(EntityManagerFactoryAccessor.java:155)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1781)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1525)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1265)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:715)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:408)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:715)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:408)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:255)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:229)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5166)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:440)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:193)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:178)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:158)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.ldb.reportcustom.ReportCustomApplication.main(ReportCustomApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+
+2023-07-24 09:42:41.055  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-07-24 09:42:41.084  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-07-24 09:42:41.526 DEBUG [ap-custom-report-service,,,] 5828 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-07-24 09:42:43.463 ERROR [ap-custom-report-service,,,] 5828 --- [task-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:456)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:451)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1040)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:552)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:501)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1292)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1025)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:743)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:793)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:57)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:747)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:562)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+
+2023-07-24 09:42:43.943  INFO [ap-custom-report-service,,,] 5828 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24 09:42:44.105  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b359544, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c80dcc9, org.springframework.security.web.header.HeaderWriterFilter@7fe386e1, org.springframework.web.filter.CorsFilter@31cc569d, org.springframework.security.web.authentication.logout.LogoutFilter@78c24054, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@24c2237c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@23a4648a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3649c1b6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60f27b5e, org.springframework.security.web.session.SessionManagementFilter@6d5a70cd, org.springframework.security.web.access.ExceptionTranslationFilter@7cd684c2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5033a5d4]
+2023-07-24 09:42:44.523  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-24 09:42:44.595  WARN [ap-custom-report-service,,,] 5828 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-07-24 09:42:44.626  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-07-24 09:42:44.678  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-07-24 09:42:46.033 ERROR [ap-custom-report-service,,,] 5828 --- [task-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:456)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:451)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1040)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:552)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:501)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1292)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1025)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:743)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:793)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:57)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:747)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:562)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:324)
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:133)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.lambda$isInitializingDatabase$0(DataSourceInitializedPublisher.java:127)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:136)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:102)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:94)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.isInitializingDatabase(DataSourceInitializedPublisher.java:129)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:109)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.access$300(DataSourceInitializedPublisher.java:55)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher$DataSourceSchemaCreatedPublisher.lambda$postProcessEntityManagerFactory$0(DataSourceInitializedPublisher.java:253)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+
+2023-07-24 09:42:46.034  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-07-24 09:42:46.262  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-07-24 09:42:46.274  INFO [ap-custom-report-service,,,] 5828 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 10.726 seconds (JVM running for 11.134)
+2023-07-24 09:42:48.746  INFO [ap-custom-report-service,,,] 5828 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24 09:42:48.746  INFO [ap-custom-report-service,,,] 5828 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-07-24 09:42:50.914  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.3.0.0/oraclepki.jar
+2023-07-24 09:42:50.915  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-07-24 09:42:50.915  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-24 09:42:51.220  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: prod
+2023-07-24 09:42:51.829  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-07-24 09:42:51.897  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63ms. Found 3 JPA repository interfaces.
+2023-07-24 09:42:52.130  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=55600031-b1ae-3db0-a3f5-8cd44101c17a
+2023-07-24 09:42:52.360  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@d70ddde' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24 09:42:52.376  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-24 09:42:52.873  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-07-24 09:42:52.967  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1735 ms
+2023-07-24 09:42:53.322  WARN [ap-custom-report-service,,,] 13844 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-24 09:42:53.533  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-07-24 09:42:54.018  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-07-24 09:42:54.046  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-07-24 09:42:54.527 DEBUG [ap-custom-report-service,,,] 13844 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-07-24 09:42:55.133  INFO [ap-custom-report-service,,,] 13844 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24 09:42:55.304  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8391f14, org.springframework.security.web.context.SecurityContextPersistenceFilter@32233dd, org.springframework.security.web.header.HeaderWriterFilter@6a0cfe54, org.springframework.web.filter.CorsFilter@fa01f44, org.springframework.security.web.authentication.logout.LogoutFilter@7b3b90db, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@64d9bd44, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@436e2f21, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ff03c02, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66454fa5, org.springframework.security.web.session.SessionManagementFilter@2323214e, org.springframework.security.web.access.ExceptionTranslationFilter@2d8285ef, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4d9c5154]
+2023-07-24 09:42:55.745  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-24 09:42:55.810  WARN [ap-custom-report-service,,,] 13844 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-07-24 09:42:55.847  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-07-24 09:42:55.905  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-07-24 09:42:55.934  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-07-24 09:42:56.142  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-07-24 09:42:56.155  INFO [ap-custom-report-service,,,] 13844 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 5.722 seconds (JVM running for 6.105)
+2023-07-24 09:43:05.705  INFO [ap-custom-report-service,,,] 13844 --- [http-nio-23532-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-24 09:43:05.711  INFO [ap-custom-report-service,,,] 13844 --- [http-nio-23532-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-07-24 09:43:05.733 DEBUG [ap-custom-report-service,1124887d237c35c5,1124887d237c35c5,true] 13844 --- [http-nio-23532-exec-2] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report/api/v1/custom/authenticate/token
+2023-07-24 09:43:05.803  INFO [ap-custom-report-service,1124887d237c35c5,1124887d237c35c5,true] 13844 --- [http-nio-23532-exec-2] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-07-24 09:43:05.803  INFO [ap-custom-report-service,1124887d237c35c5,1124887d237c35c5,true] 13844 --- [http-nio-23532-exec-2] c.l.r.controller.LoginController         : Client IP Address: 0:0:0:0:0:0:0:1
+2023-07-24 09:43:06.165 ERROR [ap-custom-report-service,1124887d237c35c5,1124887d237c35c5,true] 13844 --- [http-nio-23532-exec-2] c.l.r.controller.LoginController         : Authentication error = Unable to make field private final long java.time.Instant.seconds accessible: module java.base does not "opens java.time" to unnamed module @a74868d
+2023-07-24 09:43:06.182  INFO [ap-custom-report-service,1124887d237c35c5,1124887d237c35c5,true] 13844 --- [http-nio-23532-exec-2] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "Unable to make field private final long java.time.Instant.seconds accessible: module java.base does not \"opens java.time\" to unnamed module @a74868d",
+  "dataResponse" : {
+    "accessToken" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjkwMTY2NTg2LCJleHAiOjE2OTAyNTI5ODZ9.ORBs-5_31cVJ6BDEh-qen_6MNwX-ZqpxwN1aH4GjIJotgMfpqAqeP2e6m7swRf68x_L-Gr7mppZV-kR5AZCj1A",
+    "tokenType" : "Bearer",
+    "expireDate" : 86400,
+    "username" : "ADMIN_R5C10_1",
+    "enabled" : true,
+    "borders" : {
+      "createdAt" : {
+        "epochSecond" : 1674281281,
+        "nano" : 0
+      },
+      "modifiedAt" : {
+        "epochSecond" : 1674281281,
+        "nano" : 0
+      },
+      "borderId" : "R5C10",
+      "bridge" : "1",
+      "code" : "510",
+      "enable" : true,
+      "name" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I",
+      "provinceCode" : "201",
+      "provinceName" : "ນະຄອນລວງວຽງຈັນ",
+      "roles" : [ {
+        "roleId" : 24,
+        "roleName" : "ROLE_REPORT_ADMIN",
+        "roleDisplay" : "Role Border"
+      } ]
+    },
+    "roles" : [ {
+      "roleId" : 24,
+      "roleName" : "ROLE_REPORT_ADMIN",
+      "roleDisplay" : "Role Border"
+    } ]
+  }
+}
+2023-07-24 09:46:38.519  INFO [ap-custom-report-service,,,] 13844 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24 09:46:38.519  INFO [ap-custom-report-service,,,] 13844 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

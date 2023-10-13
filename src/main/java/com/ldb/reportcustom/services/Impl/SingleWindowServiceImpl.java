@@ -276,7 +276,7 @@ public class SingleWindowServiceImpl implements SingleWindowService {
             List<Object> mapList = new ArrayList<>();
             List<Map<String, Double>> listData = new ArrayList();
             /**
-             * filter data from dataList and set to mapList
+             * filter data from boder.dataList and set to mapList
              */
             mapList =  dataList.stream().filter(element -> element.containsKey("data")).map(element -> element.get("data")).collect(Collectors.toList());
 
@@ -476,12 +476,12 @@ public class SingleWindowServiceImpl implements SingleWindowService {
                 }
             }
             dataValue.put("dataValue", dataList);
-            //----------------------------------------------------------get map from data details
+            //----------------------------------------------------------get map from boder.data details
             Map<String, Long> sum = new HashMap<>();
             List<Object> mapList = new ArrayList<>();
             List<Map<String, Double>> listData = new ArrayList();
             /**
-             * filter data from dataList and set to mapList
+             * filter data from boder.dataList and set to mapList
              */
             mapList =  dataList.stream().filter(element -> element.containsKey("data")).map(element -> element.get("data")).collect(Collectors.toList());
          //   System.out.println("mapList = " + mapList);
@@ -507,7 +507,7 @@ public class SingleWindowServiceImpl implements SingleWindowService {
                 );
             }
           //  System.out.println("listData 2 = " + listData);
-            //-------set amount sum from DB to total
+            //-------set amount sum from boder.DB to total
             totalAmount = listRp.stream().map(RespSumTaxCode::getTotalAmount).reduce(0.0, Double::sum);
             /**
              * sum ຍອດເງິນຕາມແຕ່ລະປະເພດຂອງ tax code
@@ -517,7 +517,7 @@ public class SingleWindowServiceImpl implements SingleWindowService {
             sumTotal.put("total", (totalAmount));
             total.put("total", numfm.format(totalAmount));
             dataValue.put("sumTotal", sumTotal);
-            //---------------------------------------------------------- end get map from data details
+            //---------------------------------------------------------- end get map from boder.data details
             response.setStatus("00");
             response.setMessage("success");
             response.setDataResponse(dataValue);

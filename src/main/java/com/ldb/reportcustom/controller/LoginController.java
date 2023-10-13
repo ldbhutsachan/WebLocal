@@ -96,7 +96,7 @@ public class LoginController {
             SecurityContextHolder.getContext().setAuthentication(authentication);
             String jwt = tokenProvider.generateToken(authentication);
 
-            // Find Users by userId get from Token key
+            // Find Users by userId get from boder.Token key
             UserPrincipal userPrincipal = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
             Users users = userPrincipal.getUser();
 
@@ -121,7 +121,7 @@ public class LoginController {
             dataResponse.setStatus("00");
             dataResponse.setMessage("success");
             dataResponse.setDataResponse(loginResponse);
-            log.info("loginResponse: " + JSONUtils.toJSONString(loginResponse));
+            //log.info("loginResponse: " + JSONUtils.toJSONString(loginResponse));
 
 //        return ResponseEntity.ok("loginResponse");
         } catch (Exception e) {

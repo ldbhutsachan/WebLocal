@@ -41,7 +41,7 @@ public class LnswFunction {
             System.out.println("borderIds= " + roleNames);
 
             /**
-             * Get detail User From login
+             * Get detail User from boder.login
              */
             borders = borderRepository.findByRolesName(roleNames).stream().map(Border::getBorderId).collect(Collectors.toList());
 
