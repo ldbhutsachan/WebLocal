@@ -211,7 +211,8 @@ public class GetDataServiceImpl implements GetDataService {
                 log.info("req issuer_name Req 0002:");
                 condit += "AND TIN_NAME like '%"+dataRequest.getTIN_NAME()+"%' AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') between " + dataRequest.getStartDate() + " AND " + dataRequest.getEndDate();
             }
-            condit += lnswFunction.borderIdCondit("A.ISSUING_CUSTOMER_OFFICE");
+            //condit += lnswFunction.borderIdCondit("A.ISSUING_CUSTOMER_OFFICE");
+            log.info("++++"+lnswFunction.borderIdCondit("A.ISSUING_CUSTOMER_OFFICE"));
             sb.append("\nSELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, ");
             sb.append("\nTB.name AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID ");
             sb.append("\nfrom TAX_INVOICE A ");

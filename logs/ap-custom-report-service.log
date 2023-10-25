@@ -3783,3 +3783,3106 @@ Unconditional classes:
 2023-10-25 15:03:33.881  INFO [ap-custom-report-service,,,] 10900 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
 2023-10-25 15:03:34.054  INFO [ap-custom-report-service,,,] 10900 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
 2023-10-25 15:03:34.065  INFO [ap-custom-report-service,,,] 10900 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 4.212 seconds (JVM running for 4.583)
+2023-10-25 15:41:55.416  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-10-25 15:41:55.417  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-25 15:41:55.754  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: uat
+2023-10-25 15:41:56.179  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-10-25 15:41:56.216  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 3 JPA repository interfaces.
+2023-10-25 15:41:56.352  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aed222f2-9e06-35bd-b57a-53ca6fcbef86
+2023-10-25 15:41:56.502  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4f73b91a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-25 15:41:56.513  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-25 15:41:56.935  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-10-25 15:41:57.008  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1248 ms
+2023-10-25 15:41:57.164  WARN [ap-custom-report-service,,,] 15240 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-25 15:41:57.249  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-10-25 15:41:57.456  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-10-25 15:41:57.475  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-10-25 15:41:57.771 DEBUG [ap-custom-report-service,,,] 15240 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-10-25 15:41:58.085  INFO [ap-custom-report-service,,,] 15240 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 15:41:58.219  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78397f27, org.springframework.security.web.context.SecurityContextPersistenceFilter@47d7f6be, org.springframework.security.web.header.HeaderWriterFilter@339b6c91, org.springframework.web.filter.CorsFilter@3ebac5b2, org.springframework.security.web.authentication.logout.LogoutFilter@455226ec, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@337822a8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f666635, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f8cbc9c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@669e6f86, org.springframework.security.web.session.SessionManagementFilter@7d58ea6d, org.springframework.security.web.access.ExceptionTranslationFilter@3b6bbd86, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2b77f93]
+2023-10-25 15:41:58.605  WARN [ap-custom-report-service,,,] 15240 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-10-25 15:41:58.784  WARN [ap-custom-report-service,,,] 15240 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-10-25 15:41:58.814  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-10-25 15:41:58.874  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-10-25 15:41:59.022  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-10-25 15:41:59.182  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-10-25 15:41:59.192  INFO [ap-custom-report-service,,,] 15240 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 4.314 seconds (JVM running for 4.683)
+2023-10-25 15:42:16.835  INFO [ap-custom-report-service,,,] 15240 --- [http-nio-23532-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-25 15:42:16.842  INFO [ap-custom-report-service,,,] 15240 --- [http-nio-23532-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-10-25 15:42:16.854 DEBUG [ap-custom-report-service,def1be530cfa92c9,def1be530cfa92c9,true] 15240 --- [http-nio-23532-exec-2] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report-dev/api/v1/custom/authenticate/token
+2023-10-25 15:42:16.915  INFO [ap-custom-report-service,def1be530cfa92c9,def1be530cfa92c9,true] 15240 --- [http-nio-23532-exec-2] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-10-25 15:42:16.915  INFO [ap-custom-report-service,def1be530cfa92c9,def1be530cfa92c9,true] 15240 --- [http-nio-23532-exec-2] c.l.r.controller.LoginController         : Client IP Address: 0:0:0:0:0:0:0:1
+2023-10-25 15:42:17.298  INFO [ap-custom-report-service,def1be530cfa92c9,def1be530cfa92c9,true] 15240 --- [http-nio-23532-exec-2] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "accessToken" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBRE1JTl9SNUMxMF8xIiwiaWF0IjoxNjk4MjIzMzM3LCJleHAiOjE2OTgzMDk3Mzd9.GDtaQwRIv_HvejqJCXAwEGGsjbdcw-d6kDalrNskaLOMxGqqJdsr6oMSmpK9FFKzKUjbW9cFRE_i6RwKPNTX2g",
+    "tokenType" : "Bearer",
+    "expireDate" : 86400,
+    "username" : "ADMIN_R5C10_1",
+    "enabled" : true,
+    "borders" : {
+      "createdAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "modifiedAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "borderId" : "R5C10",
+      "bridge" : "1",
+      "code" : "510",
+      "enable" : true,
+      "name" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I",
+      "provinceCode" : "201",
+      "provinceName" : "ນະຄອນລວງວຽງຈັນ",
+      "roles" : [ {
+        "roleId" : 1,
+        "roleName" : "ROLE_BORDER",
+        "roleDisplay" : "Role Border"
+      } ]
+    },
+    "roles" : [ {
+      "roleId" : 41,
+      "roleName" : "ROLE_REPORT_ADMIN",
+      "roleDisplay" : "Role Border"
+    } ]
+  }
+}
+2023-10-25 15:42:36.182 DEBUG [ap-custom-report-service,b03e325b71247728,b03e325b71247728,true] 15240 --- [http-nio-23532-exec-3] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report-dev/api/v1/custom/company.service
+2023-10-25 15:42:36.185  INFO [ap-custom-report-service,b03e325b71247728,b03e325b71247728,true] 15240 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : 		 --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:42:36.186  INFO [ap-custom-report-service,b03e325b71247728,b03e325b71247728,true] 15240 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:42:36.186  INFO [ap-custom-report-service,b03e325b71247728,b03e325b71247728,true] 15240 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-10-25 15:42:36.186  INFO [ap-custom-report-service,b03e325b71247728,b03e325b71247728,true] 15240 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-10-25 15:42:36.186  INFO [ap-custom-report-service,b03e325b71247728,b03e325b71247728,true] 15240 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230125",
+  "endDate" : "20231025",
+  "tIN_NAME" : "ALL"
+}
+2023-10-25 15:42:36.186  INFO [ap-custom-report-service,b03e325b71247728,b03e325b71247728,true] 15240 --- [http-nio-23532-exec-3] c.l.r.services.Impl.GetDataServiceImpl   : req issuer_name:ALL
+2023-10-25 15:42:36.205  INFO [ap-custom-report-service,b03e325b71247728,b03e325b71247728,true] 15240 --- [http-nio-23532-exec-3] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('
+2023-10-25 15:42:36.236 ERROR [ap-custom-report-service,b03e325b71247728,b03e325b71247728,true] 15240 --- [http-nio-23532-exec-3] c.l.r.services.Impl.GetDataServiceImpl   : Cannot Get data = StatementCallback; bad SQL grammar [
+SELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, 
+TB.name AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID 
+from TAX_INVOICE A 
+LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID 
+LEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' 
+LEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID 
+WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') between 20230125 AND 20231025 AND A.ISSUING_CUSTOMER_OFFICE IN (' ORDER BY REFERENCE, b.AMOUNT DESC ]; nested exception is java.sql.SQLSyntaxErrorException: ORA-01756: quoted string not properly terminated
+
+2023-10-25 15:42:36.239 ERROR [ap-custom-report-service,b03e325b71247728,b03e325b71247728,true] 15240 --- [http-nio-23532-exec-3] c.l.r.s.Impl.SingleWindowServiceImpl     : Cannot Get data = null
+2023-10-25 15:42:36.240  INFO [ap-custom-report-service,b03e325b71247728,b03e325b71247728,true] 15240 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : 		 --> End Custom Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:42:36.241  INFO [ap-custom-report-service,b03e325b71247728,b03e325b71247728,true] 15240 --- [http-nio-23532-exec-3] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "fail"
+}
+2023-10-25 15:42:41.841 DEBUG [ap-custom-report-service,0f8757dd69172773,0f8757dd69172773,true] 15240 --- [http-nio-23532-exec-4] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report-dev/api/v1/custom/company.service
+2023-10-25 15:42:41.842  INFO [ap-custom-report-service,0f8757dd69172773,0f8757dd69172773,true] 15240 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : 		 --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:42:41.843  INFO [ap-custom-report-service,0f8757dd69172773,0f8757dd69172773,true] 15240 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:42:41.843  INFO [ap-custom-report-service,0f8757dd69172773,0f8757dd69172773,true] 15240 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-10-25 15:42:41.843  INFO [ap-custom-report-service,0f8757dd69172773,0f8757dd69172773,true] 15240 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-10-25 15:42:41.843  INFO [ap-custom-report-service,0f8757dd69172773,0f8757dd69172773,true] 15240 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230125",
+  "endDate" : "20231025",
+  "tIN_NAME" : "ALL"
+}
+2023-10-25 15:42:41.843  INFO [ap-custom-report-service,0f8757dd69172773,0f8757dd69172773,true] 15240 --- [http-nio-23532-exec-4] c.l.r.services.Impl.GetDataServiceImpl   : req issuer_name:ALL
+2023-10-25 15:42:41.844  INFO [ap-custom-report-service,0f8757dd69172773,0f8757dd69172773,true] 15240 --- [http-nio-23532-exec-4] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('
+2023-10-25 15:42:41.847 ERROR [ap-custom-report-service,0f8757dd69172773,0f8757dd69172773,true] 15240 --- [http-nio-23532-exec-4] c.l.r.services.Impl.GetDataServiceImpl   : Cannot Get data = StatementCallback; bad SQL grammar [
+SELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, 
+TB.name AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID 
+from TAX_INVOICE A 
+LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID 
+LEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' 
+LEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID 
+WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') between 20230125 AND 20231025 AND A.ISSUING_CUSTOMER_OFFICE IN (' ORDER BY REFERENCE, b.AMOUNT DESC ]; nested exception is java.sql.SQLSyntaxErrorException: ORA-01756: quoted string not properly terminated
+
+2023-10-25 15:42:41.848 ERROR [ap-custom-report-service,0f8757dd69172773,0f8757dd69172773,true] 15240 --- [http-nio-23532-exec-4] c.l.r.s.Impl.SingleWindowServiceImpl     : Cannot Get data = null
+2023-10-25 15:42:41.849  INFO [ap-custom-report-service,0f8757dd69172773,0f8757dd69172773,true] 15240 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : 		 --> End Custom Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:42:41.849  INFO [ap-custom-report-service,0f8757dd69172773,0f8757dd69172773,true] 15240 --- [http-nio-23532-exec-4] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "fail"
+}
+2023-10-25 15:46:42.372  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-10-25 15:46:42.373  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-25 15:46:42.676  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: uat
+2023-10-25 15:46:43.119  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-10-25 15:46:43.155  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34ms. Found 3 JPA repository interfaces.
+2023-10-25 15:46:43.300  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aed222f2-9e06-35bd-b57a-53ca6fcbef86
+2023-10-25 15:46:43.461  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6ec4fd77' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-25 15:46:43.471  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-25 15:46:43.962  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-10-25 15:46:44.046  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1364 ms
+2023-10-25 15:46:44.244  WARN [ap-custom-report-service,,,] 18304 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-25 15:46:44.339  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-10-25 15:46:44.554  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-10-25 15:46:44.586  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-10-25 15:46:44.976 DEBUG [ap-custom-report-service,,,] 18304 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-10-25 15:46:45.254  INFO [ap-custom-report-service,,,] 18304 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 15:46:45.384  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1374ebac, org.springframework.security.web.context.SecurityContextPersistenceFilter@6f61a592, org.springframework.security.web.header.HeaderWriterFilter@3e73acf4, org.springframework.web.filter.CorsFilter@749fd764, org.springframework.security.web.authentication.logout.LogoutFilter@ae765e2, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@69fb468f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2abf56c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@793281df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2768c078, org.springframework.security.web.session.SessionManagementFilter@4ee8c4cd, org.springframework.security.web.access.ExceptionTranslationFilter@15bdca10, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4f53f5a3]
+2023-10-25 15:46:45.729  WARN [ap-custom-report-service,,,] 18304 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-10-25 15:46:45.913  WARN [ap-custom-report-service,,,] 18304 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-10-25 15:46:45.961  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-10-25 15:46:46.033  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-10-25 15:46:46.174  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-10-25 15:46:46.341  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-10-25 15:46:46.352  INFO [ap-custom-report-service,,,] 18304 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 4.465 seconds (JVM running for 4.825)
+2023-10-25 15:47:12.992  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-10-25 15:47:12.993  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-25 15:47:13.291  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: uat
+2023-10-25 15:47:13.727  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-10-25 15:47:13.763  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33ms. Found 3 JPA repository interfaces.
+2023-10-25 15:47:13.891  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aed222f2-9e06-35bd-b57a-53ca6fcbef86
+2023-10-25 15:47:14.037  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3a53f537' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-25 15:47:14.048  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-25 15:47:14.454  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-10-25 15:47:14.527  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1229 ms
+2023-10-25 15:47:14.698  WARN [ap-custom-report-service,,,] 23332 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-25 15:47:14.781  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-10-25 15:47:14.999  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-10-25 15:47:15.015  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-10-25 15:47:15.277 DEBUG [ap-custom-report-service,,,] 23332 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-10-25 15:47:15.591  INFO [ap-custom-report-service,,,] 23332 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 15:47:15.717  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2776bb1f, org.springframework.security.web.context.SecurityContextPersistenceFilter@3716d1fd, org.springframework.security.web.header.HeaderWriterFilter@6812dbf7, org.springframework.web.filter.CorsFilter@282122cd, org.springframework.security.web.authentication.logout.LogoutFilter@6d2a780a, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@71345652, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42e5b490, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50305476, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59295ed3, org.springframework.security.web.session.SessionManagementFilter@2898055f, org.springframework.security.web.access.ExceptionTranslationFilter@5da5a8bd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c058651]
+2023-10-25 15:47:16.045  WARN [ap-custom-report-service,,,] 23332 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-10-25 15:47:16.226  WARN [ap-custom-report-service,,,] 23332 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-10-25 15:47:16.252  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-10-25 15:47:16.302  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-10-25 15:47:16.441  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-10-25 15:47:16.605  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-10-25 15:47:16.615  INFO [ap-custom-report-service,,,] 23332 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 4.085 seconds (JVM running for 4.439)
+2023-10-25 15:47:18.797  INFO [ap-custom-report-service,,,] 23332 --- [http-nio-23532-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-25 15:47:18.806  INFO [ap-custom-report-service,,,] 23332 --- [http-nio-23532-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2023-10-25 15:47:19.077 DEBUG [ap-custom-report-service,dee448198e5322fa,dee448198e5322fa,true] 23332 --- [http-nio-23532-exec-2] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report-dev/api/v1/custom/company.service
+2023-10-25 15:47:19.124  INFO [ap-custom-report-service,dee448198e5322fa,dee448198e5322fa,true] 23332 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : 		 --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:47:19.125  INFO [ap-custom-report-service,dee448198e5322fa,dee448198e5322fa,true] 23332 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:47:19.125  INFO [ap-custom-report-service,dee448198e5322fa,dee448198e5322fa,true] 23332 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-10-25 15:47:19.125  INFO [ap-custom-report-service,dee448198e5322fa,dee448198e5322fa,true] 23332 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-10-25 15:47:19.173  INFO [ap-custom-report-service,dee448198e5322fa,dee448198e5322fa,true] 23332 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230125",
+  "endDate" : "20231025",
+  "tIN_NAME" : "ALL"
+}
+2023-10-25 15:47:19.174  INFO [ap-custom-report-service,dee448198e5322fa,dee448198e5322fa,true] 23332 --- [http-nio-23532-exec-2] c.l.r.services.Impl.GetDataServiceImpl   : req issuer_name:ALL
+2023-10-25 15:47:19.203  INFO [ap-custom-report-service,dee448198e5322fa,dee448198e5322fa,true] 23332 --- [http-nio-23532-exec-2] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('
+2023-10-25 15:47:19.203  INFO [ap-custom-report-service,dee448198e5322fa,dee448198e5322fa,true] 23332 --- [http-nio-23532-exec-2] c.l.r.services.Impl.GetDataServiceImpl   : ++++ AND A.ISSUING_CUSTOMER_OFFICE IN ('
+2023-10-25 15:47:19.245  INFO [ap-custom-report-service,dee448198e5322fa,dee448198e5322fa,true] 23332 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : 		 --> End Custom Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:47:19.260  INFO [ap-custom-report-service,dee448198e5322fa,dee448198e5322fa,true] 23332 --- [http-nio-23532-exec-2] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "reference" : "TAX231842UXS7282",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:16:27",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "168",
+      "instance" : "1007648",
+      "receiptNumber" : "FT23146NYBHR",
+      "amount" : 516300.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184BBSR6600",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:38:55",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "65",
+      "instance" : "1011721",
+      "receiptNumber" : "FT23146X0FZC",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184BSFV5961",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:30:09",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "167",
+      "instance" : "1007647",
+      "receiptNumber" : "FT23146CTLBP",
+      "amount" : 516900.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184DMXA8623",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:19:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "126",
+      "instance" : "1011882",
+      "receiptNumber" : "FT231460ZCDS",
+      "amount" : 1043400.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184EV9E4923",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:42:42",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "129",
+      "instance" : "1011885",
+      "receiptNumber" : "FT231461WF32",
+      "amount" : 1121700.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184IXDJ7875",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:40:17",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "68",
+      "instance" : "1011724",
+      "receiptNumber" : "FT23146Z4C0R",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184JH408321",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:21:53",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "124",
+      "instance" : "1011880",
+      "receiptNumber" : "FT2314637VZW",
+      "amount" : 1043400.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184PAI18185",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:23:17",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "119",
+      "instance" : "1011875",
+      "receiptNumber" : "FT23146VHVMS",
+      "amount" : 1253400.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184VYTO5098",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:44:58",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "76",
+      "instance" : "1011732",
+      "receiptNumber" : "FT23146JW2M1",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184WT8L1865",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:33:32",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "169",
+      "instance" : "1007649",
+      "receiptNumber" : "FT23146ZCYRH",
+      "amount" : 516300.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184XJEY0023",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:43:55",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "77",
+      "instance" : "1011733",
+      "receiptNumber" : "FT23146VJH8L",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23244GLLP7590",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "01/09/2023 16:50:40",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34542",
+      "instance" : "3182958",
+      "receiptNumber" : "FT23150JS20D",
+      "amount" : 621370.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23244S8AR6531",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "01/09/2023 16:50:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34542",
+      "instance" : "3182958",
+      "receiptNumber" : "FT23150JPGG5",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX232554A8F5209",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:25:44",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34545",
+      "instance" : "3182963",
+      "receiptNumber" : "FT23150F0V3S",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255HYGY9171",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:19:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34543",
+      "instance" : "3182960",
+      "receiptNumber" : "FT23150Y464F",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255NADU5627",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:51:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34548",
+      "instance" : "3182968",
+      "receiptNumber" : "FT23150Z9R2F",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255UDSS0596",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:27:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34545",
+      "instance" : "3182963",
+      "receiptNumber" : "FT23150C0FDH",
+      "amount" : 411370.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255ZMOD4155",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:21:15",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34543",
+      "instance" : "3182960",
+      "receiptNumber" : "FT231508FYB6",
+      "amount" : 411370.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    } ],
+    "sumTotal" : 8.227153E7
+  }
+}
+2023-10-25 15:47:47.697 DEBUG [ap-custom-report-service,707b4bb5d7450775,707b4bb5d7450775,true] 23332 --- [http-nio-23532-exec-4] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report-dev/api/v1/custom/singleWindowDaily.service
+2023-10-25 15:47:47.700  INFO [ap-custom-report-service,707b4bb5d7450775,707b4bb5d7450775,true] 23332 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : 		 --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:47:47.700  INFO [ap-custom-report-service,707b4bb5d7450775,707b4bb5d7450775,true] 23332 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:47:47.700  INFO [ap-custom-report-service,707b4bb5d7450775,707b4bb5d7450775,true] 23332 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-10-25 15:47:47.700  INFO [ap-custom-report-service,707b4bb5d7450775,707b4bb5d7450775,true] 23332 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-10-25 15:47:47.701  INFO [ap-custom-report-service,707b4bb5d7450775,707b4bb5d7450775,true] 23332 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230703"
+}
+2023-10-25 15:47:47.702  INFO [ap-custom-report-service,707b4bb5d7450775,707b4bb5d7450775,true] 23332 --- [http-nio-23532-exec-4] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('
+2023-10-25 15:47:47.702  INFO [ap-custom-report-service,707b4bb5d7450775,707b4bb5d7450775,true] 23332 --- [http-nio-23532-exec-4] c.l.r.services.Impl.GetDataServiceImpl   : SQL : 
+SELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, 
+TB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID 
+from TAX_INVOICE A 
+LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID 
+LEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' 
+LEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID 
+WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230703 AND A.ISSUING_CUSTOMER_OFFICE IN (' ORDER BY REFERENCE, b.AMOUNT DESC 
+2023-10-25 15:47:47.736 ERROR [ap-custom-report-service,707b4bb5d7450775,707b4bb5d7450775,true] 23332 --- [http-nio-23532-exec-4] c.l.r.services.Impl.GetDataServiceImpl   : Cannot Get data = StatementCallback; bad SQL grammar [
+SELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, 
+TB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID 
+from TAX_INVOICE A 
+LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID 
+LEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' 
+LEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID 
+WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230703 AND A.ISSUING_CUSTOMER_OFFICE IN (' ORDER BY REFERENCE, b.AMOUNT DESC ]; nested exception is java.sql.SQLSyntaxErrorException: ORA-01756: quoted string not properly terminated
+
+2023-10-25 15:47:47.740 ERROR [ap-custom-report-service,707b4bb5d7450775,707b4bb5d7450775,true] 23332 --- [http-nio-23532-exec-4] c.l.r.s.Impl.SingleWindowServiceImpl     : Cannot Get data = null
+2023-10-25 15:47:47.741  INFO [ap-custom-report-service,707b4bb5d7450775,707b4bb5d7450775,true] 23332 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : 		 --> End Custom Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:47:47.742  INFO [ap-custom-report-service,707b4bb5d7450775,707b4bb5d7450775,true] 23332 --- [http-nio-23532-exec-4] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "fail"
+}
+2023-10-25 15:48:09.376 DEBUG [ap-custom-report-service,0a652e1f524dad1a,0a652e1f524dad1a,true] 23332 --- [http-nio-23532-exec-3] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report-dev/api/v1/custom/company.service
+2023-10-25 15:48:09.378  INFO [ap-custom-report-service,0a652e1f524dad1a,0a652e1f524dad1a,true] 23332 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : 		 --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:48:09.378  INFO [ap-custom-report-service,0a652e1f524dad1a,0a652e1f524dad1a,true] 23332 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:48:09.378  INFO [ap-custom-report-service,0a652e1f524dad1a,0a652e1f524dad1a,true] 23332 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-10-25 15:48:09.378  INFO [ap-custom-report-service,0a652e1f524dad1a,0a652e1f524dad1a,true] 23332 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-10-25 15:48:09.378  INFO [ap-custom-report-service,0a652e1f524dad1a,0a652e1f524dad1a,true] 23332 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230125",
+  "endDate" : "20231025",
+  "tIN_NAME" : "ALL"
+}
+2023-10-25 15:48:09.378  INFO [ap-custom-report-service,0a652e1f524dad1a,0a652e1f524dad1a,true] 23332 --- [http-nio-23532-exec-3] c.l.r.services.Impl.GetDataServiceImpl   : req issuer_name:ALL
+2023-10-25 15:48:09.379  INFO [ap-custom-report-service,0a652e1f524dad1a,0a652e1f524dad1a,true] 23332 --- [http-nio-23532-exec-3] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('
+2023-10-25 15:48:09.379  INFO [ap-custom-report-service,0a652e1f524dad1a,0a652e1f524dad1a,true] 23332 --- [http-nio-23532-exec-3] c.l.r.services.Impl.GetDataServiceImpl   : ++++ AND A.ISSUING_CUSTOMER_OFFICE IN ('
+2023-10-25 15:48:09.402  INFO [ap-custom-report-service,0a652e1f524dad1a,0a652e1f524dad1a,true] 23332 --- [http-nio-23532-exec-3] c.l.r.controller.SingleWindowController  : 		 --> End Custom Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:48:09.404  INFO [ap-custom-report-service,0a652e1f524dad1a,0a652e1f524dad1a,true] 23332 --- [http-nio-23532-exec-3] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "reference" : "TAX231842UXS7282",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:16:27",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "168",
+      "instance" : "1007648",
+      "receiptNumber" : "FT23146NYBHR",
+      "amount" : 516300.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184BBSR6600",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:38:55",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "65",
+      "instance" : "1011721",
+      "receiptNumber" : "FT23146X0FZC",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184BSFV5961",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:30:09",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "167",
+      "instance" : "1007647",
+      "receiptNumber" : "FT23146CTLBP",
+      "amount" : 516900.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184DMXA8623",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:19:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "126",
+      "instance" : "1011882",
+      "receiptNumber" : "FT231460ZCDS",
+      "amount" : 1043400.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184EV9E4923",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:42:42",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "129",
+      "instance" : "1011885",
+      "receiptNumber" : "FT231461WF32",
+      "amount" : 1121700.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184IXDJ7875",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:40:17",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "68",
+      "instance" : "1011724",
+      "receiptNumber" : "FT23146Z4C0R",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184JH408321",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:21:53",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "124",
+      "instance" : "1011880",
+      "receiptNumber" : "FT2314637VZW",
+      "amount" : 1043400.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184PAI18185",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:23:17",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "119",
+      "instance" : "1011875",
+      "receiptNumber" : "FT23146VHVMS",
+      "amount" : 1253400.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184VYTO5098",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:44:58",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "76",
+      "instance" : "1011732",
+      "receiptNumber" : "FT23146JW2M1",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184WT8L1865",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:33:32",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "169",
+      "instance" : "1007649",
+      "receiptNumber" : "FT23146ZCYRH",
+      "amount" : 516300.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184XJEY0023",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:43:55",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "77",
+      "instance" : "1011733",
+      "receiptNumber" : "FT23146VJH8L",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23244GLLP7590",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "01/09/2023 16:50:40",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34542",
+      "instance" : "3182958",
+      "receiptNumber" : "FT23150JS20D",
+      "amount" : 621370.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23244S8AR6531",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "01/09/2023 16:50:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34542",
+      "instance" : "3182958",
+      "receiptNumber" : "FT23150JPGG5",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX232554A8F5209",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:25:44",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34545",
+      "instance" : "3182963",
+      "receiptNumber" : "FT23150F0V3S",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255HYGY9171",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:19:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34543",
+      "instance" : "3182960",
+      "receiptNumber" : "FT23150Y464F",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255NADU5627",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:51:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34548",
+      "instance" : "3182968",
+      "receiptNumber" : "FT23150Z9R2F",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255UDSS0596",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:27:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34545",
+      "instance" : "3182963",
+      "receiptNumber" : "FT23150C0FDH",
+      "amount" : 411370.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255ZMOD4155",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:21:15",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34543",
+      "instance" : "3182960",
+      "receiptNumber" : "FT231508FYB6",
+      "amount" : 411370.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    } ],
+    "sumTotal" : 8.227153E7
+  }
+}
+2023-10-25 15:48:51.278 DEBUG [ap-custom-report-service,86d304591cfa8cdf,86d304591cfa8cdf,true] 23332 --- [http-nio-23532-exec-8] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'CUSTOM_1', uri: /report-dev/api/v1/custom/company.service
+2023-10-25 15:48:51.279  INFO [ap-custom-report-service,86d304591cfa8cdf,86d304591cfa8cdf,true] 23332 --- [http-nio-23532-exec-8] c.l.r.controller.SingleWindowController  : 		 --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:48:51.279  INFO [ap-custom-report-service,86d304591cfa8cdf,86d304591cfa8cdf,true] 23332 --- [http-nio-23532-exec-8] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:48:51.279  INFO [ap-custom-report-service,86d304591cfa8cdf,86d304591cfa8cdf,true] 23332 --- [http-nio-23532-exec-8] c.l.r.controller.SingleWindowController  : auth == CUSTOM_1
+2023-10-25 15:48:51.279  INFO [ap-custom-report-service,86d304591cfa8cdf,86d304591cfa8cdf,true] 23332 --- [http-nio-23532-exec-8] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@52c772e3: Username: CUSTOM_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_BORDER
+2023-10-25 15:48:51.280  INFO [ap-custom-report-service,86d304591cfa8cdf,86d304591cfa8cdf,true] 23332 --- [http-nio-23532-exec-8] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230125",
+  "endDate" : "20231025",
+  "tIN_NAME" : ""
+}
+2023-10-25 15:48:51.280  INFO [ap-custom-report-service,86d304591cfa8cdf,86d304591cfa8cdf,true] 23332 --- [http-nio-23532-exec-8] c.l.r.services.Impl.GetDataServiceImpl   : req issuer_name:
+2023-10-25 15:48:51.280  INFO [ap-custom-report-service,86d304591cfa8cdf,86d304591cfa8cdf,true] 23332 --- [http-nio-23532-exec-8] c.l.r.services.Impl.GetDataServiceImpl   : req issuer_name Req 0002:
+2023-10-25 15:48:51.288  INFO [ap-custom-report-service,86d304591cfa8cdf,86d304591cfa8cdf,true] 23332 --- [http-nio-23532-exec-8] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10')
+2023-10-25 15:48:51.288  INFO [ap-custom-report-service,86d304591cfa8cdf,86d304591cfa8cdf,true] 23332 --- [http-nio-23532-exec-8] c.l.r.services.Impl.GetDataServiceImpl   : ++++ AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10')
+2023-10-25 15:48:51.321  INFO [ap-custom-report-service,86d304591cfa8cdf,86d304591cfa8cdf,true] 23332 --- [http-nio-23532-exec-8] c.l.r.controller.SingleWindowController  : 		 --> End Custom Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:48:51.323  INFO [ap-custom-report-service,86d304591cfa8cdf,86d304591cfa8cdf,true] 23332 --- [http-nio-23532-exec-8] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "reference" : "TAX231842UXS7282",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:16:27",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "168",
+      "instance" : "1007648",
+      "receiptNumber" : "FT23146NYBHR",
+      "amount" : 516300.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184BBSR6600",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:38:55",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "65",
+      "instance" : "1011721",
+      "receiptNumber" : "FT23146X0FZC",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184BSFV5961",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:30:09",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "167",
+      "instance" : "1007647",
+      "receiptNumber" : "FT23146CTLBP",
+      "amount" : 516900.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184DMXA8623",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:19:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "126",
+      "instance" : "1011882",
+      "receiptNumber" : "FT231460ZCDS",
+      "amount" : 1043400.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184EV9E4923",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:42:42",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "129",
+      "instance" : "1011885",
+      "receiptNumber" : "FT231461WF32",
+      "amount" : 1121700.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184IXDJ7875",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:40:17",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "68",
+      "instance" : "1011724",
+      "receiptNumber" : "FT23146Z4C0R",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184JH408321",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:21:53",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "124",
+      "instance" : "1011880",
+      "receiptNumber" : "FT2314637VZW",
+      "amount" : 1043400.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184PAI18185",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:23:17",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "119",
+      "instance" : "1011875",
+      "receiptNumber" : "FT23146VHVMS",
+      "amount" : 1253400.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184VYTO5098",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:44:58",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "76",
+      "instance" : "1011732",
+      "receiptNumber" : "FT23146JW2M1",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184WT8L1865",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:33:32",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "169",
+      "instance" : "1007649",
+      "receiptNumber" : "FT23146ZCYRH",
+      "amount" : 516300.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184XJEY0023",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:43:55",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "77",
+      "instance" : "1011733",
+      "receiptNumber" : "FT23146VJH8L",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23244GLLP7590",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "01/09/2023 16:50:40",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34542",
+      "instance" : "3182958",
+      "receiptNumber" : "FT23150JS20D",
+      "amount" : 621370.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23244S8AR6531",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "01/09/2023 16:50:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34542",
+      "instance" : "3182958",
+      "receiptNumber" : "FT23150JPGG5",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX232554A8F5209",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:25:44",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34545",
+      "instance" : "3182963",
+      "receiptNumber" : "FT23150F0V3S",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255HYGY9171",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:19:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34543",
+      "instance" : "3182960",
+      "receiptNumber" : "FT23150Y464F",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255NADU5627",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:51:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34548",
+      "instance" : "3182968",
+      "receiptNumber" : "FT23150Z9R2F",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255UDSS0596",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:27:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34545",
+      "instance" : "3182963",
+      "receiptNumber" : "FT23150C0FDH",
+      "amount" : 411370.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255ZMOD4155",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:21:15",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34543",
+      "instance" : "3182960",
+      "receiptNumber" : "FT231508FYB6",
+      "amount" : 411370.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    } ],
+    "sumTotal" : 8.227153E7
+  }
+}
+2023-10-25 15:48:57.537 DEBUG [ap-custom-report-service,95b2f23532f27cb2,95b2f23532f27cb2,true] 23332 --- [http-nio-23532-exec-6] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'CUSTOM_1', uri: /report-dev/api/v1/custom/company.service
+2023-10-25 15:48:57.538  INFO [ap-custom-report-service,95b2f23532f27cb2,95b2f23532f27cb2,true] 23332 --- [http-nio-23532-exec-6] c.l.r.controller.SingleWindowController  : 		 --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:48:57.538  INFO [ap-custom-report-service,95b2f23532f27cb2,95b2f23532f27cb2,true] 23332 --- [http-nio-23532-exec-6] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:48:57.538  INFO [ap-custom-report-service,95b2f23532f27cb2,95b2f23532f27cb2,true] 23332 --- [http-nio-23532-exec-6] c.l.r.controller.SingleWindowController  : auth == CUSTOM_1
+2023-10-25 15:48:57.538  INFO [ap-custom-report-service,95b2f23532f27cb2,95b2f23532f27cb2,true] 23332 --- [http-nio-23532-exec-6] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@52c772e3: Username: CUSTOM_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_BORDER
+2023-10-25 15:48:57.538  INFO [ap-custom-report-service,95b2f23532f27cb2,95b2f23532f27cb2,true] 23332 --- [http-nio-23532-exec-6] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230125",
+  "endDate" : "20231025",
+  "tIN_NAME" : "ALL"
+}
+2023-10-25 15:48:57.538  INFO [ap-custom-report-service,95b2f23532f27cb2,95b2f23532f27cb2,true] 23332 --- [http-nio-23532-exec-6] c.l.r.services.Impl.GetDataServiceImpl   : req issuer_name:ALL
+2023-10-25 15:48:57.540  INFO [ap-custom-report-service,95b2f23532f27cb2,95b2f23532f27cb2,true] 23332 --- [http-nio-23532-exec-6] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10')
+2023-10-25 15:48:57.540  INFO [ap-custom-report-service,95b2f23532f27cb2,95b2f23532f27cb2,true] 23332 --- [http-nio-23532-exec-6] c.l.r.services.Impl.GetDataServiceImpl   : ++++ AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10')
+2023-10-25 15:48:57.558  INFO [ap-custom-report-service,95b2f23532f27cb2,95b2f23532f27cb2,true] 23332 --- [http-nio-23532-exec-6] c.l.r.controller.SingleWindowController  : 		 --> End Custom Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:48:57.560  INFO [ap-custom-report-service,95b2f23532f27cb2,95b2f23532f27cb2,true] 23332 --- [http-nio-23532-exec-6] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "reference" : "TAX231842UXS7282",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:16:27",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "168",
+      "instance" : "1007648",
+      "receiptNumber" : "FT23146NYBHR",
+      "amount" : 516300.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184BBSR6600",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:38:55",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "65",
+      "instance" : "1011721",
+      "receiptNumber" : "FT23146X0FZC",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184BSFV5961",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:30:09",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "167",
+      "instance" : "1007647",
+      "receiptNumber" : "FT23146CTLBP",
+      "amount" : 516900.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184DMXA8623",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:19:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "126",
+      "instance" : "1011882",
+      "receiptNumber" : "FT231460ZCDS",
+      "amount" : 1043400.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184EV9E4923",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:42:42",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "129",
+      "instance" : "1011885",
+      "receiptNumber" : "FT231461WF32",
+      "amount" : 1121700.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184IXDJ7875",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:40:17",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "68",
+      "instance" : "1011724",
+      "receiptNumber" : "FT23146Z4C0R",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184JH408321",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:21:53",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "124",
+      "instance" : "1011880",
+      "receiptNumber" : "FT2314637VZW",
+      "amount" : 1043400.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184PAI18185",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:23:17",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "119",
+      "instance" : "1011875",
+      "receiptNumber" : "FT23146VHVMS",
+      "amount" : 1253400.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184VYTO5098",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:44:58",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "76",
+      "instance" : "1011732",
+      "receiptNumber" : "FT23146JW2M1",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184WT8L1865",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:33:32",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "169",
+      "instance" : "1007649",
+      "receiptNumber" : "FT23146ZCYRH",
+      "amount" : 516300.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184XJEY0023",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:43:55",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "77",
+      "instance" : "1011733",
+      "receiptNumber" : "FT23146VJH8L",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23244GLLP7590",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "01/09/2023 16:50:40",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34542",
+      "instance" : "3182958",
+      "receiptNumber" : "FT23150JS20D",
+      "amount" : 621370.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23244S8AR6531",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "01/09/2023 16:50:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34542",
+      "instance" : "3182958",
+      "receiptNumber" : "FT23150JPGG5",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX232554A8F5209",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:25:44",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34545",
+      "instance" : "3182963",
+      "receiptNumber" : "FT23150F0V3S",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255HYGY9171",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:19:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34543",
+      "instance" : "3182960",
+      "receiptNumber" : "FT23150Y464F",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255NADU5627",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:51:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34548",
+      "instance" : "3182968",
+      "receiptNumber" : "FT23150Z9R2F",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255UDSS0596",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:27:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34545",
+      "instance" : "3182963",
+      "receiptNumber" : "FT23150C0FDH",
+      "amount" : 411370.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255ZMOD4155",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:21:15",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34543",
+      "instance" : "3182960",
+      "receiptNumber" : "FT231508FYB6",
+      "amount" : 411370.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    } ],
+    "sumTotal" : 8.227153E7
+  }
+}
+2023-10-25 15:49:02.576 DEBUG [ap-custom-report-service,36eec13b38fb3bc8,36eec13b38fb3bc8,true] 23332 --- [http-nio-23532-exec-7] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'CUSTOM_1', uri: /report-dev/api/v1/custom/singleWindowTotal.service
+2023-10-25 15:49:02.577  INFO [ap-custom-report-service,36eec13b38fb3bc8,36eec13b38fb3bc8,true] 23332 --- [http-nio-23532-exec-7] c.l.r.controller.SingleWindowController  : 		 --> Custom total Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:49:02.578  INFO [ap-custom-report-service,36eec13b38fb3bc8,36eec13b38fb3bc8,true] 23332 --- [http-nio-23532-exec-7] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:49:02.578  INFO [ap-custom-report-service,36eec13b38fb3bc8,36eec13b38fb3bc8,true] 23332 --- [http-nio-23532-exec-7] c.l.r.controller.SingleWindowController  : auth == CUSTOM_1
+2023-10-25 15:49:02.578  INFO [ap-custom-report-service,36eec13b38fb3bc8,36eec13b38fb3bc8,true] 23332 --- [http-nio-23532-exec-7] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@52c772e3: Username: CUSTOM_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_BORDER
+2023-10-25 15:49:02.578  INFO [ap-custom-report-service,36eec13b38fb3bc8,36eec13b38fb3bc8,true] 23332 --- [http-nio-23532-exec-7] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230703"
+}
+2023-10-25 15:49:02.581  INFO [ap-custom-report-service,36eec13b38fb3bc8,36eec13b38fb3bc8,true] 23332 --- [http-nio-23532-exec-7] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10')
+2023-10-25 15:49:02.605  INFO [ap-custom-report-service,36eec13b38fb3bc8,36eec13b38fb3bc8,true] 23332 --- [http-nio-23532-exec-7] c.l.r.controller.SingleWindowController  : 		 --> End Custom total Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:49:02.606  INFO [ap-custom-report-service,36eec13b38fb3bc8,36eec13b38fb3bc8,true] 23332 --- [http-nio-23532-exec-7] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "data" : {
+        "AFE" : 700000.0,
+        "CD" : 2.894196E8,
+        "PSC" : 0.0,
+        "STA" : 600.0,
+        "STD" : 8.971932E8,
+        "LNSW" : 898800.0,
+        "SCV" : 0.0,
+        "VAT" : 6.077736E8,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 0.0,
+        "BT" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/07/2023",
+        "VT" : 0.0
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "EDR" : "ພາສີ EDR",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ"
+      }
+    } ],
+    "sumTotal" : {
+      "AFE" : 700000.0,
+      "STA" : 600.0,
+      "PSC" : 0.0,
+      "CD" : 3.4730352E9,
+      "STD" : 1.07663184E10,
+      "LNSW" : 898800.0,
+      "SCV" : 0.0,
+      "VAT" : 7.2932832E9,
+      "EMT" : 0.0,
+      "PFD" : 0.0,
+      "EXD" : 0.0,
+      "PRS" : 0.0,
+      "EXC" : 0.0,
+      "EDR" : 0.0,
+      "BT" : 0.0,
+      "total" : 7.63655E7,
+      "TBC" : 0.0,
+      "SCF" : 0.0,
+      "SCI" : 0.0,
+      "ITF" : 0.0,
+      "VT" : 0.0
+    }
+  }
+}
+2023-10-25 15:49:06.069 DEBUG [ap-custom-report-service,0311b28f394b0d7a,0311b28f394b0d7a,true] 23332 --- [http-nio-23532-exec-9] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'CUSTOM_1', uri: /report-dev/api/v1/custom/singleWindowCompare.service
+2023-10-25 15:49:06.070  INFO [ap-custom-report-service,0311b28f394b0d7a,0311b28f394b0d7a,true] 23332 --- [http-nio-23532-exec-9] c.l.r.controller.SingleWindowController  : 		 --> Custom compare Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:49:06.071  INFO [ap-custom-report-service,0311b28f394b0d7a,0311b28f394b0d7a,true] 23332 --- [http-nio-23532-exec-9] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:49:06.071  INFO [ap-custom-report-service,0311b28f394b0d7a,0311b28f394b0d7a,true] 23332 --- [http-nio-23532-exec-9] c.l.r.controller.SingleWindowController  : auth == CUSTOM_1
+2023-10-25 15:49:06.071  INFO [ap-custom-report-service,0311b28f394b0d7a,0311b28f394b0d7a,true] 23332 --- [http-nio-23532-exec-9] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@52c772e3: Username: CUSTOM_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_BORDER
+2023-10-25 15:49:06.071  INFO [ap-custom-report-service,0311b28f394b0d7a,0311b28f394b0d7a,true] 23332 --- [http-nio-23532-exec-9] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230703"
+}
+2023-10-25 15:49:06.079  INFO [ap-custom-report-service,0311b28f394b0d7a,0311b28f394b0d7a,true] 23332 --- [http-nio-23532-exec-9] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE  IN ('R5C10')
+2023-10-25 15:49:06.103  INFO [ap-custom-report-service,0311b28f394b0d7a,0311b28f394b0d7a,true] 23332 --- [http-nio-23532-exec-9] c.l.r.controller.SingleWindowController  : 		 --> End Custom compare Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:49:06.105  INFO [ap-custom-report-service,0311b28f394b0d7a,0311b28f394b0d7a,true] 23332 --- [http-nio-23532-exec-9] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "data" : {
+        "AFE" : 100000.0,
+        "CD" : 0.0,
+        "PSC" : 0.0,
+        "STA" : 0.0,
+        "STD" : 287900.0,
+        "LNSW" : 128400.0,
+        "SCV" : 0.0,
+        "VAT" : 0.0,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 0.0,
+        "BT" : 0.0,
+        "EDR" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/07/2023 10:16:27",
+        "VT" : 0.0,
+        "receiptNumber" : "IM:220127000008 FT23146NYBHR"
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "EDR" : "ພາສີ EDR",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ ແລະ ເວລາຊຳລະ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "receiptNumber" : "ເລກທີໃບແຈ້ງ"
+      }
+    }, {
+      "data" : {
+        "AFE" : 100000.0,
+        "CD" : 0.0,
+        "PSC" : 0.0,
+        "STA" : 0.0,
+        "STD" : 1.84756E7,
+        "LNSW" : 128400.0,
+        "SCV" : 0.0,
+        "VAT" : 0.0,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 0.0,
+        "BT" : 0.0,
+        "EDR" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/07/2023 10:38:55",
+        "VT" : 0.0,
+        "receiptNumber" : "IM:230123000009 FT23146X0FZC"
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "EDR" : "ພາສີ EDR",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ ແລະ ເວລາຊຳລະ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "receiptNumber" : "ເລກທີໃບແຈ້ງ"
+      }
+    }, {
+      "data" : {
+        "AFE" : 100000.0,
+        "CD" : 0.0,
+        "PSC" : 0.0,
+        "STA" : 600.0,
+        "STD" : 287900.0,
+        "LNSW" : 128400.0,
+        "SCV" : 0.0,
+        "VAT" : 0.0,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 0.0,
+        "BT" : 0.0,
+        "EDR" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/07/2023 10:30:09",
+        "VT" : 0.0,
+        "receiptNumber" : "IM:220811000005 FT23146CTLBP"
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "EDR" : "ພາສີ EDR",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ ແລະ ເວລາຊຳລະ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "receiptNumber" : "ເລກທີໃບແຈ້ງ"
+      }
+    }, {
+      "data" : {
+        "AFE" : 100000.0,
+        "CD" : 0.0,
+        "PSC" : 0.0,
+        "STA" : 0.0,
+        "STD" : 1.84756E7,
+        "LNSW" : 128400.0,
+        "SCV" : 0.0,
+        "VAT" : 0.0,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 0.0,
+        "BT" : 0.0,
+        "EDR" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/07/2023 10:40:17",
+        "VT" : 0.0,
+        "receiptNumber" : "IM:230123000010 FT23146Z4C0R"
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "EDR" : "ພາສີ EDR",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ ແລະ ເວລາຊຳລະ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "receiptNumber" : "ເລກທີໃບແຈ້ງ"
+      }
+    }, {
+      "data" : {
+        "AFE" : 100000.0,
+        "CD" : 0.0,
+        "PSC" : 0.0,
+        "STA" : 0.0,
+        "STD" : 1.84756E7,
+        "LNSW" : 128400.0,
+        "SCV" : 0.0,
+        "VAT" : 0.0,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 0.0,
+        "BT" : 0.0,
+        "EDR" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/07/2023 10:44:58",
+        "VT" : 0.0,
+        "receiptNumber" : "IM:230123000018 FT23146JW2M1"
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "EDR" : "ພາສີ EDR",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ ແລະ ເວລາຊຳລະ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "receiptNumber" : "ເລກທີໃບແຈ້ງ"
+      }
+    }, {
+      "data" : {
+        "AFE" : 100000.0,
+        "CD" : 0.0,
+        "PSC" : 0.0,
+        "STA" : 0.0,
+        "STD" : 287900.0,
+        "LNSW" : 128400.0,
+        "SCV" : 0.0,
+        "VAT" : 0.0,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 0.0,
+        "BT" : 0.0,
+        "EDR" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/07/2023 10:33:32",
+        "VT" : 0.0,
+        "receiptNumber" : "IM:220127000009 FT23146ZCYRH"
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "EDR" : "ພາສີ EDR",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ ແລະ ເວລາຊຳລະ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "receiptNumber" : "ເລກທີໃບແຈ້ງ"
+      }
+    }, {
+      "data" : {
+        "AFE" : 100000.0,
+        "CD" : 0.0,
+        "PSC" : 0.0,
+        "STA" : 0.0,
+        "STD" : 1.84756E7,
+        "LNSW" : 128400.0,
+        "SCV" : 0.0,
+        "VAT" : 0.0,
+        "EMT" : 0.0,
+        "PFD" : 0.0,
+        "PRS" : 0.0,
+        "EXD" : 0.0,
+        "EXC" : 0.0,
+        "BT" : 0.0,
+        "EDR" : 0.0,
+        "TBC" : 0.0,
+        "SCF" : 0.0,
+        "SCI" : 0.0,
+        "ITF" : 0.0,
+        "paymentDate" : "03/07/2023 10:43:55",
+        "VT" : 0.0,
+        "receiptNumber" : "IM:230123000019 FT23146VJH8L"
+      },
+      "header" : {
+        "AFE" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+        "CD" : "ພາສີ ຂາເຂົ້າ",
+        "PSC" : "ຄ່າບໍລິການນໍາເຂົ້ານໍ້າມັນເຊື້ອໄຟ",
+        "STA" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+        "STD" : "ອາກອນມູນຄ່າເພີ່ມ",
+        "LNSW" : "ຄ່າທໍານຽມ LNSW",
+        "SCV" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "VAT" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+        "EMT" : "ຄ່າບໍລິການ e-Meter",
+        "PFD" : "ກອງທຶນທາງນ້ຳມັນ",
+        "PRS" : "ຄັງແຮນ້ຳມັນ",
+        "EXD" : "ພາສີ ຂາອອກ",
+        "EXC" : "ອາກອນຊົມໃຊ້",
+        "BT" : "ອາກອນກຳໄລ",
+        "EDR" : "ພາສີ EDR",
+        "TBC" : "ກອງທຶນຢາສູບ",
+        "SCF" : "ຄ່າບໍລິການ scanner",
+        "SCI" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດນໍາເຂົ້າ",
+        "ITF" : "ສິນຄ້າຜ່ານແດນສາກົນ",
+        "paymentDate" : "ວັນທີ ແລະ ເວລາຊຳລະ",
+        "VT" : "ຄ່າທໍານຽມ ໃບອະນຸຍາດເຕັກນິກ",
+        "receiptNumber" : "ເລກທີໃບແຈ້ງ"
+      }
+    } ],
+    "sumTotal" : {
+      "AFE" : 700000.0,
+      "STA" : 600.0,
+      "PSC" : 0.0,
+      "CD" : 0.0,
+      "STD" : 8.971932E8,
+      "LNSW" : 898800.0,
+      "SCV" : 0.0,
+      "VAT" : 0.0,
+      "EMT" : 0.0,
+      "PFD" : 0.0,
+      "EXD" : 0.0,
+      "PRS" : 0.0,
+      "EXC" : 0.0,
+      "EDR" : 0.0,
+      "BT" : 0.0,
+      "total" : 7.63655E7,
+      "TBC" : 0.0,
+      "SCF" : 0.0,
+      "SCI" : 0.0,
+      "ITF" : 0.0,
+      "VT" : 0.0
+    }
+  }
+}
+2023-10-25 15:49:09.701 DEBUG [ap-custom-report-service,185e82fe11d385e1,185e82fe11d385e1,true] 23332 --- [http-nio-23532-exec-5] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report-dev/api/v1/custom/singleWindowDaily.service
+2023-10-25 15:49:09.702  INFO [ap-custom-report-service,185e82fe11d385e1,185e82fe11d385e1,true] 23332 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : 		 --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:49:09.702  INFO [ap-custom-report-service,185e82fe11d385e1,185e82fe11d385e1,true] 23332 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:49:09.702  INFO [ap-custom-report-service,185e82fe11d385e1,185e82fe11d385e1,true] 23332 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-10-25 15:49:09.702  INFO [ap-custom-report-service,185e82fe11d385e1,185e82fe11d385e1,true] 23332 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-10-25 15:49:09.702  INFO [ap-custom-report-service,185e82fe11d385e1,185e82fe11d385e1,true] 23332 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230703"
+}
+2023-10-25 15:49:09.704  INFO [ap-custom-report-service,185e82fe11d385e1,185e82fe11d385e1,true] 23332 --- [http-nio-23532-exec-5] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('
+2023-10-25 15:49:09.704  INFO [ap-custom-report-service,185e82fe11d385e1,185e82fe11d385e1,true] 23332 --- [http-nio-23532-exec-5] c.l.r.services.Impl.GetDataServiceImpl   : SQL : 
+SELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, 
+TB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID 
+from TAX_INVOICE A 
+LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID 
+LEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' 
+LEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID 
+WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230703 AND A.ISSUING_CUSTOMER_OFFICE IN (' ORDER BY REFERENCE, b.AMOUNT DESC 
+2023-10-25 15:49:09.706 ERROR [ap-custom-report-service,185e82fe11d385e1,185e82fe11d385e1,true] 23332 --- [http-nio-23532-exec-5] c.l.r.services.Impl.GetDataServiceImpl   : Cannot Get data = StatementCallback; bad SQL grammar [
+SELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, 
+TB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID 
+from TAX_INVOICE A 
+LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID 
+LEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' 
+LEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID 
+WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230703 AND A.ISSUING_CUSTOMER_OFFICE IN (' ORDER BY REFERENCE, b.AMOUNT DESC ]; nested exception is java.sql.SQLSyntaxErrorException: ORA-01756: quoted string not properly terminated
+
+2023-10-25 15:49:09.708 ERROR [ap-custom-report-service,185e82fe11d385e1,185e82fe11d385e1,true] 23332 --- [http-nio-23532-exec-5] c.l.r.s.Impl.SingleWindowServiceImpl     : Cannot Get data = null
+2023-10-25 15:49:09.708  INFO [ap-custom-report-service,185e82fe11d385e1,185e82fe11d385e1,true] 23332 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : 		 --> End Custom Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:49:09.709  INFO [ap-custom-report-service,185e82fe11d385e1,185e82fe11d385e1,true] 23332 --- [http-nio-23532-exec-5] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "fail"
+}
+2023-10-25 15:49:14.318 DEBUG [ap-custom-report-service,a6dc042f1b90222b,a6dc042f1b90222b,true] 23332 --- [http-nio-23532-exec-10] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report-dev/api/v1/custom/singleWindowDaily.service
+2023-10-25 15:49:14.320  INFO [ap-custom-report-service,a6dc042f1b90222b,a6dc042f1b90222b,true] 23332 --- [http-nio-23532-exec-10] c.l.r.controller.SingleWindowController  : 		 --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:49:14.320  INFO [ap-custom-report-service,a6dc042f1b90222b,a6dc042f1b90222b,true] 23332 --- [http-nio-23532-exec-10] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:49:14.320  INFO [ap-custom-report-service,a6dc042f1b90222b,a6dc042f1b90222b,true] 23332 --- [http-nio-23532-exec-10] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-10-25 15:49:14.320  INFO [ap-custom-report-service,a6dc042f1b90222b,a6dc042f1b90222b,true] 23332 --- [http-nio-23532-exec-10] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-10-25 15:49:14.320  INFO [ap-custom-report-service,a6dc042f1b90222b,a6dc042f1b90222b,true] 23332 --- [http-nio-23532-exec-10] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230703"
+}
+2023-10-25 15:49:14.321  INFO [ap-custom-report-service,a6dc042f1b90222b,a6dc042f1b90222b,true] 23332 --- [http-nio-23532-exec-10] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('
+2023-10-25 15:49:14.321  INFO [ap-custom-report-service,a6dc042f1b90222b,a6dc042f1b90222b,true] 23332 --- [http-nio-23532-exec-10] c.l.r.services.Impl.GetDataServiceImpl   : SQL : 
+SELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, 
+TB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID 
+from TAX_INVOICE A 
+LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID 
+LEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' 
+LEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID 
+WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230703 AND A.ISSUING_CUSTOMER_OFFICE IN (' ORDER BY REFERENCE, b.AMOUNT DESC 
+2023-10-25 15:49:14.324 ERROR [ap-custom-report-service,a6dc042f1b90222b,a6dc042f1b90222b,true] 23332 --- [http-nio-23532-exec-10] c.l.r.services.Impl.GetDataServiceImpl   : Cannot Get data = StatementCallback; bad SQL grammar [
+SELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, 
+TB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID 
+from TAX_INVOICE A 
+LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID 
+LEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' 
+LEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID 
+WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230703 AND A.ISSUING_CUSTOMER_OFFICE IN (' ORDER BY REFERENCE, b.AMOUNT DESC ]; nested exception is java.sql.SQLSyntaxErrorException: ORA-01756: quoted string not properly terminated
+
+2023-10-25 15:49:14.325 ERROR [ap-custom-report-service,a6dc042f1b90222b,a6dc042f1b90222b,true] 23332 --- [http-nio-23532-exec-10] c.l.r.s.Impl.SingleWindowServiceImpl     : Cannot Get data = null
+2023-10-25 15:49:14.326  INFO [ap-custom-report-service,a6dc042f1b90222b,a6dc042f1b90222b,true] 23332 --- [http-nio-23532-exec-10] c.l.r.controller.SingleWindowController  : 		 --> End Custom Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:49:14.326  INFO [ap-custom-report-service,a6dc042f1b90222b,a6dc042f1b90222b,true] 23332 --- [http-nio-23532-exec-10] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "fail"
+}
+2023-10-25 15:49:28.915 DEBUG [ap-custom-report-service,95940f026e4a01a5,95940f026e4a01a5,true] 23332 --- [http-nio-23532-exec-1] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report-dev/api/v1/custom/singleWindowDaily.service
+2023-10-25 15:49:28.916  INFO [ap-custom-report-service,95940f026e4a01a5,95940f026e4a01a5,true] 23332 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : 		 --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:49:28.916  INFO [ap-custom-report-service,95940f026e4a01a5,95940f026e4a01a5,true] 23332 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:49:28.916  INFO [ap-custom-report-service,95940f026e4a01a5,95940f026e4a01a5,true] 23332 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-10-25 15:49:28.916  INFO [ap-custom-report-service,95940f026e4a01a5,95940f026e4a01a5,true] 23332 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-10-25 15:49:28.916  INFO [ap-custom-report-service,95940f026e4a01a5,95940f026e4a01a5,true] 23332 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230703"
+}
+2023-10-25 15:49:28.917  INFO [ap-custom-report-service,95940f026e4a01a5,95940f026e4a01a5,true] 23332 --- [http-nio-23532-exec-1] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('
+2023-10-25 15:49:28.917  INFO [ap-custom-report-service,95940f026e4a01a5,95940f026e4a01a5,true] 23332 --- [http-nio-23532-exec-1] c.l.r.services.Impl.GetDataServiceImpl   : SQL : 
+SELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, 
+TB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID 
+from TAX_INVOICE A 
+LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID 
+LEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' 
+LEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID 
+WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230703 AND A.ISSUING_CUSTOMER_OFFICE IN (' ORDER BY REFERENCE, b.AMOUNT DESC 
+2023-10-25 15:49:28.920 ERROR [ap-custom-report-service,95940f026e4a01a5,95940f026e4a01a5,true] 23332 --- [http-nio-23532-exec-1] c.l.r.services.Impl.GetDataServiceImpl   : Cannot Get data = StatementCallback; bad SQL grammar [
+SELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, 
+TB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID 
+from TAX_INVOICE A 
+LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID 
+LEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' 
+LEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID 
+WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230703 AND A.ISSUING_CUSTOMER_OFFICE IN (' ORDER BY REFERENCE, b.AMOUNT DESC ]; nested exception is java.sql.SQLSyntaxErrorException: ORA-01756: quoted string not properly terminated
+
+2023-10-25 15:49:28.921 ERROR [ap-custom-report-service,95940f026e4a01a5,95940f026e4a01a5,true] 23332 --- [http-nio-23532-exec-1] c.l.r.s.Impl.SingleWindowServiceImpl     : Cannot Get data = null
+2023-10-25 15:49:28.921  INFO [ap-custom-report-service,95940f026e4a01a5,95940f026e4a01a5,true] 23332 --- [http-nio-23532-exec-1] c.l.r.controller.SingleWindowController  : 		 --> End Custom Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:49:28.922  INFO [ap-custom-report-service,95940f026e4a01a5,95940f026e4a01a5,true] 23332 --- [http-nio-23532-exec-1] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "fail"
+}
+2023-10-25 15:49:32.539 DEBUG [ap-custom-report-service,68d0cc8d34d98012,68d0cc8d34d98012,true] 23332 --- [http-nio-23532-exec-2] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report-dev/api/v1/custom/singleWindowDaily.service
+2023-10-25 15:49:32.540  INFO [ap-custom-report-service,68d0cc8d34d98012,68d0cc8d34d98012,true] 23332 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : 		 --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:49:32.540  INFO [ap-custom-report-service,68d0cc8d34d98012,68d0cc8d34d98012,true] 23332 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:49:32.540  INFO [ap-custom-report-service,68d0cc8d34d98012,68d0cc8d34d98012,true] 23332 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-10-25 15:49:32.540  INFO [ap-custom-report-service,68d0cc8d34d98012,68d0cc8d34d98012,true] 23332 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-10-25 15:49:32.540  INFO [ap-custom-report-service,68d0cc8d34d98012,68d0cc8d34d98012,true] 23332 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230703"
+}
+2023-10-25 15:49:32.542  INFO [ap-custom-report-service,68d0cc8d34d98012,68d0cc8d34d98012,true] 23332 --- [http-nio-23532-exec-2] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('
+2023-10-25 15:49:32.542  INFO [ap-custom-report-service,68d0cc8d34d98012,68d0cc8d34d98012,true] 23332 --- [http-nio-23532-exec-2] c.l.r.services.Impl.GetDataServiceImpl   : SQL : 
+SELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, 
+TB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID 
+from TAX_INVOICE A 
+LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID 
+LEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' 
+LEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID 
+WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230703 AND A.ISSUING_CUSTOMER_OFFICE IN (' ORDER BY REFERENCE, b.AMOUNT DESC 
+2023-10-25 15:49:32.544 ERROR [ap-custom-report-service,68d0cc8d34d98012,68d0cc8d34d98012,true] 23332 --- [http-nio-23532-exec-2] c.l.r.services.Impl.GetDataServiceImpl   : Cannot Get data = StatementCallback; bad SQL grammar [
+SELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, 
+TB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID 
+from TAX_INVOICE A 
+LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID 
+LEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' 
+LEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID 
+WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230703 AND A.ISSUING_CUSTOMER_OFFICE IN (' ORDER BY REFERENCE, b.AMOUNT DESC ]; nested exception is java.sql.SQLSyntaxErrorException: ORA-01756: quoted string not properly terminated
+
+2023-10-25 15:49:32.545 ERROR [ap-custom-report-service,68d0cc8d34d98012,68d0cc8d34d98012,true] 23332 --- [http-nio-23532-exec-2] c.l.r.s.Impl.SingleWindowServiceImpl     : Cannot Get data = null
+2023-10-25 15:49:32.546  INFO [ap-custom-report-service,68d0cc8d34d98012,68d0cc8d34d98012,true] 23332 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : 		 --> End Custom Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:49:32.546  INFO [ap-custom-report-service,68d0cc8d34d98012,68d0cc8d34d98012,true] 23332 --- [http-nio-23532-exec-2] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "fail"
+}
+2023-10-25 15:50:49.865  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-10-25 15:50:49.866  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-25 15:50:50.174  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: uat
+2023-10-25 15:50:50.621  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-10-25 15:50:50.660  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 3 JPA repository interfaces.
+2023-10-25 15:50:50.821  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aed222f2-9e06-35bd-b57a-53ca6fcbef86
+2023-10-25 15:50:50.971  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1d2115b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-25 15:50:50.980  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-25 15:50:51.471  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-10-25 15:50:51.547  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1366 ms
+2023-10-25 15:50:51.706  WARN [ap-custom-report-service,,,] 18412 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-25 15:50:51.793  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-10-25 15:50:52.007  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-10-25 15:50:52.025  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-10-25 15:50:52.316 DEBUG [ap-custom-report-service,,,] 18412 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-10-25 15:50:52.641  INFO [ap-custom-report-service,,,] 18412 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 15:50:52.778  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1407f00, org.springframework.security.web.context.SecurityContextPersistenceFilter@58a52cd9, org.springframework.security.web.header.HeaderWriterFilter@77d9b129, org.springframework.web.filter.CorsFilter@3b827e3, org.springframework.security.web.authentication.logout.LogoutFilter@2e633064, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@1786f7f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f8a950, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c9aa2df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3cc77eea, org.springframework.security.web.session.SessionManagementFilter@37682e41, org.springframework.security.web.access.ExceptionTranslationFilter@3a3abd8a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4fcb8a04]
+2023-10-25 15:50:53.108  WARN [ap-custom-report-service,,,] 18412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-10-25 15:50:53.281  WARN [ap-custom-report-service,,,] 18412 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-10-25 15:50:53.304  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-10-25 15:50:53.357  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-10-25 15:50:53.500  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-10-25 15:50:53.676  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-10-25 15:50:53.688  INFO [ap-custom-report-service,,,] 18412 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 4.309 seconds (JVM running for 4.656)
+2023-10-25 15:50:53.688  INFO [ap-custom-report-service,,,] 18412 --- [http-nio-23532-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-25 15:50:53.696  INFO [ap-custom-report-service,,,] 18412 --- [http-nio-23532-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-10-25 15:50:53.927 DEBUG [ap-custom-report-service,7524538c57973ac3,7524538c57973ac3,true] 18412 --- [http-nio-23532-exec-2] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report-dev/api/v1/custom/singleWindowDaily.service
+2023-10-25 15:50:53.965  INFO [ap-custom-report-service,7524538c57973ac3,7524538c57973ac3,true] 18412 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : 		 --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:50:53.965  INFO [ap-custom-report-service,7524538c57973ac3,7524538c57973ac3,true] 18412 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:50:53.965  INFO [ap-custom-report-service,7524538c57973ac3,7524538c57973ac3,true] 18412 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-10-25 15:50:53.966  INFO [ap-custom-report-service,7524538c57973ac3,7524538c57973ac3,true] 18412 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-10-25 15:50:53.971  INFO [ap-custom-report-service,7524538c57973ac3,7524538c57973ac3,true] 18412 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230703"
+}
+2023-10-25 15:50:53.972  INFO [ap-custom-report-service,7524538c57973ac3,7524538c57973ac3,true] 18412 --- [http-nio-23532-exec-2] c.l.r.services.Impl.GetDataServiceImpl   : SQL : 
+SELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, 
+TB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID 
+from TAX_INVOICE A 
+LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID 
+LEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' 
+LEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID 
+WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230703 ORDER BY REFERENCE, b.AMOUNT DESC 
+2023-10-25 15:50:54.005 ERROR [ap-custom-report-service,7524538c57973ac3,7524538c57973ac3,true] 18412 --- [http-nio-23532-exec-2] c.l.r.s.Impl.SingleWindowServiceImpl     : Cannot Get data = null
+2023-10-25 15:50:54.006  INFO [ap-custom-report-service,7524538c57973ac3,7524538c57973ac3,true] 18412 --- [http-nio-23532-exec-2] c.l.r.controller.SingleWindowController  : 		 --> End Custom Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:50:54.014  INFO [ap-custom-report-service,7524538c57973ac3,7524538c57973ac3,true] 18412 --- [http-nio-23532-exec-2] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "fail"
+}
+2023-10-25 15:50:55.151 DEBUG [ap-custom-report-service,a80edd209f64e611,a80edd209f64e611,true] 18412 --- [http-nio-23532-exec-5] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report-dev/api/v1/custom/singleWindowDaily.service
+2023-10-25 15:50:55.152  INFO [ap-custom-report-service,a80edd209f64e611,a80edd209f64e611,true] 18412 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : 		 --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:50:55.152  INFO [ap-custom-report-service,a80edd209f64e611,a80edd209f64e611,true] 18412 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:50:55.152  INFO [ap-custom-report-service,a80edd209f64e611,a80edd209f64e611,true] 18412 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-10-25 15:50:55.152  INFO [ap-custom-report-service,a80edd209f64e611,a80edd209f64e611,true] 18412 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-10-25 15:50:55.153  INFO [ap-custom-report-service,a80edd209f64e611,a80edd209f64e611,true] 18412 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230703"
+}
+2023-10-25 15:50:55.153  INFO [ap-custom-report-service,a80edd209f64e611,a80edd209f64e611,true] 18412 --- [http-nio-23532-exec-5] c.l.r.services.Impl.GetDataServiceImpl   : SQL : 
+SELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, 
+TB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID 
+from TAX_INVOICE A 
+LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID 
+LEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' 
+LEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID 
+WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230703 ORDER BY REFERENCE, b.AMOUNT DESC 
+2023-10-25 15:50:55.172 ERROR [ap-custom-report-service,a80edd209f64e611,a80edd209f64e611,true] 18412 --- [http-nio-23532-exec-5] c.l.r.s.Impl.SingleWindowServiceImpl     : Cannot Get data = null
+2023-10-25 15:50:55.173  INFO [ap-custom-report-service,a80edd209f64e611,a80edd209f64e611,true] 18412 --- [http-nio-23532-exec-5] c.l.r.controller.SingleWindowController  : 		 --> End Custom Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:50:55.174  INFO [ap-custom-report-service,a80edd209f64e611,a80edd209f64e611,true] 18412 --- [http-nio-23532-exec-5] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "fail"
+}
+2023-10-25 15:51:01.790 DEBUG [ap-custom-report-service,6d4d43184605079c,6d4d43184605079c,true] 18412 --- [http-nio-23532-exec-4] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'ADMIN_R5C10_1', uri: /report-dev/api/v1/custom/singleWindowDaily.service
+2023-10-25 15:51:01.791  INFO [ap-custom-report-service,6d4d43184605079c,6d4d43184605079c,true] 18412 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : 		 --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:51:01.791  INFO [ap-custom-report-service,6d4d43184605079c,6d4d43184605079c,true] 18412 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:51:01.791  INFO [ap-custom-report-service,6d4d43184605079c,6d4d43184605079c,true] 18412 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : auth == ADMIN_R5C10_1
+2023-10-25 15:51:01.791  INFO [ap-custom-report-service,6d4d43184605079c,6d4d43184605079c,true] 18412 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@15901381: Username: ADMIN_R5C10_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_REPORT_ADMIN
+2023-10-25 15:51:01.791  INFO [ap-custom-report-service,6d4d43184605079c,6d4d43184605079c,true] 18412 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230703"
+}
+2023-10-25 15:51:01.791  INFO [ap-custom-report-service,6d4d43184605079c,6d4d43184605079c,true] 18412 --- [http-nio-23532-exec-4] c.l.r.services.Impl.GetDataServiceImpl   : SQL : 
+SELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, 
+TB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID 
+from TAX_INVOICE A 
+LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID 
+LEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' 
+LEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID 
+WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230703 ORDER BY REFERENCE, b.AMOUNT DESC 
+2023-10-25 15:51:01.809 ERROR [ap-custom-report-service,6d4d43184605079c,6d4d43184605079c,true] 18412 --- [http-nio-23532-exec-4] c.l.r.s.Impl.SingleWindowServiceImpl     : Cannot Get data = null
+2023-10-25 15:51:01.810  INFO [ap-custom-report-service,6d4d43184605079c,6d4d43184605079c,true] 18412 --- [http-nio-23532-exec-4] c.l.r.controller.SingleWindowController  : 		 --> End Custom Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:51:01.810  INFO [ap-custom-report-service,6d4d43184605079c,6d4d43184605079c,true] 18412 --- [http-nio-23532-exec-4] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "fail"
+}
+2023-10-25 15:51:42.908  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/19.3.0.0/osdt_cert.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/Administrator/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
+2023-10-25 15:51:42.909  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-25 15:51:43.225  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: uat
+2023-10-25 15:51:43.669  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-10-25 15:51:43.707  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34ms. Found 3 JPA repository interfaces.
+2023-10-25 15:51:43.836  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aed222f2-9e06-35bd-b57a-53ca6fcbef86
+2023-10-25 15:51:43.991  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@16d1454b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-25 15:51:44.001  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-25 15:51:44.426  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-10-25 15:51:44.506  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1274 ms
+2023-10-25 15:51:44.675  WARN [ap-custom-report-service,,,] 17476 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-25 15:51:44.769  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-10-25 15:51:44.994  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-10-25 15:51:45.009  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-10-25 15:51:45.357 DEBUG [ap-custom-report-service,,,] 17476 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-10-25 15:51:45.652  INFO [ap-custom-report-service,,,] 17476 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 15:51:45.797  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3387ed1f, org.springframework.security.web.context.SecurityContextPersistenceFilter@75e7269f, org.springframework.security.web.header.HeaderWriterFilter@7853472f, org.springframework.web.filter.CorsFilter@25b41e67, org.springframework.security.web.authentication.logout.LogoutFilter@2522f01e, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@5fcb9159, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69f3ec5d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a7931ce, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@17d8df04, org.springframework.security.web.session.SessionManagementFilter@31a4f689, org.springframework.security.web.access.ExceptionTranslationFilter@9cd7607, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e6768db]
+2023-10-25 15:51:46.135  WARN [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-10-25 15:51:46.322  WARN [ap-custom-report-service,,,] 17476 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-10-25 15:51:46.351  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-10-25 15:51:46.402  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-10-25 15:51:46.539  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-10-25 15:51:46.718  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-10-25 15:51:46.729  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 4.32 seconds (JVM running for 4.867)
+2023-10-25 15:51:47.225  INFO [ap-custom-report-service,,,] 17476 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-25 15:51:47.233  INFO [ap-custom-report-service,,,] 17476 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-10-25 15:51:47.244 DEBUG [ap-custom-report-service,caa02bf83df7dbd2,caa02bf83df7dbd2,true] 17476 --- [http-nio-23532-exec-1] c.l.r.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /report-dev/api/v1/custom/authenticate/token
+2023-10-25 15:51:47.306  INFO [ap-custom-report-service,caa02bf83df7dbd2,caa02bf83df7dbd2,true] 17476 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2023-10-25 15:51:47.306  INFO [ap-custom-report-service,caa02bf83df7dbd2,caa02bf83df7dbd2,true] 17476 --- [http-nio-23532-exec-1] c.l.r.controller.LoginController         : Client IP Address: 0:0:0:0:0:0:0:1
+2023-10-25 15:51:47.672  INFO [ap-custom-report-service,caa02bf83df7dbd2,caa02bf83df7dbd2,true] 17476 --- [http-nio-23532-exec-1] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "accessToken" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJDVVNUT01fMSIsImlhdCI6MTY5ODIyMzkwNywiZXhwIjoxNjk4MzEwMzA3fQ.UqoeMiX8gvmEQUavybhnO8LwRhElfEBQEy37018PCeUvuM7BP5LY6fMZbZ8Lzyhi3V-D2l-5-I-5pRe3P8rXhg",
+    "tokenType" : "Bearer",
+    "expireDate" : 86400,
+    "username" : "CUSTOM_1",
+    "enabled" : true,
+    "borders" : {
+      "createdAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "modifiedAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "borderId" : "R5C10",
+      "bridge" : "1",
+      "code" : "510",
+      "enable" : true,
+      "name" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I",
+      "provinceCode" : "201",
+      "provinceName" : "ນະຄອນລວງວຽງຈັນ",
+      "roles" : [ {
+        "roleId" : 1,
+        "roleName" : "ROLE_BORDER",
+        "roleDisplay" : "Role Border"
+      } ]
+    },
+    "roles" : [ {
+      "roleId" : 1,
+      "roleName" : "ROLE_BORDER",
+      "roleDisplay" : "Role Border"
+    } ]
+  }
+}
+2023-10-25 15:51:54.907 DEBUG [ap-custom-report-service,d7b0fd49eb087b1e,d7b0fd49eb087b1e,true] 17476 --- [http-nio-23532-exec-7] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'CUSTOM_1', uri: /report-dev/api/v1/custom/singleWindowDaily.service
+2023-10-25 15:51:54.910  INFO [ap-custom-report-service,d7b0fd49eb087b1e,d7b0fd49eb087b1e,true] 17476 --- [http-nio-23532-exec-7] c.l.r.controller.SingleWindowController  : 		 --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:51:54.911  INFO [ap-custom-report-service,d7b0fd49eb087b1e,d7b0fd49eb087b1e,true] 17476 --- [http-nio-23532-exec-7] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:51:54.911  INFO [ap-custom-report-service,d7b0fd49eb087b1e,d7b0fd49eb087b1e,true] 17476 --- [http-nio-23532-exec-7] c.l.r.controller.SingleWindowController  : auth == CUSTOM_1
+2023-10-25 15:51:54.911  INFO [ap-custom-report-service,d7b0fd49eb087b1e,d7b0fd49eb087b1e,true] 17476 --- [http-nio-23532-exec-7] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@52c772e3: Username: CUSTOM_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_BORDER
+2023-10-25 15:51:54.911  INFO [ap-custom-report-service,d7b0fd49eb087b1e,d7b0fd49eb087b1e,true] 17476 --- [http-nio-23532-exec-7] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230703"
+}
+2023-10-25 15:51:54.931  INFO [ap-custom-report-service,d7b0fd49eb087b1e,d7b0fd49eb087b1e,true] 17476 --- [http-nio-23532-exec-7] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10')
+2023-10-25 15:51:54.931  INFO [ap-custom-report-service,d7b0fd49eb087b1e,d7b0fd49eb087b1e,true] 17476 --- [http-nio-23532-exec-7] c.l.r.services.Impl.GetDataServiceImpl   : SQL : 
+SELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, 
+TB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID 
+from TAX_INVOICE A 
+LEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID 
+LEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' 
+LEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID 
+WHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1  AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = 20230703 AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10') ORDER BY REFERENCE, b.AMOUNT DESC 
+2023-10-25 15:51:54.952  INFO [ap-custom-report-service,d7b0fd49eb087b1e,d7b0fd49eb087b1e,true] 17476 --- [http-nio-23532-exec-7] c.l.r.controller.SingleWindowController  : 		 --> End Custom Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:51:54.958  INFO [ap-custom-report-service,d7b0fd49eb087b1e,d7b0fd49eb087b1e,true] 17476 --- [http-nio-23532-exec-7] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "paymentDate" : "03/07/2023 10:16:27",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "168",
+      "instance" : "1007648",
+      "receiptNumber" : "FT23146NYBHR",
+      "amount" : 516300.0,
+      "paymentChanel" : "INTERNET",
+      "companyName" : "mewshop",
+      "printBill" : {
+        "header" : {
+          "billNo" : "FT23146NYBHR",
+          "number" : "168",
+          "invoices" : "TAX231842UXS7282",
+          "borderName" : "ດ່ານພາສີສາກົນສີນຄ້າທ່າບົກທ່ານາແລ້ງ ສົກປີ: 2022",
+          "typeInvoice" : "IM",
+          "soi" : "220127000008",
+          "issueDate" : "27/01/2022",
+          "companyName" : "mewshop"
+        },
+        "detail" : [ {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ຄ່າທໍານຽມ LNSW",
+          "amount" : "128,400"
+        }, {
+          "title" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+          "amount" : "100,000"
+        } ],
+        "footer" : {
+          "totalAmount" : "516,300",
+          "nameAmount" : "ຫ້າແສນໜຶ່ງໝື່ນຫົກພັນສາມຮ້ອຍກີບ",
+          "paymentDate" : "03/07/2023 10:16:27",
+          "qrCode" : "TAX231842UXS7282"
+        }
+      }
+    }, {
+      "paymentDate" : "03/07/2023 10:38:55",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "65",
+      "instance" : "1011721",
+      "receiptNumber" : "FT23146X0FZC",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "printBill" : {
+        "header" : {
+          "billNo" : "FT23146X0FZC",
+          "number" : "65",
+          "invoices" : "TAX23184BBSR6600",
+          "borderName" : "ດ່ານພາສີສາກົນສີນຄ້າທ່າບົກທ່ານາແລ້ງ ສົກປີ: 2023",
+          "typeInvoice" : "IM",
+          "soi" : "230123000009",
+          "issueDate" : "23/01/2023",
+          "companyName" : "Tanoy_Logistics Co,, Ltd"
+        },
+        "detail" : [ {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ຄ່າທໍານຽມ LNSW",
+          "amount" : "128,400"
+        }, {
+          "title" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+          "amount" : "100,000"
+        }, {
+          "title" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+          "amount" : "0"
+        } ],
+        "footer" : {
+          "totalAmount" : "18,704,000",
+          "nameAmount" : "ສິບແປດລ້ານເຈັດແສນສີພັນກີບ",
+          "paymentDate" : "03/07/2023 10:38:55",
+          "qrCode" : "TAX23184BBSR6600"
+        }
+      }
+    }, {
+      "paymentDate" : "03/07/2023 10:30:09",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "167",
+      "instance" : "1007647",
+      "receiptNumber" : "FT23146CTLBP",
+      "amount" : 516900.0,
+      "paymentChanel" : "INTERNET",
+      "companyName" : "mewshop",
+      "printBill" : {
+        "header" : {
+          "billNo" : "FT23146CTLBP",
+          "number" : "167",
+          "invoices" : "TAX23184BSFV5961",
+          "borderName" : "ດ່ານພາສີສາກົນສີນຄ້າທ່າບົກທ່ານາແລ້ງ ສົກປີ: 2022",
+          "typeInvoice" : "IM",
+          "soi" : "220811000005",
+          "issueDate" : "11/08/2022",
+          "companyName" : "mewshop"
+        },
+        "detail" : [ {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ຄ່າທໍານຽມ LNSW",
+          "amount" : "128,400"
+        }, {
+          "title" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+          "amount" : "100,000"
+        }, {
+          "title" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+          "amount" : "600"
+        } ],
+        "footer" : {
+          "totalAmount" : "516,900",
+          "nameAmount" : "ຫ້າແສນໜຶ່ງໝື່ນຫົກພັນເກົ້າຮ້ອຍກີບ",
+          "paymentDate" : "03/07/2023 10:30:09",
+          "qrCode" : "TAX23184BSFV5961"
+        }
+      }
+    }, {
+      "paymentDate" : "03/07/2023 10:40:17",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "68",
+      "instance" : "1011724",
+      "receiptNumber" : "FT23146Z4C0R",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "printBill" : {
+        "header" : {
+          "billNo" : "FT23146Z4C0R",
+          "number" : "68",
+          "invoices" : "TAX23184IXDJ7875",
+          "borderName" : "ດ່ານພາສີສາກົນສີນຄ້າທ່າບົກທ່ານາແລ້ງ ສົກປີ: 2023",
+          "typeInvoice" : "IM",
+          "soi" : "230123000010",
+          "issueDate" : "23/01/2023",
+          "companyName" : "Tanoy_Logistics Co,, Ltd"
+        },
+        "detail" : [ {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ຄ່າທໍານຽມ LNSW",
+          "amount" : "128,400"
+        }, {
+          "title" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+          "amount" : "100,000"
+        }, {
+          "title" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+          "amount" : "0"
+        } ],
+        "footer" : {
+          "totalAmount" : "18,704,000",
+          "nameAmount" : "ສິບແປດລ້ານເຈັດແສນສີພັນກີບ",
+          "paymentDate" : "03/07/2023 10:40:17",
+          "qrCode" : "TAX23184IXDJ7875"
+        }
+      }
+    }, {
+      "paymentDate" : "03/07/2023 10:44:58",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "76",
+      "instance" : "1011732",
+      "receiptNumber" : "FT23146JW2M1",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "printBill" : {
+        "header" : {
+          "billNo" : "FT23146JW2M1",
+          "number" : "76",
+          "invoices" : "TAX23184VYTO5098",
+          "borderName" : "ດ່ານພາສີສາກົນສີນຄ້າທ່າບົກທ່ານາແລ້ງ ສົກປີ: 2023",
+          "typeInvoice" : "IM",
+          "soi" : "230123000018",
+          "issueDate" : "23/01/2023",
+          "companyName" : "Tanoy_Logistics Co,, Ltd"
+        },
+        "detail" : [ {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ຄ່າທໍານຽມ LNSW",
+          "amount" : "128,400"
+        }, {
+          "title" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+          "amount" : "100,000"
+        }, {
+          "title" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+          "amount" : "0"
+        } ],
+        "footer" : {
+          "totalAmount" : "18,704,000",
+          "nameAmount" : "ສິບແປດລ້ານເຈັດແສນສີພັນກີບ",
+          "paymentDate" : "03/07/2023 10:44:58",
+          "qrCode" : "TAX23184VYTO5098"
+        }
+      }
+    }, {
+      "paymentDate" : "03/07/2023 10:33:32",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "169",
+      "instance" : "1007649",
+      "receiptNumber" : "FT23146ZCYRH",
+      "amount" : 516300.0,
+      "paymentChanel" : "INTERNET",
+      "companyName" : "mewshop",
+      "printBill" : {
+        "header" : {
+          "billNo" : "FT23146ZCYRH",
+          "number" : "169",
+          "invoices" : "TAX23184WT8L1865",
+          "borderName" : "ດ່ານພາສີສາກົນສີນຄ້າທ່າບົກທ່ານາແລ້ງ ສົກປີ: 2022",
+          "typeInvoice" : "IM",
+          "soi" : "220127000009",
+          "issueDate" : "27/01/2022",
+          "companyName" : "mewshop"
+        },
+        "detail" : [ {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "92,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "195,000"
+        }, {
+          "title" : "ຄ່າທໍານຽມ LNSW",
+          "amount" : "128,400"
+        }, {
+          "title" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+          "amount" : "100,000"
+        } ],
+        "footer" : {
+          "totalAmount" : "516,300",
+          "nameAmount" : "ຫ້າແສນໜຶ່ງໝື່ນຫົກພັນສາມຮ້ອຍກີບ",
+          "paymentDate" : "03/07/2023 10:33:32",
+          "qrCode" : "TAX23184WT8L1865"
+        }
+      }
+    }, {
+      "paymentDate" : "03/07/2023 10:43:55",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "77",
+      "instance" : "1011733",
+      "receiptNumber" : "FT23146VJH8L",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "printBill" : {
+        "header" : {
+          "billNo" : "FT23146VJH8L",
+          "number" : "77",
+          "invoices" : "TAX23184XJEY0023",
+          "borderName" : "ດ່ານພາສີສາກົນສີນຄ້າທ່າບົກທ່ານາແລ້ງ ສົກປີ: 2023",
+          "typeInvoice" : "IM",
+          "soi" : "230123000019",
+          "issueDate" : "23/01/2023",
+          "companyName" : "Tanoy_Logistics Co,, Ltd"
+        },
+        "detail" : [ {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ພາສີ ຂາເຂົ້າ",
+          "amount" : "5,959,900"
+        }, {
+          "title" : "ຕ່າອາກອນມູນຄ່າເພີ່ມ",
+          "amount" : "12,515,700"
+        }, {
+          "title" : "ຄ່າທໍານຽມ LNSW",
+          "amount" : "128,400"
+        }, {
+          "title" : "ຄ່າບໍລິການດຳເນີນໃບແຈ້ງພາສີ",
+          "amount" : "100,000"
+        }, {
+          "title" : "ຄ່າບໍລິການຂໍ້ມູນສະຖິຕິ",
+          "amount" : "0"
+        } ],
+        "footer" : {
+          "totalAmount" : "18,704,000",
+          "nameAmount" : "ສິບແປດລ້ານເຈັດແສນສີພັນກີບ",
+          "paymentDate" : "03/07/2023 10:43:55",
+          "qrCode" : "TAX23184XJEY0023"
+        }
+      }
+    } ],
+    "sumTotal" : 7.63655E7
+  }
+}
+2023-10-25 15:52:08.830 DEBUG [ap-custom-report-service,023827295b3c040f,023827295b3c040f,true] 17476 --- [http-nio-23532-exec-8] c.l.r.S.jwt.JwtAuthenticationFilter      : set Authentication to auth context for 'CUSTOM_1', uri: /report-dev/api/v1/custom/company.service
+2023-10-25 15:52:08.833  INFO [ap-custom-report-service,023827295b3c040f,023827295b3c040f,true] 17476 --- [http-nio-23532-exec-8] c.l.r.controller.SingleWindowController  : 		 --> Custom Request controller >>>>>>>>>>>>>>>>>>>>>>
+2023-10-25 15:52:08.833  INFO [ap-custom-report-service,023827295b3c040f,023827295b3c040f,true] 17476 --- [http-nio-23532-exec-8] c.l.r.controller.SingleWindowController  : Client IP Address = 0:0:0:0:0:0:0:1
+2023-10-25 15:52:08.833  INFO [ap-custom-report-service,023827295b3c040f,023827295b3c040f,true] 17476 --- [http-nio-23532-exec-8] c.l.r.controller.SingleWindowController  : auth == CUSTOM_1
+2023-10-25 15:52:08.833  INFO [ap-custom-report-service,023827295b3c040f,023827295b3c040f,true] 17476 --- [http-nio-23532-exec-8] c.l.r.controller.SingleWindowController  : auth username == com.ldb.reportcustom.Security.service.UserPrincipal@52c772e3: Username: CUSTOM_1; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_BORDER
+2023-10-25 15:52:08.834  INFO [ap-custom-report-service,023827295b3c040f,023827295b3c040f,true] 17476 --- [http-nio-23532-exec-8] c.l.r.controller.SingleWindowController  : data body request: {
+  "startDate" : "20230125",
+  "endDate" : "20231025",
+  "tIN_NAME" : "ALL"
+}
+2023-10-25 15:52:08.834  INFO [ap-custom-report-service,023827295b3c040f,023827295b3c040f,true] 17476 --- [http-nio-23532-exec-8] c.l.r.services.Impl.GetDataServiceImpl   : req issuer_name:ALL
+2023-10-25 15:52:08.838  INFO [ap-custom-report-service,023827295b3c040f,023827295b3c040f,true] 17476 --- [http-nio-23532-exec-8] com.ldb.reportcustom.utils.LnswFunction  : Border id =  AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10')
+2023-10-25 15:52:08.838  INFO [ap-custom-report-service,023827295b3c040f,023827295b3c040f,true] 17476 --- [http-nio-23532-exec-8] c.l.r.services.Impl.GetDataServiceImpl   : ++++ AND A.ISSUING_CUSTOMER_OFFICE IN ('R5C10')
+2023-10-25 15:52:08.871  INFO [ap-custom-report-service,023827295b3c040f,023827295b3c040f,true] 17476 --- [http-nio-23532-exec-8] c.l.r.controller.SingleWindowController  : 		 --> End Custom Request controller <<<<<<<<<<<<<<<<<<<
+2023-10-25 15:52:08.874  INFO [ap-custom-report-service,023827295b3c040f,023827295b3c040f,true] 17476 --- [http-nio-23532-exec-8] c.l.r.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "dataValue" : [ {
+      "reference" : "TAX231842UXS7282",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:16:27",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "168",
+      "instance" : "1007648",
+      "receiptNumber" : "FT23146NYBHR",
+      "amount" : 516300.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184BBSR6600",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:38:55",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "65",
+      "instance" : "1011721",
+      "receiptNumber" : "FT23146X0FZC",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184BSFV5961",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:30:09",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "167",
+      "instance" : "1007647",
+      "receiptNumber" : "FT23146CTLBP",
+      "amount" : 516900.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184DMXA8623",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:19:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "126",
+      "instance" : "1011882",
+      "receiptNumber" : "FT231460ZCDS",
+      "amount" : 1043400.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184EV9E4923",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:42:42",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "129",
+      "instance" : "1011885",
+      "receiptNumber" : "FT231461WF32",
+      "amount" : 1121700.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184IXDJ7875",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:40:17",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "68",
+      "instance" : "1011724",
+      "receiptNumber" : "FT23146Z4C0R",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184JH408321",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:21:53",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "124",
+      "instance" : "1011880",
+      "receiptNumber" : "FT2314637VZW",
+      "amount" : 1043400.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184PAI18185",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:23:17",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "119",
+      "instance" : "1011875",
+      "receiptNumber" : "FT23146VHVMS",
+      "amount" : 1253400.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C30",
+      "borderName" : "ຫ້ອງການພາສີສາງທ່ານາແລ້ງແລະໂຊກໄຊ"
+    }, {
+      "reference" : "TAX23184VYTO5098",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:44:58",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "76",
+      "instance" : "1011732",
+      "receiptNumber" : "FT23146JW2M1",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184WT8L1865",
+      "companyName" : "mewshop",
+      "paymentDate" : "03/07/2023 10:33:32",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "169",
+      "instance" : "1007649",
+      "receiptNumber" : "FT23146ZCYRH",
+      "amount" : 516300.0,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23184XJEY0023",
+      "companyName" : "Tanoy_Logistics Co,, Ltd",
+      "paymentDate" : "03/07/2023 10:43:55",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "77",
+      "instance" : "1011733",
+      "receiptNumber" : "FT23146VJH8L",
+      "amount" : 1.8704E7,
+      "paymentChanel" : "INTERNET",
+      "border" : "R5C10",
+      "borderName" : "ດ່ານສາກົນ ຂົວມິດຕະພາບ I"
+    }, {
+      "reference" : "TAX23244GLLP7590",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "01/09/2023 16:50:40",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34542",
+      "instance" : "3182958",
+      "receiptNumber" : "FT23150JS20D",
+      "amount" : 621370.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23244S8AR6531",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "01/09/2023 16:50:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34542",
+      "instance" : "3182958",
+      "receiptNumber" : "FT23150JPGG5",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX232554A8F5209",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:25:44",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34545",
+      "instance" : "3182963",
+      "receiptNumber" : "FT23150F0V3S",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255HYGY9171",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:19:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34543",
+      "instance" : "3182960",
+      "receiptNumber" : "FT23150Y464F",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255NADU5627",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:51:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34548",
+      "instance" : "3182968",
+      "receiptNumber" : "FT23150Z9R2F",
+      "amount" : 5.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255UDSS0596",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:27:50",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34545",
+      "instance" : "3182963",
+      "receiptNumber" : "FT23150C0FDH",
+      "amount" : 411370.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    }, {
+      "reference" : "TAX23255ZMOD4155",
+      "companyName" : "NSWA+ Test",
+      "paymentDate" : "12/09/2023 13:21:15",
+      "typeInvoice" : "IM",
+      "invoiceNumber" : "34543",
+      "instance" : "3182960",
+      "receiptNumber" : "FT231508FYB6",
+      "amount" : 411370.0,
+      "paymentChanel" : "MOBILE",
+      "border" : "LAVLP",
+      "borderName" : "ດ່ານພາສີສາກົນສິນຄ້າທ່າບົກທ່ານາແລ້ງ"
+    } ],
+    "sumTotal" : 8.227153E7
+  }
+}
+2023-10-25 15:52:42.009  INFO [ap-custom-report-service,,,] 17476 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 15:52:42.010  INFO [ap-custom-report-service,,,] 17476 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-10-25 15:52:42.590  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: uat
+2023-10-25 15:52:42.849  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-10-25 15:52:42.850  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0ms. Found 0 JPA repository interfaces.
+2023-10-25 15:52:42.916  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2811a046-2e27-3e13-8cac-b09fbf21d1d5
+2023-10-25 15:52:43.046  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-10-25 15:52:43.076  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 484 ms
+2023-10-25 15:52:43.515  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-10-25 15:52:43.893  WARN [ap-custom-report-service,,,] 17476 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-25 15:52:43.966  INFO [ap-custom-report-service,,,] 17476 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 15:52:44.133  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 02245e59-da5f-4321-a51a-8c88c84a9a78
+
+2023-10-25 15:52:44.169  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ab4b3a9, org.springframework.security.web.context.SecurityContextPersistenceFilter@4da3284e, org.springframework.security.web.header.HeaderWriterFilter@3388460a, org.springframework.security.web.csrf.CsrfFilter@2fdbe790, org.springframework.security.web.authentication.logout.LogoutFilter@4ef5ddfd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4f7206a1, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4ea209ad, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@30e076c6, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2e6d46eb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d3e1609, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@287272b9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47474c76, org.springframework.security.web.session.SessionManagementFilter@2cb8f369, org.springframework.security.web.access.ExceptionTranslationFilter@dd0374a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6abcdf07]
+2023-10-25 15:52:44.226  WARN [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-10-25 15:52:44.458  WARN [ap-custom-report-service,,,] 17476 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-10-25 15:52:44.482  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-10-25 15:52:44.502  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-10-25 15:52:44.659  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-10-25 15:52:44.660  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-10-25 15:52:44.671  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 2.599 seconds (JVM running for 62.808)
+2023-10-25 15:52:44.677  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   ManagementWebSecurityAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.oauth2.jwt.JwtDecoder,org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration#inMemoryUserDetailsManager matched:
+      - @ConditionalOnMissingBean (types: org.springframework.security.oauth2.client.registration.ClientRegistrationRepository; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ValidationAutoConfiguration#defaultValidator matched:
+      - @ConditionalOnMissingBean (types: javax.validation.Validator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebSecurityEnablerConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter; SearchStrategy: all) found bean 'org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityConfigurerAdapter'; @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2023-10-25 15:52:46.832  INFO [ap-custom-report-service,,,] 17476 --- [Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 15:52:46.832  INFO [ap-custom-report-service,,,] 17476 --- [Thread-22] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-10-25 15:52:47.255  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] c.l.r.ReportCustomApplication            : The following profiles are active: uat
+2023-10-25 15:52:47.517  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-10-25 15:52:47.533  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 3 JPA repository interfaces.
+2023-10-25 15:52:47.597  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aed222f2-9e06-35bd-b57a-53ca6fcbef86
+2023-10-25 15:52:47.629  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@12a7ae6e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-25 15:52:47.633  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-25 15:52:47.736  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23532 (http)
+2023-10-25 15:52:47.763  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 507 ms
+2023-10-25 15:52:47.903  WARN [ap-custom-report-service,,,] 17476 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-25 15:52:47.965  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-10-25 15:52:48.069  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-10-25 15:52:48.081  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-10-25 15:52:48.172  INFO [ap-custom-report-service,,,] 17476 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 15:52:48.212  INFO [ap-custom-report-service,,,] 3652 --- [main] c.l.r.ReportCustomApplicationTests       : The following profiles are active: uat
+2023-10-25 15:52:48.299 DEBUG [ap-custom-report-service,,,] 17476 --- [restartedMain] c.l.r.S.jwt.JwtAuthenticationFilter      : Filter 'jwtAuthenticationFilter' configured for use
+2023-10-25 15:52:48.468  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5790a213, org.springframework.security.web.context.SecurityContextPersistenceFilter@53d89f63, org.springframework.security.web.header.HeaderWriterFilter@70ab6097, org.springframework.web.filter.CorsFilter@6a5be46e, org.springframework.security.web.authentication.logout.LogoutFilter@63b29ae2, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@4d584cf6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4003973b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ac73f32, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69b829f, org.springframework.security.web.session.SessionManagementFilter@6946b79, org.springframework.security.web.access.ExceptionTranslationFilter@c89f243, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4569afa0]
+2023-10-25 15:52:48.741  WARN [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-10-25 15:52:48.800  INFO [ap-custom-report-service,,,] 3652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2023-10-25 15:52:48.857  INFO [ap-custom-report-service,,,] 3652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52ms. Found 3 JPA repository interfaces.
+2023-10-25 15:52:48.938  WARN [ap-custom-report-service,,,] 17476 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-10-25 15:52:48.962  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-10-25 15:52:49.013  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23532 (http) with context path ''
+2023-10-25 15:52:49.086  INFO [ap-custom-report-service,,,] 3652 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eab2c6d7-8aac-3ff8-9187-56f0f9927ff5
+2023-10-25 15:52:49.168  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-10-25 15:52:49.241  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-10-25 15:52:49.250  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] c.l.r.ReportCustomApplication            : Started ReportCustomApplication in 2.363 seconds (JVM running for 67.387)
+2023-10-25 15:52:49.251  INFO [ap-custom-report-service,,,] 17476 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   ManagementWebSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter; SearchStrategy: all) found beans of type 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter' webSecurityConfig (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter' (OnClassCondition)
+         - found 'session' scope (OnWebApplicationCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.oauth2.jwt.JwtDecoder,org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector; SearchStrategy: all) found beans of type 'org.springframework.security.authentication.AuthenticationManager' org.springframework.security.authenticationManager and found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' userDetailsService and found beans of type 'org.springframework.security.authentication.AuthenticationProvider' authenticationProvider (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+
+   ValidationAutoConfiguration#defaultValidator:
+      Did not match:
+         - @ConditionalOnMissingBean (types: javax.validation.Validator; SearchStrategy: all) found beans of type 'javax.validation.Validator' validator (OnBeanCondition)
+
+   WebSecurityEnablerConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - found 'session' scope (OnWebApplicationCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2023-10-25 15:52:49.336  INFO [ap-custom-report-service,,,] 3652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@21090c88' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-25 15:52:49.359  INFO [ap-custom-report-service,,,] 3652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-25 15:52:49.688  INFO [ap-custom-report-service,,,] 3652 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-10-25 15:52:50.263  INFO [ap-custom-report-service,,,] 3652 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-10-25 15:52:50.283  INFO [ap-custom-report-service,,,] 3652 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-10-25 15:52:50.374  WARN [ap-custom-report-service,,,] 3652 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-25 15:52:51.835  INFO [ap-custom-report-service,,,] 3652 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 15:52:52.100  INFO [ap-custom-report-service,,,] 3652 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6fe243a, org.springframework.security.web.context.SecurityContextPersistenceFilter@2435c6ae, org.springframework.security.web.header.HeaderWriterFilter@9825465, org.springframework.web.filter.CorsFilter@4c8a9266, org.springframework.security.web.authentication.logout.LogoutFilter@477bea57, com.ldb.reportcustom.Security.jwt.JwtAuthenticationFilter@2e91cf69, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@297dff3a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e34a84b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63ad5fe7, org.springframework.security.web.session.SessionManagementFilter@23d23d98, org.springframework.security.web.access.ExceptionTranslationFilter@320ba79f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f6cde7e]
+2023-10-25 15:52:53.640  WARN [ap-custom-report-service,,,] 3652 --- [main] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-10-25 15:52:53.686  INFO [ap-custom-report-service,,,] 3652 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-10-25 15:52:53.761  INFO [ap-custom-report-service,,,] 3652 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2023-10-25 15:52:54.062  INFO [ap-custom-report-service,,,] 3652 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2023-10-25 15:52:54.074  INFO [ap-custom-report-service,,,] 3652 --- [main] c.l.r.ReportCustomApplicationTests       : Started ReportCustomApplicationTests in 6.844 seconds (JVM running for 7.527)
+2023-10-25 15:52:54.192  INFO [ap-custom-report-service,,,] 3652 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 15:52:54.194  INFO [ap-custom-report-service,,,] 3652 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
