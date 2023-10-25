@@ -37,7 +37,7 @@ public class GetDataServiceImpl implements GetDataService {
     @Override
     public List<RespAccountBorder> findBorderAccount() {
         StringBuilder sb = new StringBuilder();
-        sb.append("SELECT ID, TAX_RECEIPT_NAME, BORDER_ID, TAX_CODE  from border.TAX_ACCOUNT_BORDER WHERE RECEIPT_TITLE = 'Y' ");
+        sb.append("SELECT ID, TAX_RECEIPT_NAME, BORDER_ID, TAX_CODE  from TAX_ACCOUNT_BORDER WHERE RECEIPT_TITLE = 'Y' ");
         String sql = sb.toString();
        // log.info("SQL : " + sql);
         return this.jdbcTemplate.query(sql, new RowMapper<RespAccountBorder>() {
@@ -71,7 +71,7 @@ public class GetDataServiceImpl implements GetDataService {
             sb.append("\nfrom TAX_INVOICE A ");
             sb.append("\nLEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID ");
             sb.append("\nLEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' ");
-            sb.append("\nLEFT OUTER JOIN border.TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID ");
+            sb.append("\nLEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID ");
             sb.append("\nWHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1 ").append(condit).append(" ORDER BY REFERENCE, b.AMOUNT DESC ");
 
             String sql = sb.toString();
@@ -126,7 +126,7 @@ public class GetDataServiceImpl implements GetDataService {
             sb.append("\nfrom TAX_INVOICE A ");
             sb.append("\nLEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID ");
             sb.append("\nLEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' ");
-            sb.append("\nLEFT OUTER JOIN border.TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID ");
+            sb.append("\nLEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID ");
             sb.append("\nWHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1 ").append(condit).append(" ORDER BY REFERENCE, b.AMOUNT DESC ");
 
             String sql = sb.toString();
@@ -217,7 +217,7 @@ public class GetDataServiceImpl implements GetDataService {
             sb.append("\nfrom TAX_INVOICE A ");
             sb.append("\nLEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID ");
             sb.append("\nLEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' ");
-            sb.append("\nLEFT OUTER JOIN border.TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID ");
+            sb.append("\nLEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID ");
             sb.append("\nWHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1 ").append(condit).append(" ORDER BY REFERENCE, b.AMOUNT DESC ");
             String sql = sb.toString();
           //  log.info("SQL : " + sql);

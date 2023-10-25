@@ -1,94 +1,94 @@
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\services\Impl\GetDataServiceImpl.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\utils\LnswFunction.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespPrintBillFooter.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\Exception2\BadRequestException.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\request\BorderRequestReportByBoderID.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\NotFoundException.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\entities\Users.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\ProfileResponse.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\services\GetDataService.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\DataResponse.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\services\Impl\GetProvinceService.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\controller\LoginController.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\controller\ReportAdminController.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\request\LoginRequest.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\request\GroupcompanyReq.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\entities\Border.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\entities\CreateUser.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\GatewayTimeOutException.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\InternalServerError.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\repositories\UserRepository.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\services\GetCompanyService.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\entities\Roles.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\services\Impl\GetListCompany.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\DTO\ExceptionDTO.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\services\Impl\CreateUserServiceImpl.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\Security\jwt\JwtAuthenticationEntryPoint.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\entities\audit\DateAudit.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespMainObj.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\handler\LimitLoginAuthenticationProvider.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\request\BoderRequest.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\Exception2\ForbiddenException.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\config\AuditingConfig.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\repositories\ProvinceRepository.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\config\WebMvcConfig.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\controller\CreateUserController.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\DetailMessage\DetailedErrorItem.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\BadGatewayException.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\config\WebSecurityConfig.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\request\RequestReportByStartDate.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\LoginResponse.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\Security\service\UserPrincipal.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\request\RequestDatebyCompany.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\Security\jwt\JwtAuthenticationFilter.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\controller\CompanyGroupController.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\DTO\DetailedErrorDTO.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\Exception2\AppException.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\services\Impl\SingleWindowServiceAdminImpl.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\entities\Company.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\Exception2\NotFoundException.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\UnAuthorizedException.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespPrintBillDetail.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\services\Impl\SingleWindowServiceImpl.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\Security\service\UserDetailsDaoImpl.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespSumTaxCode.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\request\RequestReportStartDate.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespAccountBorder.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespPrintBillHeader.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\services\SingleWindowServiceAdmin.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\utils\LaoKipText.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\NotAcceptableException.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\Security\service\UserDetailsDao.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespPrintBill.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\entities\UserAttempts.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\DetailMessage\ErrorInfo.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\entities\audit\UserAudit.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\services\Impl\GetSingleWindowServiceAdminImpl.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\Exception2\BadGatewayException.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\ProvinceReponse.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\controller\SingleWindowController.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\InitializeMessage.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\Security\service\CustomUserDetailsService.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\entities\audit\Auditable.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\DetailMessage\ExceptionResponse.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\Security\jwt\JwtTokenProvider.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\handler\MyAccessDeniedHandler.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespSingleWinDaily.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\request\RequestReportDate.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\services\GetSingleWindowServiceAdmin.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\DTO\ErrorDTO.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\ReportCustomApplication.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\BadRequestException.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\utils\APIMappingPaths.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespMainCompanyObj.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\repositories\CreateUserRepository.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\services\CreateUserService.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\utils\JSONUtils.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\services\SingleWindowService.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\ServiceUnavailableException.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ResourceNotFoundException.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\ForbiddenException.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\BorderRespone.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\repositories\BorderRepository.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\utils\FunctionlessWriteNumberToWord.java
-C:\LDB Project\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ApiExceptionHandler.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\repositories\BorderRepository.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\services\Impl\GetProvinceService.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\utils\JSONUtils.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\controller\CreateUserController.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\DTO\DetailedErrorDTO.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\request\LoginRequest.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\controller\ReportAdminController.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\ServiceUnavailableException.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\Exception2\ForbiddenException.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\InitializeMessage.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\services\Impl\SingleWindowServiceAdminImpl.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespPrintBillDetail.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\DTO\ErrorDTO.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\NotFoundException.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\controller\LoginController.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\entities\audit\Auditable.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\utils\LnswFunction.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespPrintBill.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\DetailMessage\ErrorInfo.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\entities\audit\UserAudit.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespPrintBillHeader.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\repositories\UserRepository.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\services\Impl\GetSingleWindowServiceAdminImpl.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\utils\APIMappingPaths.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\Security\service\UserDetailsDao.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\entities\Border.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\entities\Users.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\controller\SingleWindowController.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\services\GetCompanyService.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\services\SingleWindowService.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\DetailMessage\DetailedErrorItem.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\Exception2\BadGatewayException.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\repositories\ProvinceRepository.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\services\Impl\GetListCompany.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\entities\Roles.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\BadRequestException.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ApiExceptionHandler.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\request\BorderRequestReportByBoderID.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespMainObj.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\LoginResponse.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\handler\LimitLoginAuthenticationProvider.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespPrintBillFooter.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\entities\Company.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\entities\audit\DateAudit.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\BorderRespone.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\Security\service\UserPrincipal.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\config\WebMvcConfig.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\ProfileResponse.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\Security\jwt\JwtAuthenticationEntryPoint.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\DataResponse.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\DTO\ExceptionDTO.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespAccountBorder.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\InternalServerError.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespSumTaxCode.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\services\Impl\CreateUserServiceImpl.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\UnAuthorizedException.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\ReportCustomApplication.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\Security\service\UserDetailsDaoImpl.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\request\RequestReportStartDate.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\Exception2\NotFoundException.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\Security\jwt\JwtAuthenticationFilter.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\utils\LaoKipText.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\request\GroupcompanyReq.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\repositories\CreateUserRepository.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespSingleWinDaily.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\NotAcceptableException.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\request\RequestReportDate.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\utils\FunctionlessWriteNumberToWord.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ResourceNotFoundException.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\services\CreateUserService.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\config\AuditingConfig.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\entities\CreateUser.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\services\GetSingleWindowServiceAdmin.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\handler\MyAccessDeniedHandler.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\services\SingleWindowServiceAdmin.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\request\BoderRequest.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\Exception2\AppException.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\services\Impl\SingleWindowServiceImpl.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\controller\CompanyGroupController.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\Security\service\CustomUserDetailsService.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\services\Impl\GetDataServiceImpl.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\entities\UserAttempts.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\Security\jwt\JwtTokenProvider.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\BadGatewayException.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\services\GetDataService.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\ProvinceReponse.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\DetailMessage\ExceptionResponse.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\request\RequestReportByStartDate.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\request\RequestDatebyCompany.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\messages\response\reportSW\RespMainCompanyObj.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\ForbiddenException.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\ExceptionStatus\GatewayTimeOutException.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\exceptions\Exception2\BadRequestException.java
+D:\ProjectLDBBANK\ReportFastax\src\main\java\com\ldb\reportcustom\config\WebSecurityConfig.java

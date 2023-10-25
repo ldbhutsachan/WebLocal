@@ -2,7 +2,7 @@ spring:
   application:
     name: ap-custom-report-service
   profiles:
-    active: ${PROFILE_ACTIVE:prod}
+    active: ${PROFILE_ACTIVE:uat}
 #  logstash:
 #    server: ${LOG_STASH_SERVER:128.199.79.133}
 #    port: ${LOG_STASH_PORT:5045}

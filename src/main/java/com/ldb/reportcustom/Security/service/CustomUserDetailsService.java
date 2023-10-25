@@ -48,16 +48,17 @@ public class CustomUserDetailsService extends JdbcDaoImpl {
 
     @Override
 //	@Value("SELECT * from boder.USERS where username = ?")
-    @Value("SELECT * from border.TAX_USER_LOGIN where USER_NAME = ?")
+    //@Value("SELECT * from border.TAX_USER_LOGIN where USER_NAME = ?")
+    @Value("SELECT * from TAX_USER_LOGIN where USER_NAME = ?")
     public void setUsersByUsernameQuery(String usersByUsernameQueryString) {
         super.setUsersByUsernameQuery(usersByUsernameQueryString);
     }
 
     @Override
 //	@Value("select username, role from boder.user_roles where username =?")
-    @Value("SELECT C.USER_NAME, B.ROLE_NAME from border.TAX_USER_ROLE A "
-            + "JOIN border.TAX_ROLES B ON A.ROLE_ID = B.ROLE_ID "
-            + "LEFT OUTER JOIN border.TAX_USER_LOGIN C ON A.USER_ID = C.USER_ID "
+    @Value("SELECT C.USER_NAME, B.ROLE_NAME from TAX_USER_ROLE A "
+            + "JOIN TAX_ROLES B ON A.ROLE_ID = B.ROLE_ID "
+            + "LEFT OUTER JOIN TAX_USER_LOGIN C ON A.USER_ID = C.USER_ID "
             + "WHERE C.USER_NAME =?")
     public void setAuthoritiesByUsernameQuery(String queryString) {
         super.setAuthoritiesByUsernameQuery(queryString);
