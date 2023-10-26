@@ -104,7 +104,7 @@ public class LoginController {
 //            Date now = new Date();
 //            Date expiryDate = new Date(now.getTime() + jwtExpirationInMs);
             long seconds = TimeUnit.MILLISECONDS.toSeconds(jwtExpirationInMs);
-            System.out.println("seconds = " + seconds);
+         //   System.out.println("seconds = " + seconds);
             // Initialize data to return object
             LoginResponse loginResponse = new LoginResponse(
                     jwt, "Bearer",

@@ -46,16 +46,19 @@ public class LnswFunction {
             borders = borderRepository.findByRolesName(roleNames).stream().map(Border::getBorderId).collect(Collectors.toList());
 
         }
-
         String borderId = "";
-
-        borderId = " AND " + columnName + " IN " + splitString(borders);
-
+        //=================================cheack session User then send to query =====================================================
+        List<String> roleNamesBorder = auth.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList());
+        String roleNamesBorderString = String.join(", ", roleNamesBorder);
+        if(roleNamesBorderString.equals("ROLE_REPORT_ADMIN") ){
+            borderId = "";
+        }else {
+           borderId = " AND " + columnName + " IN " + splitString(borders);
+        }
         log.info("Border id = " + borderId);
         return borderId;
+        //=================================cheack session User then send to queey=====================================================
     }
-
-
     public static String splitString(String data) {
         String[] strData = data.split(",");
         String border = "('";

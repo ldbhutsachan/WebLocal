@@ -30,17 +30,17 @@ public class UserAttempts {
 	@Column(name = "LAST_MODIFIED", nullable = true)
 	private Date lastModified;
 
-	@Override
-	public String toString() {
-		ObjectMapper mapper = new ObjectMapper();
-
-		String jsonString = "";
-		try {
-			mapper.enable(SerializationFeature.INDENT_OUTPUT);
-			jsonString = mapper.writeValueAsString(this);
-		} catch (JsonProcessingException e) {
-			e.printStackTrace();
-		}
-		return jsonString;
-	}
+//	@Override
+//	public String toString() {
+//		ObjectMapper mapper = new ObjectMapper();
+//
+//		String jsonString = "";
+//		try {
+//			mapper.enable(SerializationFeature.INDENT_OUTPUT);
+//			jsonString = mapper.writeValueAsString(this);
+//		} catch (JsonProcessingException e) {
+//			e.printStackTrace();
+//		}
+//		return jsonString;
+//	}
 }

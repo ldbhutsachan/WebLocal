@@ -66,6 +66,8 @@ public class GetDataServiceImpl implements GetDataService {
 
             condit += lnswFunction.borderIdCondit("A.ISSUING_CUSTOMER_OFFICE");
 
+            log.info("admin check:"+condit);
+
             sb.append("\nSELECT TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY HH24:MI:SS') AS PAY_DATE, A.UPDATED_AT AS PAYMENT_DATE, SAD_TYPE, SAD_REG_NO, SAD_INSTANCE_ID, PAYMENT_REF,  TOTAL_AMOUNT, INVOICE_STATUS, PAYMENT_CHANNEL, ");
             sb.append("\nTB.RECEIPT_NAME AS BORDER_NAME, TIN_NAME, REFERENCE, INVOICE_ID, ISSUING_DATE, C.TAX_RECEIPT_NAME, B.AMOUNT, B.TAX_CODE, B.MORE_INFO, A.ISSUING_CUSTOMER_OFFICE AS BORDER_ID ");
             sb.append("\nfrom TAX_INVOICE A ");
