@@ -62,6 +62,8 @@ public class GetDataServiceImpl implements GetDataService {
 
             if (!dataRequest.getStartDate().equals("") ) {
                 condit += " AND TO_CHAR(A.UPDATED_AT, 'YYYYMMDD') = " + dataRequest.getStartDate() ;
+            }else {
+                condit += " AND  TO_CHAR(sysdate, 'DD/MM/YYYY') =TO_CHAR(A.UPDATED_AT, 'DD/MM/YYYY')" ;
             }
 
             condit += lnswFunction.borderIdCondit("A.ISSUING_CUSTOMER_OFFICE");
@@ -74,7 +76,7 @@ public class GetDataServiceImpl implements GetDataService {
             sb.append("\nLEFT OUTER JOIN TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID ");
             sb.append("\nLEFT OUTER JOIN TAX_ACCOUNT_BORDER C on B.TAX_CODE = C.TAX_CODE AND C.RECEIPT_TITLE = 'Y' ");
             sb.append("\nLEFT OUTER JOIN TAX_BORDER TB on A.ISSUING_CUSTOMER_OFFICE = TB.BORDER_ID ");
-            sb.append("\nWHERE INVOICE_STATUS = 'ACCEPTED' AND 1=1 ").append(condit).append(" ORDER BY REFERENCE, b.AMOUNT DESC ");
+            sb.append("\nWHERE INVOICE_STATUS = 'ACCEPTED'   AND 1=1 ").append(condit).append(" ORDER BY REFERENCE, b.AMOUNT DESC ");
 
             String sql = sb.toString();
             log.info("SQL : " + sql);
