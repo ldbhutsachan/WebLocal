@@ -51,6 +51,7 @@ com\ldb\reportcustom\utils\APIMappingPaths$ReportAdmin.class
 com\ldb\reportcustom\repositories\CreateUserRepository.class
 com\ldb\reportcustom\services\Impl\GetDataServiceImpl$3.class
 com\ldb\reportcustom\utils\FunctionlessWriteNumberToWord.class
+com\ldb\reportcustom\services\GetCompanyService.class
 com\ldb\reportcustom\exceptions\ExceptionStatus\BadRequestException.class
 com\ldb\reportcustom\services\Impl\GetProvinceService$1.class
 com\ldb\reportcustom\repositories\ProvinceRepository.class
@@ -65,6 +66,7 @@ com\ldb\reportcustom\messages\response\reportSW\RespPrintBill.class
 com\ldb\reportcustom\exceptions\ExceptionStatus\NotAcceptableException.class
 com\ldb\reportcustom\exceptions\DTO\ExceptionDTO.class
 com\ldb\reportcustom\messages\request\RequestReportStartDate.class
+com\ldb\reportcustom\services\GetDataService.class
 com\ldb\reportcustom\entities\Roles.class
 com\ldb\reportcustom\messages\request\BorderRequestReportByBoderID.class
 com\ldb\reportcustom\Security\jwt\JwtAuthenticationFilter.class
@@ -96,6 +98,7 @@ com\ldb\reportcustom\handler\LimitLoginAuthenticationProvider.class
 com\ldb\reportcustom\messages\response\ProvinceReponse.class
 com\ldb\reportcustom\messages\request\RequestReportDate.class
 com\ldb\reportcustom\Security\service\UserDetailsDaoImpl.class
+com\ldb\reportcustom\services\Impl\GetDataServiceImpl$5.class
 com\ldb\reportcustom\services\Impl\GetSingleWindowServiceAdminImpl$4.class
 com\ldb\reportcustom\messages\response\ProfileResponse.class
 com\ldb\reportcustom\Security\jwt\JwtTokenProvider.class
@@ -104,6 +107,7 @@ com\ldb\reportcustom\utils\LnswFunction.class
 com\ldb\reportcustom\messages\response\reportSW\RespAccountBorder.class
 com\ldb\reportcustom\messages\response\reportSW\RespPrintBillHeader.class
 com\ldb\reportcustom\Security\service\UserDetailsDao.class
+com\ldb\reportcustom\utils\APIMappingPaths.class
 com\ldb\reportcustom\messages\response\reportSW\RespSingleWinDaily.class
 com\ldb\reportcustom\entities\audit\DateAudit.class
 com\ldb\reportcustom\messages\response\reportSW\RespMainCompanyObj.class

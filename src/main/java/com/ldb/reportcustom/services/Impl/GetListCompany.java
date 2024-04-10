@@ -28,9 +28,10 @@ public class GetListCompany implements GetCompanyService {
         String condit="";
         condit += lnswFunction.borderIdCondit("A.ISSUING_CUSTOMER_OFFICE");
         StringBuilder sb = new StringBuilder();
-        sb.append("select to_char('ALL') as tin_name, to_char('ALL') as ISSUING_CUSTOMER_OFFICE from boder.dual union " +
-                "SELECT tin_name,ISSUING_CUSTOMER_OFFICE from boder.BORDER.TAX_INVOICE A" +
-                " LEFT OUTER JOIN BORDER.TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID where ISSUING_CUSTOMER_OFFICE is not null "+condit+"  group by tin_name,ISSUING_CUSTOMER_OFFICE order by ISSUING_CUSTOMER_OFFICE asc \n");
+        sb.append("select to_char('ALL') as tin_name, to_char('ALL') as ISSUING_CUSTOMER_OFFICE from BORDER.TAX_INVOICE union \n" +
+                "                SELECT tin_name,ISSUING_CUSTOMER_OFFICE from BORDER.TAX_INVOICE A\n" +
+                "                 LEFT OUTER JOIN BORDER.TAX_INVOICE_DETAIL B ON a.REFERENCE = b.REFERENCE_INV_ID\n" +
+                "                 where ISSUING_CUSTOMER_OFFICE is not null   "+condit+"  group by tin_name,ISSUING_CUSTOMER_OFFICE order by ISSUING_CUSTOMER_OFFICE asc \n");
         String sql = sb.toString();
         return this.jdbcTemplate.query(sql, new RowMapper<Company>() {
             @Override
