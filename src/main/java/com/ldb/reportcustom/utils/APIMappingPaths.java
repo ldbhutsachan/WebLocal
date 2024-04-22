@@ -35,6 +35,8 @@ public class APIMappingPaths {
 
 //ລາຍງານຜູ້ສໍາລະ
         public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_COMPANY_GROUP_PATH = "/GroupCompany.service";
+        public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_ACC_LIST_PATH = "/AccountList.service";
+        public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_ACCNO_PATH = "/AccountByAccNo.service";
         public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_COMPANY_PATH = "/company.service";
 
 

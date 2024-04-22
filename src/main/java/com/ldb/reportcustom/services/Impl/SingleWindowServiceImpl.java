@@ -536,7 +536,6 @@ public DataResponse ReportCompany(RequestDatebyCompany dataRequest) {
     List<RespMainCompanyObj> listMain = new ArrayList<>();
     DecimalFormat numfm = new DecimalFormat("#,###,###,##0");
     HashMap<String, Object> dataValue = new HashMap<String, Object>();
-
     try {
         List<RespSingleWinDaily> listRp = getDataService.listReportCompanyAll(dataRequest);
         assert listRp != null;

@@ -19,6 +19,8 @@ import java.util.Date;
  */
 @Data
 @JsonPropertyOrder({
+        "debitAccNo",
+        "debitAccName",
         "paymentDate",
         "payDate",
         "typeInvoice",
@@ -40,6 +42,11 @@ import java.util.Date;
 @EqualsAndHashCode(callSuper = false)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class RespSingleWinDaily {
+    @JsonProperty("debitAccNo")
+    private String debitAccNo;
+
+    @JsonProperty("debitAccName")
+    private String debitAccName;
 
     @JsonProperty("paymentDate")
     private String paymentDate;
