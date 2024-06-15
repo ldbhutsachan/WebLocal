@@ -1,2 +1,4 @@
-package com.ldb.weblocalapi.services.Impl;public class UserService {
+package com.ldb.weblocalapi.services;
+
+public class UserService {
 }

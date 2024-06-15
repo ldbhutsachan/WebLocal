@@ -1,22 +1,35 @@
 package com.ldb.weblocalapi.controller;
 
 
+import com.ldb.weblocalapi.Model.ChangePasswordReq;
 import com.ldb.weblocalapi.Security.jwt.JwtTokenProvider;
 import com.ldb.weblocalapi.Security.service.CustomUserDetailsService;
 import com.ldb.weblocalapi.Security.service.UserPrincipal;
+import com.ldb.weblocalapi.entities.DisplayLink;
+import com.ldb.weblocalapi.entities.Menu;
 import com.ldb.weblocalapi.entities.Users;
+import com.ldb.weblocalapi.exceptions.DetailMessage.ExceptionResponse;
+import com.ldb.weblocalapi.exceptions.Exception2.BadRequestException;
+import com.ldb.weblocalapi.exceptions.Exception2.ForbiddenException;
+import com.ldb.weblocalapi.exceptions.Exception2.NotFoundException;
+import com.ldb.weblocalapi.exceptions.ExceptionStatus.InternalServerError;
+import com.ldb.weblocalapi.exceptions.ExceptionStatus.UnAuthorizedException;
 import com.ldb.weblocalapi.messages.request.LoginRequest;
 import com.ldb.weblocalapi.messages.response.DataResponse;
 import com.ldb.weblocalapi.messages.response.LoginResponse;
 import com.ldb.weblocalapi.messages.response.ProfileResponse;
+import com.ldb.weblocalapi.repositories.MenuRepository;
 import com.ldb.weblocalapi.repositories.UserRepository;
+import com.ldb.weblocalapi.services.Impl.CreateUserServiceInterface;
 import com.ldb.weblocalapi.utils.APIMappingPaths;
 import com.ldb.weblocalapi.utils.JSONUtils;
+import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -25,43 +38,39 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.naming.ServiceUnavailableException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
-/**
- * Create at 2019-01-21
- *
- * @author KHAMPHAI
- */
 @Slf4j
 @RestController
 @RequestMapping(
         value = {"${url.mapping}" + APIMappingPaths.API_MB_GATEWAY_VERSION_PATH
                 + APIMappingPaths.API_MB_REPORT_PATH + APIMappingPaths.API_AUTHENTICATION_GATEWAY_PATH}
 )
-//@RequestMapping(value = "/MBAPI/MB-REPORT")
 public class LoginController {
-
     @Value("${app.jwtExpirationInMs}") // 3  minus
     private int jwtExpirationInMs;
-
     @Autowired
     private AuthenticationManager authenticationManager;
-
+    @Autowired
+    CreateUserServiceInterface createUserServiceInterface;
     @Autowired
     private JwtTokenProvider tokenProvider;
-
     private final UserRepository userRepository;
-
     @Autowired
     private CustomUserDetailsService customUserDetailsService;
-
+    @Autowired
+    MenuRepository menuRepository;
     @Autowired
     public LoginController(@Lazy UserRepository userRepository) {
         this.userRepository = userRepository;
     }
-
     @RequestMapping(
             value = APIMappingPaths.LOGIN.API_LOGIN_GATEWAY_PATH,
             consumes = {
@@ -81,7 +90,6 @@ public class LoginController {
         try {
             log.info("++ Mobile Login Request Token ..............................");
             log.info("Client IP Address: " + request.getRemoteAddr());
-
             // Request username and password
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
@@ -89,39 +97,23 @@ public class LoginController {
                             loginRequest.getPassword()
                     )
             );
-
             // Generate Token key
             SecurityContextHolder.getContext().setAuthentication(authentication);
             String jwt = tokenProvider.generateToken(authentication);
-
             // Find Users by userId get from boder.Token key
             UserPrincipal userPrincipal = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
             Users users = userPrincipal.getUser();
-
-//            System.out.println("user =" + users);
-//            Date now = new Date();
-//            Date expiryDate = new Date(now.getTime() + jwtExpirationInMs);
             long seconds = TimeUnit.MILLISECONDS.toSeconds(jwtExpirationInMs);
-         //   System.out.println("seconds = " + seconds);
-            // Initialize data to return object
+            List<Menu> listMenu = menuRepository.findByMenuMapUserIdFromUserName(users.getUsername());
+            List<Long> menuGroupId = listMenu.stream().map(Menu::getMenuId).distinct().collect(Collectors.toList());
+            log.info("show log{}",menuGroupId);
             LoginResponse loginResponse = new LoginResponse(
                     jwt, "Bearer",
-//                    new Date(seconds),
-                    seconds,
-                    users.getUsername(), users.getEnabled(), users.getBorder(), users.getRoles()
-
-//                    user.get().getUsername(), user.get().getEnabled(),
-//                    user.get().getBorder(), user.get().getRoles()
+                    seconds,users.getImagePath(),users.getUsername(), users.getEnabled(), users.getSection(),listMenu
             );
-
-//            responseHeaders.set("accessToken",  jwt);
-
             dataResponse.setStatus("00");
             dataResponse.setMessage("success");
             dataResponse.setDataResponse(loginResponse);
-            //log.info("loginResponse: " + JSONUtils.toJSONString(loginResponse));
-
-//        return ResponseEntity.ok("loginResponse");
         } catch (Exception e) {
             log.error("Authentication error = " + e.getMessage());
             dataResponse.setMessage(e.getMessage());
@@ -129,40 +121,46 @@ public class LoginController {
         return ResponseEntity.ok().headers(responseHeaders).body(dataResponse);
     }
 
+    @ApiOperation(
+            value = "getProfile in ProFile show data",
+            authorizations = {@Authorization(value = "apiKey")},
+            response = DocumentTypeController.class
+    )
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Success", response = DocumentTypeController.class),
+            @ApiResponse(code = 201, message = "Created", response = ExceptionResponse.class),
+            @ApiResponse(code = 400, message = "Bad Request", response = BadRequestException.class),
+            @ApiResponse(code = 401, message = "Unauthorized", response = UnAuthorizedException.class),
+            @ApiResponse(code = 403, message = "Forbidden", response = ForbiddenException.class),
+            @ApiResponse(code = 404, message = "Not Found", response = NotFoundException.class),
+            @ApiResponse(code = 500, message = "Internal Server Error", response = InternalServerError.class),
+            @ApiResponse(code = 503, message = "Service Unavailable", response = ServiceUnavailableException.class)
+    })
     @RequestMapping(
             value = APIMappingPaths.LOGIN.API_PROFILE_GATEWAY_PATH,
-//            consumes = {
-//                    MediaType.APPLICATION_JSON_VALUE
-//            },
             produces = {
                     MediaType.APPLICATION_JSON_VALUE
             },
-            method = RequestMethod.GET
+            method = RequestMethod.POST
     )
     @ResponseBody
     public ResponseEntity<?> getProfile(Authentication auth, HttpServletRequest request) {
-//        HttpHeaders responseHeaders = new HttpHeaders();
         DataResponse dataResponse = new DataResponse();
         dataResponse.setStatus("05");
         dataResponse.setMessage("ຢຸດເຊີ ຫລື ລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ");
         try {
             log.info("++ Mobile Login Request Token ..............................");
             log.info("Client IP Address: " + request.getRemoteAddr());
-//            System.out.println("User name = "+ auth.getName());
-
             Users users = userRepository.findByUsername(auth.getName()).get();
-//            System.out.println("User detail = " + users);
-
-            // Initialize data to return object
             ProfileResponse loginResponse = new ProfileResponse(
-                    users.getUsername(), users.getEnabled(),
+                    users.getUsername(),
+                    users.getImagePath(),
+                    users.getEnabled(),
                     users.getAccountNonExpired(),
                     users.getAccountNonLocked(),
                     users.getCredentialsNonExpired(),
-                    users.getBorder(),
-                    users.getRoles()
+                    users.getSection()
             );
-
             dataResponse.setStatus("00");
             dataResponse.setMessage("success");
             dataResponse.setDataResponse(loginResponse);
@@ -173,6 +171,47 @@ public class LoginController {
         }
         return ResponseEntity.ok().body(dataResponse);
     }
-    ///get
+    //**************************************change password ***********************************************
+    @ApiOperation(
+            value = "getProfile in ProFile show data",
+            authorizations = {@Authorization(value = "apiKey")},
+            response = DocumentTypeController.class
+    )
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Success", response = DocumentTypeController.class),
+            @ApiResponse(code = 201, message = "Created", response = ExceptionResponse.class),
+            @ApiResponse(code = 400, message = "Bad Request", response = BadRequestException.class),
+            @ApiResponse(code = 401, message = "Unauthorized", response = UnAuthorizedException.class),
+            @ApiResponse(code = 403, message = "Forbidden", response = ForbiddenException.class),
+            @ApiResponse(code = 404, message = "Not Found", response = NotFoundException.class),
+            @ApiResponse(code = 500, message = "Internal Server Error", response = InternalServerError.class),
+            @ApiResponse(code = 503, message = "Service Unavailable", response = ServiceUnavailableException.class)
+    })
+    @RequestMapping(
+            value = APIMappingPaths.LOGIN.API_CHANGE_PASSWORD_MENU,
+            produces = {
+                    MediaType.APPLICATION_JSON_VALUE
+            },
+            method = RequestMethod.POST
+    )
+    @ResponseBody
+    public ResponseEntity<?> changePassword(
+            @ApiParam(
+                name = "Body Request",
+                value = "JSON body request to check information",
+        required = true) @Valid @RequestBody ChangePasswordReq changePasswordReq, HttpServletRequest request) throws Exception {
+            log.info("\t\t --> DisplayLink Request controller >>>>>>>>>>>>>>>>>>>>>>");
+            String clientIpAddress = request.getRemoteAddr();
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+            log.info("Client IP Address = " + clientIpAddress);
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            log.info("auth == " + auth.getName());
+            log.info("auth username == " + auth.getPrincipal());
+            log.info("data body request: " + request.toString());
+            changePasswordReq.setUserName(auth.getName());
+            DataResponse response = createUserServiceInterface.ChangePassword(changePasswordReq);
+            log.info("\t\t --> End Custom compare Request controller <<<<<<<<<<<<<<<<<<<");
+            return new ResponseEntity<>(response, HttpStatus.OK);
+    }
 
 }

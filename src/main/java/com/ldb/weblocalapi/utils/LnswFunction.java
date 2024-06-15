@@ -1,7 +1,7 @@
 package com.ldb.weblocalapi.utils;
 
-import com.ldb.weblocalapi.entities.Border;
-import com.ldb.weblocalapi.repositories.BorderRepository;
+import com.ldb.weblocalapi.entities.Section;
+import com.ldb.weblocalapi.repositories.SectionRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -24,65 +24,59 @@ import java.util.stream.Collectors;
 public class LnswFunction {
 
     @Autowired
-    private BorderRepository borderRepository;
+    private SectionRepository sectionRepository;
 
     public String borderIdCondit(String columnName) {
         // ຊອກຫາ ROLE ທີໃຊ້ໃນການລອກອິນເຂົ້າລະບົບ
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
-        List<String> borders = new ArrayList<>();
-        /**
-         * ກວດສອບວ່າ ROLE ທີ່ໃຊ້ໃນການລອກອິນເຂົ້າລະບົບເປັນ ROLE_BORDER ຫຼື ບໍ່ ຖ້າແມ່ນໃຫ້ເອົາ BORDER_ID ທີ່ມີຢູ່.o
-         */
+        List<String> branch = new ArrayList<>();
+
         if (auth.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_BORDER"))) {
-            borders = borderRepository.findByBorderIdFromUserName(auth.getName()).stream().map(Border::getBorderId).collect(Collectors.toList());
+            branch = sectionRepository.findByBranchIdFromUserName(auth.getName()).stream().map(Section::getSecId).collect(Collectors.toList());
         } else {
             List<String> roleNames = auth.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList());
             System.out.println("borderIds= " + roleNames);
-
-            /**
-             * Get detail User from boder.login
-             */
-            borders = borderRepository.findByRolesName(roleNames).stream().map(Border::getBorderId).collect(Collectors.toList());
+            branch = sectionRepository.findByRolesName(roleNames).stream().map(Section::getSecId).collect(Collectors.toList());
 
         }
-        String borderId = "";
+        String branchId = "";
         //=================================cheack session User then send to query =====================================================
         List<String> roleNamesBorder = auth.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList());
         String roleNamesBorderString = String.join(", ", roleNamesBorder);
         if(roleNamesBorderString.equals("ROLE_REPORT_ADMIN") ){
-            borderId = "";
+            branchId = "";
         }else {
-           borderId = " AND " + columnName + " IN " + splitString(borders);
+            branchId = " AND " + columnName + " IN " + splitString(branch);
         }
-        log.info("Border id = " + borderId);
-        return borderId;
+        log.info("branchId id = " + branchId);
+        return branchId;
         //=================================cheack session User then send to queey=====================================================
     }
     public static String splitString(String data) {
         String[] strData = data.split(",");
-        String border = "('";
+        String branch = "('";
         for (int i = 0; i < strData.length; i++) {
             if (i < strData.length - 1) {
-                border += strData[i] + "', '";
+                branch += strData[i] + "', '";
             } else {
-                border += strData[i] + "')";
+                branch += strData[i] + "')";
             }
         }
-        return border;
+        return branch;
     }
 
     public static String splitString(List<String> strData) {
 //        String[] strData = data.split(",");
-        String border = "('";
+        String branch = "('";
         for (int i = 0; i < strData.size(); i++) {
             if (i < strData.size() - 1) {
-                border += strData.get(i) + "', '";
+                branch += strData.get(i) + "', '";
             } else {
-                border += strData.get(i) + "')";
+                branch += strData.get(i) + "')";
             }
         }
-        return border;
+        return branch;
     }
 
 

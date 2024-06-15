@@ -1,6 +1,6 @@
 package com.ldb.weblocalapi.controller;
 
-import com.ldb.weblocalapi.entities.Respone.DocumentRespone;
+import com.ldb.weblocalapi.Model.BranchReq;
 import com.ldb.weblocalapi.exceptions.DetailMessage.ExceptionResponse;
 import com.ldb.weblocalapi.exceptions.Exception2.BadRequestException;
 import com.ldb.weblocalapi.exceptions.Exception2.ForbiddenException;
@@ -32,11 +32,11 @@ import java.text.SimpleDateFormat;
         value = {"${url.mapping}" + APIMappingPaths.API_MB_GATEWAY_VERSION_PATH
                 + APIMappingPaths.API_MB_REPORT_PATH}
 )
-public class SectionListDocMenuController {
+public class BranchListDocMenuController {
     @Autowired
     DocumentService documentService;
     @ApiOperation(
-            value = "Docuement in DocuementController",
+            value = "BranchListDocMenuController in DocuementController",
             authorizations = {@Authorization(value = "apiKey")},
             response = DocumentTypeController.class
     )
@@ -51,7 +51,7 @@ public class SectionListDocMenuController {
             @ApiResponse(code = 503, message = "Service Unavailable", response = ServiceUnavailableException.class)
     })
     @RequestMapping(
-            value = APIMappingPaths.SECTION_MENUCONDITION.API_SECTION_MENU,
+            value = APIMappingPaths.BAND_MENUCONDITION.API_BAND_MENU,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE
             },
@@ -61,8 +61,8 @@ public class SectionListDocMenuController {
     public ResponseEntity<?> getSaveDocument(@ApiParam(
             name = "Body Request",
             value = "JSON body request to check information",
-            required = true) @Valid @RequestBody DocReq documentRespone, HttpServletRequest request) throws Exception {
-        log.info("\t\t --> Custom compare Request controller >>>>>>>>>>>>>>>>>>>>>>");
+            required = true) HttpServletRequest request) throws Exception {
+        log.info("\t\t --> BranchListDocMenuController compare Request controller >>>>>>>>>>>>>>>>>>>>>>");
         String clientIpAddress = request.getRemoteAddr();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
         log.info("Client IP Address = " + clientIpAddress);
@@ -70,8 +70,8 @@ public class SectionListDocMenuController {
         log.info("auth == " + auth.getName());
         log.info("auth username == " + auth.getPrincipal());
         log.info("data body request: " + request.toString());
-        DataResponse response = documentService.documentListBySecCodeMenu(documentRespone,request);
-        log.info("\t\t --> End Custom compare Request controller <<<<<<<<<<<<<<<<<<<");
+        DataResponse response = documentService.documentListByBandMenu();
+        log.info("\t\t --> End BranchListDocMenuController compare Request controller <<<<<<<<<<<<<<<<<<<");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
     @ApiOperation(
@@ -90,7 +90,7 @@ public class SectionListDocMenuController {
             @ApiResponse(code = 503, message = "Service Unavailable", response = ServiceUnavailableException.class)
     })
     @RequestMapping(
-            value = APIMappingPaths.SECTION_MENUCONDITION.API_SECTION_MENU_CONDITION,
+            value = APIMappingPaths.BAND_MENUCONDITION.API_BAND_MENU_CONDITION,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE
             },
@@ -100,7 +100,7 @@ public class SectionListDocMenuController {
     public ResponseEntity<?> SectionListDocByDate(@ApiParam(
             name = "Body Request",
             value = "JSON body request to check information",
-            required = true) @Valid @RequestBody DocReq documentRespone, HttpServletRequest request) throws Exception {
+            required = true) @Valid @RequestBody BranchReq documentRespone, HttpServletRequest request) throws Exception {
         log.info("\t\t --> Custom compare Request controller >>>>>>>>>>>>>>>>>>>>>>");
         String clientIpAddress = request.getRemoteAddr();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
@@ -109,7 +109,7 @@ public class SectionListDocMenuController {
         log.info("auth == " + auth.getName());
         log.info("auth username == " + auth.getPrincipal());
         log.info("data body request: " + request.toString());
-        DataResponse response = documentService.documentListBySecCodeMenuByDate(documentRespone,request);
+        DataResponse response = documentService.documentListByBandMenuByDate(documentRespone,request);
         log.info("\t\t --> End Custom compare Request controller <<<<<<<<<<<<<<<<<<<");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

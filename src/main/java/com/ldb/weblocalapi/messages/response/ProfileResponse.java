@@ -4,7 +4,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.ldb.weblocalapi.entities.Border;
+import com.ldb.weblocalapi.entities.Province;
+import com.ldb.weblocalapi.entities.Section;
 import com.ldb.weblocalapi.entities.Roles;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,17 +27,13 @@ import java.util.Set;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ProfileResponse {
 
-//    private String accessToken;
-//    private String tokenType;
-//    private Date expireDate;
     private String username;
+    private String imagePath;
     private boolean enabled;
     private Boolean accountNonExpired;
     private Boolean accountNonLocked ;
     private Boolean credentialsNonExpired;
-    private Border borders;
-    private Set<Roles> roles = new HashSet<>();
-
+    private Section sections;
     @Override
     public String toString() {
         ObjectMapper mapper = new ObjectMapper();

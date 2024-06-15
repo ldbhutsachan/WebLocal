@@ -4,21 +4,16 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.ldb.weblocalapi.entities.Border;
-import com.ldb.weblocalapi.entities.Roles;
+import com.ldb.weblocalapi.entities.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
-
-
-/**
- * Create at 2019-01-21
- * @author KHAMPHAI
- */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -30,10 +25,10 @@ public class LoginResponse {
     private String tokenType;
     private long expireDate;
     private String username;
+    private String imagePath;
     private boolean enabled;
-    private Border borders;
-    private Set<Roles> roles = new HashSet<>();
-
+    private Section userInfo;
+    private List<Menu> menu = new ArrayList<>();
     @Override
     public String toString() {
         ObjectMapper mapper = new ObjectMapper();

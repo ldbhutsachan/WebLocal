@@ -10,16 +10,10 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-
-/**
- *
- * @author Noh
- * @edit_by KHAMPHAI
- */
 @Entity
 @Data
 @EqualsAndHashCode(callSuper = false)
-@Table(name = "TAX_USER_LOGIN",
+@Table(name = "USER_LOGIN",
         uniqueConstraints = {
                 @UniqueConstraint(name = "USER_UK", columnNames = "USER_NAME")
         }
@@ -27,8 +21,6 @@ import java.util.Set;
 public class Users extends DateAudit {
 
     @Id
-//    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USERS_SEQ")
-//    @SequenceGenerator(name = "USERS_SEQ", sequenceName = "USERS_SEQ", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "USER_ID", nullable = false)
     private Long userId;
@@ -42,10 +34,13 @@ public class Users extends DateAudit {
     @Column(name = "ENABLED", length = 1, nullable = false)
     private Boolean enabled;
 
+    @Column(name = "IMAGEPATH", length = 1500, nullable = false)
+    private String imagePath;
+
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "BORDER_ID", nullable = false, foreignKey = @ForeignKey(name = "FK_USER_BORDER" ))
+    @JoinColumn(name = "BRANCH_ID", nullable = false, foreignKey = @ForeignKey(name = "FK_USER_BORDER" ))
     @OnDelete(action = OnDeleteAction.CASCADE)
-    private Border border;
+    private Section section;
 
     @Column(name = "ACCOUNT_NON_EXPIRED", length = 1, nullable = false, columnDefinition = "NUMBER(1) default 1")
     private Boolean accountNonExpired;
@@ -57,21 +52,8 @@ public class Users extends DateAudit {
     private Boolean credentialsNonExpired;
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.EAGER)
-    @JoinTable(name = "TAX_USER_ROLE", joinColumns = @JoinColumn(name = "USER_ID"), inverseJoinColumns = @JoinColumn(name = "ROLE_ID"))
+    @JoinTable(name = "USER_ROLE", joinColumns = @JoinColumn(name = "USER_ID"), inverseJoinColumns = @JoinColumn(name = "ROLE_ID"))
     private Set<Roles> roles = new HashSet<>();
 
 
-//    @Override
-//    public String toString() {
-//        ObjectMapper mapper = new ObjectMapper();
-//
-//        String jsonString = "";
-//        try {
-//            mapper.enable(SerializationFeature.INDENT_OUTPUT);
-//            jsonString = mapper.writeValueAsString(this);
-//        } catch (JsonProcessingException e) {
-//            e.printStackTrace();
-//        }
-//        return jsonString;
-//    }
 }

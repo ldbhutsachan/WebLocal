@@ -13,49 +13,54 @@ public class APIMappingPaths {
     public static final String API_MB_REPORT_PATH = "/custom";
     public static final String API_AUTHENTICATION_GATEWAY_PATH = "/authenticate";
     public static final class  LOGIN {
-        public static final String API_LOGIN_GATEWAY_PATH = "/token";
-        public static final String API_PROFILE_GATEWAY_PATH = "/profile.service";
+    public static final String API_LOGIN_GATEWAY_PATH = "/login";
+    public static final String API_PROFILE_GATEWAY_PATH = "/profile.service";
+        public static final String API_CHANGE_PASSWORD_MENU = "/ChanePassword.service";
     }
-    public static final class CREATEUSERS{
-        public static final String API_CREATE_USER_GATEWAY_PATH = "/createUser.service";
-        //API_CHANGE_PASSWORD_USER_GATEWAY_PATH
-        public static final String API_CHANGE_PASSWORD_USER_GATEWAY_PATH = "/changePasswordUser.service";
-
+    public static final class DOCTYPE{
+        public static final String API_DOCTYPE = "/docType.service";
+        public static final String API_STORE_DOCTYPE = "/storeDocType.service";
+        public static final String API_UPDATE_DOCTYPE = "/updateDocType.service";
+        public static final String API_DDEL_OCTYPE = "/delDocType.service";
     }
-    public static final class ReportAdmin{
-        public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_PATH_PROVINCE = "/getProvince.service";
-        public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_PATH_ADMIN_BORDER = "/getBorder.service";
-        //Report 01
-        public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_PATH_ADMIN = "/singleWindowDailyAdmin.service";
-        //Report 02
-        public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_COMPARE_PATH_ADMIN = "/singleWindowCompareAdmin.service";
-        public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_TOTAL_PATH_ADMIN_SELECT_ALL = "/singleWindowTotalAdminSelectAll.service";
-        //Report 03
-        public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_TOTAL_PATH_ADMIN = "/singleWindowTotalAdmin.service";
-
-//ລາຍງານຜູ້ສໍາລະ
-        public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_COMPANY_GROUP_PATH = "/GroupCompany.service";
-        public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_ACC_LIST_PATH = "/AccountList.service";
-        public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_ACCNO_PATH = "/AccountByAccNo.service";
-        public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_COMPANY_PATH = "/company.service";
-
-
-
+    public static final class SECTION{
+        public static final String API_SECTION = "/section.service";
     }
-    public static final class REPORT_SERVICE {
-        public static final String API_CUSTOM_SINGLE_GET_PROVINCE_TOTAL_PATH = "/getProvince.service";
-        public static final String ALL_REPORT_SUMMARY_GATEWAY_PATH = "/allReportSummary.service";
-        public static final String ALL_REPORT_BORDER_DETAIL_GATEWAY_PATH = "/reportBorderDetail.service";
-        public static final String ALL_BAR_CHART_SUM_TOTAL_GATEWAY_PATH = "/barChartSumTotal.service";
-        public static final String ALL_PIE_CHART_SUM_TOTAL_GATEWAY_PATH = "/pieChartSumTotal.service";
-        public static final String DOWNLOAD_PDF_FILE_GATEWAY_PATH = "/downloadPdf/{fileName:.+}";
-        public static final String GENERATE_PDF_FILE_GATEWAY_PATH = "/generatePdf";
-        public static final String API_DUTY_DAILY_GATEWAY_PATH = "/dutyChart.service";
-        public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_PATH = "/singleWindowDaily.service";
-        //report admin
-        public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_COMPARE_PATH = "/singleWindowCompare.service";
-        public static final String API_CUSTOM_SINGLE_WINDOW_GATEWAY_TOTAL_PATH = "/singleWindowTotal.service";
-
+    public static final class BRANCH{
+        public static final String API_BRANCH = "/branch.service";
+    }
+    public static final class DOCUMENT{
+        public static final String API_DOCUMENT = "/getListDocument.service";
+        public static final String API_DOCUMENT_BYTEXTBOX = "/documentListByTextBox.service";
+        public static final String API_USER_READ_DOCUMENT = "/ReadDocDocumentByDocNo.service";
+        public static final String API_USER_VIEW_INFO_BUTTON = "/userViewInfo.service";
+        public static final String API_SAVE_DOCUMENT = "/saveDocument.service";
+        public static final String API_UPDATE_DOCUMENT = "/updateDocument.service";
+        public static final String API_DEL_DOCUMENT = "/delDocument.service";
+    }
+    public static final class DISPLAYLINK{
+        public static final String API_DISPLAYLINK = "/displayLink.service";
+        public static final String API_NAME_DISPLAYLINK = "/searchDisPlayByText.service";
+        public static final String API_STORE_DISPLAYLINK = "/storeDisplayLink.service";
+        public static final String API_UPDATE_DISPLAYLINK = "/updateDisPlayLink.service";
+        public static final String API_DEL_DISPLAYLINK = "/deleteDisPlayLink.service";
+    }
+    public static final class HOME{
+        public static final String API_HOME = "/Home.service";
+        public static final String API_HOME_CONDITION = "/getSaveDocumentCondition.service";
+        public static final String API_HOME_POPUP = "/popUp.service";
+    }
+    public static final class SECTION_MENUCONDITION{
+        public static final String API_SECTION_MENU = "/SectionListDoc.service";
+        public static final String API_SECTION_MENU_CONDITION = "/SectionListDocByDate.service";
+    }
+    public static final class BAND_MENUCONDITION{
+        public static final String API_BAND_MENU = "/bandListDoc.service";
+        public static final String API_BAND_MENU_CONDITION = "/bandListDocByDate.service";
+    }
+    public static final class FEE{
+        public static final String API_FEE_MENU = "/feeListDoc.service";
+        public static final String API_FEE_MENU_CONDITION = "/feeListDocByDate.service";
     }
 
 

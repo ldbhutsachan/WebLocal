@@ -1,13 +1,13 @@
 spring:
   application:
-    name: ap-custom-report-service
+    name: ap-webLocalApi-service
   profiles:
     active: ${PROFILE_ACTIVE:prod}
 #  logstash:
 #    server: ${LOG_STASH_SERVER:128.199.79.133}
 #    port: ${LOG_STASH_PORT:5045}
   apps:
-    package: com.ldb.reportcustom
+    package: com.ldb.weblocalapi
     logging:
       level-info: INFO
       level-debug: DEBUG

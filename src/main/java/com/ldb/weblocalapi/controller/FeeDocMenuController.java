@@ -7,9 +7,10 @@ import com.ldb.weblocalapi.exceptions.Exception2.ForbiddenException;
 import com.ldb.weblocalapi.exceptions.Exception2.NotFoundException;
 import com.ldb.weblocalapi.exceptions.ExceptionStatus.InternalServerError;
 import com.ldb.weblocalapi.exceptions.ExceptionStatus.UnAuthorizedException;
-import com.ldb.weblocalapi.messages.request.DocReq;
 import com.ldb.weblocalapi.messages.response.DataResponse;
 import com.ldb.weblocalapi.services.DocumentService;
+import com.ldb.weblocalapi.services.FeeService;
+import com.ldb.weblocalapi.services.Impl.FeeServiceImpl;
 import com.ldb.weblocalapi.utils.APIMappingPaths;
 import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
@@ -32,9 +33,9 @@ import java.text.SimpleDateFormat;
         value = {"${url.mapping}" + APIMappingPaths.API_MB_GATEWAY_VERSION_PATH
                 + APIMappingPaths.API_MB_REPORT_PATH}
 )
-public class BranchListDocMenuController {
+public class FeeDocMenuController {
     @Autowired
-    DocumentService documentService;
+    FeeService documentService;
     @ApiOperation(
             value = "BranchListDocMenuController in DocuementController",
             authorizations = {@Authorization(value = "apiKey")},
@@ -51,18 +52,18 @@ public class BranchListDocMenuController {
             @ApiResponse(code = 503, message = "Service Unavailable", response = ServiceUnavailableException.class)
     })
     @RequestMapping(
-            value = APIMappingPaths.BAND_MENUCONDITION.API_BAND_MENU,
+            value = APIMappingPaths.FEE.API_FEE_MENU,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE
             },
             method = RequestMethod.POST
     )
     @ResponseBody
-    public ResponseEntity<?> getSaveDocument(@ApiParam(
+    public ResponseEntity<?> getFeeListAll(@ApiParam(
             name = "Body Request",
             value = "JSON body request to check information",
             required = true) HttpServletRequest request) throws Exception {
-        log.info("\t\t --> BranchListDocMenuController compare Request controller >>>>>>>>>>>>>>>>>>>>>>");
+        log.info("\t\t --> FeeDocMenuController compare Request controller >>>>>>>>>>>>>>>>>>>>>>");
         String clientIpAddress = request.getRemoteAddr();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
         log.info("Client IP Address = " + clientIpAddress);
@@ -70,12 +71,12 @@ public class BranchListDocMenuController {
         log.info("auth == " + auth.getName());
         log.info("auth username == " + auth.getPrincipal());
         log.info("data body request: " + request.toString());
-        DataResponse response = documentService.documentListByBandMenu();
-        log.info("\t\t --> End BranchListDocMenuController compare Request controller <<<<<<<<<<<<<<<<<<<");
+        DataResponse response =documentService.getListFeeAll();
+        log.info("\t\t --> End FeeDocMenuController Request controller <<<<<<<<<<<<<<<<<<<");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
     @ApiOperation(
-            value = "Docuement in DocuementController",
+            value = "FeeDocMenuController in DocuementController",
             authorizations = {@Authorization(value = "apiKey")},
             response = DocumentTypeController.class
     )
@@ -90,14 +91,14 @@ public class BranchListDocMenuController {
             @ApiResponse(code = 503, message = "Service Unavailable", response = ServiceUnavailableException.class)
     })
     @RequestMapping(
-            value = APIMappingPaths.BAND_MENUCONDITION.API_BAND_MENU_CONDITION,
+            value = APIMappingPaths.FEE.API_FEE_MENU_CONDITION,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE
             },
             method = RequestMethod.POST
     )
     @ResponseBody
-    public ResponseEntity<?> SectionListDocByDate(@ApiParam(
+    public ResponseEntity<?> getFeeListAllByCondition(@ApiParam(
             name = "Body Request",
             value = "JSON body request to check information",
             required = true) @Valid @RequestBody BranchReq documentRespone, HttpServletRequest request) throws Exception {
@@ -109,7 +110,8 @@ public class BranchListDocMenuController {
         log.info("auth == " + auth.getName());
         log.info("auth username == " + auth.getPrincipal());
         log.info("data body request: " + request.toString());
-        DataResponse response = documentService.documentListByBandMenuByDate(documentRespone,request);
+        DataResponse response = new DataResponse();
+        response.setDataResponse(documentService.getListFeeAllByCondition(documentRespone));
         log.info("\t\t --> End Custom compare Request controller <<<<<<<<<<<<<<<<<<<");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

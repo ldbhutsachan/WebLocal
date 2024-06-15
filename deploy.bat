@@ -13,8 +13,7 @@ echo %VERSION%
 echo "(1/3) Preparing to setup image registry.........."
 
 #set IMAGE=hubporn.ldblao.la/easypass-api/mobile-border-api
-set IMAGE=registry.ldblao.la/mobile-dev/reportcustomer
-
+set IMAGE=registry.ldblao.la/mobile-dev/reportcustomer 999
 
 echo "(2/3) Building java package......."
 

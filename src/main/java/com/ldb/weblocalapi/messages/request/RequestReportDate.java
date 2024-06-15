@@ -34,8 +34,8 @@ public class RequestReportDate {
     @JsonProperty("endDate")
     public String endDate;
 
-//    @JsonProperty("borderId")
-//    public String borderId;
+    @JsonProperty("inFoBox")
+    public String inFoBox;
 
     @Override
     public String toString() {
