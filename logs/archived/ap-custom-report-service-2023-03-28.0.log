@@ -1,2 +1,0 @@
-2023-03-28 07:55:40.991  INFO [ap-custom-report-service,,,] 17916 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-28 07:55:40.993  INFO [ap-custom-report-service,,,] 17916 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
