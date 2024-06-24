@@ -49,6 +49,7 @@ public class APIMappingPaths {
         public static final String API_HOME = "/Home.service";
         public static final String API_HOME_CONDITION = "/getSaveDocumentCondition.service";
         public static final String API_HOME_POPUP = "/popUp.service";
+        public static final String API_HOME_READ = "/read.service";
     }
     public static final class SECTION_MENUCONDITION{
         public static final String API_SECTION_MENU = "/SectionListDoc.service";

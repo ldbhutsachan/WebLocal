@@ -255,9 +255,12 @@ public class DisPlayController {
             data.setImagePath(fileName);
         }
         DataResponse response = new DataResponse();
-        if(files == null){
+        log.info("show :"+files);
+        if(files == null || files.length == 0 || files.equals(null) || files.equals("")){
+            log.info("show no file");
             response = displayLinkService.updateDisplayLinkNoFile(data,request);
         }else {
+            log.info("show have file");
             response = displayLinkService.updateLinkFile(data,request);
         }
         log.info("\t\t --> End displayLinkService compare Request controller <<<<<<<<<<<<<<<<<<<");

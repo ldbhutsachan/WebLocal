@@ -12,6 +12,7 @@ com\ldb\weblocalapi\messages\request\RequestReportByStartDate.class
 com\ldb\weblocalapi\exceptions\DetailMessage\DetailedErrorItem.class
 com\ldb\weblocalapi\services\FeeService.class
 com\ldb\weblocalapi\config\AuditingConfig.class
+com\ldb\weblocalapi\services\ReadDocService.class
 com\ldb\weblocalapi\Security\service\CustomUserDetailsService.class
 com\ldb\weblocalapi\repositories\PopupRepository.class
 com\ldb\weblocalapi\utils\Constant$RESPONSE_CODE.class
@@ -87,6 +88,7 @@ com\ldb\weblocalapi\controller\DisPlayController.class
 com\ldb\weblocalapi\repositories\MenuRepository.class
 com\ldb\weblocalapi\entities\DisplayLink.class
 com\ldb\weblocalapi\utils\APIMappingPaths$HOME.class
+com\ldb\weblocalapi\entities\Read.class
 com\ldb\weblocalapi\messages\response\reportSW\RespSingleWinDaily.class
 com\ldb\weblocalapi\entities\Respone\DocumentRespone.class
 com\ldb\weblocalapi\repositories\SectionRepository.class
@@ -124,6 +126,7 @@ com\ldb\weblocalapi\entities\DocType.class
 com\ldb\weblocalapi\Model\DocumentSecMenu.class
 com\ldb\weblocalapi\Model\BranchReq.class
 com\ldb\weblocalapi\utils\APIMappingPaths$BRANCH.class
+com\ldb\weblocalapi\services\Impl\ReadDocServiceImpl.class
 com\ldb\weblocalapi\exceptions\ExceptionStatus\BadRequestException.class
 com\ldb\weblocalapi\entities\CreateUser.class
 com\ldb\weblocalapi\exceptions\Exception2\BadRequestException.class
@@ -133,6 +136,7 @@ com\ldb\weblocalapi\entities\Section.class
 com\ldb\weblocalapi\entities\Popup.class
 com\ldb\weblocalapi\entities\Users.class
 com\ldb\weblocalapi\messages\response\BorderRespone.class
+com\ldb\weblocalapi\repositories\ReadDocumentRepository.class
 com\ldb\weblocalapi\entities\Respone\ReadDocument.class
 com\ldb\weblocalapi\repositories\ProvinceRepository.class
 com\ldb\weblocalapi\utils\JSONUtils.class
@@ -148,6 +152,8 @@ com\ldb\weblocalapi\exceptions\ExceptionStatus\BadGatewayException.class
 com\ldb\weblocalapi\messages\response\ProfileResponse.class
 com\ldb\weblocalapi\controller\LoginController.class
 com\ldb\weblocalapi\repositories\DisplayLinkRepository.class
+com\ldb\weblocalapi\services\Impl\ReadDocServiceImpl$1.class
+com\ldb\weblocalapi\services\Impl\ReadDocServiceImplInterface.class
 com\ldb\weblocalapi\utils\APIMappingPaths$DOCUMENT.class
 com\ldb\weblocalapi\exceptions\DTO\ErrorDTO.class
 com\ldb\weblocalapi\Security\jwt\JwtAuthenticationEntryPoint.class

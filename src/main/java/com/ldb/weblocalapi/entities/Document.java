@@ -21,7 +21,7 @@ public class Document {
             @Column(name = "DOC_STATUS",length = 50 , nullable = false)
             private String docStatus;
 
-            @Column(name = "DOC_PATH",length = 1500 , nullable = false)
+            @Column(name = "DOC_PATH")
             private String docPath;
 
             @Column(name = "SAVE_BY",length = 150 , nullable = false)

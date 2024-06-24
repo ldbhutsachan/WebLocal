@@ -1,5 +1,6 @@
 package com.ldb.weblocalapi.entities.Respone;
 
+import com.ldb.weblocalapi.entities.BrandUnit;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import javax.persistence.*;
@@ -56,7 +57,15 @@ public class DocumentRespone {
     @Column(name = "RELATION_UNIT_SEC",length = 1500,nullable = false)
     private String relationUnitSec;
 
+    @Column(name = "POPUP",length = 1500,nullable = false)
+    private String popUpStatus;
 
+    @Column(name = "PUPUP_END",length = 1500,nullable = false)
+    private String popUpEndDate;
 
+    //ReadDocument
+    @OneToMany
+    @JoinColumn(name = "DOC_ID")
+    private List<ReadDocument> readByUserInfo;
 
 }

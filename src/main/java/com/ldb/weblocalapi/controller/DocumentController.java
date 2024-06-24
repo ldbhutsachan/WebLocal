@@ -89,7 +89,9 @@ DocumentSharingRepository documentSharingRepository;
         log.info("auth == " + auth.getName());
         log.info("auth username == " + auth.getPrincipal());
         log.info("data body request: " + request.toString());
-        DataResponse response = documentService.documentList(documentRespone,request);
+        DocumentRespone data = new DocumentRespone();
+        data.setSaveBy(auth.getName());
+        DataResponse response = documentService.documentList(data,request);
         log.info("\t\t --> End Custom compare Request controller <<<<<<<<<<<<<<<<<<<");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
@@ -130,6 +132,9 @@ DocumentSharingRepository documentSharingRepository;
         log.info("auth == " + auth.getName());
         log.info("auth username == " + auth.getPrincipal());
         log.info("data body request: " + request.toString());
+        DocumentRespone data = new DocumentRespone();
+        data.setSaveBy(auth.getName());
+        data.setDocName(documentRespone.getDocName());
         DataResponse response = documentService.documentListByTextBox(documentRespone,request);
         log.info("\t\t --> End Custom compare Request controller <<<<<<<<<<<<<<<<<<<");
         return new ResponseEntity<>(response, HttpStatus.OK);
@@ -299,7 +304,7 @@ DocumentSharingRepository documentSharingRepository;
                         data.setPopupEnd(outputDateEnd);
        //====================check doc file before upload this==============
        log.info("file upload:"+files.getOriginalFilename());
-       String originFile = files.getOriginalFilename();
+       String originFile = docName;
        String fileName = "";
        List<String> fileNames = new ArrayList<>();
        if(files == null){
@@ -307,7 +312,7 @@ DocumentSharingRepository documentSharingRepository;
            data.setDocPath("image.jpg");
        }else {
            Arrays.asList(files).stream().forEach(file -> {
-               fileNames.add(mediaUploadService.uploadMedia(file,data,originFile));
+               fileNames.add(mediaUploadService.uploadMediaDocUpdate(file,data,originFile));
            });
            log.info("Uploaded the files successfully: " + fileNames );
            fileName = StringUtils.join(fileNames, ',');
@@ -350,8 +355,8 @@ DocumentSharingRepository documentSharingRepository;
    public ResponseEntity<DataResponse>updateDocument(@ApiParam(
            name = "Body Request",
            value = "JSON body request to check information",
-           required = true) @Valid  @RequestParam(name="files" , required=false) MultipartFile files
-          //,@RequestParam("keyId") Long  keyId
+           required = true) @Valid  @RequestParam(name="files" , required=false) MultipartFile[] files
+          ,@RequestParam("keyId") Long  keyId
            ,@RequestParam("docNo") String  docNo
            ,@RequestParam("docType") String  docType
            ,@RequestParam("docDate") String  docDate
@@ -393,7 +398,7 @@ DocumentSharingRepository documentSharingRepository;
             SimpleDateFormat outputFormatEnd = new SimpleDateFormat("dd-MMM-yy");
             String outputDateEnd = outputFormatEnd.format(dateEnd);
                     Document data = new Document();
-                      //  data.setId(keyId);
+                        data.setId(keyId);
                         data.setDocNo(docNo);
                         data.setDocType(docType);
                         data.setSaveBy(auth.getName());
@@ -409,16 +414,15 @@ DocumentSharingRepository documentSharingRepository;
                         data.setPopupStart(outputDateStart);
                         data.setPopupEnd(outputDateEnd);
        //====================check doc file before upload this==============
-       log.info("file upload:"+files.getOriginalFilename());
-       String originFile = files.getOriginalFilename();
+       String originFile = docName;
        String fileName = "";
        List<String> fileNames = new ArrayList<>();
-       if(files == null){
+           if(files == null){
            log.warn("************* file name is null ****************");
            data.setDocPath("image.jpg");
        }else {
            Arrays.asList(files).stream().forEach(file -> {
-               fileNames.add(mediaUploadService.uploadMedia(file,data,originFile));
+               fileNames.add(mediaUploadService.uploadMediaDocUpdate(file,data,originFile));
            });
            log.info("Uploaded the files successfully: " + fileNames );
            fileName = StringUtils.join(fileNames, ',');
@@ -426,7 +430,8 @@ DocumentSharingRepository documentSharingRepository;
        }
        log.info("file path:"+fileName);
        DataResponse response = new DataResponse();
-       if(files.isEmpty()){
+       log.info("show :"+files);
+       if(files == null ||  files.length == 0 ||   files.equals(null) || files.equals("")){
            dataResponse =  documentService.updateNoFile(data);
        }else {
            dataResponse =  documentService.update(data);

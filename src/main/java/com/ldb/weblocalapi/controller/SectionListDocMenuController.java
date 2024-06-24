@@ -1,5 +1,6 @@
 package com.ldb.weblocalapi.controller;
 
+import com.ldb.weblocalapi.Model.BranchReq;
 import com.ldb.weblocalapi.entities.Respone.DocumentRespone;
 import com.ldb.weblocalapi.exceptions.DetailMessage.ExceptionResponse;
 import com.ldb.weblocalapi.exceptions.Exception2.BadRequestException;
@@ -10,6 +11,7 @@ import com.ldb.weblocalapi.exceptions.ExceptionStatus.UnAuthorizedException;
 import com.ldb.weblocalapi.messages.request.DocReq;
 import com.ldb.weblocalapi.messages.response.DataResponse;
 import com.ldb.weblocalapi.services.DocumentService;
+import com.ldb.weblocalapi.services.Impl.DocSecMenuServiceImpl;
 import com.ldb.weblocalapi.utils.APIMappingPaths;
 import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
@@ -35,6 +37,9 @@ import java.text.SimpleDateFormat;
 public class SectionListDocMenuController {
     @Autowired
     DocumentService documentService;
+    @Autowired
+    DocSecMenuServiceImpl docSecMenuService;
+
     @ApiOperation(
             value = "Docuement in DocuementController",
             authorizations = {@Authorization(value = "apiKey")},
@@ -100,7 +105,7 @@ public class SectionListDocMenuController {
     public ResponseEntity<?> SectionListDocByDate(@ApiParam(
             name = "Body Request",
             value = "JSON body request to check information",
-            required = true) @Valid @RequestBody DocReq documentRespone, HttpServletRequest request) throws Exception {
+            required = true) @Valid @RequestBody BranchReq documentRespone, HttpServletRequest request) throws Exception {
         log.info("\t\t --> Custom compare Request controller >>>>>>>>>>>>>>>>>>>>>>");
         String clientIpAddress = request.getRemoteAddr();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
@@ -109,7 +114,7 @@ public class SectionListDocMenuController {
         log.info("auth == " + auth.getName());
         log.info("auth username == " + auth.getPrincipal());
         log.info("data body request: " + request.toString());
-        DataResponse response = documentService.documentListBySecCodeMenuByDate(documentRespone,request);
+        DataResponse response = documentService.SecCodeMenuByDate(documentRespone,request);
         log.info("\t\t --> End Custom compare Request controller <<<<<<<<<<<<<<<<<<<");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

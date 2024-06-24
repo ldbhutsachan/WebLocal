@@ -15,9 +15,12 @@ public interface DocumentService {
     public DataResponse documentListBySecCodeMenu(DocReq documentRespone, HttpServletRequest request);
     public DataResponse documentListByBandMenu();
     public DataResponse documentListByBandMenuByDate(BranchReq documentRespone, HttpServletRequest request);
-    public DataResponse documentListBySecCodeMenuByDate(DocReq documentRespone, HttpServletRequest request);
+
+    public DataResponse SecCodeMenuByDate(BranchReq documentRespone, HttpServletRequest request);
+
+    public DataResponse documentListBySecCodeMenuByDate(BranchReq documentRespone, HttpServletRequest request);
     public DataResponse HomeDocumentListByContion(RequestReportDate documentRespone, HttpServletRequest request);
-    public DataResponse HomeDocumentList();
+    public DataResponse HomeDocumentList(String secCod);
     public DataResponse documentListByTextBox(DocumentRespone documentRespone, HttpServletRequest request);
     public DataResponse ReadDocDocumentByDocNo(ReadDocument document, HttpServletRequest request);
     public DataResponse getUserSaveInfo(UploadByUser uploadByUser, HttpServletRequest request);

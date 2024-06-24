@@ -32,7 +32,7 @@ public class MediaUploadServiceImpl implements MediaUploadService{
     @Value("${media.upload.url_pdf}")
     private String uploadURLPDF;
     @Override
-    public String uploadMedia(MultipartFile file, Document document,String originFile) {
+    public String uploadMediaDoc(MultipartFile file, Document document,String originFile) {
         try {
             log.info("originFile:"+originFile);
             log.info("getDocNo:"+document.getDocNo());
@@ -54,6 +54,53 @@ public class MediaUploadServiceImpl implements MediaUploadService{
             log.info("Generate Random Media Name");
             UUID uuid =  UUID.randomUUID();
             String fileName = docNo  + "-"+formattedDateTime+ "-"+originFiles;
+            //String fileName = docNo +  "." + extension;
+            log.info("New Generate File Name {}" + fileName);
+            log.info("Begin To Calling Http Request Image Upload URL: {} ", uploadURL);
+            HttpClient client = HttpClients.createDefault();
+            HttpPost httpPost;
+            if(extension.toLowerCase().equals("pdf")){
+                httpPost = new HttpPost(uploadURLPDF);
+            }else{
+                httpPost = new HttpPost(uploadURL);
+            }
+            List<NameValuePair> params = new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("BASE64", base64String));
+            params.add(new BasicNameValuePair("filename", fileName));
+            httpPost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
+            log.info("Start To Post Upload Image ...");
+            HttpResponse rest = client.execute(httpPost);
+            log.info("Finish Image Upload");
+            return uploadPath + fileName;
+        }catch (Exception ex){
+            ex.printStackTrace();
+            return "";
+        }
+
+    }
+    @Override
+    public String uploadMediaDocUpdate(MultipartFile file, Document document,String originFile) {
+        try {
+            log.info("originFile:"+originFile);
+            log.info("getDocNo:"+document.getDocNo());
+            log.info("getSaveDate:"+document.getSaveDate());
+            String docNo = document.getDocNo();
+            String originFiles = originFile.trim();
+            LocalDateTime now = LocalDateTime.now();
+            // Define the desired format
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
+            String formattedDateTime = now.format(formatter);
+            log.info("Begin Convert MultiPart File To Base64String");
+            String base64String = new String(Base64.encodeBase64(file.getBytes()));
+            log.info("Convert To Base64 String Completed");
+
+            log.info("Get File Extension");
+            String[] filePattern = (file.getOriginalFilename()).split("\\.");
+            String extension = filePattern[filePattern.length-1];
+            log.info("Media File Extension Is {}",extension);
+            log.info("Generate Random Media Name");
+            UUID uuid =  UUID.randomUUID();
+            String fileName = docNo  + "-"+formattedDateTime+ "-"+originFiles+"."+extension;
             //String fileName = docNo +  "." + extension;
             log.info("New Generate File Name {}" + fileName);
             log.info("Begin To Calling Http Request Image Upload URL: {} ", uploadURL);

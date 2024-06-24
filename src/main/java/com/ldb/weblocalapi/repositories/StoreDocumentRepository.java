@@ -10,11 +10,25 @@ import org.springframework.transaction.annotation.Transactional;
 public interface StoreDocumentRepository extends CrudRepository<Document,Document> {
     @Transactional
     @Modifying
-    @Query("UPDATE Document d SET d.docType = :docType, d.docPath = :docPath," +
-            "d.docDate = :docDate, d.updateBy = :updateBy, " +
-            "d.note = :note, d.docName = :docName, d.popup = :popup, d.type = :type, d.relationUnit = :relationUnit," +
-            " d.relationUnitSec = :relationUnitSec, d.popupStart = :popupStart, d.popupEnd = :popupEnd WHERE d.docNo = :docNo")
+    //d.docPath = :docPath
+    //@Param("docPath") String docPath,
+    @Query("UPDATE Document d\n" +
+            "SET d.docNo = :docNo,\n" +
+            "    d.docType = :docType," +
+            "    d.docPath = :docPath, \n" +
+            "    d.docDate = :docDate,\n" +
+            "    d.updateBy = :updateBy,\n" +
+            "    d.note = :note,\n" +
+            "    d.docName = :docName,\n" +
+            "    d.popup = :popup,\n" +
+            "    d.type = :type,\n" +
+            "    d.relationUnit = :relationUnit,\n" +
+            "    d.relationUnitSec = :relationUnitSec,\n" +
+            "    d.popupStart = :popupStart,\n" +
+            "    d.popupEnd = :popupEnd\n" +
+            "WHERE d.id = :keyId")
                 int update(
+            @Param("keyId") Long keyId,
                 @Param("docNo") String docNo,
                 @Param("docType") String docType,
                 @Param("docPath") String docPath,
@@ -31,11 +45,22 @@ public interface StoreDocumentRepository extends CrudRepository<Document,Documen
 
     @Transactional
     @Modifying
-    @Query("UPDATE Document d SET d.docType = :docType," +
-            "d.docDate = :docDate, d.updateBy = :updateBy, " +
-            "d.note = :note, d.docName = :docName, d.popup = :popup, d.type = :type, d.relationUnit = :relationUnit," +
-            " d.relationUnitSec = :relationUnitSec, d.popupStart = :popupStart, d.popupEnd = :popupEnd WHERE d.docNo = :docNo")
+    @Query("UPDATE Document d\n" +
+            "SET d.docNo = :docNo,\n" +
+            "    d.docType = :docType,\n" +
+            "    d.docDate = :docDate,\n" +
+            "    d.updateBy = :updateBy,\n" +
+            "    d.note = :note,\n" +
+            "    d.docName = :docName,\n" +
+            "    d.popup = :popup,\n" +
+            "    d.type = :type,\n" +
+            "    d.relationUnit = :relationUnit,\n" +
+            "    d.relationUnitSec = :relationUnitSec,\n" +
+            "    d.popupStart = :popupStart,\n" +
+            "    d.popupEnd = :popupEnd\n" +
+            "WHERE d.id = :keyId")
     int updateNoFile(
+            @Param("keyId") Long keyId,
             @Param("docNo") String docNo,
             @Param("docType") String docType,
             @Param("docDate") String docDate,

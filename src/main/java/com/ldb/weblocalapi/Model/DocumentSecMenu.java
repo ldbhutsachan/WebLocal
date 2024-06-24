@@ -1,9 +1,15 @@
 package com.ldb.weblocalapi.Model;
 
+import com.ldb.weblocalapi.entities.Respone.ReadDocument;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import java.util.List;
+
 @Setter
 @Getter
 @AllArgsConstructor
@@ -23,4 +29,6 @@ public class DocumentSecMenu {
     private String typeDocIn_Out;
     private String amtRead;
     private String relationUnit;
+
+
 }

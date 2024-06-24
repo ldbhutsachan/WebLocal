@@ -19,7 +19,7 @@ public class ReadDocument {
     @Column(name = "DOC_ID", nullable = false)
     private String docId;
 
-    @Column(name = "DOC_NO", nullable = false)
+    @Column(name = "DOC_NO")
     private String docNo;
 
     @Column(name = "NAME", nullable = false)
@@ -43,8 +43,6 @@ public class ReadDocument {
     @Column(name = "MAIL", nullable = false)
     private String mail;
 
-
-
-
-
+    @Column(name = "READ_DATE", nullable = false)
+    private String readDate;
 }

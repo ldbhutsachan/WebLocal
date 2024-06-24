@@ -44,15 +44,16 @@ public class DocumentServiceImpl implements DocumentService {
 
     @Autowired
     DocSecMenuServiceImpl docSecMenuService;
-
+//***check
     @Override
     public DataResponse documentList(DocumentRespone documentRespone, HttpServletRequest request) {
-        String keyId = documentRespone.getKeyId();
-        log.info("keyId:"+keyId);
+        String secCod = documentRespone.getKeyId();
+        String saveBy = documentRespone.getSaveBy();
+        log.info("keyId:"+saveBy);
         DataResponse dataResponse = new DataResponse();
         try {
             //***********************check keyId if not null ***************************
-                dataResponse.setDataResponse(documentRepository.findDocAll());
+                dataResponse.setDataResponse(documentRepository.findDocAllNyUserName(saveBy));
             if(dataResponse.getDataResponse() !=null){
                 dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
                 dataResponse.setMessage(Constant.RESPONSE_MESSAGE.SUCCESS_MSG);
@@ -150,8 +151,9 @@ public class DocumentServiceImpl implements DocumentService {
         return dataResponse;
     }
 
+
     @Override
-    public DataResponse documentListBySecCodeMenuByDate(DocReq documentRespone, HttpServletRequest request) {
+    public DataResponse documentListBySecCodeMenuByDate(BranchReq documentRespone, HttpServletRequest request) {
        DataResponse dataResponse = new DataResponse();
        if(documentRespone.getType().equals("IN")){
            documentRespone.setType("ຂາເຂົ້າ");
@@ -161,7 +163,7 @@ public class DocumentServiceImpl implements DocumentService {
            documentRespone.setType("0");
        }
       try{
-          dataResponse.setDataResponse(docSecMenuService.findDocAllDocumentListBySecCodeMenuByDateTotDateByDocTypeAll(documentRespone));
+          dataResponse.setDataResponse(docSecMenuService.findDocAllDocumentListByBranchMenu(documentRespone));
             if(dataResponse.getDataResponse() !=null){
                 dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
                 dataResponse.setMessage(Constant.RESPONSE_MESSAGE.SUCCESS_MSG);
@@ -214,10 +216,11 @@ public class DocumentServiceImpl implements DocumentService {
     }
 
     @Override
-    public DataResponse HomeDocumentList() {
+    public DataResponse HomeDocumentList(String secCod) {
         DataResponse dataResponse = new DataResponse();
         try {
-                dataResponse.setDataResponse(documentRepository.findDocAll());
+
+                dataResponse.setDataResponse(documentRepository.findDocAll(secCod));
             if(dataResponse.getDataResponse() !=null){
                 dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
                 dataResponse.setMessage(Constant.RESPONSE_MESSAGE.SUCCESS_MSG);
@@ -236,9 +239,10 @@ public class DocumentServiceImpl implements DocumentService {
     @Override
     public DataResponse documentListByTextBox(DocumentRespone documentRespone, HttpServletRequest request) {
         DataResponse dataResponse = new DataResponse();
+        String saveBy = documentRespone.getSaveBy();
         try {
             //***********************check keyId if not null ***************************
-            dataResponse.setDataResponse(documentRepository.findByDocFromKeyDocName(documentRespone.getDocName(),documentRespone.getDocName()));
+            dataResponse.setDataResponse(documentRepository.findByDocFromKeyDocName(saveBy,documentRespone.getDocName(),documentRespone.getDocName()));
             if(dataResponse.getDataResponse() !=null){
                 dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
                 dataResponse.setMessage(Constant.RESPONSE_MESSAGE.SUCCESS_MSG);
@@ -320,6 +324,7 @@ public class DocumentServiceImpl implements DocumentService {
     @Override
     public DataResponse update(Document document) {
         DataResponse dataResponse = new DataResponse();
+        long keyId = document.getId();
         String docNo = document.getDocNo();
         String docType =document.getDocType();
         String docPath = document.getDocPath();
@@ -335,6 +340,7 @@ public class DocumentServiceImpl implements DocumentService {
         String popupEnd = document.getPopupEnd();
         try{
             dataResponse.setDataResponse(storeDocumentRepository.update(
+                    keyId,
                      docNo,
                      docType,
                      docPath,
@@ -365,6 +371,7 @@ public class DocumentServiceImpl implements DocumentService {
     @Override
     public DataResponse updateNoFile(Document document) {
         DataResponse dataResponse = new DataResponse();
+        long keyId = document.getId();
         String docNo = document.getDocNo();
         String docType =document.getDocType();
         String docDate = document.getDocDate();
@@ -379,6 +386,7 @@ public class DocumentServiceImpl implements DocumentService {
         String popupEnd = document.getPopupEnd();
         try{
             dataResponse.setDataResponse(storeDocumentRepository.updateNoFile(
+                    keyId,
                      docNo,
                      docType,
                      docDate,
@@ -547,4 +555,32 @@ public class DocumentServiceImpl implements DocumentService {
 //                documentReq.getSharingType());
 //        return 1;
 //    }
+@Override
+public DataResponse SecCodeMenuByDate(BranchReq documentRespone, HttpServletRequest request) {
+    DataResponse dataResponse = new DataResponse();
+    if(documentRespone.getType().equals("IN")){
+        documentRespone.setType("ຂາເຂົ້າ");
+    } else if(documentRespone.getType().equals("OUT")){
+        documentRespone.setType("ຂາອອກ");
+    }else {
+        documentRespone.setType("0");
+    }
+    try{
+        dataResponse.setDataResponse(docSecMenuService.findDocAllDocumentListByBranchMenu(documentRespone));
+        if(dataResponse.getDataResponse() !=null){
+            dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
+            dataResponse.setMessage(Constant.RESPONSE_MESSAGE.SUCCESS_MSG);
+        }else {
+            dataResponse.setStatus(Constant.RESPONSE_CODE.DATA_NOT_FOUND);
+            dataResponse.setMessage(Constant.RESPONSE_MESSAGE.DATA_NOT_FOUND_MSG);
+        }
+    }catch (Exception e){
+        dataResponse.setStatus(Constant.RESPONSE_CODE.DATA_NOT_FOUND);
+        dataResponse.setMessage(Constant.RESPONSE_MESSAGE.DATA_NOT_FOUND_MSG);
+        e.printStackTrace();
+    }
+    return dataResponse;
 }
+
+}
+

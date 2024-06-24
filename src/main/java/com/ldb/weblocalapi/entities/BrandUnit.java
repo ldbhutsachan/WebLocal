@@ -19,6 +19,6 @@ public class BrandUnit {
     @Column(name = "BRANCH_UNIT_NAME",nullable = false)
     private String branchUnitName;
 
-//    @Column(name = "BRANCH_CODE",nullable = false)
-//    private String branchCode;
+    @Column(name = "BRANCH_CODE",nullable = false)
+    private String branchCode;
 }

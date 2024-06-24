@@ -85,6 +85,7 @@ public class LoginController {
     public ResponseEntity<?> getMobileAuthenticate(@Valid @RequestBody LoginRequest loginRequest, HttpServletRequest request) {
         HttpHeaders responseHeaders = new HttpHeaders();
         DataResponse dataResponse = new DataResponse();
+        LoginResponse loginResponse =  new LoginResponse();
         dataResponse.setStatus("05");
         dataResponse.setMessage("ຢຸດເຊີ ຫລື ລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ");
         try {
@@ -107,20 +108,20 @@ public class LoginController {
             List<Menu> listMenu = menuRepository.findByMenuMapUserIdFromUserName(users.getUsername());
             List<Long> menuGroupId = listMenu.stream().map(Menu::getMenuId).distinct().collect(Collectors.toList());
             log.info("show log{}",menuGroupId);
-            LoginResponse loginResponse = new LoginResponse(
+             loginResponse = new LoginResponse(
                     jwt, "Bearer",
-                    seconds,users.getImagePath(),users.getUsername(), users.getEnabled(), users.getSection(),listMenu
+                    seconds,users.getUsername(),users.getImagePath(), users.getEnabled(), users.getSection(),listMenu
             );
             dataResponse.setStatus("00");
             dataResponse.setMessage("success");
             dataResponse.setDataResponse(loginResponse);
         } catch (Exception e) {
-            log.error("Authentication error = " + e.getMessage());
-            dataResponse.setMessage(e.getMessage());
+            dataResponse.setStatus("05");
+            dataResponse.setMessage("ຢຸດເຊີ ຫລື ລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ");
+            dataResponse.setDataResponse(loginResponse);
         }
         return ResponseEntity.ok().headers(responseHeaders).body(dataResponse);
     }
-
     @ApiOperation(
             value = "getProfile in ProFile show data",
             authorizations = {@Authorization(value = "apiKey")},
