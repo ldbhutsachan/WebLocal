@@ -11,5 +11,6 @@ import java.util.List;
 public interface DocSecMenuServiceService {
 
     List<DocumentSecMenu> findDocAllDocumentListByBranchMenu(BranchReq docReq);
-    public List<DocumentSecMenu> findDocAllDocumentListByBandAll();
+    public List<DocumentSecMenu> findDocAllDocumentListByBandAll(String secCode);
+    public List<DocumentSecMenu> findSecMenu(DocReq docReq);
 }

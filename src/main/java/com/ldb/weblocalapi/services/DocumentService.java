@@ -1,6 +1,7 @@
 package com.ldb.weblocalapi.services;
 
 import com.ldb.weblocalapi.Model.BranchReq;
+import com.ldb.weblocalapi.Model.DocumentSecMenu;
 import com.ldb.weblocalapi.entities.Document;
 import com.ldb.weblocalapi.entities.Respone.DocumentRespone;
 import com.ldb.weblocalapi.entities.Respone.ReadDocument;
@@ -12,11 +13,12 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 public interface DocumentService {
     public DataResponse documentList(DocumentRespone documentRespone, HttpServletRequest request);
-    public DataResponse documentListBySecCodeMenu(DocReq documentRespone, HttpServletRequest request);
-    public DataResponse documentListByBandMenu();
-    public DataResponse documentListByBandMenuByDate(BranchReq documentRespone, HttpServletRequest request);
 
-    public DataResponse SecCodeMenuByDate(BranchReq documentRespone, HttpServletRequest request);
+    public DataResponse documentListByBandMenu(String secCode);
+    //****
+    public DataResponse documentListByBandMenuByDate(BranchReq documentRespone, HttpServletRequest request);
+    public DataResponse SecCodeMenuByDate(DocReq documentRespone, HttpServletRequest request);
+    public DataResponse  SecCodeMenuByDateALL(DocReq documentRespone, HttpServletRequest request);
 
     public DataResponse documentListBySecCodeMenuByDate(BranchReq documentRespone, HttpServletRequest request);
     public DataResponse HomeDocumentListByContion(RequestReportDate documentRespone, HttpServletRequest request);

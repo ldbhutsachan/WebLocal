@@ -1,6 +1,7 @@
 package com.ldb.weblocalapi.services.Impl;
 
 import com.ldb.weblocalapi.Model.BranchReq;
+import com.ldb.weblocalapi.Model.DocumentSecMenu;
 import com.ldb.weblocalapi.entities.DocShareBandUnit;
 import com.ldb.weblocalapi.entities.Document;
 import com.ldb.weblocalapi.entities.DocumentSharing;
@@ -10,6 +11,7 @@ import com.ldb.weblocalapi.entities.Respone.UploadByUser;
 import com.ldb.weblocalapi.messages.request.DocReq;
 import com.ldb.weblocalapi.messages.request.RequestReportDate;
 import com.ldb.weblocalapi.messages.response.DataResponse;
+import com.ldb.weblocalapi.messages.response.LoginResponse;
 import com.ldb.weblocalapi.repositories.*;
 import com.ldb.weblocalapi.services.DocumentService;
 import lombok.extern.slf4j.Slf4j;
@@ -19,6 +21,8 @@ import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.stream.Collectors;
+
 import com.ldb.weblocalapi.utils.Constant;
 
 @Slf4j
@@ -70,45 +74,50 @@ public class DocumentServiceImpl implements DocumentService {
     }
 
     @Override
-    public DataResponse documentListBySecCodeMenu(DocReq documentRespone, HttpServletRequest request) {
-        String code = documentRespone.getCode();
-        String type = documentRespone.getType();
-        if(type.equals("IN")){
-            type = "ຂາເຂົ້າ";
-        }else if(type.equals("OUT")) {
-            type = "ຂາອອກ";
-        }else {
-            type = "0";
-        }
-        log.info("show type:"+type);
+    public DataResponse documentListByBandMenu(String secCode) {
         DataResponse dataResponse = new DataResponse();
         try {
-            //***********************check documentListBySecCodeMenu if not null ***************************
-            if(type.equals("0")){
-                dataResponse.setDataResponse(documentRepository.findDocAllDocumentListBySecCodeMenuByCode(code));
-            }else {
-                dataResponse.setDataResponse(documentRepository.findDocAllDocumentListBySecCodeMenuByTypeCode(type,code));
+            List<ReadDocument> rspListReadInfo = new ArrayList<>();
+            List<DocumentSecMenu> resListSecMenu =docSecMenuService.findDocAllDocumentListByBandAll(secCode);
+            List<ReadDocument> rspListReadDoc = readDocRepository.findDocumentViewAll();
+            List<String> checkReadUser = resListSecMenu.stream().map(DocumentSecMenu::getKeyId).distinct().collect(Collectors.toList());
+            DocumentSecMenu result = new DocumentSecMenu();
+            result.setKeyId(resListSecMenu.get(0).getKeyId());
+            result.setDocName(resListSecMenu.get(0).getDocName());
+            result.setDocNo(resListSecMenu.get(0).getDocNo());
+            result.setDocTypeNo(resListSecMenu.get(0).getDocTypeNo());
+            result.setDocTypeName(resListSecMenu.get(0).getDocTypeName());
+            result.setDocDate(resListSecMenu.get(0).getDocDate());
+            result.setSaveDate(resListSecMenu.get(0).getSaveDate());
+            result.setSaveBy(resListSecMenu.get(0).getSaveBy());
+            result.setName(resListSecMenu.get(0).getName());
+            result.setDocPath(resListSecMenu.get(0).getDocPath());
+            result.setDocStatus(resListSecMenu.get(0).getDocStatus());
+            result.setTypeDocIn_Out(resListSecMenu.get(0).getTypeDocIn_Out());
+            result.setAmtRead(resListSecMenu.get(0).getAmtRead());
+            rspListReadInfo = new ArrayList<>();
+            for (String refId : checkReadUser) {
+                for(ReadDocument rsp : rspListReadDoc){
+                    if(rsp.getDocId().equals(refId)) {
+                        ReadDocument rspGroupRead = new ReadDocument();
+                        rspGroupRead.setUserId(rsp.getUserId());
+                        rspGroupRead.setUserName(rsp.getUserName());
+                        rspGroupRead.setDocId(rsp.getDocId());
+                        rspGroupRead.setDocNo(rsp.getDocNo());
+                        rspGroupRead.setName(rsp.getName());
+                        rspGroupRead.setSecId(rsp.getSecId());
+                        rspGroupRead.setSecName(rsp.getSecName());
+                        rspGroupRead.setProCode(rsp.getProCode());
+                        rspGroupRead.setProName(rsp.getProName());
+                        rspGroupRead.setMobile(rsp.getMobile());
+                        rspGroupRead.setMail(rsp.getMail());
+                        rspGroupRead.setReadDate(rsp.getReadDate());
+                        rspListReadInfo.add(rspGroupRead);
+                    }
+                    result.setReadByUserInfo(rspListReadInfo);
+                }
             }
-            if(dataResponse.getDataResponse() !=null){
-                dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
-                dataResponse.setMessage(Constant.RESPONSE_MESSAGE.SUCCESS_MSG);
-            }else {
-                dataResponse.setStatus(Constant.RESPONSE_CODE.DATA_NOT_FOUND);
-                dataResponse.setMessage(Constant.RESPONSE_MESSAGE.DATA_NOT_FOUND_MSG);
-            }
-        }catch (Exception e){
-            dataResponse.setStatus(Constant.RESPONSE_CODE.DATA_NOT_FOUND);
-            dataResponse.setMessage(Constant.RESPONSE_MESSAGE.DATA_NOT_FOUND_MSG);
-            e.printStackTrace();
-        }
-        return dataResponse;
-    }
-
-    @Override
-    public DataResponse documentListByBandMenu() {
-        DataResponse dataResponse = new DataResponse();
-        try {
-            dataResponse.setDataResponse(docSecMenuService.findDocAllDocumentListByBandAll());
+            dataResponse.setDataResponse(result);
             if(dataResponse.getDataResponse() !=null){
                 dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
                 dataResponse.setMessage(Constant.RESPONSE_MESSAGE.SUCCESS_MSG);
@@ -135,7 +144,47 @@ public class DocumentServiceImpl implements DocumentService {
             documentRespone.setType("0");
         }
         try{
-            dataResponse.setDataResponse(docSecMenuService.findDocAllDocumentListByBranchMenu(documentRespone));
+            List<ReadDocument> rspListReadInfo = new ArrayList<>();
+            List<DocumentSecMenu> resListSecMenu =docSecMenuService.findDocAllDocumentListByBranchMenu(documentRespone);
+            List<ReadDocument> rspListReadDoc = readDocRepository.findDocumentViewAll();
+            List<String> checkReadUser = resListSecMenu.stream().map(DocumentSecMenu::getKeyId).distinct().collect(Collectors.toList());
+            DocumentSecMenu result = new DocumentSecMenu();
+            result.setKeyId(resListSecMenu.get(0).getKeyId());
+            result.setDocName(resListSecMenu.get(0).getDocName());
+            result.setDocNo(resListSecMenu.get(0).getDocNo());
+            result.setDocTypeNo(resListSecMenu.get(0).getDocTypeNo());
+            result.setDocTypeName(resListSecMenu.get(0).getDocTypeName());
+            result.setDocDate(resListSecMenu.get(0).getDocDate());
+            result.setSaveDate(resListSecMenu.get(0).getSaveDate());
+            result.setSaveBy(resListSecMenu.get(0).getSaveBy());
+            result.setName(resListSecMenu.get(0).getName());
+            result.setDocPath(resListSecMenu.get(0).getDocPath());
+            result.setDocStatus(resListSecMenu.get(0).getDocStatus());
+            result.setTypeDocIn_Out(resListSecMenu.get(0).getTypeDocIn_Out());
+            result.setAmtRead(resListSecMenu.get(0).getAmtRead());
+            rspListReadInfo = new ArrayList<>();
+            for (String refId : checkReadUser) {
+                for(ReadDocument rsp : rspListReadDoc){
+                    if(rsp.getDocId().equals(refId)) {
+                        ReadDocument rspGroupRead = new ReadDocument();
+                        rspGroupRead.setUserId(rsp.getUserId());
+                        rspGroupRead.setUserName(rsp.getUserName());
+                        rspGroupRead.setDocId(rsp.getDocId());
+                        rspGroupRead.setDocNo(rsp.getDocNo());
+                        rspGroupRead.setName(rsp.getName());
+                        rspGroupRead.setSecId(rsp.getSecId());
+                        rspGroupRead.setSecName(rsp.getSecName());
+                        rspGroupRead.setProCode(rsp.getProCode());
+                        rspGroupRead.setProName(rsp.getProName());
+                        rspGroupRead.setMobile(rsp.getMobile());
+                        rspGroupRead.setMail(rsp.getMail());
+                        rspGroupRead.setReadDate(rsp.getReadDate());
+                        rspListReadInfo.add(rspGroupRead);
+                    }
+                    result.setReadByUserInfo(rspListReadInfo);
+                }
+            }
+            dataResponse.setDataResponse(result);
             if(dataResponse.getDataResponse() !=null){
                 dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
                 dataResponse.setMessage(Constant.RESPONSE_MESSAGE.SUCCESS_MSG);
@@ -556,7 +605,7 @@ public class DocumentServiceImpl implements DocumentService {
 //        return 1;
 //    }
 @Override
-public DataResponse SecCodeMenuByDate(BranchReq documentRespone, HttpServletRequest request) {
+public  DataResponse  SecCodeMenuByDateALL(DocReq documentRespone, HttpServletRequest request) {
     DataResponse dataResponse = new DataResponse();
     if(documentRespone.getType().equals("IN")){
         documentRespone.setType("ຂາເຂົ້າ");
@@ -566,7 +615,80 @@ public DataResponse SecCodeMenuByDate(BranchReq documentRespone, HttpServletRequ
         documentRespone.setType("0");
     }
     try{
-        dataResponse.setDataResponse(docSecMenuService.findDocAllDocumentListByBranchMenu(documentRespone));
+        log.info("show:"+documentRespone.getType());
+        if(documentRespone.getType().equals("0")){
+            dataResponse.setDataResponse(documentSecMenuRepository.finSecMenuAll(documentRespone.getCode()));
+        }else {
+            dataResponse.setDataResponse(documentSecMenuRepository.finSecMenuAllWithType(documentRespone.getType(),documentRespone.getCode()));
+        }
+        if(dataResponse.getDataResponse() !=null){
+            dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
+            dataResponse.setMessage(Constant.RESPONSE_MESSAGE.SUCCESS_MSG);
+        }else {
+            dataResponse.setStatus(Constant.RESPONSE_CODE.DATA_NOT_FOUND);
+            dataResponse.setMessage(Constant.RESPONSE_MESSAGE.DATA_NOT_FOUND_MSG);
+        }
+    }catch (Exception e){
+        dataResponse.setStatus(Constant.RESPONSE_CODE.DATA_NOT_FOUND);
+        dataResponse.setMessage(Constant.RESPONSE_MESSAGE.DATA_NOT_FOUND_MSG);
+        e.printStackTrace();
+    }
+    return dataResponse;
+}
+@Override
+public DataResponse SecCodeMenuByDate(DocReq documentRespone, HttpServletRequest request) {
+    DataResponse dataResponse = new DataResponse();
+    if(documentRespone.getType().equals("IN")){
+        documentRespone.setType("ຂາເຂົ້າ");
+    } else if(documentRespone.getType().equals("OUT")){
+        documentRespone.setType("ຂາອອກ");
+    }else {
+        documentRespone.setType("0");
+    }
+    try{
+        HashMap<String, Object> dataValue = new HashMap<String, Object>();
+        List<ReadDocument> rspListReadInfo = new ArrayList<>();
+        List<DocumentSecMenu> resListSecMenu = docSecMenuService.findSecMenu(documentRespone);
+        List<ReadDocument> rspListReadDoc = readDocRepository.findDocumentViewAll();
+        List<String> checkReadUser = resListSecMenu.stream().map(DocumentSecMenu::getKeyId).distinct().collect(Collectors.toList());
+
+        DocumentSecMenu result = new DocumentSecMenu();
+        result.setKeyId(resListSecMenu.get(0).getKeyId());
+        result.setDocName(resListSecMenu.get(0).getDocName());
+        result.setDocNo(resListSecMenu.get(0).getDocNo());
+        result.setDocTypeNo(resListSecMenu.get(0).getDocTypeNo());
+        result.setDocTypeName(resListSecMenu.get(0).getDocTypeName());
+        result.setDocDate(resListSecMenu.get(0).getDocDate());
+        result.setSaveDate(resListSecMenu.get(0).getSaveDate());
+        result.setSaveBy(resListSecMenu.get(0).getSaveBy());
+        result.setName(resListSecMenu.get(0).getName());
+        result.setDocPath(resListSecMenu.get(0).getDocPath());
+        result.setDocStatus(resListSecMenu.get(0).getDocStatus());
+        result.setTypeDocIn_Out(resListSecMenu.get(0).getTypeDocIn_Out());
+        result.setAmtRead(resListSecMenu.get(0).getAmtRead());
+        rspListReadInfo = new ArrayList<>();
+        for (String refId : checkReadUser) {
+            for(ReadDocument rsp : rspListReadDoc){
+                if(rsp.getDocId().equals(refId)) {
+                    ReadDocument rspGroupRead = new ReadDocument();
+                    rspGroupRead.setUserId(rsp.getUserId());
+                    rspGroupRead.setUserName(rsp.getUserName());
+                    rspGroupRead.setDocId(rsp.getDocId());
+                    rspGroupRead.setDocNo(rsp.getDocNo());
+                    rspGroupRead.setName(rsp.getName());
+                    rspGroupRead.setSecId(rsp.getSecId());
+                    rspGroupRead.setSecName(rsp.getSecName());
+                    rspGroupRead.setProCode(rsp.getProCode());
+                    rspGroupRead.setProName(rsp.getProName());
+                    rspGroupRead.setMobile(rsp.getMobile());
+                    rspGroupRead.setMail(rsp.getMail());
+                    rspGroupRead.setReadDate(rsp.getReadDate());
+                    rspListReadInfo.add(rspGroupRead);
+                }
+                result.setReadByUserInfo(rspListReadInfo);
+            }
+        }
+        dataResponse.setDataResponse(result);
         if(dataResponse.getDataResponse() !=null){
             dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
             dataResponse.setMessage(Constant.RESPONSE_MESSAGE.SUCCESS_MSG);

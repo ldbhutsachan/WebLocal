@@ -27,12 +27,12 @@ public class DocSecMenuServiceImpl implements DocSecMenuServiceService {
     DocumentRepository documentRepository;
 
     @Override
-    public List<DocumentSecMenu> findDocAllDocumentListByBandAll() {
+    public List<DocumentSecMenu> findDocAllDocumentListByBandAll(String secCode) {
         StringBuilder sb = new StringBuilder();
+
         sb.append("SELECT");
-        sb.append(" TYPE, ID, DOCNAME, DOC_NO, DOCTYPENO, DOC_TYPE_NAME, DOC_DATE, SAVE_DATE, NAME, SAVE_BY, READ_BY, DOC_PATH, DOC_STATUS, TOTAL");
-        sb.append(" from  V_BAND_MENU_COUNTER");
-        sb.append(" group by TYPE, ID, DOCNAME, DOC_NO, DOCTYPENO, DOC_TYPE_NAME, DOC_DATE, SAVE_DATE, NAME, SAVE_BY, READ_BY, DOC_PATH, DOC_STATUS, TOTAL order by ID desc");
+        sb.append(" TYPE, ID,RELATION_UNIT, DOCNAME, DOC_NO, DOCTYPENO, DOC_TYPE_NAME, DOC_DATE, SAVE_DATE, NAME, SAVE_BY, READ_BY, DOC_PATH, DOC_STATUS,  (SELECT COUNT(*) FROM read_doc b where b.DOC_KEY_ID=id ) as total ");
+        sb.append(" from  V_BAND_MENU_COUNTER where 1=1 and RELATION_UNIT='"+secCode+"'");
         String sql = sb.toString();
          log.info("SQL : " + sql);
         return this.jdbcTemplate.query(sql, new RowMapper<DocumentSecMenu>() {
@@ -51,7 +51,7 @@ public class DocSecMenuServiceImpl implements DocSecMenuServiceService {
                 tr.setDocPath(rs.getString("DOC_PATH"));
                 tr.setDocStatus(rs.getString("DOC_STATUS"));
                 tr.setTypeDocIn_Out(rs.getString("TYPE"));
-                tr.setAmtRead(rs.getString("TOTAL"));
+                tr.setAmtRead(rs.getInt("TOTAL"));
                // tr.setRelationUnit(rs.getString("RELATION_UNIT"));
                 return tr;
             }
@@ -97,16 +97,15 @@ public class DocSecMenuServiceImpl implements DocSecMenuServiceService {
             conditionInputText += " AND DOC_NO like '%" + inputText + "%' OR  DOCNAME like '%" + inputText + "%' ";
         }
         StringBuilder sb = new StringBuilder();
-        sb.append("SELECT");
-        sb.append(" TYPE, ID, DOCNAME, DOC_NO, DOCTYPENO, DOC_TYPE_NAME, DOC_DATE, SAVE_DATE, NAME, SAVE_BY, READ_BY, DOC_PATH, DOC_STATUS, TOTAL");
-        sb.append(" from  V_BAND_MENU_COUNTER");
+        sb.append("SELECT ");
+        sb.append("TYPE, ID,RELATION_UNIT, DOCNAME, DOC_NO, DOCTYPENO, DOC_TYPE_NAME, DOC_DATE, SAVE_DATE, NAME,SAVE_BY, READ_BY, DOC_PATH, DOC_STATUS,  (SELECT COUNT(*) FROM read_doc b where b.DOC_KEY_ID=id ) as total ");
+        sb.append(" from  V_BAND_MENU_COUNTER where 1=1  ");
         sb.append(conditionDate); //*****check date not emt
         sb.append(conditionCode); //*****check band code
         sb.append(conditionType); //*****check type 0 in out
         sb.append(conditionDocTypeNo);//***check docTypeno
         sb.append(conditionInputText);//****check input from text
         sb.append(conditionCodeSec);//******check combo check small band
-        sb.append(" group by TYPE, ID, DOCNAME, DOC_NO, DOCTYPENO, DOC_TYPE_NAME, DOC_DATE, SAVE_DATE, NAME, SAVE_BY, READ_BY, DOC_PATH, DOC_STATUS, TOTAL order by ID desc");
         String sql = sb.toString();
         log.info("SQL : " + sql);
         return this.jdbcTemplate.query(sql, new RowMapper<DocumentSecMenu>() {
@@ -125,22 +124,23 @@ public class DocSecMenuServiceImpl implements DocSecMenuServiceService {
                 tr.setDocPath(rs.getString("DOC_PATH"));
                 tr.setDocStatus(rs.getString("DOC_STATUS"));
                 tr.setTypeDocIn_Out(rs.getString("TYPE"));
-                tr.setAmtRead(rs.getString("TOTAL"));
+                tr.setAmtRead(rs.getInt("TOTAL"));
                 tr.setRelationUnit(rs.getString("RELATION_UNIT"));
                 return tr;
             }
         });
     }
 
-    public List<DocumentSecMenu> findSecCodeMenu(BranchReq docReq) {
+    //------------------------Second
+    @Override
+    public List<DocumentSecMenu> findSecMenu(DocReq docReq) {
         String conditionDate = "";
         String conditionCode = "";
-        String conditionCodeSec = "";
         String conditionType = "";
         String conditionDocTypeNo = "";
         String conditionInputText = "";
-        String brandCode = docReq.getBrandCode();
-        String brandCodeSec = docReq.getSmallBrandCode();
+        String code = docReq.getCode();
+
         String type = docReq.getType();
         String docTypeNo = docReq.getDocType();
         String inputText = docReq.getInBoxText();
@@ -155,11 +155,8 @@ public class DocSecMenuServiceImpl implements DocSecMenuServiceService {
         if (!outputDateStart.equals("")) {
             conditionDate += " AND DOC_DATE >= '" + outputDateStart + "' AND DOC_DATE <= '" + outputDateEnd + "'";
         }
-        if (!brandCode.equals("0")) {
-            conditionCode += " AND RELATION_UNIT='" + brandCode + "' ";
-        }
-        if (!brandCodeSec.equals("0")) {
-            conditionCodeSec += " AND RELATION_UNIT_SEC='" + brandCodeSec + "' ";
+        if (!code.equals("0")) {
+            conditionCode += " AND RELATION_UNIT='" + code + "' ";
         }
         if (!type.equals("0")) {
             conditionType += " AND TYPE='" + type + "' ";
@@ -171,16 +168,14 @@ public class DocSecMenuServiceImpl implements DocSecMenuServiceService {
             conditionInputText += " AND DOC_NO like '%" + inputText + "%' OR  DOCNAME like '%" + inputText + "%' ";
         }
         StringBuilder sb = new StringBuilder();
-        sb.append("SELECT");
-        sb.append(" TYPE, ID, DOCNAME, DOC_NO, DOCTYPENO, DOC_TYPE_NAME, DOC_DATE, SAVE_DATE, NAME, SAVE_BY, READ_BY, DOC_PATH, DOC_STATUS, TOTAL");
-        sb.append(" from  V_BAND_MENU_COUNTER");
+        sb.append("SELECT ");
+        sb.append("TYPE, ID,RELATION_UNIT, DOCNAME, DOC_NO, DOCTYPENO, DOC_TYPE_NAME, DOC_DATE, SAVE_DATE, NAME,SAVE_BY, READ_BY, DOC_PATH, DOC_STATUS,  (SELECT COUNT(*) FROM read_doc b where b.DOC_KEY_ID=id ) as total ");
+        sb.append(" from  V_BAND_MENU_COUNTER where 1=1  ");
         sb.append(conditionDate); //*****check date not emt
         sb.append(conditionCode); //*****check band code
         sb.append(conditionType); //*****check type 0 in out
         sb.append(conditionDocTypeNo);//***check docTypeno
         sb.append(conditionInputText);//****check input from text
-        sb.append(conditionCodeSec);//******check combo check small band
-        sb.append(" group by TYPE, ID, DOCNAME, DOC_NO, DOCTYPENO, DOC_TYPE_NAME, DOC_DATE, SAVE_DATE, NAME, SAVE_BY, READ_BY, DOC_PATH, DOC_STATUS, TOTAL order by ID desc");
         String sql = sb.toString();
         log.info("SQL : " + sql);
         return this.jdbcTemplate.query(sql, new RowMapper<DocumentSecMenu>() {
@@ -199,12 +194,11 @@ public class DocSecMenuServiceImpl implements DocSecMenuServiceService {
                 tr.setDocPath(rs.getString("DOC_PATH"));
                 tr.setDocStatus(rs.getString("DOC_STATUS"));
                 tr.setTypeDocIn_Out(rs.getString("TYPE"));
-                tr.setAmtRead(rs.getString("TOTAL"));
+                tr.setAmtRead(rs.getInt("TOTAL"));
                 tr.setRelationUnit(rs.getString("RELATION_UNIT"));
                 return tr;
-
-
             }
         });
     }
+
 }

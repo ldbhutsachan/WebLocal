@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -54,5 +55,8 @@ public class DocumentSecMenuRespone {
     @Column(name = "RELATION_UNIT",length = 1500,nullable = false)
     private String relationUnit;
 
+    @OneToMany
+    @JoinColumn(name = "DOC_ID")
+    private List<ReadDocument> readByUserInfo;
 
 }

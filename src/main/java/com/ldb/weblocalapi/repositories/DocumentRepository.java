@@ -28,22 +28,22 @@ public interface DocumentRepository extends CrudRepository<DocumentRespone,Docum
     @Query(value = "SELECT * FROM V_SAVE_DOCUMENT_MAIN where SAVE_BY=? ORDER BY ID DESC", nativeQuery = true)
     List<DocumentRespone> findDocAllNyUserName(String saveBy);
 
-    @Query(value = "SELECT * FROM V_SAVE_DOCUMENT_COUNTER WHERE DOC_DATE >= :startDate AND DOC_DATE <= :endDate ORDER BY ID DESC", nativeQuery = true)
+    @Query(value = "SELECT * FROM V_SAVE_DOCUMENT_MAIN WHERE DOC_DATE >= :startDate AND DOC_DATE <= :endDate ORDER BY ID DESC", nativeQuery = true)
     List<DocumentRespone> findHomeDocAllByDateToEndDate(@Param("startDate") String startDate, @Param("endDate") String endDate);
 
-    @Query(value = "SELECT * FROM V_SAVE_DOCUMENT_COUNTER WHERE DOC_DATE >= :startDate AND DOC_DATE <= :endDate and DOCTYPENO like %:inFoBox% ORDER BY ID DESC", nativeQuery = true)
+    @Query(value = "SELECT * FROM V_SAVE_DOCUMENT_MAIN WHERE DOC_DATE >= :startDate AND DOC_DATE <= :endDate and DOCTYPENO like %:inFoBox% ORDER BY ID DESC", nativeQuery = true)
     List<DocumentRespone> findHomeDocAllByDateToEndDateText(@Param("startDate") String startDate, @Param("endDate") String endDate, @Param("inFoBox") String inFoBox);
 
-    @Query(value = "SELECT * FROM V_SAVE_DOCUMENT_COUNTER WHERE  DOCNAME like %:inFoBox% OR DOC_NO like %:inFoBox% ORDER BY ID DESC", nativeQuery = true)
+    @Query(value = "SELECT * FROM V_SAVE_DOCUMENT_MAIN WHERE  DOCNAME like %:inFoBox% OR DOC_NO like %:inFoBox% ORDER BY ID DESC", nativeQuery = true)
     List<DocumentRespone> findHomeDocAllByText(@Param("inFoBox") String inFoBox);
 
     @Query(value = "SELECT * FROM V_SAVE_DOCUMENT_COUNTER ORDER BY ID DESC", nativeQuery = true)
     List<DocumentRespone> findHomeDocAll();
 
-    @Query(value = "SELECT * FROM V_SAVE_DOCUMENT_COUNTER where TYPE=? and RELATION_UNIT=? ORDER BY ID DESC", nativeQuery = true)
+    @Query(value = "SELECT * FROM V_SAVE_DOCUMENT_COUNTER where TYPE=? and RELATION_UNITS=? ORDER BY ID DESC", nativeQuery = true)
     List<DocumentRespone> findDocAllDocumentListBySecCodeMenuByTypeCode(String code, String type);
 
-    @Query(value = "SELECT * FROM V_SAVE_DOCUMENT_COUNTER where RELATION_UNIT=? ORDER BY ID DESC", nativeQuery = true)
+    @Query(value = "SELECT * FROM V_SAVE_DOCUMENT_COUNTER where RELATION_UNITS=? ORDER BY ID DESC", nativeQuery = true)
     List<DocumentRespone> findDocAllDocumentListBySecCodeMenuByCode(String code);
 
 

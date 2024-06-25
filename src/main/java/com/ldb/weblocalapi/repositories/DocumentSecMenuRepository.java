@@ -10,29 +10,17 @@ import java.util.List;
 public interface DocumentSecMenuRepository  extends CrudRepository<DocumentSecMenuRespone,DocumentSecMenuRespone> {
 
 
-    @Query(value = "SELECT * FROM V_SECTION_MENU_COUNTER where  RELATION_UNIT=:code and DOC_DATE >= :startDate AND DOC_DATE <= :endDate ORDER BY ID DESC" , nativeQuery = true)
-    List<DocumentSecMenuRespone> findDocAllDocumentListBySecCodeMenuByDateTotDate(@Param("startDate") String startDate, @Param("endDate") String endDate,
-                                                                                  @Param("code") String code);
+    @Query(value = "SELECT * FROM V_SECTION_MENU_COUNTER where  RELATION_UNIT=:code ORDER BY ID DESC" , nativeQuery = true)
+    List<DocumentSecMenuRespone> finSecMenuAll(
+            @Param("code") String code);
 
-    @Query(value = "SELECT * FROM V_SECTION_MENU_COUNTER where TYPE= :type  and DOC_DATE >= :startDate AND DOC_DATE <= :endDate ORDER BY ID DESC" , nativeQuery = true)
-    List<DocumentSecMenuRespone> findDocAllDocumentListBySecCodeMenuByDateTotDateByTypeDocType(@Param("type") String type,@Param("startDate") String startDate,
-                                                                                               @Param("endDate") String endDate);
-
-    @Query(value = "SELECT * FROM V_SECTION_MENU_COUNTER where   RELATION_UNIT=:code and DOCTYPENO= :docType and " +
-            "and DOC_DATE >= :startDate AND DOC_DATE <= :endDate ORDER BY ID DESC" , nativeQuery = true)
-    List<DocumentSecMenuRespone> findDocAllDocumentListBySecCodeMenuByDateTotDateByDocTypeAll(
-            @Param("code") String code,
-            @Param("docType") String docType,
-            @Param("startDate") String startDate,
-            @Param("endDate") String endDate);
-
-
-    @Query(value = "SELECT * FROM V_SECTION_MENU_COUNTER where TYPE= :type and RELATION_UNIT=:code and DOCTYPENO= :docType and DOC_DATE >= :startDate AND DOC_DATE <= :endDate ORDER BY ID DESC" , nativeQuery = true)
-    List<DocumentSecMenuRespone> findDocAllDocumentListBySecCodeMenuByDateTotDateAndDocType(
+    @Query(value = "SELECT * FROM V_SECTION_MENU_COUNTER where TYPE =:type and RELATION_UNIT=:code ORDER BY ID DESC" , nativeQuery = true)
+    List<DocumentSecMenuRespone> finSecMenuAllWithType(
             @Param("type") String type,
-            @Param("code") String code,
-            @Param("docType") String docType,
-            @Param("startDate") String startDate,
-            @Param("endDate") String endDate);
+            @Param("code") String code);
+
+//    @Query(value = "SELECT * FROM V_SECTION_MENU_COUNTER WHERE TYPE = ?1 AND RELATION_UNIT = ?2 ORDER BY ID DESC", nativeQuery = true)
+//    List<DocumentSecMenuRespone> findByTypeAndRelationUnit(String type, String code);
+
 
 }
