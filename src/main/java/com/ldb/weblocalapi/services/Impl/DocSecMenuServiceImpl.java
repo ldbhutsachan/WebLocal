@@ -27,12 +27,22 @@ public class DocSecMenuServiceImpl implements DocSecMenuServiceService {
     DocumentRepository documentRepository;
 
     @Override
-    public List<DocumentSecMenu> findDocAllDocumentListByBandAll(String secCode) {
+    public List<DocumentSecMenu> findDocAllDocumentListByBandAll(String secCode,BranchReq req) {
+        String condiction = "";
+        if(req.getType().equals("IN")){
+            condiction = " AND TYPE ='' ";
+        }
+        else if(req.getType().equals("OUT")){
+            condiction = " AND TYPE ='' ";
+        }
+        else {
+            condiction = "";
+        }
         StringBuilder sb = new StringBuilder();
-
         sb.append("SELECT");
         sb.append(" TYPE, ID,RELATION_UNIT, DOCNAME, DOC_NO, DOCTYPENO, DOC_TYPE_NAME, DOC_DATE, SAVE_DATE, NAME, SAVE_BY, READ_BY, DOC_PATH, DOC_STATUS,  (SELECT COUNT(*) FROM read_doc b where b.DOC_KEY_ID=id ) as total ");
-        sb.append(" from  V_BAND_MENU_COUNTER where 1=1 and RELATION_UNIT='"+secCode+"'");
+        sb.append(" from  V_BAND_MENU_COUNTER where 1=1 and RELATION_UNIT='"+secCode+"' "+condiction+" ");
+
         String sql = sb.toString();
          log.info("SQL : " + sql);
         return this.jdbcTemplate.query(sql, new RowMapper<DocumentSecMenu>() {

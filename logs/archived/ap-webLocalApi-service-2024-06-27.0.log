@@ -1,0 +1,397 @@
+2024-06-27 09:40:40.437  INFO [ap-webLocalApi-service,,,] 5104 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-27 09:40:40.494  INFO [ap-webLocalApi-service,,,] 5104 --- [http-nio-23532-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 56 ms
+2024-06-27 09:40:40.538 DEBUG [ap-webLocalApi-service,bed79e05fb2fa871,bed79e05fb2fa871,true] 5104 --- [http-nio-23532-exec-1] c.l.w.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /weblocalapi-prod/api/v1/custom/authenticate/login
+2024-06-27 09:40:40.685  INFO [ap-webLocalApi-service,bed79e05fb2fa871,bed79e05fb2fa871,true] 5104 --- [http-nio-23532-exec-1] c.l.w.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2024-06-27 09:40:40.687  INFO [ap-webLocalApi-service,bed79e05fb2fa871,bed79e05fb2fa871,true] 5104 --- [http-nio-23532-exec-1] c.l.w.controller.LoginController         : Client IP Address: 10.0.10.49
+2024-06-27 09:40:40.789 DEBUG [ap-webLocalApi-service,bed79e05fb2fa871,bed79e05fb2fa871,true] 5104 --- [http-nio-23532-exec-1] c.l.w.S.s.CustomUserDetailsService       : Query returned no results for user 'LDB2249import 'package:flutter/material.dart';void main() {  runApp(MyApp());}class MyApp extends StatelessWidget {  @override  Widget build(BuildContext context) {    return MaterialApp(      title: 'Best Selling UI Kit',      theme: ThemeData(        primarySwatch: Colors.blue,      ),      home: BestSellingScreen(),    );  }}class BestSellingScreen extends StatelessWidget {  final List<Product> bestSellingProducts = [    Product(      name: 'Wireless Headphones',      description: 'High quality wireless headphones with noise cancellation.',      price: 59.99,      rating: 4.5,      imageUrl: 'https://via.placeholder.com/150',    ),    Product(      name: 'Smart Watch',      description: 'Stylish smart watch with fitness tracking features.',      price: 99.99,      rating: 4.7,      imageUrl: 'https://via.placeholder.com/150',    ),    Product(      name: 'Bluetooth Speaker',      description: 'Portable Bluetooth speaker with excellent sound quality.',      price: 29.99,      rating: 4.3,      imageUrl: 'https://via.placeholder.com/150',    ),    // Add more products here  ];  @override  Widget build(BuildContext context) {    return Scaffold(      appBar: AppBar(        title: Text('Best Selling Products'),      ),      body: ListView.builder(        itemCount: bestSellingProducts.length,        itemBuilder: (context, index) {          return ProductWidget(product: bestSellingProducts[index]);        },      ),    );  }}class Product {  final String name;  final String description;  final double price;  final double rating;  final String imageUrl;  Product({    required this.name,    required this.description,    required this.price,    required this.rating,    required this.imageUrl,  });}class ProductWidget extends StatelessWidget {  final Product product;  ProductWidget({required this.product});  @override  Widget build(BuildContext context) {    return Card(      margin: EdgeInsets.all(8.0),      child: Padding(        padding: const EdgeInsets.all(16.0),        child: Row(          children: <Widget>[            Image.network(              product.imageUrl,              width: 100,              height: 100,              fit: BoxFit.cover,            ),            SizedBox(width: 16.0),            Expanded(              child: Column(                crossAxisAlignment: CrossAxisAlignment.start,                children: <Widget>[                  Text(                    product.name,                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),                  ),                  SizedBox(height: 8.0),                  Text(                    product.description,                    style: TextStyle(fontSize: 14, color: Colors.grey[600]),                  ),                  SizedBox(height: 8.0),                  Row(                    mainAxisAlignment: MainAxisAlignment.spaceBetween,                    children: <Widget>[                      Text(                        '\$${product.price.toStringAsFixed(2)}',                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),                      ),                      Row(                        children: List.generate(5, (index) {                          return Icon(                            index < product.rating                                ? Icons.star                                : Icons.star_border,                            color: Colors.amber,                            size: 20,                          );                        }),                      ),                    ],                  ),                ],              ),            ),          ],        ),      ),    );  }}'
+2024-06-27 09:40:40.852 DEBUG [ap-webLocalApi-service,bed79e05fb2fa871,bed79e05fb2fa871,true] 5104 --- [http-nio-23532-exec-1] c.l.w.h.LimitLoginAuthenticationProvider : User 'LDB2249import 'package:flutter/material.dart';void main() {  runApp(MyApp());}class MyApp extends StatelessWidget {  @override  Widget build(BuildContext context) {    return MaterialApp(      title: 'Best Selling UI Kit',      theme: ThemeData(        primarySwatch: Colors.blue,      ),      home: BestSellingScreen(),    );  }}class BestSellingScreen extends StatelessWidget {  final List<Product> bestSellingProducts = [    Product(      name: 'Wireless Headphones',      description: 'High quality wireless headphones with noise cancellation.',      price: 59.99,      rating: 4.5,      imageUrl: 'https://via.placeholder.com/150',    ),    Product(      name: 'Smart Watch',      description: 'Stylish smart watch with fitness tracking features.',      price: 99.99,      rating: 4.7,      imageUrl: 'https://via.placeholder.com/150',    ),    Product(      name: 'Bluetooth Speaker',      description: 'Portable Bluetooth speaker with excellent sound quality.',      price: 29.99,      rating: 4.3,      imageUrl: 'https://via.placeholder.com/150',    ),    // Add more products here  ];  @override  Widget build(BuildContext context) {    return Scaffold(      appBar: AppBar(        title: Text('Best Selling Products'),      ),      body: ListView.builder(        itemCount: bestSellingProducts.length,        itemBuilder: (context, index) {          return ProductWidget(product: bestSellingProducts[index]);        },      ),    );  }}class Product {  final String name;  final String description;  final double price;  final double rating;  final String imageUrl;  Product({    required this.name,    required this.description,    required this.price,    required this.rating,    required this.imageUrl,  });}class ProductWidget extends StatelessWidget {  final Product product;  ProductWidget({required this.product});  @override  Widget build(BuildContext context) {    return Card(      margin: EdgeInsets.all(8.0),      child: Padding(        padding: const EdgeInsets.all(16.0),        child: Row(          children: <Widget>[            Image.network(              product.imageUrl,              width: 100,              height: 100,              fit: BoxFit.cover,            ),            SizedBox(width: 16.0),            Expanded(              child: Column(                crossAxisAlignment: CrossAxisAlignment.start,                children: <Widget>[                  Text(                    product.name,                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),                  ),                  SizedBox(height: 8.0),                  Text(                    product.description,                    style: TextStyle(fontSize: 14, color: Colors.grey[600]),                  ),                  SizedBox(height: 8.0),                  Row(                    mainAxisAlignment: MainAxisAlignment.spaceBetween,                    children: <Widget>[                      Text(                        '\$${product.price.toStringAsFixed(2)}',                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),                      ),                      Row(                        children: List.generate(5, (index) {                          return Icon(                            index < product.rating                                ? Icons.star                                : Icons.star_border,                            color: Colors.amber,                            size: 20,                          );                        }),                      ),                    ],                  ),                ],              ),            ),          ],        ),      ),    );  }}' not found
+2024-06-27 09:40:40.863  INFO [ap-webLocalApi-service,bed79e05fb2fa871,bed79e05fb2fa871,true] 5104 --- [http-nio-23532-exec-1] c.l.w.h.LimitLoginAuthenticationProvider : invalid login = Bad credentials
+2024-06-27 09:40:40.891  INFO [ap-webLocalApi-service,bed79e05fb2fa871,bed79e05fb2fa871,true] 5104 --- [http-nio-23532-exec-1] c.l.w.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "ຢຸດເຊີ ຫລື ລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ",
+  "dataResponse" : {
+    "expireDate" : 0,
+    "enabled" : false,
+    "menu" : [ ]
+  }
+}
+2024-06-27 09:40:42.461 DEBUG [ap-webLocalApi-service,f1817daba71adcfe,f1817daba71adcfe,true] 5104 --- [http-nio-23532-exec-3] c.l.w.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /weblocalapi-prod/api/v1/custom/authenticate/login
+2024-06-27 09:40:42.462  INFO [ap-webLocalApi-service,f1817daba71adcfe,f1817daba71adcfe,true] 5104 --- [http-nio-23532-exec-3] c.l.w.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2024-06-27 09:40:42.462  INFO [ap-webLocalApi-service,f1817daba71adcfe,f1817daba71adcfe,true] 5104 --- [http-nio-23532-exec-3] c.l.w.controller.LoginController         : Client IP Address: 10.0.10.49
+2024-06-27 09:40:42.465 DEBUG [ap-webLocalApi-service,f1817daba71adcfe,f1817daba71adcfe,true] 5104 --- [http-nio-23532-exec-3] c.l.w.S.s.CustomUserDetailsService       : Query returned no results for user 'LDB2249import 'package:flutter/material.dart';void main() {  runApp(MyApp());}class MyApp extends StatelessWidget {  @override  Widget build(BuildContext context) {    return MaterialApp(      title: 'Best Selling UI Kit',      theme: ThemeData(        primarySwatch: Colors.blue,      ),      home: BestSellingScreen(),    );  }}class BestSellingScreen extends StatelessWidget {  final List<Product> bestSellingProducts = [    Product(      name: 'Wireless Headphones',      description: 'High quality wireless headphones with noise cancellation.',      price: 59.99,      rating: 4.5,      imageUrl: 'https://via.placeholder.com/150',    ),    Product(      name: 'Smart Watch',      description: 'Stylish smart watch with fitness tracking features.',      price: 99.99,      rating: 4.7,      imageUrl: 'https://via.placeholder.com/150',    ),    Product(      name: 'Bluetooth Speaker',      description: 'Portable Bluetooth speaker with excellent sound quality.',      price: 29.99,      rating: 4.3,      imageUrl: 'https://via.placeholder.com/150',    ),    // Add more products here  ];  @override  Widget build(BuildContext context) {    return Scaffold(      appBar: AppBar(        title: Text('Best Selling Products'),      ),      body: ListView.builder(        itemCount: bestSellingProducts.length,        itemBuilder: (context, index) {          return ProductWidget(product: bestSellingProducts[index]);        },      ),    );  }}class Product {  final String name;  final String description;  final double price;  final double rating;  final String imageUrl;  Product({    required this.name,    required this.description,    required this.price,    required this.rating,    required this.imageUrl,  });}class ProductWidget extends StatelessWidget {  final Product product;  ProductWidget({required this.product});  @override  Widget build(BuildContext context) {    return Card(      margin: EdgeInsets.all(8.0),      child: Padding(        padding: const EdgeInsets.all(16.0),        child: Row(          children: <Widget>[            Image.network(              product.imageUrl,              width: 100,              height: 100,              fit: BoxFit.cover,            ),            SizedBox(width: 16.0),            Expanded(              child: Column(                crossAxisAlignment: CrossAxisAlignment.start,                children: <Widget>[                  Text(                    product.name,                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),                  ),                  SizedBox(height: 8.0),                  Text(                    product.description,                    style: TextStyle(fontSize: 14, color: Colors.grey[600]),                  ),                  SizedBox(height: 8.0),                  Row(                    mainAxisAlignment: MainAxisAlignment.spaceBetween,                    children: <Widget>[                      Text(                        '\$${product.price.toStringAsFixed(2)}',                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),                      ),                      Row(                        children: List.generate(5, (index) {                          return Icon(                            index < product.rating                                ? Icons.star                                : Icons.star_border,                            color: Colors.amber,                            size: 20,                          );                        }),                      ),                    ],                  ),                ],              ),            ),          ],        ),      ),    );  }}'
+2024-06-27 09:40:42.527 DEBUG [ap-webLocalApi-service,f1817daba71adcfe,f1817daba71adcfe,true] 5104 --- [http-nio-23532-exec-3] c.l.w.h.LimitLoginAuthenticationProvider : User 'LDB2249import 'package:flutter/material.dart';void main() {  runApp(MyApp());}class MyApp extends StatelessWidget {  @override  Widget build(BuildContext context) {    return MaterialApp(      title: 'Best Selling UI Kit',      theme: ThemeData(        primarySwatch: Colors.blue,      ),      home: BestSellingScreen(),    );  }}class BestSellingScreen extends StatelessWidget {  final List<Product> bestSellingProducts = [    Product(      name: 'Wireless Headphones',      description: 'High quality wireless headphones with noise cancellation.',      price: 59.99,      rating: 4.5,      imageUrl: 'https://via.placeholder.com/150',    ),    Product(      name: 'Smart Watch',      description: 'Stylish smart watch with fitness tracking features.',      price: 99.99,      rating: 4.7,      imageUrl: 'https://via.placeholder.com/150',    ),    Product(      name: 'Bluetooth Speaker',      description: 'Portable Bluetooth speaker with excellent sound quality.',      price: 29.99,      rating: 4.3,      imageUrl: 'https://via.placeholder.com/150',    ),    // Add more products here  ];  @override  Widget build(BuildContext context) {    return Scaffold(      appBar: AppBar(        title: Text('Best Selling Products'),      ),      body: ListView.builder(        itemCount: bestSellingProducts.length,        itemBuilder: (context, index) {          return ProductWidget(product: bestSellingProducts[index]);        },      ),    );  }}class Product {  final String name;  final String description;  final double price;  final double rating;  final String imageUrl;  Product({    required this.name,    required this.description,    required this.price,    required this.rating,    required this.imageUrl,  });}class ProductWidget extends StatelessWidget {  final Product product;  ProductWidget({required this.product});  @override  Widget build(BuildContext context) {    return Card(      margin: EdgeInsets.all(8.0),      child: Padding(        padding: const EdgeInsets.all(16.0),        child: Row(          children: <Widget>[            Image.network(              product.imageUrl,              width: 100,              height: 100,              fit: BoxFit.cover,            ),            SizedBox(width: 16.0),            Expanded(              child: Column(                crossAxisAlignment: CrossAxisAlignment.start,                children: <Widget>[                  Text(                    product.name,                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),                  ),                  SizedBox(height: 8.0),                  Text(                    product.description,                    style: TextStyle(fontSize: 14, color: Colors.grey[600]),                  ),                  SizedBox(height: 8.0),                  Row(                    mainAxisAlignment: MainAxisAlignment.spaceBetween,                    children: <Widget>[                      Text(                        '\$${product.price.toStringAsFixed(2)}',                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),                      ),                      Row(                        children: List.generate(5, (index) {                          return Icon(                            index < product.rating                                ? Icons.star                                : Icons.star_border,                            color: Colors.amber,                            size: 20,                          );                        }),                      ),                    ],                  ),                ],              ),            ),          ],        ),      ),    );  }}' not found
+2024-06-27 09:40:42.531  INFO [ap-webLocalApi-service,f1817daba71adcfe,f1817daba71adcfe,true] 5104 --- [http-nio-23532-exec-3] c.l.w.h.LimitLoginAuthenticationProvider : invalid login = Bad credentials
+2024-06-27 09:40:42.532  INFO [ap-webLocalApi-service,f1817daba71adcfe,f1817daba71adcfe,true] 5104 --- [http-nio-23532-exec-3] c.l.w.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "05",
+  "message" : "ຢຸດເຊີ ຫລື ລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ",
+  "dataResponse" : {
+    "expireDate" : 0,
+    "enabled" : false,
+    "menu" : [ ]
+  }
+}
+2024-06-27 09:41:46.788 DEBUG [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] c.l.w.S.jwt.JwtAuthenticationFilter      : no valid JWT token found, uri: /weblocalapi-prod/api/v1/custom/authenticate/login
+2024-06-27 09:41:46.790  INFO [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] c.l.w.controller.LoginController         : ++ Mobile Login Request Token ..............................
+2024-06-27 09:41:46.790  INFO [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] c.l.w.controller.LoginController         : Client IP Address: 10.0.10.49
+2024-06-27 09:41:46.861 DEBUG [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] org.hibernate.SQL                        : 
+    select
+        users0_.user_id as user_id1_15_,
+        users0_.created_at as created_at2_15_,
+        users0_.updated_at as updated_at3_15_,
+        users0_.account_non_expired as account_non_expire4_15_,
+        users0_.account_non_locked as account_non_locked5_15_,
+        users0_.credentials_non_expired as credentials_non_ex6_15_,
+        users0_.enabled as enabled7_15_,
+        users0_.imagepath as imagepath8_15_,
+        users0_.password as password9_15_,
+        users0_.branch_id as branch_id11_15_,
+        users0_.user_name as user_name10_15_ 
+    from
+        user_login users0_ 
+    where
+        users0_.user_name=?
+2024-06-27 09:41:46.863 TRACE [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [LDB2249]
+2024-06-27 09:41:46.885 DEBUG [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] org.hibernate.SQL                        : 
+    select
+        section0_.sec_id as sec_id1_14_0_,
+        section0_.created_at as created_at3_14_0_,
+        section0_.updated_at as updated_at4_14_0_,
+        section0_.code as code5_14_0_,
+        section0_.enable as enable6_14_0_,
+        section0_.province_code as province_code7_14_0_,
+        section0_.province_name as province_name8_14_0_,
+        section0_.name as name2_14_0_ 
+    from
+        section section0_ 
+    where
+        section0_.sec_id=?
+2024-06-27 09:41:46.885 TRACE [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [HO1001]
+2024-06-27 09:41:46.893 DEBUG [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] org.hibernate.SQL                        : 
+    select
+        roles0_.user_id as user_id1_17_0_,
+        roles0_.role_id as role_id2_17_0_,
+        roles1_.role_id as role_id1_13_1_,
+        roles1_.created_at as created_at2_13_1_,
+        roles1_.created_by as created_by3_13_1_,
+        roles1_.modified_at as modified_at4_13_1_,
+        roles1_.modified_by as modified_by5_13_1_,
+        roles1_.role_display as role_display6_13_1_,
+        roles1_.role_name as role_name7_13_1_ 
+    from
+        user_role roles0_ 
+    inner join
+        role roles1_ 
+            on roles0_.role_id=roles1_.role_id 
+    where
+        roles0_.user_id=?
+2024-06-27 09:41:46.894 TRACE [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2024-06-27 09:41:47.155 DEBUG [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] org.hibernate.SQL                        : 
+    SELECT
+        A.ID,
+        A.MENU_ID,
+        A.USER_ID,
+        C.USER_NAME,
+        MENU_PATH,
+        ICON_MENU,
+        MENU_LO,
+        STATUS 
+    FROM
+        MAP_USER_MENU A 
+    INNER JOIN
+        MENU B 
+            ON A.MENU_ID=B.MENU_ID     
+    INNER JOIN
+        USER_LOGIN C 
+            ON A.USER_ID=C.USER_ID 
+    WHERE
+        C.USER_NAME = ? 
+    order by
+        MENU_ID ASC
+2024-06-27 09:41:47.155 TRACE [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [LDB2249]
+2024-06-27 09:41:47.162  INFO [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] c.l.w.controller.LoginController         : show log[1, 2, 3, 4, 5, 6, 7]
+2024-06-27 09:41:47.168 DEBUG [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] org.hibernate.SQL                        : 
+    select
+        childmenu0_.menu_id as menu_id5_2_0_,
+        childmenu0_.child_menu_id as child_menu_id1_2_0_,
+        childmenu0_.child_menu_id as child_menu_id1_2_1_,
+        childmenu0_.child_menu_lo as child_menu_lo2_2_1_,
+        childmenu0_.code as code3_2_1_,
+        childmenu0_.type_level as type_level4_2_1_,
+        childmenu0_.menu_id as menu_id5_2_1_,
+        childmenu0_.status as status6_2_1_,
+        childmenu0_.child_menu_path as child_menu_path7_2_1_ 
+    from
+        child_menu childmenu0_ 
+    where
+        childmenu0_.menu_id=?
+2024-06-27 09:41:47.168 TRACE [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2024-06-27 09:41:47.171 DEBUG [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] org.hibernate.SQL                        : 
+    select
+        childmenu0_.menu_id as menu_id5_2_0_,
+        childmenu0_.child_menu_id as child_menu_id1_2_0_,
+        childmenu0_.child_menu_id as child_menu_id1_2_1_,
+        childmenu0_.child_menu_lo as child_menu_lo2_2_1_,
+        childmenu0_.code as code3_2_1_,
+        childmenu0_.type_level as type_level4_2_1_,
+        childmenu0_.menu_id as menu_id5_2_1_,
+        childmenu0_.status as status6_2_1_,
+        childmenu0_.child_menu_path as child_menu_path7_2_1_ 
+    from
+        child_menu childmenu0_ 
+    where
+        childmenu0_.menu_id=?
+2024-06-27 09:41:47.171 TRACE [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [2]
+2024-06-27 09:41:47.172 DEBUG [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] org.hibernate.SQL                        : 
+    select
+        childmenu0_.menu_id as menu_id5_2_0_,
+        childmenu0_.child_menu_id as child_menu_id1_2_0_,
+        childmenu0_.child_menu_id as child_menu_id1_2_1_,
+        childmenu0_.child_menu_lo as child_menu_lo2_2_1_,
+        childmenu0_.code as code3_2_1_,
+        childmenu0_.type_level as type_level4_2_1_,
+        childmenu0_.menu_id as menu_id5_2_1_,
+        childmenu0_.status as status6_2_1_,
+        childmenu0_.child_menu_path as child_menu_path7_2_1_ 
+    from
+        child_menu childmenu0_ 
+    where
+        childmenu0_.menu_id=?
+2024-06-27 09:41:47.172 TRACE [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [3]
+2024-06-27 09:41:47.177 DEBUG [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] org.hibernate.SQL                        : 
+    select
+        childmenu0_.menu_id as menu_id5_2_0_,
+        childmenu0_.child_menu_id as child_menu_id1_2_0_,
+        childmenu0_.child_menu_id as child_menu_id1_2_1_,
+        childmenu0_.child_menu_lo as child_menu_lo2_2_1_,
+        childmenu0_.code as code3_2_1_,
+        childmenu0_.type_level as type_level4_2_1_,
+        childmenu0_.menu_id as menu_id5_2_1_,
+        childmenu0_.status as status6_2_1_,
+        childmenu0_.child_menu_path as child_menu_path7_2_1_ 
+    from
+        child_menu childmenu0_ 
+    where
+        childmenu0_.menu_id=?
+2024-06-27 09:41:47.177 TRACE [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [4]
+2024-06-27 09:41:47.180 DEBUG [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] org.hibernate.SQL                        : 
+    select
+        childmenu0_.menu_id as menu_id5_2_0_,
+        childmenu0_.child_menu_id as child_menu_id1_2_0_,
+        childmenu0_.child_menu_id as child_menu_id1_2_1_,
+        childmenu0_.child_menu_lo as child_menu_lo2_2_1_,
+        childmenu0_.code as code3_2_1_,
+        childmenu0_.type_level as type_level4_2_1_,
+        childmenu0_.menu_id as menu_id5_2_1_,
+        childmenu0_.status as status6_2_1_,
+        childmenu0_.child_menu_path as child_menu_path7_2_1_ 
+    from
+        child_menu childmenu0_ 
+    where
+        childmenu0_.menu_id=?
+2024-06-27 09:41:47.180 TRACE [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [5]
+2024-06-27 09:41:47.184 DEBUG [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] org.hibernate.SQL                        : 
+    select
+        childmenu0_.menu_id as menu_id5_2_0_,
+        childmenu0_.child_menu_id as child_menu_id1_2_0_,
+        childmenu0_.child_menu_id as child_menu_id1_2_1_,
+        childmenu0_.child_menu_lo as child_menu_lo2_2_1_,
+        childmenu0_.code as code3_2_1_,
+        childmenu0_.type_level as type_level4_2_1_,
+        childmenu0_.menu_id as menu_id5_2_1_,
+        childmenu0_.status as status6_2_1_,
+        childmenu0_.child_menu_path as child_menu_path7_2_1_ 
+    from
+        child_menu childmenu0_ 
+    where
+        childmenu0_.menu_id=?
+2024-06-27 09:41:47.185 TRACE [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [6]
+2024-06-27 09:41:47.187 DEBUG [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] org.hibernate.SQL                        : 
+    select
+        childmenu0_.menu_id as menu_id5_2_0_,
+        childmenu0_.child_menu_id as child_menu_id1_2_0_,
+        childmenu0_.child_menu_id as child_menu_id1_2_1_,
+        childmenu0_.child_menu_lo as child_menu_lo2_2_1_,
+        childmenu0_.code as code3_2_1_,
+        childmenu0_.type_level as type_level4_2_1_,
+        childmenu0_.menu_id as menu_id5_2_1_,
+        childmenu0_.status as status6_2_1_,
+        childmenu0_.child_menu_path as child_menu_path7_2_1_ 
+    from
+        child_menu childmenu0_ 
+    where
+        childmenu0_.menu_id=?
+2024-06-27 09:41:47.187 TRACE [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [7]
+2024-06-27 09:41:47.190  INFO [ap-webLocalApi-service,83995eacd4e6f471,83995eacd4e6f471,true] 5104 --- [http-nio-23532-exec-5] c.l.w.exceptions.ApiExceptionHandler     : Response body = {
+  "status" : "00",
+  "message" : "success",
+  "dataResponse" : {
+    "accessToken" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJMREIyMjQ5IiwiaWF0IjoxNzE5NDU2MTA2LCJleHAiOjE3MTk1NDI1MDZ9.A1DCw3bbqjjYIAjffi6TeFL8SO93g1cYHqZiceid0N2kW9Msh4tT9LLQJjRUp-lsqa6eczGkPAqJ_Ni9n7hZWA",
+    "tokenType" : "Bearer",
+    "expireDate" : 86400,
+    "username" : "LDB2249",
+    "imagePath" : "https://dehome.ldblao.la/mobile/QR/IMGMOBILE/iadoc/uploads/6f52d096-e5c9-478d-a5c7-ed1297087301-6f52d096-e5c9-478d-a5c7-ed1297087301.jpg",
+    "enabled" : true,
+    "userInfo" : {
+      "createdAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "modifiedAt" : {
+        "nano" : 0,
+        "epochSecond" : 1674281281
+      },
+      "secId" : "HO1001",
+      "secName" : "ຝ່າຍເຕັກໂນໂລຊີ ແລະ ຂໍ້ມູນຂ່າວສານ",
+      "code" : "1001",
+      "enable" : true,
+      "provinceCode" : "201",
+      "provinceName" : "ນະຄອນລວງວຽງຈັນ"
+    },
+    "menu" : [ {
+      "menuId" : 1,
+      "iconMenu" : "heroicons:home",
+      "menuLo" : "ໜ້າຫຼັກ",
+      "status" : "A",
+      "to" : "/home",
+      "childMenu" : [ ]
+    }, {
+      "menuId" : 2,
+      "iconMenu" : "tdesign:system-2",
+      "menuLo" : "ຂໍ້ມູນ Link ເຂົ້າລະບົບ",
+      "status" : "A",
+      "to" : "/links",
+      "childMenu" : [ ]
+    }, {
+      "menuId" : 3,
+      "iconMenu" : "fluent:document-add-48-regular",
+      "menuLo" : "ອັບໂຫຼດເອກະສານ",
+      "status" : "A",
+      "to" : "/upload-document",
+      "childMenu" : [ ]
+    }, {
+      "menuId" : 4,
+      "iconMenu" : "lucide:file-type-2",
+      "menuLo" : "ປະເພດເອກະສານ",
+      "status" : "A",
+      "to" : "/doc-catgory",
+      "childMenu" : [ ]
+    }, {
+      "menuId" : 5,
+      "iconMenu" : "fluent:document-data-link-32-regular",
+      "menuLo" : "ເອກະສານສຳນັກງານໃຫຍ່",
+      "status" : "A",
+      "to" : "no path",
+      "childMenu" : [ {
+        "childMenuId" : "22",
+        "childMenuLo" : "ຝ່າຍບຸກຄະລາກອນ",
+        "status" : "A",
+        "code" : "HO1002",
+        "menuId" : "5",
+        "levelType" : "department",
+        "to" : "/department"
+      }, {
+        "childMenuId" : "23",
+        "childMenuLo" : "ຝ່າຍກວດສອບ",
+        "status" : "A",
+        "code" : "HO1003",
+        "menuId" : "5",
+        "levelType" : "department",
+        "to" : "/department"
+      }, {
+        "childMenuId" : "24",
+        "childMenuLo" : "ຝ່າຍສິນເຊື່ອ",
+        "status" : "A",
+        "code" : "HO1004",
+        "menuId" : "5",
+        "levelType" : "department",
+        "to" : "/department"
+      }, {
+        "childMenuId" : "25",
+        "childMenuLo" : "ຝ່າຍບໍລິການ",
+        "status" : "A",
+        "code" : "HO1005",
+        "menuId" : "5",
+        "levelType" : "department",
+        "to" : "/department"
+      }, {
+        "childMenuId" : "26",
+        "childMenuLo" : "ຝ່າຍບໍລິຫານທືນ ເເລະ ບໍລິການຕ່າງປະເທດ",
+        "status" : "A",
+        "code" : "HO1006",
+        "menuId" : "5",
+        "levelType" : "department",
+        "to" : "/department"
+      }, {
+        "childMenuId" : "27",
+        "childMenuLo" : "ຝ່າຍບໍລິຫານ ເເລະ ການຕະຫຼາດ",
+        "status" : "A",
+        "code" : "HO1007",
+        "menuId" : "5",
+        "levelType" : "department",
+        "to" : "/department"
+      }, {
+        "childMenuId" : "28",
+        "childMenuLo" : "ຝ່າຍຕ້ານການຝອກເງິນ ເເລະ ບໍລິຫານຄວາມສ່ຽງ",
+        "status" : "A",
+        "code" : "HO1008",
+        "menuId" : "5",
+        "levelType" : "department",
+        "to" : "/department"
+      }, {
+        "childMenuId" : "29",
+        "childMenuLo" : "ຝ່າຍບັນຊີ ເເລະ ການເງິນ",
+        "status" : "A",
+        "code" : "HO1009",
+        "menuId" : "5",
+        "levelType" : "department",
+        "to" : "/department"
+      }, {
+        "childMenuId" : "81",
+        "childMenuLo" : "ຝ່າຍເຕັກໂນໂລຊີ ແລະ ຂໍ້ມູນຂ່າວສານ",
+        "status" : "A",
+        "code" : "HO1001",
+        "menuId" : "5",
+        "levelType" : "department",
+        "to" : "/department"
+      } ]
+    }, {
+      "menuId" : 6,
+      "iconMenu" : "fluent:document-bullet-list-cube-20-regular",
+      "menuLo" : "ເອກະສານສາຂາ",
+      "status" : "A",
+      "to" : "/branch",
+      "childMenu" : [ ]
+    }, {
+      "menuId" : 7,
+      "iconMenu" : "fluent:feed-48-regular",
+      "menuLo" : "ຄ່າທໍານຽມ ເເລະ ອັດຕາດອກເບ້ຍ",
+      "status" : "A",
+      "to" : "no path",
+      "childMenu" : [ {
+        "childMenuId" : "66",
+        "childMenuLo" : "ຄ່າທໍານຽມ",
+        "status" : "A",
+        "code" : "HO10011",
+        "menuId" : "7",
+        "levelType" : "FEE",
+        "to" : "/FEE"
+      }, {
+        "childMenuId" : "67",
+        "childMenuLo" : "ອັດຕາດອກເບ້ຍ",
+        "status" : "A",
+        "code" : "HO10012",
+        "menuId" : "7",
+        "levelType" : "ITR",
+        "to" : "/ITR"
+      }, {
+        "childMenuId" : "68",
+        "childMenuLo" : "ອັດຕາດອກເບ້ຍເງິນກຼ້",
+        "status" : "A",
+        "code" : "HO10013",
+        "menuId" : "7",
+        "levelType" : "ITR_CR",
+        "to" : "/ITR_CR"
+      } ]
+    } ]
+  }
+}

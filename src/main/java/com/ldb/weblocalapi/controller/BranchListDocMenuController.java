@@ -66,7 +66,7 @@ public class BranchListDocMenuController {
     public ResponseEntity<?> getSaveDocument(@ApiParam(
             name = "Body Request",
             value = "JSON body request to check information",
-            required = true) HttpServletRequest request) throws Exception {
+            required = true) HttpServletRequest request,@Valid @RequestBody BranchReq documentRespone) throws Exception {
         log.info("\t\t --> BranchListDocMenuController compare Request controller >>>>>>>>>>>>>>>>>>>>>>");
         String clientIpAddress = request.getRemoteAddr();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
@@ -77,7 +77,7 @@ public class BranchListDocMenuController {
         log.info("data body request: " + request.toString());
         List<Section> getSecInfo =sectionRepository.findByBranchIdFromUserName(auth.getName());
         String secCod = getSecInfo.get(0).getSecId();
-        DataResponse response = documentService.documentListByBandMenu(secCod);
+        DataResponse response = documentService.documentListByBandMenu(secCod,documentRespone);
         log.info("\t\t --> End BranchListDocMenuController compare Request controller <<<<<<<<<<<<<<<<<<<");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

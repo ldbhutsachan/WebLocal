@@ -14,7 +14,7 @@ import java.util.List;
 public interface DocumentService {
     public DataResponse documentList(DocumentRespone documentRespone, HttpServletRequest request);
 
-    public DataResponse documentListByBandMenu(String secCode);
+    public DataResponse documentListByBandMenu(String secCode,BranchReq req);
     //****
     public DataResponse documentListByBandMenuByDate(BranchReq documentRespone, HttpServletRequest request);
     public DataResponse SecCodeMenuByDate(DocReq documentRespone, HttpServletRequest request);

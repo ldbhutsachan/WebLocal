@@ -74,13 +74,16 @@ public class DocumentServiceImpl implements DocumentService {
     }
 
     @Override
-    public DataResponse documentListByBandMenu(String secCode) {
+    public DataResponse documentListByBandMenu(String secCode,BranchReq req) {
         DataResponse dataResponse = new DataResponse();
+        String type = req.getType();
+        String  branchCode= req.getBrandCode();
         try {
-            List<ReadDocument> rspListReadInfo = new ArrayList<>();
-            List<DocumentSecMenu> resListSecMenu =docSecMenuService.findDocAllDocumentListByBandAll(secCode);
+          //  List<ReadDocument> rspListReadInfo = new ArrayList<>();
+            List<DocumentSecMenu> resListSecMenu = docSecMenuService.findDocAllDocumentListByBandAll(secCode,req);
             List<ReadDocument> rspListReadDoc = readDocRepository.findDocumentViewAll();
             List<String> checkReadUser = resListSecMenu.stream().map(DocumentSecMenu::getKeyId).distinct().collect(Collectors.toList());
+
             DocumentSecMenu result = new DocumentSecMenu();
             result.setKeyId(resListSecMenu.get(0).getKeyId());
             result.setDocName(resListSecMenu.get(0).getDocName());
@@ -95,10 +98,16 @@ public class DocumentServiceImpl implements DocumentService {
             result.setDocStatus(resListSecMenu.get(0).getDocStatus());
             result.setTypeDocIn_Out(resListSecMenu.get(0).getTypeDocIn_Out());
             result.setAmtRead(resListSecMenu.get(0).getAmtRead());
-            rspListReadInfo = new ArrayList<>();
+// Initialize list for read information
+            List<ReadDocument> rspListReadInfo = new ArrayList<>();
+
+// Iterate over each refId in checkReadUser
             for (String refId : checkReadUser) {
-                for(ReadDocument rsp : rspListReadDoc){
-                    if(rsp.getDocId().equals(refId)) {
+                // Iterate over each rsp in rspListReadDoc
+                for (ReadDocument rsp : rspListReadDoc) {
+                    // Check if rsp's docId matches refId
+                    if (rsp.getDocId().equals(refId)) {
+                        // Create a new ReadDocument and populate it
                         ReadDocument rspGroupRead = new ReadDocument();
                         rspGroupRead.setUserId(rsp.getUserId());
                         rspGroupRead.setUserName(rsp.getUserName());
@@ -112,11 +121,15 @@ public class DocumentServiceImpl implements DocumentService {
                         rspGroupRead.setMobile(rsp.getMobile());
                         rspGroupRead.setMail(rsp.getMail());
                         rspGroupRead.setReadDate(rsp.getReadDate());
+                        // Add rspGroupRead to rspListReadInfo
                         rspListReadInfo.add(rspGroupRead);
                     }
-                    result.setReadByUserInfo(rspListReadInfo);
                 }
             }
+// Set the list of ReadDocument objects into result
+            result.setReadByUserInfo(rspListReadInfo);
+
+// Set result into dataResponse
             dataResponse.setDataResponse(result);
             if(dataResponse.getDataResponse() !=null){
                 dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
@@ -189,11 +202,11 @@ public class DocumentServiceImpl implements DocumentService {
                 dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
                 dataResponse.setMessage(Constant.RESPONSE_MESSAGE.SUCCESS_MSG);
             }else {
-                dataResponse.setStatus(Constant.RESPONSE_CODE.DATA_NOT_FOUND);
+                dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
                 dataResponse.setMessage(Constant.RESPONSE_MESSAGE.DATA_NOT_FOUND_MSG);
             }
         }catch (Exception e){
-            dataResponse.setStatus(Constant.RESPONSE_CODE.DATA_NOT_FOUND);
+            dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
             dataResponse.setMessage(Constant.RESPONSE_MESSAGE.DATA_NOT_FOUND_MSG);
             e.printStackTrace();
         }

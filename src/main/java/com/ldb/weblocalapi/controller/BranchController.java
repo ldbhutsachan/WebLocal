@@ -64,11 +64,51 @@ public class BranchController {
         try {
             log.info("++ Branch Login Request Token ..............................");
             log.info("Client IP Address: " + request.getRemoteAddr());
-         //   if(keyId.equals("0") || keyId == "0"){
                 dataResponse.setDataResponse(branchRepository.findDocTypeAll());
-//            }else {
-//                dataResponse.setDataResponse(branchRepository.findByDocTypeByKeyId(branch.getBranchCode()));
-//            }
+            if(dataResponse.getDataResponse() !=null){
+                dataResponse.setStatus("00");
+                dataResponse.setMessage("Success");
+            }else {
+                dataResponse.setStatus("05");
+                dataResponse.setMessage("Data Not Found");
+            }
+
+        }catch (Exception ex){
+            dataResponse.setStatus("05");
+            dataResponse.setMessage("ຂໍ້ມູນບໍ່ຖືກຕ້ອງ");
+        }
+        return ResponseEntity.ok(dataResponse);
+    }
+    //*************bandList
+    @ApiOperation(
+            value = "Branch in BranchController",
+            authorizations = {@Authorization(value = "apiKey")},
+            response = DocumentTypeController.class
+    )
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Success", response = DocumentTypeController.class),
+            @ApiResponse(code = 201, message = "Created", response = ExceptionResponse.class),
+            @ApiResponse(code = 400, message = "Bad Request", response = BadRequestException.class),
+            @ApiResponse(code = 401, message = "Unauthorized", response = UnAuthorizedException.class),
+            @ApiResponse(code = 403, message = "Forbidden", response = ForbiddenException.class),
+            @ApiResponse(code = 404, message = "Not Found", response = NotFoundException.class),
+            @ApiResponse(code = 500, message = "Internal Server Error", response = InternalServerError.class),
+            @ApiResponse(code = 503, message = "Service Unavailable", response = ServiceUnavailableException.class)
+    })
+    @RequestMapping(
+            value = APIMappingPaths.BRANCH.API_BRANCH_LIST,
+            produces = {
+                    MediaType.APPLICATION_JSON_VALUE
+            },
+            method = RequestMethod.POST
+    )
+    @ResponseBody
+    public ResponseEntity<?> getBandList( HttpServletRequest request) {
+        DataResponse dataResponse = new DataResponse();
+        try {
+            log.info("++ Branch Login Request Token ..............................");
+            log.info("Client IP Address: " + request.getRemoteAddr());
+            dataResponse.setDataResponse(branchRepository.findDocTypeAllOnlyBand());
             if(dataResponse.getDataResponse() !=null){
                 dataResponse.setStatus("00");
                 dataResponse.setMessage("Success");

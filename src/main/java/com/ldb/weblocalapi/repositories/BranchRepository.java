@@ -15,4 +15,7 @@ public interface BranchRepository extends CrudRepository<BranchRespone, BranchRe
 
     @Query(value = "SELECT * FROM BRANCH order by ID asc" , nativeQuery = true)
     List<BranchRespone> findDocTypeAll();
+
+    @Query(value = "SELECT * FROM BRANCH where BRANCH_CODE like '%LA%' and BRANCH_CODE !='LA0010001' order by ID asc" , nativeQuery = true)
+    List<BranchRespone> findDocTypeAllOnlyBand();
 }

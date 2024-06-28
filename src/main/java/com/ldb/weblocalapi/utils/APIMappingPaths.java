@@ -28,6 +28,7 @@ public class APIMappingPaths {
     }
     public static final class BRANCH{
         public static final String API_BRANCH = "/branch.service";
+        public static final String API_BRANCH_LIST = "/branchList.service";
     }
     public static final class DOCUMENT{
         public static final String API_DOCUMENT = "/getListDocument.service";
