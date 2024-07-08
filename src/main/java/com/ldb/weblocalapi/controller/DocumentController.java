@@ -7,6 +7,7 @@ import com.ldb.weblocalapi.entities.DocumentSharing;
 import com.ldb.weblocalapi.entities.Respone.DocumentRespone;
 import com.ldb.weblocalapi.entities.Respone.ReadDocument;
 import com.ldb.weblocalapi.entities.Respone.UploadByUser;
+import com.ldb.weblocalapi.entities.Section;
 import com.ldb.weblocalapi.exceptions.DetailMessage.ExceptionResponse;
 import com.ldb.weblocalapi.exceptions.Exception2.BadRequestException;
 import com.ldb.weblocalapi.exceptions.Exception2.ForbiddenException;
@@ -15,6 +16,7 @@ import com.ldb.weblocalapi.exceptions.ExceptionStatus.InternalServerError;
 import com.ldb.weblocalapi.exceptions.ExceptionStatus.UnAuthorizedException;
 import com.ldb.weblocalapi.messages.response.DataResponse;
 import com.ldb.weblocalapi.repositories.DocumentSharingRepository;
+import com.ldb.weblocalapi.repositories.SectionRepository;
 import com.ldb.weblocalapi.repositories.StoreDocumentRepository;
 import com.ldb.weblocalapi.services.DocumentService;
 import com.ldb.weblocalapi.utils.APIMappingPaths;
@@ -34,6 +36,9 @@ import javax.naming.ServiceUnavailableException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -53,6 +58,9 @@ public class DocumentController {
 DocumentSharingRepository documentSharingRepository;
 @Autowired
     MediaUploadService mediaUploadService;
+
+    @Autowired
+    SectionRepository secListRepository;
  //============================================================= document home ==================================================
     @ApiOperation(
             value = "Docuement in DocuementController",
@@ -261,6 +269,18 @@ DocumentSharingRepository documentSharingRepository;
            ,@RequestParam("popupStart") String popupStart
            ,@RequestParam("popupEnd") String popupEnd,
                                                    HttpServletRequest request) throws Exception {
+        String popupStart2 = "";
+        String popupEnd2="";
+       LocalDate currentDate = LocalDate.now();
+       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+       String formattedDateTime = currentDate.format(formatter);
+        if(popupStart.isEmpty() || popupEnd.isEmpty()){
+            popupStart2=formattedDateTime;
+            popupEnd2=formattedDateTime;
+        }else {
+            popupStart2=popupStart;
+            popupEnd2=popupEnd;
+        }
        log.info("\t\t --> DisplayLink Request controller >>>>>>>>>>>>>>>>>>>>>>");
        String clientIpAddress = request.getRemoteAddr();
        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
@@ -268,6 +288,8 @@ DocumentSharingRepository documentSharingRepository;
        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
        log.info("auth == " + auth.getName());
        log.info("auth username == " + auth.getPrincipal());
+       List<Section> getSecInfo =secListRepository.findByBranchIdFromUserName(auth.getName());
+       String secCod = getSecInfo.get(0).getSecId();
 
         DataResponse dataResponse = new DataResponse();
        String inputDate02 = docDate;
@@ -276,13 +298,13 @@ DocumentSharingRepository documentSharingRepository;
        SimpleDateFormat outputFormat = new SimpleDateFormat("dd-MMM-yy");
        String outputDate = outputFormat.format(date);
 
-       String poStart = popupStart;
+       String poStart = popupStart2;
        SimpleDateFormat inputFormatStart = new SimpleDateFormat("dd/MM/yyyy");
        Date dateStart = inputFormatStart.parse(poStart);
        SimpleDateFormat outputFormatStart = new SimpleDateFormat("dd-MMM-yy");
        String outputDateStart = outputFormatStart.format(dateStart);
 
-       String poEnd = popupEnd;
+       String poEnd = popupEnd2;
        SimpleDateFormat inputFormatEnd = new SimpleDateFormat("dd/MM/yyyy");
        Date dateEnd = inputFormatEnd.parse(poStart);
        SimpleDateFormat outputFormatEnd = new SimpleDateFormat("dd-MMM-yy");
@@ -312,7 +334,7 @@ DocumentSharingRepository documentSharingRepository;
            data.setDocPath("image.jpg");
        }else {
            Arrays.asList(files).stream().forEach(file -> {
-               fileNames.add(mediaUploadService.uploadMediaDocUpdate(file,data,originFile));
+               fileNames.add(mediaUploadService.uploadMedia(file));
            });
            log.info("Uploaded the files successfully: " + fileNames );
            fileName = StringUtils.join(fileNames, ',');
@@ -320,11 +342,18 @@ DocumentSharingRepository documentSharingRepository;
        }
        log.info("file path:"+fileName);
        dataResponse =  documentService.save(data);
-       documentService.saveSharingDocument(relationUnit,docNo);
-       if(!relationUnitSec.isEmpty()){
-           log.info("insert band small ================><====================");
-           documentService.saveSharingDocumentSec(relationUnitSec,docNo);
+       log.info("show:"+dataResponse);
+       if(dataResponse.getDataResponse() !=null){
+           documentService.saveSharingDocumentYou(secCod,docNo);
+           //====================save all info sharing ==============================
+           documentService.saveSharingDocument(relationUnit,docNo);
+           if(!relationUnitSec.isEmpty()){
+               log.info("insert band small ================><====================");
+               documentService.saveSharingDocumentSec(relationUnitSec,docNo);
+           }
        }
+       //====================save your info sharing==============================
+
        return new ResponseEntity<>(dataResponse , HttpStatus.OK);
    }
 

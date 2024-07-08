@@ -8,6 +8,7 @@ D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\messages\response\repo
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\Security\jwt\JwtTokenProvider.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\WebLocalApiApplication.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\messages\response\ProvinceReponse.java
+D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\repositories\PopupRepository.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\exceptions\Exception2\BadGatewayException.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\Security\service\CustomUserDetailsService.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\messages\response\reportSW\RespPrintBillHeader.java
@@ -19,10 +20,13 @@ D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\messages\response\repo
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\exceptions\ExceptionStatus\ForbiddenException.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\utils\FunctionlessWriteNumberToWord.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\repositories\ViewSaveByUserRepository.java
+D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\repositories\ReadDocumentRepository.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\repositories\SectionRepository.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\entities\Section.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\exceptions\ExceptionStatus\BadRequestException.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\entities\Respone\DocumentRespone.java
+D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\services\ReadDocService.java
+D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\services\Impl\CreateUserServiceImpl.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\repositories\DocTypeRepository.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\services\DocumentTypeService.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\controller\BranchController.java
@@ -31,7 +35,9 @@ D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\messages\response\repo
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\entities\Respone\ReadDocument.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\exceptions\ExceptionStatus\InternalServerError.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\Security\jwt\JwtAuthenticationEntryPoint.java
+D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\services\Impl\ReadDocServiceImpl.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\entities\DocumentSharing.java
+D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\services\Impl\CreateUserServiceInterface.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\services\FeeService.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\controller\HomeController.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\exceptions\Exception2\BadRequestException.java
@@ -42,6 +48,7 @@ D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\repositories\RelationU
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\utils\LnswFunction.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\controller\FeeDocMenuController.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\services\Impl\DisplayLinkServiceImpl.java
+D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\Model\ChangePasswordReq.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\entities\DocShareBandUnit.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\messages\request\RequestReportDate.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\repositories\StoreDocumentRepository.java
@@ -55,6 +62,7 @@ D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\entities\Respone\Branc
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\utils\JSONUtils.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\controller\SectionController.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\services\Impl\DocumentServiceImpl.java
+D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\services\Impl\ReadDocServiceImplInterface.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\repositories\ProvinceRepository.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\exceptions\DTO\ErrorDTO.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\entities\DocType.java
@@ -66,6 +74,7 @@ D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\repositories\DocumentS
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\messages\response\DataResponse.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\repositories\MenuRepository.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\MediaUpload\MediaUploadServiceImpl.java
+D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\entities\Popup.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\messages\response\BorderRespone.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\exceptions\ExceptionStatus\UnAuthorizedException.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\Security\jwt\JwtAuthenticationFilter.java
@@ -79,10 +88,12 @@ D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\repositories\CreateUse
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\exceptions\DetailMessage\ErrorInfo.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\services\Impl\DocumentTypeServiceImpl.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\messages\request\AccountReq.java
+D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\entities\Respone\HomeDataResponse.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\services\DocSecMenuServiceService.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\config\AuditingConfig.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\entities\Users.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\Security\service\UserDetailsDao.java
+D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\entities\Read.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\services\DisplayLinkService.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\messages\response\AccountRespone.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\entities\DisplayLink.java
@@ -127,6 +138,7 @@ D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\controller\BranchListD
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\exceptions\ExceptionStatus\ServiceUnavailableException.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\controller\LoginController.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\Security\service\UserDetailsDaoImpl.java
+D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\services\CreateUserService.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\exceptions\ExceptionStatus\NotAcceptableException.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\repositories\ReadDocRepository.java
 D:\WebLocal\WebLocalApi\src\main\java\com\ldb\weblocalapi\repositories\UploadByUserRepository.java

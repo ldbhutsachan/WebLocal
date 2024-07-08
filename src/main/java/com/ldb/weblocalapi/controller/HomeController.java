@@ -69,6 +69,7 @@ public class HomeController {
             @ApiResponse(code = 503, message = "Service Unavailable", response = ServiceUnavailableException.class)
     })
     @RequestMapping(
+            //Home.service
             value = APIMappingPaths.HOME.API_HOME,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE
@@ -112,6 +113,7 @@ public class HomeController {
             @ApiResponse(code = 503, message = "Service Unavailable", response = ServiceUnavailableException.class)
     })
     @RequestMapping(
+            //******getSaveDocumentCondition.service
             value = APIMappingPaths.HOME.API_HOME_CONDITION,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE
@@ -131,12 +133,12 @@ public class HomeController {
         log.info("auth == " + auth.getName());
         log.info("auth username == " + auth.getPrincipal());
         log.info("data body request: " + request.toString());
-        DataResponse responseHome = documentService.HomeDocumentListByContion(documentRespone,request);
+        List<Section> getSecInfo =sectionRepository.findByBranchIdFromUserName(auth.getName());
+        String secCod = getSecInfo.get(0).getSecId();
+        DataResponse responseHome = documentService.HomeDocumentListByContion(documentRespone,request,secCod);
         log.info("\t\t --> End Custom compare Request controller <<<<<<<<<<<<<<<<<<<");
         return new ResponseEntity<>(responseHome, HttpStatus.OK);
     }
-
-
     @ApiOperation(
             value = "Docuement in DocuementController",
             authorizations = {@Authorization(value = "apiKey")},

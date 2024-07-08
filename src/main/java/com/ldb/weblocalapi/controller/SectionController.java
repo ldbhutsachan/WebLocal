@@ -10,6 +10,7 @@ import com.ldb.weblocalapi.exceptions.Exception2.NotFoundException;
 import com.ldb.weblocalapi.exceptions.ExceptionStatus.InternalServerError;
 import com.ldb.weblocalapi.exceptions.ExceptionStatus.UnAuthorizedException;
 import com.ldb.weblocalapi.messages.response.DataResponse;
+import com.ldb.weblocalapi.repositories.SectionRepository;
 import com.ldb.weblocalapi.repositories.SectionResponseRepository;
 import com.ldb.weblocalapi.utils.APIMappingPaths;
 import io.swagger.annotations.ApiOperation;
@@ -20,11 +21,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.naming.ServiceUnavailableException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -35,6 +39,9 @@ import javax.validation.Valid;
 public class SectionController {
     @Autowired
     SectionResponseRepository sectionRepository;
+
+    @Autowired
+    SectionRepository secListRepository;
     @ApiOperation(
             value = "API_SECTION in SectionController",
             authorizations = {@Authorization(value = "apiKey")},
@@ -64,8 +71,15 @@ public class SectionController {
         try {
             log.info("++ getSection Login Request Token ..............................");
             log.info("Client IP Address: " + request.getRemoteAddr());
+
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            log.info("auth == " + auth.getName());
+            log.info("auth username == " + auth.getPrincipal());
+            log.info("data body request: " + request.toString());
+            List<Section> getSecInfo =secListRepository.findByBranchIdFromUserName(auth.getName());
+            String secCod = getSecInfo.get(0).getSecId();
             if(secId.equals("0") || secId == "0"){
-                dataResponse.setDataResponse(sectionRepository.findByBranchIdFromAll());
+                dataResponse.setDataResponse(sectionRepository.findByBranchIdFromAll(secCod));
             }else {
                 dataResponse.setDataResponse(sectionRepository.findByBranchIdFromBySecId(secId));
             }

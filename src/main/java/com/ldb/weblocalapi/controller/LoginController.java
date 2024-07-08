@@ -104,10 +104,17 @@ public class LoginController {
             // Find Users by userId get from boder.Token key
             UserPrincipal userPrincipal = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
             Users users = userPrincipal.getUser();
+
+            String role = userPrincipal.getAuthorities().toString().replace("[","");
+
+            String roleCheck = role.replace("]","");
             long seconds = TimeUnit.MILLISECONDS.toSeconds(jwtExpirationInMs);
-            List<Menu> listMenu = menuRepository.findByMenuMapUserIdFromUserName(users.getUsername());
-            List<Long> menuGroupId = listMenu.stream().map(Menu::getMenuId).distinct().collect(Collectors.toList());
-            log.info("show log{}",menuGroupId);
+            List<Menu> listMenu = new ArrayList<>();
+            if(roleCheck.equals("ROLE_ADMIN")){
+                listMenu = menuRepository.findByMenuMapUserIdFromUserName(users.getUsername());
+            }else {
+                listMenu = menuRepository.findByMenuMapUserIdFromUserNameUser(users.getUsername());
+            }
              loginResponse = new LoginResponse(
                     jwt, "Bearer",
                     seconds,users.getUsername(),users.getImagePath(), users.getEnabled(), users.getSection(),listMenu

@@ -12,6 +12,6 @@ public interface SectionResponseRepository extends CrudRepository<SectionRespons
     @Query(value ="SELECT * from SECTION WHERE SEC_ID = ? ORDER BY SEC_ID ASC", nativeQuery = true)
     List<SectionResponse> findByBranchIdFromBySecId(String secId);
 
-    @Query(value ="SELECT * from SECTION ORDER BY SEC_ID ASC", nativeQuery = true)
-    List<SectionResponse> findByBranchIdFromAll();
+    @Query(value ="SELECT * from SECTION WHERE SEC_ID != ? ORDER BY SEC_ID ASC", nativeQuery = true)
+    List<SectionResponse> findByBranchIdFromAll(String secId);
 }

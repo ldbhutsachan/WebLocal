@@ -58,22 +58,32 @@ public class FeeServiceImpl {
             String docTypeNo = docReq.getDocType();
             String inputText = docReq.getInBoxText();
             //********************************check date ******************************************
-            String startDate = docReq.getStartDate();
-            String endDate = docReq.getEndDate();
-            String outputFormat = "dd/MM/yyyy";
-            LocalDate date = LocalDate.parse(startDate, DateTimeFormatter.ofPattern("yyyyMMdd"));
-            String outputDateStart = date.format(DateTimeFormatter.ofPattern(outputFormat));
-            LocalDate dateEnd = LocalDate.parse(endDate, DateTimeFormatter.ofPattern("yyyyMMdd"));
-            String outputDateEnd = dateEnd.format(DateTimeFormatter.ofPattern(outputFormat));
+            String startDate = "";
+            String endDate ="";
+            String outputDateStart  = "";
+            String outputDateEnd = "";
+            if(startDate.isEmpty()){
+                startDate = docReq.getStartDate();
+                endDate = docReq.getEndDate();
+            }else {
+                startDate = docReq.getStartDate();
+                endDate = docReq.getEndDate();
+                String outputFormat = "dd/MM/yyyy";
+                LocalDate date = LocalDate.parse(startDate, DateTimeFormatter.ofPattern("yyyyMMdd"));
+                outputDateStart = date.format(DateTimeFormatter.ofPattern(outputFormat));
+                LocalDate dateEnd = LocalDate.parse(endDate, DateTimeFormatter.ofPattern("yyyyMMdd"));
+                outputDateEnd = dateEnd.format(DateTimeFormatter.ofPattern(outputFormat));
+            }
             //********************FEE= 0001 ຄ່າທໍານຽມ  ITR= 0002 ອັດຕາດອກເບ້ຍ  ITR_CR=0003 ອັດຕາດອກເບ້ຍເງິນກຼ້ -------
+
             if (type.equals("FEE")) {
-                conditionType += " AND DOCTYPENO='66' ";
+                conditionType += " AND DOCTYPENO='1461' ";
             }
             if (type.equals("ITR")) {
-                conditionType += " AND DOCTYPENO='67' ";
+                conditionType += " AND DOCTYPENO='1462' ";
             }
             if (type.equals("ITR_CR")) {
-                conditionType += " AND DOCTYPENO='68' ";
+                conditionType += " AND DOCTYPENO='1463' ";
             }
             if (!outputDateStart.equals("")) {
                 conditionDate += " AND DOC_DATE >= '" + outputDateStart + "' AND DOC_DATE <= '" + outputDateEnd + "'";

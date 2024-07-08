@@ -18,10 +18,9 @@ public class Constant {
         public static final String DATA_OLD_PASS_FAIL="ລະຫັດຜ່ານເກົ່າ ຂອງທ່່ານບໍ່ຖືກຕ້ອງ !!!";
         public static final String DATA_DON_CHANGE="ທ່ານປ່ຽນລະຫັດຜ່ານສໍາເລັດເເລ້ວ";
     }
-
-
     public static class RESPONSE_FAIL_MESSAGE{
         public static final String STORE_MSG = "ບັນທຶກຂໍ້ມູນບໍ່ສໍາເລັດ";
+        public static final String STORE_MSG_CHECK = "ເລກທີເອກະສານນີ້ຊໍ້າກັນ ຫຼື ມີໃນລະບົບເເລ້ວ !!!! ກະລຸນາກວດສອບຄືນ";
         public static final String UPDATE_MSG="ເເກ້ໄຂຂໍ້ມູນບໍ່ສໍາເລັດ";
         public static final String DEL_MSG="ລຶບຂໍ້ມູນບໍ່ສໍາເລັດ";
 

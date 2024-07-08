@@ -6,6 +6,7 @@ import com.ldb.weblocalapi.entities.DocShareBandUnit;
 import com.ldb.weblocalapi.entities.Document;
 import com.ldb.weblocalapi.entities.DocumentSharing;
 import com.ldb.weblocalapi.entities.Respone.DocumentRespone;
+import com.ldb.weblocalapi.entities.Respone.DocumentSecMenuRespone;
 import com.ldb.weblocalapi.entities.Respone.ReadDocument;
 import com.ldb.weblocalapi.entities.Respone.UploadByUser;
 import com.ldb.weblocalapi.messages.request.DocReq;
@@ -17,6 +18,10 @@ import com.ldb.weblocalapi.services.DocumentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -48,6 +53,9 @@ public class DocumentServiceImpl implements DocumentService {
 
     @Autowired
     DocSecMenuServiceImpl docSecMenuService;
+
+    @Autowired
+    private DocumentServiceImpl documentSecMenuRepositoryTest;
 //***check
     @Override
     public DataResponse documentList(DocumentRespone documentRespone, HttpServletRequest request) {
@@ -74,63 +82,28 @@ public class DocumentServiceImpl implements DocumentService {
     }
 
     @Override
-    public DataResponse documentListByBandMenu(String secCode,BranchReq req) {
+    public DataResponse documentListByBandMenu(String secCode,BranchReq documentRespone) {
         DataResponse dataResponse = new DataResponse();
-        String type = req.getType();
-        String  branchCode= req.getBrandCode();
-        try {
-          //  List<ReadDocument> rspListReadInfo = new ArrayList<>();
-            List<DocumentSecMenu> resListSecMenu = docSecMenuService.findDocAllDocumentListByBandAll(secCode,req);
-            List<ReadDocument> rspListReadDoc = readDocRepository.findDocumentViewAll();
-            List<String> checkReadUser = resListSecMenu.stream().map(DocumentSecMenu::getKeyId).distinct().collect(Collectors.toList());
-
-            DocumentSecMenu result = new DocumentSecMenu();
-            result.setKeyId(resListSecMenu.get(0).getKeyId());
-            result.setDocName(resListSecMenu.get(0).getDocName());
-            result.setDocNo(resListSecMenu.get(0).getDocNo());
-            result.setDocTypeNo(resListSecMenu.get(0).getDocTypeNo());
-            result.setDocTypeName(resListSecMenu.get(0).getDocTypeName());
-            result.setDocDate(resListSecMenu.get(0).getDocDate());
-            result.setSaveDate(resListSecMenu.get(0).getSaveDate());
-            result.setSaveBy(resListSecMenu.get(0).getSaveBy());
-            result.setName(resListSecMenu.get(0).getName());
-            result.setDocPath(resListSecMenu.get(0).getDocPath());
-            result.setDocStatus(resListSecMenu.get(0).getDocStatus());
-            result.setTypeDocIn_Out(resListSecMenu.get(0).getTypeDocIn_Out());
-            result.setAmtRead(resListSecMenu.get(0).getAmtRead());
-// Initialize list for read information
-            List<ReadDocument> rspListReadInfo = new ArrayList<>();
-
-// Iterate over each refId in checkReadUser
-            for (String refId : checkReadUser) {
-                // Iterate over each rsp in rspListReadDoc
-                for (ReadDocument rsp : rspListReadDoc) {
-                    // Check if rsp's docId matches refId
-                    if (rsp.getDocId().equals(refId)) {
-                        // Create a new ReadDocument and populate it
-                        ReadDocument rspGroupRead = new ReadDocument();
-                        rspGroupRead.setUserId(rsp.getUserId());
-                        rspGroupRead.setUserName(rsp.getUserName());
-                        rspGroupRead.setDocId(rsp.getDocId());
-                        rspGroupRead.setDocNo(rsp.getDocNo());
-                        rspGroupRead.setName(rsp.getName());
-                        rspGroupRead.setSecId(rsp.getSecId());
-                        rspGroupRead.setSecName(rsp.getSecName());
-                        rspGroupRead.setProCode(rsp.getProCode());
-                        rspGroupRead.setProName(rsp.getProName());
-                        rspGroupRead.setMobile(rsp.getMobile());
-                        rspGroupRead.setMail(rsp.getMail());
-                        rspGroupRead.setReadDate(rsp.getReadDate());
-                        // Add rspGroupRead to rspListReadInfo
-                        rspListReadInfo.add(rspGroupRead);
-                    }
-                }
+        if(documentRespone.getType().equals("IN")){
+            documentRespone.setType("ຂາເຂົ້າ");
+        } else if(documentRespone.getType().equals("OUT")){
+            documentRespone.setType("ຂາອອກ");
+        }else {
+            documentRespone.setType("0");
+        }
+        try{
+            if(documentRespone.getType().equals("0")){
+                log.info("show All:");
+                dataResponse.setDataResponse(documentSecMenuRepository.finBandMenuAll(secCode));
             }
-// Set the list of ReadDocument objects into result
-            result.setReadByUserInfo(rspListReadInfo);
-
-// Set result into dataResponse
-            dataResponse.setDataResponse(result);
+            else if(documentRespone.getType().equals("ຂາເຂົ້າ")){
+                log.info("show IN:");
+                dataResponse.setDataResponse(documentSecMenuRepository.finBandMenuAllWithTypeIn(secCode,secCode));
+            }
+            else {
+                log.info("show OUT:");
+                dataResponse.setDataResponse(documentSecMenuRepository.finBandMenuAllWithTypeOut(secCode,secCode));
+            }
             if(dataResponse.getDataResponse() !=null){
                 dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
                 dataResponse.setMessage(Constant.RESPONSE_MESSAGE.SUCCESS_MSG);
@@ -147,70 +120,153 @@ public class DocumentServiceImpl implements DocumentService {
     }
 
     @Override
-    public DataResponse documentListByBandMenuByDate(BranchReq documentRespone, HttpServletRequest request) {
+    public DataResponse documentListByBandMenuByDate(BranchReq docReq, HttpServletRequest request,String secCod) {
         DataResponse dataResponse = new DataResponse();
-        if(documentRespone.getType().equals("IN")){
-            documentRespone.setType("ຂາເຂົ້າ");
-        } else if(documentRespone.getType().equals("OUT")){
-            documentRespone.setType("ຂາອອກ");
+        //*******************************cehck data from q*****************************************************
+        String conditionSecCodOut = "";
+        String conditionSmallBand = "";
+        String conditionBandCode = "";
+        String conditionSecCodIn = "";
+        String conditionDate = "";
+        String conditionDocTypeNo = "";
+        String conditionInputText = "";
+        String bandCode = docReq.getBrandCode();
+        String smallBandCode = docReq.getSmallBrandCode();
+        String docTypeNo = docReq.getDocType();
+        String inputText = docReq.getInBoxText();
+        //********************************check date ******************************************
+        String startDate = "";
+        String endDate ="";
+        String outputDateStart  = "";
+        String outputDateEnd = "";
+        if(startDate.isEmpty()){
+             startDate = docReq.getStartDate();
+             endDate = docReq.getEndDate();
         }else {
-            documentRespone.setType("0");
+             startDate = docReq.getStartDate();
+             endDate = docReq.getEndDate();
+            String outputFormat = "dd/MM/yyyy";
+            LocalDate date = LocalDate.parse(startDate, DateTimeFormatter.ofPattern("yyyyMMdd"));
+             outputDateStart = date.format(DateTimeFormatter.ofPattern(outputFormat));
+            LocalDate dateEnd = LocalDate.parse(endDate, DateTimeFormatter.ofPattern("yyyyMMdd"));
+             outputDateEnd = dateEnd.format(DateTimeFormatter.ofPattern(outputFormat));
         }
         try{
-            List<ReadDocument> rspListReadInfo = new ArrayList<>();
-            List<DocumentSecMenu> resListSecMenu =docSecMenuService.findDocAllDocumentListByBranchMenu(documentRespone);
-            List<ReadDocument> rspListReadDoc = readDocRepository.findDocumentViewAll();
-            List<String> checkReadUser = resListSecMenu.stream().map(DocumentSecMenu::getKeyId).distinct().collect(Collectors.toList());
-            DocumentSecMenu result = new DocumentSecMenu();
-            result.setKeyId(resListSecMenu.get(0).getKeyId());
-            result.setDocName(resListSecMenu.get(0).getDocName());
-            result.setDocNo(resListSecMenu.get(0).getDocNo());
-            result.setDocTypeNo(resListSecMenu.get(0).getDocTypeNo());
-            result.setDocTypeName(resListSecMenu.get(0).getDocTypeName());
-            result.setDocDate(resListSecMenu.get(0).getDocDate());
-            result.setSaveDate(resListSecMenu.get(0).getSaveDate());
-            result.setSaveBy(resListSecMenu.get(0).getSaveBy());
-            result.setName(resListSecMenu.get(0).getName());
-            result.setDocPath(resListSecMenu.get(0).getDocPath());
-            result.setDocStatus(resListSecMenu.get(0).getDocStatus());
-            result.setTypeDocIn_Out(resListSecMenu.get(0).getTypeDocIn_Out());
-            result.setAmtRead(resListSecMenu.get(0).getAmtRead());
-            rspListReadInfo = new ArrayList<>();
-            for (String refId : checkReadUser) {
-                for(ReadDocument rsp : rspListReadDoc){
-                    if(rsp.getDocId().equals(refId)) {
-                        ReadDocument rspGroupRead = new ReadDocument();
-                        rspGroupRead.setUserId(rsp.getUserId());
-                        rspGroupRead.setUserName(rsp.getUserName());
-                        rspGroupRead.setDocId(rsp.getDocId());
-                        rspGroupRead.setDocNo(rsp.getDocNo());
-                        rspGroupRead.setName(rsp.getName());
-                        rspGroupRead.setSecId(rsp.getSecId());
-                        rspGroupRead.setSecName(rsp.getSecName());
-                        rspGroupRead.setProCode(rsp.getProCode());
-                        rspGroupRead.setProName(rsp.getProName());
-                        rspGroupRead.setMobile(rsp.getMobile());
-                        rspGroupRead.setMail(rsp.getMail());
-                        rspGroupRead.setReadDate(rsp.getReadDate());
-                        rspListReadInfo.add(rspGroupRead);
-                    }
-                    result.setReadByUserInfo(rspListReadInfo);
+            if(docReq.getType().equals("IN")){
+                docReq.setType("ຂາເຂົ້າ");
+            } else if(docReq.getType().equals("OUT")){
+                docReq.setType("ຂາອອກ");
+            }else {
+                docReq.setType("0");
+            }
+            if(!bandCode.equals("0")){
+                conditionBandCode = " AND RELATION_UNIT ='"+bandCode+"' ";
+            }
+            if(!smallBandCode.equals("0")){
+                conditionSmallBand = " AND RELATION_UNIT_SEC ='"+smallBandCode+"' ";
+            }
+            if(!secCod.equals("")){
+                conditionSecCodOut = " AND BRANCH_ID ='"+secCod+"' ";
+            }
+            if(!secCod.equals("")){
+                conditionSecCodIn = " AND BRANCH_ID !='"+secCod+"' ";
+            }
+            if (!outputDateStart.equals("")) {
+                conditionDate += " AND DOC_DATE >= '" + outputDateStart + "' AND DOC_DATE <= '" + outputDateEnd + "'";
+            }
+            if (!docTypeNo.equals("0")) {
+                conditionDocTypeNo += " AND DOCTYPENO='" + docTypeNo + "' ";
+            }
+            if (!inputText.equals("")) {
+                conditionInputText += " AND DOC_NO like '%" + inputText + "%' OR  DOCNAME like '%" + inputText + "%' ";
+            }
+            //===========================condition All ================================
+            //**********************check small Band **********************************
+            String countAllConditionAll = "";
+            String countAllConditionIn = "";
+            String countAllConditionOut = "";
+            if(!smallBandCode.equals("0")){
+                 countAllConditionAll =conditionSecCodOut+conditionDate+ conditionDocTypeNo+ conditionInputText+conditionBandCode+conditionSmallBand;
+                //==========================condition IN=============================
+                 countAllConditionIn =conditionSecCodIn+ conditionDate+ conditionDocTypeNo+ conditionInputText+conditionBandCode+conditionSmallBand;
+                //==========================condition  OUT=============================
+                 countAllConditionOut =conditionSecCodOut+ conditionDate+ conditionDocTypeNo+ conditionInputText+conditionBandCode+conditionSmallBand;
+                if(docReq.getType().equals("0")){
+                    log.info("show 01");
+                    dataResponse.setDataResponse(documentSecMenuRepositoryTest.finBandMenuAllWithTypeConditionSmallBandALL(countAllConditionAll));
+                }
+                else if(docReq.getType().equals("ຂາເຂົ້າ")){
+                    log.info("show 02 ຂາເຂົ້າ============");
+                    dataResponse.setDataResponse(documentSecMenuRepositoryTest.finBandMenuAllWithTypeConditionSmallBandALL(countAllConditionIn));
+                }
+                else {
+                    log.info("show 03 ຂາອອກ ==========");
+                    dataResponse.setDataResponse(documentSecMenuRepositoryTest.finBandMenuAllWithTypeConditionSmallBandALL(countAllConditionOut));
+                }
+            }else {
+                 countAllConditionAll =conditionSecCodOut+conditionDate+ conditionDocTypeNo+ conditionInputText+conditionBandCode;
+                //==========================condition IN=============================
+                 countAllConditionIn =conditionSecCodIn+ conditionDate+ conditionDocTypeNo+ conditionInputText+conditionBandCode;
+                //==========================condition  OUT=============================
+                 countAllConditionOut =conditionSecCodOut+ conditionDate+ conditionDocTypeNo+ conditionInputText+conditionBandCode;
+                if(docReq.getType().equals("0")){
+                    log.info("show 01");
+                    dataResponse.setDataResponse(documentSecMenuRepositoryTest.finBandMenuAllWithTypeConditionALL(countAllConditionAll));
+                }
+                else if(docReq.getType().equals("ຂາເຂົ້າ")){
+                    log.info("show 02 ຂາເຂົ້າ============");
+                    dataResponse.setDataResponse(documentSecMenuRepositoryTest.finBandMenuAllWithTypeConditionALL(countAllConditionIn));
+                }
+                else {
+                    log.info("show 03 ຂາອອກ ==========");
+                    dataResponse.setDataResponse(documentSecMenuRepositoryTest.finBandMenuAllWithTypeConditionALL(countAllConditionOut));
                 }
             }
-            dataResponse.setDataResponse(result);
+
             if(dataResponse.getDataResponse() !=null){
                 dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
                 dataResponse.setMessage(Constant.RESPONSE_MESSAGE.SUCCESS_MSG);
             }else {
-                dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
+                dataResponse.setStatus(Constant.RESPONSE_CODE.DATA_NOT_FOUND);
                 dataResponse.setMessage(Constant.RESPONSE_MESSAGE.DATA_NOT_FOUND_MSG);
             }
         }catch (Exception e){
-            dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
+            dataResponse.setStatus(Constant.RESPONSE_CODE.DATA_NOT_FOUND);
             dataResponse.setMessage(Constant.RESPONSE_MESSAGE.DATA_NOT_FOUND_MSG);
             e.printStackTrace();
         }
         return dataResponse;
+    }
+
+    //====================================for query ========================================================================
+    @PersistenceContext
+    private EntityManager entityManager;
+    public List<DocumentSecMenuRespone> finBandMenuAllWithTypeConditionALL(String countAllCondition) {
+        // Base query
+        StringBuilder queryBuilder = new StringBuilder("SELECT * FROM V_BAND_MENU_COUNTER WHERE 1=1");
+        // Append dynamic conditions
+        if (countAllCondition != null && !countAllCondition.isEmpty()) {
+            queryBuilder.append(countAllCondition);
+        }
+        queryBuilder.append(" ORDER BY ID DESC");
+        // Create query
+        Query query = entityManager.createNativeQuery(queryBuilder.toString(), DocumentSecMenuRespone.class);
+        // Execute query
+        return query.getResultList();
+    }
+
+    public List<DocumentSecMenuRespone> finBandMenuAllWithTypeConditionSmallBandALL(String countAllCondition) {
+        // Base query
+        StringBuilder queryBuilder = new StringBuilder("SELECT * FROM V_BAND_MENU_COUNT_SMALLCODE WHERE 1=1");
+        // Append dynamic conditions
+        if (countAllCondition != null && !countAllCondition.isEmpty()) {
+            queryBuilder.append(countAllCondition);
+        }
+        queryBuilder.append(" ORDER BY ID DESC");
+        // Create query
+        Query query = entityManager.createNativeQuery(queryBuilder.toString(), DocumentSecMenuRespone.class);
+        // Execute query
+        return query.getResultList();
     }
 
 
@@ -242,7 +298,7 @@ public class DocumentServiceImpl implements DocumentService {
     }
 
     @Override
-    public DataResponse HomeDocumentListByContion(RequestReportDate documentRespone, HttpServletRequest request) {
+    public DataResponse HomeDocumentListByContion(RequestReportDate documentRespone, HttpServletRequest request,String secCod) {
         String startDate = documentRespone.getStartDate();
         String endDate = documentRespone.getEndDate();
         String inFoBox = documentRespone.getInFoBox();
@@ -255,12 +311,17 @@ public class DocumentServiceImpl implements DocumentService {
         try {
             //***********************check keyId if not null ***************************
             if(inFoBox.equals("") && !outputDateStart.equals("") && !outputDateEnd.equals("")){
-                dataResponse.setDataResponse(documentRepository.findHomeDocAllByDateToEndDate(outputDateStart,outputDateEnd));
+                log.info("Q1:");
+                log.info("D1:"+outputDateStart);
+                log.info("D2:"+outputDateEnd);
+                dataResponse.setDataResponse(documentRepository.findHomeDocAllByDateToEndDate(secCod,outputDateStart,outputDateEnd));
             }
             else if( !inFoBox.equals("") && !outputDateStart.equals("") || !outputDateEnd.equals("") ){
-                dataResponse.setDataResponse(documentRepository.findHomeDocAllByDateToEndDateText(outputDateStart,outputDateEnd,inFoBox));
+                log.info("Q2:");
+                dataResponse.setDataResponse(documentRepository.findHomeDocAllByDateToEndDateText(secCod,outputDateStart,outputDateEnd,inFoBox));
             }else {
-                dataResponse.setDataResponse(documentRepository.findHomeDocAllByText(inFoBox));
+                log.info("Q2:");
+                dataResponse.setDataResponse(documentRepository.findHomeDocAllByText(secCod,inFoBox));
             }
             if(dataResponse.getDataResponse() !=null){
                 dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
@@ -281,7 +342,6 @@ public class DocumentServiceImpl implements DocumentService {
     public DataResponse HomeDocumentList(String secCod) {
         DataResponse dataResponse = new DataResponse();
         try {
-
                 dataResponse.setDataResponse(documentRepository.findDocAll(secCod));
             if(dataResponse.getDataResponse() !=null){
                 dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
@@ -368,13 +428,21 @@ public class DocumentServiceImpl implements DocumentService {
     public DataResponse save(Document document) {
         DataResponse dataResponse = new DataResponse();
         try{
-            dataResponse.setDataResponse(storeDocumentRepository.save(document));
-            if(dataResponse.getDataResponse() !=null){
-                dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
-                dataResponse.setMessage(Constant.RESPONSE_MESSAGE.STORE_MSG);
-            }else {
+            List<String> docNos = documentSharingRepository.findDocNo(document.getDocNo());
+            log.info("show size:"+docNos.size());
+            //============================CHECK DOCNO IN DATABASE========================
+            if(docNos.size() >= 1){
                 dataResponse.setStatus(Constant.RESPONSE_CODE.DATA_NOT_FOUND);
-                dataResponse.setMessage(Constant.RESPONSE_FAIL_MESSAGE.STORE_MSG);
+                dataResponse.setMessage(Constant.RESPONSE_FAIL_MESSAGE.STORE_MSG_CHECK+" ເລກທີ: "+document.getDocNo());
+            }else {
+                dataResponse.setDataResponse(storeDocumentRepository.save(document));
+                if (dataResponse.getDataResponse() != null) {
+                    dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
+                    dataResponse.setMessage(Constant.RESPONSE_MESSAGE.STORE_MSG);
+                } else {
+                    dataResponse.setStatus(Constant.RESPONSE_CODE.DATA_NOT_FOUND);
+                    dataResponse.setMessage(Constant.RESPONSE_FAIL_MESSAGE.STORE_MSG);
+                }
             }
         }catch (Exception e){
             dataResponse.setStatus(Constant.RESPONSE_CODE.DATA_NOT_FOUND);
@@ -552,6 +620,37 @@ public class DocumentServiceImpl implements DocumentService {
             String trimmedStr = relationUnit.trim();
             String[] relationUnitArray = trimmedStr.split(",");
             List<DocumentSharing> savedDocumentSharing = new ArrayList<>();
+                for (String relation : relationUnitArray) {
+                    DocumentSharing documentSharing = new DocumentSharing();
+                    documentSharing.setRelationUnit(relation.trim());
+                    documentSharing.setDocNo(docNo.trim());
+                    documentSharing.setCreateDate(new Date());
+                    savedDocumentSharing.add(documentSharingRepository.save(documentSharing));
+                }
+                dataResponse.setDataResponse(savedDocumentSharing);
+                if (dataResponse.getDataResponse() != null) {
+                    dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
+                    dataResponse.setMessage(Constant.RESPONSE_MESSAGE.STORE_MSG);
+                } else {
+                    dataResponse.setStatus(Constant.RESPONSE_CODE.DATA_NOT_FOUND);
+                    dataResponse.setMessage(Constant.RESPONSE_FAIL_MESSAGE.STORE_MSG);
+                }
+        }catch (Exception e){
+            dataResponse.setStatus(Constant.RESPONSE_CODE.DATA_NOT_FOUND);
+            dataResponse.setMessage(Constant.RESPONSE_FAIL_MESSAGE.STORE_MSG);
+            e.printStackTrace();
+        }
+        return dataResponse;
+    }
+
+    @Override
+    public DataResponse saveSharingDocumentYou(String secCode, String docNo) {
+        DataResponse dataResponse = new DataResponse();
+        try{
+            String relationUnit = secCode;
+            String trimmedStr = relationUnit.trim();
+            String[] relationUnitArray = trimmedStr.split(",");
+            List<DocumentSharing> savedDocumentSharing = new ArrayList<>();
             for (String relation : relationUnitArray) {
                 DocumentSharing documentSharing = new DocumentSharing();
                 documentSharing.setRelationUnit(relation.trim());
@@ -559,12 +658,11 @@ public class DocumentServiceImpl implements DocumentService {
                 documentSharing.setCreateDate(new Date());
                 savedDocumentSharing.add(documentSharingRepository.save(documentSharing));
             }
-
             dataResponse.setDataResponse(savedDocumentSharing);
-            if(dataResponse.getDataResponse() !=null){
+            if (dataResponse.getDataResponse() != null) {
                 dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
                 dataResponse.setMessage(Constant.RESPONSE_MESSAGE.STORE_MSG);
-            }else {
+            } else {
                 dataResponse.setStatus(Constant.RESPONSE_CODE.DATA_NOT_FOUND);
                 dataResponse.setMessage(Constant.RESPONSE_FAIL_MESSAGE.STORE_MSG);
             }
@@ -575,6 +673,8 @@ public class DocumentServiceImpl implements DocumentService {
         }
         return dataResponse;
     }
+
+
     @Override
     public DataResponse saveSharingDocumentSec(String relationUnitSec,String docNo) {
         DataResponse dataResponse = new DataResponse();
@@ -618,7 +718,7 @@ public class DocumentServiceImpl implements DocumentService {
 //        return 1;
 //    }
 @Override
-public  DataResponse  SecCodeMenuByDateALL(DocReq documentRespone, HttpServletRequest request) {
+public  DataResponse  SecCodeMenuByDateALL(DocReq documentRespone, HttpServletRequest request,String secCod) {
     DataResponse dataResponse = new DataResponse();
     if(documentRespone.getType().equals("IN")){
         documentRespone.setType("ຂາເຂົ້າ");
@@ -631,8 +731,12 @@ public  DataResponse  SecCodeMenuByDateALL(DocReq documentRespone, HttpServletRe
         log.info("show:"+documentRespone.getType());
         if(documentRespone.getType().equals("0")){
             dataResponse.setDataResponse(documentSecMenuRepository.finSecMenuAll(documentRespone.getCode()));
-        }else {
-            dataResponse.setDataResponse(documentSecMenuRepository.finSecMenuAllWithType(documentRespone.getType(),documentRespone.getCode()));
+        }
+        else if(documentRespone.getType().equals("ຂາເຂົ້າ")){
+            dataResponse.setDataResponse(documentSecMenuRepository.finSecMenuAllWithTypeIn(secCod,documentRespone.getCode()));
+        }
+        else {
+            dataResponse.setDataResponse(documentSecMenuRepository.finSecMenuAllWithTypeOut(secCod,documentRespone.getCode()));
         }
         if(dataResponse.getDataResponse() !=null){
             dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
@@ -649,59 +753,73 @@ public  DataResponse  SecCodeMenuByDateALL(DocReq documentRespone, HttpServletRe
     return dataResponse;
 }
 @Override
-public DataResponse SecCodeMenuByDate(DocReq documentRespone, HttpServletRequest request) {
+public DataResponse SecCodeMenuByDate(DocReq docReq, HttpServletRequest request,String secCod) {
     DataResponse dataResponse = new DataResponse();
-    if(documentRespone.getType().equals("IN")){
-        documentRespone.setType("ຂາເຂົ້າ");
-    } else if(documentRespone.getType().equals("OUT")){
-        documentRespone.setType("ຂາອອກ");
-    }else {
-        documentRespone.setType("0");
-    }
+    //*******************************cehck data from q*****************************************************
+    String conditionSecCodOut = "";
+    String conditionSecCodIn = "";
+    String conditionDate = "";
+    String conditionCode = "";
+    String conditionDocTypeNo = "";
+    String conditionInputText = "";
+    String code = docReq.getCode();
+    String docTypeNo = docReq.getDocType();
+    String inputText = docReq.getInBoxText();
+    //********************************check date ******************************************
+    String startDate = docReq.getStartDate();
+    String endDate = docReq.getEndDate();
+    String outputFormat = "dd/MM/yyyy";
+    LocalDate date = LocalDate.parse(startDate, DateTimeFormatter.ofPattern("yyyyMMdd"));
+    String outputDateStart = date.format(DateTimeFormatter.ofPattern(outputFormat));
+    LocalDate dateEnd = LocalDate.parse(endDate, DateTimeFormatter.ofPattern("yyyyMMdd"));
+    String outputDateEnd = dateEnd.format(DateTimeFormatter.ofPattern(outputFormat));
     try{
-        HashMap<String, Object> dataValue = new HashMap<String, Object>();
-        List<ReadDocument> rspListReadInfo = new ArrayList<>();
-        List<DocumentSecMenu> resListSecMenu = docSecMenuService.findSecMenu(documentRespone);
-        List<ReadDocument> rspListReadDoc = readDocRepository.findDocumentViewAll();
-        List<String> checkReadUser = resListSecMenu.stream().map(DocumentSecMenu::getKeyId).distinct().collect(Collectors.toList());
-
-        DocumentSecMenu result = new DocumentSecMenu();
-        result.setKeyId(resListSecMenu.get(0).getKeyId());
-        result.setDocName(resListSecMenu.get(0).getDocName());
-        result.setDocNo(resListSecMenu.get(0).getDocNo());
-        result.setDocTypeNo(resListSecMenu.get(0).getDocTypeNo());
-        result.setDocTypeName(resListSecMenu.get(0).getDocTypeName());
-        result.setDocDate(resListSecMenu.get(0).getDocDate());
-        result.setSaveDate(resListSecMenu.get(0).getSaveDate());
-        result.setSaveBy(resListSecMenu.get(0).getSaveBy());
-        result.setName(resListSecMenu.get(0).getName());
-        result.setDocPath(resListSecMenu.get(0).getDocPath());
-        result.setDocStatus(resListSecMenu.get(0).getDocStatus());
-        result.setTypeDocIn_Out(resListSecMenu.get(0).getTypeDocIn_Out());
-        result.setAmtRead(resListSecMenu.get(0).getAmtRead());
-        rspListReadInfo = new ArrayList<>();
-        for (String refId : checkReadUser) {
-            for(ReadDocument rsp : rspListReadDoc){
-                if(rsp.getDocId().equals(refId)) {
-                    ReadDocument rspGroupRead = new ReadDocument();
-                    rspGroupRead.setUserId(rsp.getUserId());
-                    rspGroupRead.setUserName(rsp.getUserName());
-                    rspGroupRead.setDocId(rsp.getDocId());
-                    rspGroupRead.setDocNo(rsp.getDocNo());
-                    rspGroupRead.setName(rsp.getName());
-                    rspGroupRead.setSecId(rsp.getSecId());
-                    rspGroupRead.setSecName(rsp.getSecName());
-                    rspGroupRead.setProCode(rsp.getProCode());
-                    rspGroupRead.setProName(rsp.getProName());
-                    rspGroupRead.setMobile(rsp.getMobile());
-                    rspGroupRead.setMail(rsp.getMail());
-                    rspGroupRead.setReadDate(rsp.getReadDate());
-                    rspListReadInfo.add(rspGroupRead);
-                }
-                result.setReadByUserInfo(rspListReadInfo);
-            }
+        if(docReq.getType().equals("IN")){
+            docReq.setType("ຂາເຂົ້າ");
+        } else if(docReq.getType().equals("OUT")){
+            docReq.setType("ຂາອອກ");
+        }else {
+            docReq.setType("0");
         }
-        dataResponse.setDataResponse(result);
+        if(!secCod.equals("")){
+            conditionSecCodOut = " AND BRANCH_ID ='"+secCod+"' ";
+        }
+        if(!secCod.equals("")){
+            conditionSecCodIn = " AND BRANCH_ID !='"+secCod+"' ";
+        }
+        if (!outputDateStart.equals("")) {
+            conditionDate += " AND DOC_DATE >= '" + outputDateStart + "' AND DOC_DATE <= '" + outputDateEnd + "'";
+        }
+        if (!code.equals("0")) {
+            conditionCode += " AND RELATION_UNIT='" + code + "' ";
+        }
+        if (!docTypeNo.equals("0")) {
+            conditionDocTypeNo += " AND DOCTYPENO='" + docTypeNo + "' ";
+        }
+        if (!inputText.equals("")) {
+            conditionInputText += " AND DOC_NO like '%" + inputText + "%' OR  DOCNAME like '%" + inputText + "%' ";
+        }
+        //===========================condition All ================================
+        String countAllConditionAll =conditionDate+ conditionCode+ conditionDocTypeNo+ conditionInputText;
+
+        //==========================condition IN=============================
+        String countAllConditionIn =conditionSecCodIn+ conditionDate+ conditionCode+ conditionDocTypeNo+ conditionInputText;
+
+        //==========================condition  OUT=============================
+        String countAllConditionOut =conditionSecCodOut+ conditionDate+ conditionCode+ conditionDocTypeNo+ conditionInputText;
+
+        if(docReq.getType().equals("0")){
+            log.info("show 01");
+          dataResponse.setDataResponse(documentSecMenuRepositoryTest.finSecMenuAllWithTypeConditionALL(countAllConditionAll));
+        }
+        else if(docReq.getType().equals("ຂາເຂົ້າ")){
+            log.info("show 02 ຂາເຂົ້າ============");
+            dataResponse.setDataResponse(documentSecMenuRepositoryTest.finSecMenuAllWithTypeConditionALL(countAllConditionIn));
+        }
+        else {
+            log.info("show 03 ຂາອອກ ==========");
+            dataResponse.setDataResponse(documentSecMenuRepositoryTest.finSecMenuAllWithTypeConditionALL(countAllConditionOut));
+        }
         if(dataResponse.getDataResponse() !=null){
             dataResponse.setStatus(Constant.RESPONSE_CODE.SUCCESS);
             dataResponse.setMessage(Constant.RESPONSE_MESSAGE.SUCCESS_MSG);
@@ -716,6 +834,21 @@ public DataResponse SecCodeMenuByDate(DocReq documentRespone, HttpServletRequest
     }
     return dataResponse;
 }
+
+//====================================for query ========================================================================
+    public List<DocumentSecMenuRespone> finSecMenuAllWithTypeConditionALL(String countAllCondition) {
+        // Base query
+        StringBuilder queryBuilder = new StringBuilder("SELECT * FROM V_SECTION_MENU_COUNTER WHERE 1=1");
+        // Append dynamic conditions
+        if (countAllCondition != null && !countAllCondition.isEmpty()) {
+            queryBuilder.append(countAllCondition);
+        }
+        queryBuilder.append(" ORDER BY ID DESC");
+        // Create query
+        Query query = entityManager.createNativeQuery(queryBuilder.toString(), DocumentSecMenuRespone.class);
+        // Execute query
+        return query.getResultList();
+    }
 
 }
 

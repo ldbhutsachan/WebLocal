@@ -3,6 +3,7 @@ package com.ldb.weblocalapi.services.Impl;
 import com.ldb.weblocalapi.Model.BranchReq;
 import com.ldb.weblocalapi.Model.DocumentSecMenu;
 import com.ldb.weblocalapi.entities.Respone.DocumentRespone;
+import com.ldb.weblocalapi.entities.Respone.DocumentSecMenuRespone;
 import com.ldb.weblocalapi.messages.request.DocReq;
 import com.ldb.weblocalapi.repositories.DocumentRepository;
 import com.ldb.weblocalapi.services.DocSecMenuServiceService;
@@ -143,7 +144,7 @@ public class DocSecMenuServiceImpl implements DocSecMenuServiceService {
 
     //------------------------Second
     @Override
-    public List<DocumentSecMenu> findSecMenu(DocReq docReq) {
+    public List<DocumentSecMenuRespone> findSecMenu(DocReq docReq) {
         String conditionDate = "";
         String conditionCode = "";
         String conditionType = "";
@@ -179,8 +180,8 @@ public class DocSecMenuServiceImpl implements DocSecMenuServiceService {
         }
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT ");
-        sb.append("TYPE, ID,RELATION_UNIT, DOCNAME, DOC_NO, DOCTYPENO, DOC_TYPE_NAME, DOC_DATE, SAVE_DATE, NAME,SAVE_BY, READ_BY, DOC_PATH, DOC_STATUS,  (SELECT COUNT(*) FROM read_doc b where b.DOC_KEY_ID=id ) as total ");
-        sb.append(" from  V_BAND_MENU_COUNTER where 1=1  ");
+        sb.append("TYPE, ID,RELATION_UNIT, DOCNAME, DOC_NO, DOCTYPENO, DOC_TYPE_NAME, DOC_DATE, SAVE_DATE, NAME,SAVE_BY, DOC_PATH, DOC_STATUS,  (SELECT COUNT(*) FROM read_doc b where b.DOC_KEY_ID=id ) as total ");
+        sb.append(" from  V_SECTION_MENU_COUNTER where 1=1  ");
         sb.append(conditionDate); //*****check date not emt
         sb.append(conditionCode); //*****check band code
         sb.append(conditionType); //*****check type 0 in out
@@ -188,10 +189,10 @@ public class DocSecMenuServiceImpl implements DocSecMenuServiceService {
         sb.append(conditionInputText);//****check input from text
         String sql = sb.toString();
         log.info("SQL : " + sql);
-        return this.jdbcTemplate.query(sql, new RowMapper<DocumentSecMenu>() {
+        return this.jdbcTemplate.query(sql, new RowMapper<DocumentSecMenuRespone>() {
             @Override
-            public DocumentSecMenu mapRow(ResultSet rs, int i) throws SQLException {
-                DocumentSecMenu tr = new DocumentSecMenu();
+            public DocumentSecMenuRespone mapRow(ResultSet rs, int i) throws SQLException {
+                DocumentSecMenuRespone tr = new DocumentSecMenuRespone();
                 tr.setKeyId(rs.getString("ID"));
                 tr.setDocName(rs.getString("DOCNAME"));
                 tr.setDocNo(rs.getString("DOC_NO"));
@@ -204,8 +205,10 @@ public class DocSecMenuServiceImpl implements DocSecMenuServiceService {
                 tr.setDocPath(rs.getString("DOC_PATH"));
                 tr.setDocStatus(rs.getString("DOC_STATUS"));
                 tr.setTypeDocIn_Out(rs.getString("TYPE"));
-                tr.setAmtRead(rs.getInt("TOTAL"));
+                tr.setAmtRead(rs.getString("TOTAL"));
                 tr.setRelationUnit(rs.getString("RELATION_UNIT"));
+
+
                 return tr;
             }
         });

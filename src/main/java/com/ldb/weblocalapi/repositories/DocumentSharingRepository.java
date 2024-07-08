@@ -1,11 +1,14 @@
 package com.ldb.weblocalapi.repositories;
 
 import com.ldb.weblocalapi.entities.DocumentSharing;
+import com.ldb.weblocalapi.entities.Respone.BranchRespone;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 public interface DocumentSharingRepository extends CrudRepository<DocumentSharing,DocumentSharing> {
     @Transactional
@@ -22,6 +25,9 @@ public interface DocumentSharingRepository extends CrudRepository<DocumentSharin
     @Modifying
     @Query(value ="DELETE DOC_SHARING WHERE DOC_NO=? ", nativeQuery = true)
     int update(@Param("docNo") String docNo);
+
+    @Query(value = "SELECT DOC_NO FROM DOCUMENT WHERE DOC_NO = :docNo", nativeQuery = true)
+    List<String> findDocNo(@Param("docNo") String docNo);
 
 
 }

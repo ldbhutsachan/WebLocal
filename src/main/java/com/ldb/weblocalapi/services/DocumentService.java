@@ -16,12 +16,12 @@ public interface DocumentService {
 
     public DataResponse documentListByBandMenu(String secCode,BranchReq req);
     //****
-    public DataResponse documentListByBandMenuByDate(BranchReq documentRespone, HttpServletRequest request);
-    public DataResponse SecCodeMenuByDate(DocReq documentRespone, HttpServletRequest request);
-    public DataResponse  SecCodeMenuByDateALL(DocReq documentRespone, HttpServletRequest request);
+    public DataResponse documentListByBandMenuByDate(BranchReq documentRespone, HttpServletRequest request,String secCod);
+    public DataResponse SecCodeMenuByDate(DocReq documentRespone, HttpServletRequest request,String secCod);
+    public DataResponse  SecCodeMenuByDateALL(DocReq documentRespone, HttpServletRequest request,String secCod);
 
     public DataResponse documentListBySecCodeMenuByDate(BranchReq documentRespone, HttpServletRequest request);
-    public DataResponse HomeDocumentListByContion(RequestReportDate documentRespone, HttpServletRequest request);
+    public DataResponse HomeDocumentListByContion(RequestReportDate documentRespone, HttpServletRequest request,String secCod);
     public DataResponse HomeDocumentList(String secCod);
     public DataResponse documentListByTextBox(DocumentRespone documentRespone, HttpServletRequest request);
     public DataResponse ReadDocDocumentByDocNo(ReadDocument document, HttpServletRequest request);
@@ -35,6 +35,7 @@ public interface DocumentService {
     public DataResponse upDateSharingDocumentSec(String docNo);
 
     public DataResponse saveSharingDocument(String relationUnit,String docNo);
+    public DataResponse saveSharingDocumentYou(String relationUnit,String docNo);
     public DataResponse saveSharingDocumentSec(String relationUnitSec,String docNo);
 
 }

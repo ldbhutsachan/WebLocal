@@ -2,6 +2,7 @@ package com.ldb.weblocalapi.controller;
 
 import com.ldb.weblocalapi.Model.BranchReq;
 import com.ldb.weblocalapi.entities.Respone.DocumentRespone;
+import com.ldb.weblocalapi.entities.Section;
 import com.ldb.weblocalapi.exceptions.DetailMessage.ExceptionResponse;
 import com.ldb.weblocalapi.exceptions.Exception2.BadRequestException;
 import com.ldb.weblocalapi.exceptions.Exception2.ForbiddenException;
@@ -10,6 +11,7 @@ import com.ldb.weblocalapi.exceptions.ExceptionStatus.InternalServerError;
 import com.ldb.weblocalapi.exceptions.ExceptionStatus.UnAuthorizedException;
 import com.ldb.weblocalapi.messages.request.DocReq;
 import com.ldb.weblocalapi.messages.response.DataResponse;
+import com.ldb.weblocalapi.repositories.SectionRepository;
 import com.ldb.weblocalapi.services.DocumentService;
 import com.ldb.weblocalapi.services.Impl.DocSecMenuServiceImpl;
 import com.ldb.weblocalapi.utils.APIMappingPaths;
@@ -27,6 +29,7 @@ import javax.naming.ServiceUnavailableException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -39,6 +42,8 @@ public class SectionListDocMenuController {
     DocumentService documentService;
     @Autowired
     DocSecMenuServiceImpl docSecMenuService;
+    @Autowired
+    SectionRepository sectionRepository;
 
     @ApiOperation(
             value = "Docuement in DocuementController",
@@ -75,7 +80,9 @@ public class SectionListDocMenuController {
         log.info("auth == " + auth.getName());
         log.info("auth username == " + auth.getPrincipal());
         log.info("data body request: " + request.toString());
-        DataResponse response = documentService.SecCodeMenuByDateALL(documentRespone,request);
+        List<Section> getSecInfo =sectionRepository.findByBranchIdFromUserName(auth.getName());
+        String secCod = getSecInfo.get(0).getSecId();
+        DataResponse response = documentService.SecCodeMenuByDateALL(documentRespone,request,secCod);
         log.info("\t\t --> End Custom compare Request controller <<<<<<<<<<<<<<<<<<<");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
@@ -114,7 +121,9 @@ public class SectionListDocMenuController {
         log.info("auth == " + auth.getName());
         log.info("auth username == " + auth.getPrincipal());
         log.info("data body request: " + request.toString());
-        DataResponse response = documentService.SecCodeMenuByDate(documentRespone,request);
+        List<Section> getSecInfo =sectionRepository.findByBranchIdFromUserName(auth.getName());
+        String secCod = getSecInfo.get(0).getSecId();
+        DataResponse response = documentService.SecCodeMenuByDate(documentRespone,request,secCod);
         log.info("\t\t --> End Custom compare Request controller <<<<<<<<<<<<<<<<<<<");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

@@ -109,14 +109,17 @@ public class BranchListDocMenuController {
             value = "JSON body request to check information",
             required = true) @Valid @RequestBody BranchReq documentRespone, HttpServletRequest request) throws Exception {
         log.info("\t\t --> Custom compare Request controller >>>>>>>>>>>>>>>>>>>>>>");
-        String clientIpAddress = request.getRemoteAddr();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
-        log.info("Client IP Address = " + clientIpAddress);
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         log.info("auth == " + auth.getName());
         log.info("auth username == " + auth.getPrincipal());
         log.info("data body request: " + request.toString());
-        DataResponse response = documentService.documentListByBandMenuByDate(documentRespone,request);
+        List<Section> getSecInfo =sectionRepository.findByBranchIdFromUserName(auth.getName());
+        String secCod = getSecInfo.get(0).getSecId();
+        log.info("show:"+secCod);
+        log.info("getStartDate:"+documentRespone.getStartDate());
+        log.info("getEndDate:"+documentRespone.getEndDate());
+
+        DataResponse response = documentService.documentListByBandMenuByDate(documentRespone,request,secCod);
         log.info("\t\t --> End Custom compare Request controller <<<<<<<<<<<<<<<<<<<");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
